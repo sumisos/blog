@@ -1,4 +1,496 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sat, 15 May 2021 12:29:47 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Re:从零开始的博客生涯 #6 Auto CI/CD</title><link>https://ews.ink/tech/hugo-6-auto-ci-cd/</link><guid isPermaLink="true">https://ews.ink/tech/hugo-6-auto-ci-cd/</guid><pubDate>Fri, 14 May 2021 19:24:43 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="思路">思路&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sun, 16 May 2021 09:30:20 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>shields.io Badges 用法</title><link>https://ews.ink/tech/badges/</link><guid isPermaLink="true">https://ews.ink/tech/badges/</guid><pubDate>Sun, 16 May 2021 09:09:30 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://shields.io/">&lt;img src="https://img.shields.io/badge/shields.io-%E5%AE%98%E7%BD%91-info" alt="">&lt;/a>&lt;/span>&lt;/p>
+&lt;blockquote>
+&lt;p>如 &lt;a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent Encoding&lt;/a> 所指定，本文所有 URL 路径应使用 uri 转义。&lt;br>
+（例：&lt;code>c++&lt;/code> 应该是 &lt;code>c%2B%2B&lt;/code>，&lt;code>let's go&lt;/code> 应该是 &lt;code>let%27s%20go&lt;/code>，诸如此类）&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="静态-static">静态 Static&lt;/h2>
+&lt;ul>
+&lt;li>短横线 dash &lt;code>-&lt;/code> =&amp;gt; 分隔符&lt;/li>
+&lt;li>双短横线 &lt;code>--&lt;/code> =&amp;gt; 短横线 &lt;code>-&lt;/code>&lt;/li>
+&lt;li>双下划线 &lt;code>__&lt;/code> =&amp;gt; 下划线 &lt;code>_&lt;/code>&lt;/li>
+&lt;li>&lt;code>_&lt;/code> 或 &lt;code> &lt;/code>(转义后为 &lt;code>%20&lt;/code>) =&amp;gt; 空格 &lt;code> &lt;/code>&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code>https://img.shields.io/badge/&amp;lt;LABEL&amp;gt;-&amp;lt;MESSAGE&amp;gt;-&amp;lt;COLOR&amp;gt;
+https://img.shields.io/static/v1?label=&amp;lt;LABEL&amp;gt;&amp;amp;message=&amp;lt;MESSAGE&amp;gt;&amp;amp;color=&amp;lt;COLOR&amp;gt;
+&lt;/code>&lt;/pre>&lt;h2 id="颜色-colors">颜色 Colors&lt;/h2>
+&lt;p>&lt;span class="sticker">&lt;img src="https://img.shields.io/badge/-brightgreen-brightgreen" alt="">
+&lt;img src="https://img.shields.io/badge/-green-green" alt="">
+&lt;img src="https://img.shields.io/badge/-yellowgreen-yellowgreen" alt="">
+&lt;img src="https://img.shields.io/badge/-yellow-yellow" alt="">
+&lt;img src="https://img.shields.io/badge/-orange-orange" alt="">
+&lt;img src="https://img.shields.io/badge/-red-red" alt="">
+&lt;img src="https://img.shields.io/badge/-blue-blue" alt="">
+&lt;img src="https://img.shields.io/badge/-lightgrey-lightgrey" alt="">&lt;/span>&lt;/p>
+&lt;p>&lt;span class="sticker">&lt;img src="https://img.shields.io/badge/-success-success" alt="">
+&lt;img src="https://img.shields.io/badge/-important-important" alt="">
+&lt;img src="https://img.shields.io/badge/-critical-critical" alt="">
+&lt;img src="https://img.shields.io/badge/-infomational-infomational" alt="">
+&lt;img src="https://img.shields.io/badge/-inactive-inactive" alt="">&lt;/span>&lt;/p>
+&lt;p>&lt;span class="sticker">&lt;img src="https://img.shields.io/badge/-blueviolet-blueviolet" alt="">
+&lt;img src="https://img.shields.io/badge/-ff69b4-ff69b4" alt="">
+&lt;img src="https://img.shields.io/badge/-9cf-9cf" alt="">&lt;/span>&lt;/p>
+&lt;h2 id="节点-endpoint">节点 Endpoint&lt;/h2>
+&lt;p>&lt;a href="https://shields.io/endpoint">官网详细介绍&lt;/a>&lt;/p>
+&lt;pre>&lt;code>https://img.shields.io/endpoint?url=&amp;lt;URL&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>其他参数同静态标签，一样可以生效，如覆写 &lt;code>style&lt;/code>、&lt;code>label&lt;/code>、&lt;code>message&lt;/code>、&lt;code>color&lt;/code>、&lt;code>logoColor&lt;/code> 等。&lt;/p>
+&lt;p>&lt;code>&amp;lt;URL&amp;gt;&lt;/code> 返回的响应应该是如下格式的 &lt;code>json&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-JSON" data-lang="JSON">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;schemaVersion&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;label&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;is it monday&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;message&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;no&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;color&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;orange&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>举例：&lt;code>https://shields.redsparr0w.com/2473/monday&lt;/code> &lt;img src="https://img.shields.io/endpoint?url=https://shields.redsparr0w.com/2473/monday" alt="">&lt;/p>
+&lt;h2 id="动态-dynamic">动态 Dynamic&lt;/h2>
+&lt;p>访问接口获取响应后按照写好的路径读取数据，不如 &lt;code>endpoint&lt;/code> 用法省心，但胜在灵活，不必专门写固定格式的接口。&lt;br>
+&lt;a href="https://jsonpath.com/">JSON 路径验证&lt;/a>&lt;/p>
+&lt;p>&lt;code>json&lt;/code>、&lt;code>xml&lt;/code>、&lt;code>yaml&lt;/code> 依次为：&lt;/p>
+&lt;pre>&lt;code>https://img.shields.io/badge/dynamic/json?url=&amp;lt;URL&amp;gt;&amp;amp;label=&amp;lt;LABEL&amp;gt;&amp;amp;query=&amp;lt;$.DATA.SUBDATA&amp;gt;&amp;amp;color=&amp;lt;COLOR&amp;gt;&amp;amp;prefix=&amp;lt;PREFIX&amp;gt;&amp;amp;suffix=&amp;lt;SUFFIX&amp;gt;
+https://img.shields.io/badge/dynamic/xml?url=&amp;lt;URL&amp;gt;&amp;amp;label=&amp;lt;LABEL&amp;gt;&amp;amp;query=&amp;lt;//data/subdata&amp;gt;&amp;amp;color=&amp;lt;COLOR&amp;gt;&amp;amp;prefix=&amp;lt;PREFIX&amp;gt;&amp;amp;suffix=&amp;lt;SUFFIX&amp;gt;
+https://img.shields.io/badge/dynamic/yaml?url=&amp;lt;URL&amp;gt;&amp;amp;label=&amp;lt;LABEL&amp;gt;&amp;amp;query=&amp;lt;$.DATA.SUBDATA&amp;gt;&amp;amp;color=&amp;lt;COLOR&amp;gt;&amp;amp;prefix=&amp;lt;PREFIX&amp;gt;&amp;amp;suffix=&amp;lt;SUFFIX&amp;gt;
+&lt;/code>&lt;/pre>&lt;h2 id="样式-styles">样式 Styles&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">Parameters&lt;/th>
+&lt;th style="text-align:center">Styles&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?style=plastic&amp;amp;logo=appveyor&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-plastic-infomational?style=plastic&amp;amp;logo=appveyor" alt="">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?style=flat&amp;amp;logo=appveyor&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-flat-infomational?style=flat&amp;amp;logo=appveyor" alt="">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?style=flat-square&amp;amp;logo=appveyor&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-flat--square-infomational?style=flat-square&amp;amp;logo=appveyor" alt="">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?style=for-the-badge&amp;amp;logo=appveyor&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-for--the--badge-infomational?style=for-the-badge&amp;amp;logo=appveyor" alt="">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?style=social&amp;amp;logo=appveyor&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-social-infomational?style=social&amp;amp;logo=appveyor" alt="">&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="其他参数">其他参数&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">Parameters&lt;/th>
+&lt;th style="text-align:center">Styles&lt;/th>
+&lt;th style="text-align:center">Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?label=healthinesses&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-healthinesses-infomational?label=healthinesses" alt="">&lt;/td>
+&lt;td style="text-align:center">覆写左边的文本 注意转义&lt;a href="https://developer.mozilla.org/en-US/docs/Glossary/percent-encoding">URL-Encoding&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?logo=appveyor&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-logo-infomational?logo=appveyor" alt="">&lt;/td>
+&lt;td style="text-align:center">添加 LOGO 支持列表参考&lt;a href="https://simpleicons.org/">simple-icons&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?logo=data:image/png;base64,…&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-base64--logo-infomational?logo=data:image/png;base64,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" alt="">&lt;/td>
+&lt;td style="text-align:center">图片需要高大于 14 像素并小于 8192 bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?logoColor=violet&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-desc-infomational?logo=appveyor&amp;amp;logoColor=violet" alt="">&lt;/td>
+&lt;td style="text-align:center">自定义 LOGO 的颜色（支持 &lt;code>hex&lt;/code>/&lt;code>rgb&lt;/code>/&lt;code>rgba&lt;/code>/&lt;code>hsl&lt;/code>/&lt;code>hsla&lt;/code>/&lt;code>css&lt;/code> 格式）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?logoWidth=40&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-desc-infomational?logo=appveyor&amp;amp;logoWidth=40" alt="">&lt;/td>
+&lt;td style="text-align:center">自定义 LOGO 区域宽度&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?link=http://left&amp;amp;link=http://right&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;object data="https://img.shields.io/badge/style-link-infomational?link=http://left&amp;link=http://right" />&lt;/td>
+&lt;td style="text-align:center">自定义左右标签不同链接 注意需要在 &lt;code>&amp;lt;object&amp;gt;&lt;/code> 标签中才生效 &lt;code>&amp;lt;img&amp;gt;&lt;/code> 不行&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?labelColor=abcdef&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-desc-infomational?labelColor=abcdef" alt="">&lt;/td>
+&lt;td style="text-align:center">自定义&lt;strong>左边&lt;/strong>标签的背景色&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?color=fedcba&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-desc-infomational?color=fedcba" alt="">&lt;/td>
+&lt;td style="text-align:center">自定义&lt;strong>右边&lt;/strong>标签的背景色&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>?cacheSeconds=3600&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://img.shields.io/badge/style-desc-infomational?cacheSeconds=3600" alt="">&lt;/td>
+&lt;td style="text-align:center">自定义缓存时间 最小 300 更小会被忽略&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/shields.io/">shields.io</category><category domain="https://ews.ink/tags/badges/">Badges</category><category domain="https://ews.ink/tags/markdown/">Markdown</category></item><item><title>Steam 模拟手机令牌二步验证</title><link>https://ews.ink/game/steam-2fa/</link><guid isPermaLink="true">https://ews.ink/game/steam-2fa/</guid><pubDate>Sat, 15 May 2021 18:42:20 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="第三方-steam-工具">第三方 Steam 工具&lt;/h2>
+&lt;blockquote>
+&lt;p>第三方工具安全性各有不同，风险自负。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/JustArchiNET/ArchiSteamFarm">ArchiSteamFarm&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://steampp.net">Steam++&lt;/a> &lt;a href="https://github.com/SteamTools-Team/SteamTools">&lt;img src="https://img.shields.io/github/stars/rmbadmin/SteamTools.svg?style=social" data-sticker />&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/winauth/winauth">WinAuth&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/Jessecar96/SteamDesktopAuthenticator">Steam Desktop Authenticator&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>以上工具都支持&lt;strong>第三方&lt;/strong>的 Steam 二步验证。&lt;/p>
+&lt;p>虽然 Steam 的字母数字混合五位验证码看起来和别的 OTP Authenticator 高贵，其实都是一种东西。&lt;br>
+即基于 Time-based One-time Password 算法的一次性密码生成器，又称：&lt;/p>
+&lt;ul>
+&lt;li>两步验证&lt;/li>
+&lt;li>二步验证&lt;/li>
+&lt;li>双重验证&lt;/li>
+&lt;li>双因素验证&lt;/li>
+&lt;li>多因素验证&lt;/li>
+&lt;li>虚拟 MFA（我只看到过阿里这么叫）&lt;/li>
+&lt;li>动态令牌&lt;/li>
+&lt;li>2FA&lt;/li>
+&lt;li>Two-Factor Authentication&lt;/li>
+&lt;li>Multi-Factor Authentication&lt;/li>
+&lt;li>OTP(One Time Password)&lt;/li>
+&lt;/ul>
+&lt;p>花名很多嘛。&lt;/p>
+&lt;h2 id="steam">Steam++&lt;/h2>
+&lt;p>它家只要有 &lt;code>shared_secret&lt;/code> 和 &lt;code>identity_secret&lt;/code> 就允许导入。&lt;br>
+也就是说，最少：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-JSON" data-lang="JSON">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;shared_secret&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[key_secret_1]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;identity_secret&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[key_secret_2]&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>就可以正常运作了。&lt;br>
+但这样的话，比较关键的 &lt;code>恢复代码&lt;/code> 以及 &lt;code>设备 ID&lt;/code> 等额外信息都没有。&lt;/p>
+&lt;p>所以还是推荐该有的都加上，新建文本文档，命名为 &lt;code>min.example.maFile&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-JSON" data-lang="JSON">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;account_name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[your_steam_username]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;revocation_code&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[revocation_code]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;device_id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;android:[phone_uuid]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;uri&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;otpauth://totp/Steam:[your_steam_username]?secret=[totp_secret]&amp;amp;issuer=Steam&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;shared_secret&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[key_secret_1]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;identity_secret&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[key_secret_2]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;steamid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[your_steam_64bit_id]&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>除了最关键的两个密钥之外比较关键的是：&lt;code>revocation_code&lt;/code> - 恢复代码。&lt;br>
+其次是 &lt;code>uri&lt;/code> 里面有 &lt;code>[totp_secret]&lt;/code>，别的都是锦上添花的东西。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="winauth">WinAuth&lt;/h2>
+&lt;p>导出的格式类似 &lt;code>WinAuth.example.maFile&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-JSON" data-lang="JSON">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;account_name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[your_steam_username]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;revocation_code&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[revocation_code]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;device_id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;android:[phone_uuid]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;uri&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;otpauth://totp/Steam:[your_steam_username]?secret=[totp_secret]&amp;amp;issuer=Steam&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;shared_secret&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[key_secret_1]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;identity_secret&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[key_secret_2]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;serial_number&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[serial_number]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;server_time&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[server_time]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;token_gid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[token_gid]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;secret_1&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[secret_1]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;status&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;steamguard_scheme&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;2&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;steamid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[your_steam_64bit_id]&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="steam-desktop-authenticator">Steam Desktop Authenticator&lt;/h2>
+&lt;p>导出的格式类似 &lt;code>SDA.example.maFile&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-JSON" data-lang="JSON">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;account_name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[your_steam_username]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;revocation_code&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[revocation_code]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;device_id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;android:[phone_uuid]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;uri&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;otpauth://totp/Steam:[your_steam_username]?secret=[totp_secret]&amp;amp;issuer=Steam&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;shared_secret&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[key_secret_1]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;identity_secret&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[key_secret_2]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;serial_number&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[serial_number]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;server_time&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[server_time]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;token_gid&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[token_gid]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;secret_1&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[secret_1]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;status&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;fully_enrolled&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;Session&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;SessionID&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[string]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;SteamLogin&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[string]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;SteamLoginSecure&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[string]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;WebCookie&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[string]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;OAuthToken&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[string]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;SteamID&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;[string]&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="keepass">KeePass&lt;/h2>
+&lt;p>我是 &lt;a href="https://keepass.info">KeePass&lt;/a> 用户，TOTP 插件还蛮多的，我用的 &lt;a href="https://keepass.info/plugins.html#keetraytotp">KeeTrayTOTP&lt;/a>。&lt;br>
+用上面的软件绑定手机令牌后导出，用文本编辑器打开 &lt;code>.maFile&lt;/code> 文件，会有 &lt;code>uri&lt;/code> 项：&lt;/p>
+&lt;pre>&lt;code>&amp;quot;uri&amp;quot;: &amp;quot;otpauth://totp/Steam:[your_steam_username]?secret=[totp_secret]&amp;amp;issuer=Steam&amp;quot;,
+&lt;/code>&lt;/pre>&lt;p>记录下 &lt;code>[totp_secret]&lt;/code>，这个就是 Steam 令牌作为 TOTP 工具时的序列号。&lt;/p></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/steam/">Steam</category><category domain="https://ews.ink/tags/totp/">TOTP</category></item><item><title>Github 用户资料页面玩法</title><link>https://ews.ink/tech/github-profile-readme/</link><guid isPermaLink="true">https://ews.ink/tech/github-profile-readme/</guid><pubDate>Sat, 15 May 2021 15:55:27 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="开始">开始&lt;/h2>
+&lt;p>众所周知，创建一个和用户名相同的 Repo，这个 Repo 的 &lt;code>README.md&lt;/code> 内容就会显示在用户资料主页面。&lt;br>
+所以在这个 markdown 文档里写什么，用户资料页就会显示什么，那么就可以开始玩了。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">&lt;span class="gu">## Hi there 👋
+&lt;/span>&lt;span class="gu">&lt;/span>
+&lt;span class="c">&amp;lt;!--&lt;/span>
+&lt;span class="gs">**[USERNAME]/[USERNAME]**&lt;/span>&lt;span class="c"> is a ✨&lt;/span> &lt;span class="ge">_special_&lt;/span> &lt;span class="c">✨ repository because its &lt;/span>&lt;span class="sb">`README.md`&lt;/span>&lt;span class="c"> (this file) appears on your GitHub profile.
+&lt;/span>&lt;span class="c">
+&lt;/span>&lt;span class="c">Here are some ideas to get you started:
+&lt;/span>&lt;span class="c">&lt;/span>
+&lt;span class="k">-&lt;/span> &lt;span class="c">🔭 I’m currently working on ...
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="k">-&lt;/span> &lt;span class="c">🌱 I’m currently learning ...
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="k">-&lt;/span> &lt;span class="c">👯 I’m looking to collaborate on ...
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="k">-&lt;/span> &lt;span class="c">🤔 I’m looking for help with ...
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="k">-&lt;/span> &lt;span class="c">💬 Ask me about ...
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="k">-&lt;/span> &lt;span class="c">📫 How to reach me: ...
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="k">-&lt;/span> &lt;span class="c">😄 Pronouns: ...
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="k">-&lt;/span> &lt;span class="c">⚡ Fun fact: ...
+&lt;/span>&lt;span class="c">--&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="动态渲染图片">动态渲染图片&lt;/h2>
+&lt;p>类似早些年论坛的签名档，动态数据渲染那种效果。&lt;br>
+虽然自己写也花不了多久，不过还是现成的好吃。&lt;/p>
+&lt;h2 id="github-统计卡片">GitHub 统计卡片&lt;/h2>
+&lt;p>&lt;a href="https://github.com/hokaso/github-readme-stats">GitHub Readme Stats&lt;/a> 这个仓库就是专为 Github 的用户资料页开发的。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">[&lt;span class="nt">![Your Github Stats&lt;/span>](&lt;span class="na">https://github-readme-stats.vercel.app/api?username=[USERNAME]&lt;/span>)](https://github.com/[USERNAME])
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a href="https://github.com/sumisos">&lt;img src="https://github-readme-stats.vercel.app/api?username=sumisos" alt="Sumi's Github Stats">&lt;/a>&lt;/p>
+&lt;h3 id="隐藏指定统计">隐藏指定统计&lt;/h3>
+&lt;blockquote>
+&lt;p>加上 &lt;code>&amp;amp;hide=stars,commits,prs,issues,contribs&lt;/code> 参数即可。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">[&lt;span class="nt">![Your Github Stats&lt;/span>](&lt;span class="na">https://github-readme-stats.vercel.app/api?username=[USERNAME]&amp;amp;hide=prs,contribs&lt;/span>)](https://github.com/[USERNAME])
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a href="https://github.com/sumisos">&lt;img src="https://github-readme-stats.vercel.app/api?username=sumisos&amp;amp;hide=prs,contribs" alt="Sumi's Github Stats">&lt;/a>&lt;/p>
+&lt;h3 id="将私人项目贡献添加到总提交计数中">将私人项目贡献添加到总提交计数中&lt;/h3>
+&lt;blockquote>
+&lt;p>加上 &lt;code>&amp;amp;count_private=true&lt;/code> 参数即可。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">[&lt;span class="nt">![Your Github Stats&lt;/span>](&lt;span class="na">https://github-readme-stats.vercel.app/api?username=[USERNAME]&amp;amp;count_private=true&lt;/span>)](https://github.com/[USERNAME])
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a href="https://github.com/sumisos">&lt;img src="https://github-readme-stats.vercel.app/api?username=sumisos&amp;amp;count_private=true" alt="Sumi's Github Stats">&lt;/a>&lt;/p>
+&lt;h3 id="显示图标">显示图标&lt;/h3>
+&lt;blockquote>
+&lt;p>加上 &lt;code>&amp;amp;show_icons=true&lt;/code> 参数即可。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">[&lt;span class="nt">![Your Github Stats&lt;/span>](&lt;span class="na">https://github-readme-stats.vercel.app/api?username=[USERNAME]&amp;amp;show_icons=true&lt;/span>)](https://github.com/[USERNAME])
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a href="https://github.com/sumisos">&lt;img src="https://github-readme-stats.vercel.app/api?username=sumisos&amp;amp;show_icons=true" alt="Sumi's Github Stats">&lt;/a>&lt;/p>
+&lt;h3 id="预设主题">预设主题&lt;/h3>
+&lt;blockquote>
+&lt;p>加上 &lt;code>&amp;amp;theme=THEME_NAME&lt;/code> 参数即可。&lt;br>
+更多参考 &lt;a href="https://github.com/hokaso/github-readme-stats/blob/master/themes/README.md">主题预览&lt;/a> 及 &lt;a href="https://github.com/hokaso/github-readme-stats/blob/master/themes/index.js">对应代码&lt;/a>。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">[&lt;span class="nt">![Your Github Stats&lt;/span>](&lt;span class="na">https://github-readme-stats.vercel.app/api?username=[USERNAME]&amp;amp;theme=[THEME_NAME]&lt;/span>)](https://github.com/[USERNAME])
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a href="https://github.com/sumisos">&lt;img src="https://github-readme-stats.vercel.app/api?username=sumisos&amp;amp;theme=vue" alt="Sumi's Github Stats">&lt;/a>&lt;/p>
+&lt;h3 id="自定义主题">自定义主题&lt;/h3>
+&lt;blockquote>
+&lt;p>可以使用更多参数来为卡片自定义样式。&lt;/p>
+&lt;/blockquote>
+&lt;p>可定制选项：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>title_color&lt;/code> - 卡片标题颜色 &lt;em>（十六进制色码）&lt;/em>&lt;/li>
+&lt;li>&lt;code>text_color&lt;/code> - 内容文本颜色 &lt;em>（十六进制色码）&lt;/em>&lt;/li>
+&lt;li>&lt;code>icon_color&lt;/code> - 图标颜色（如果可用）&lt;em>（十六进制色码）&lt;/em>&lt;/li>
+&lt;li>&lt;code>bg_color&lt;/code> - 卡片背景颜色 &lt;em>（十六进制色码）&lt;/em> &lt;strong>或者&lt;/strong> 以 &lt;em>angle,start,end&lt;/em> 的形式渐变&lt;/li>
+&lt;li>&lt;code>hide_border&lt;/code> - 隐藏卡的边框 &lt;em>(布尔值)&lt;/em>&lt;/li>
+&lt;li>&lt;code>theme&lt;/code> - 主题名称，从&lt;a href="../themes/README.md">所有可用主题&lt;/a>中选择&lt;/li>
+&lt;li>&lt;code>cache_seconds&lt;/code> - 手动设置缓存头 &lt;em>（最小值: 1800，最大值: 86400）&lt;/em>&lt;/li>
+&lt;li>&lt;code>locale&lt;/code> - 在卡片中设置语言 &lt;em>(例如 cn, de, es, 等等)&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h4 id="统计卡片专属选项">统计卡片专属选项&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>hide&lt;/code> - 隐藏特定统计信息 &lt;em>(以逗号分隔)&lt;/em>&lt;/li>
+&lt;li>&lt;code>hide_title&lt;/code> - &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;li>&lt;code>hide_rank&lt;/code> - &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;li>&lt;code>hide_border&lt;/code> - &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;li>&lt;code>show_icons&lt;/code> - &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;li>&lt;code>include_all_commits&lt;/code> - 统计总提交次数而不是仅统计今年的提交次数 &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;li>&lt;code>count_private&lt;/code> - 统计私人提交 &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;li>&lt;code>line_height&lt;/code> - 设置文本之间的行高 &lt;em>(number)&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h4 id="repo-卡片专属选项">Repo 卡片专属选项&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>show_owner&lt;/code> - 显示 Repo 的所有者名字 &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h4 id="语言卡片专属选项">语言卡片专属选项&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>hide&lt;/code> - 从卡片中隐藏指定语言 &lt;em>(Comma seperated values)&lt;/em>&lt;/li>
+&lt;li>&lt;code>hide_title&lt;/code> - &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;li>&lt;code>hide_border&lt;/code> - &lt;em>(boolean)&lt;/em>&lt;/li>
+&lt;li>&lt;code>layout&lt;/code> - 在两个可用布局 &lt;code>default&lt;/code> &amp;amp; &lt;code>compact&lt;/code> 间切换&lt;/li>
+&lt;li>&lt;code>card_width&lt;/code> - 手动设置卡片的宽度 &lt;em>(number)&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>⚠️ &lt;strong>重要:&lt;/strong>&lt;br>
+如 &lt;a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent Encoding&lt;/a> 所指定，URL 路径应使用 uri 转义。&lt;br>
+（例：&lt;code>c++&lt;/code> 应该是 &lt;code>c%2B%2B&lt;/code>，&lt;code>let's go&lt;/code> 应该是 &lt;code>let%27s%20go&lt;/code>，诸如此类）&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="wakatime">Wakatime&lt;/h2>
+&lt;p>&lt;a href="https://wakatime.com/">Wakatime&lt;/a> 是一个统计开发用时的小工具，以插件的形式支持各种 IDE。&lt;br>
+注册后查看 &lt;a href="https://wakatime.com/plugins">支持的 IDE 列表&lt;/a> 安装插件，并输入 &lt;a href="https://wakatime.com/settings/api-key">API key&lt;/a> 即可开始记录搬砖时间。&lt;br>
+编辑 &lt;a href="https://wakatime.com/settings/profile">用户资料&lt;/a> 的 &lt;code>Username&lt;/code>，然后就能用上 Wakatime 的统计卡片了。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">[&lt;span class="nt">![Wakatime Stats&lt;/span>](&lt;span class="na">https://github-readme-stats.vercel.app/api/wakatime?username=[USERNAME]&lt;/span>)](https://github.com/[USERNAME])
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a href="https://github.com/sumisos">&lt;img src="https://github-readme-stats.vercel.app/api/wakatime?username=sumisos&amp;amp;show_icons=true&amp;amp;theme=great-gatsby" alt="Wakatime Stats">&lt;/a>&lt;/p>
+&lt;h2 id="pv-统计">PV 统计&lt;/h2>
+&lt;p>访问 &lt;a href="https://badges.toozhao.com/">Badger&lt;/a>，点击正中间的 &lt;code>Create your badge&lt;/code> 按钮。&lt;br>
+复制粘贴生成的 Markdown 代码即可统计 &lt;code>该页面访问总次数&lt;/code>。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/git/">Git</category><category domain="https://ews.ink/tags/github/">Github</category><category domain="https://ews.ink/tags/markdown/">Markdown</category></item><item><title>个人偏好的代码范式</title><link>https://ews.ink/tech/dev-code-style/</link><guid isPermaLink="true">https://ews.ink/tech/dev-code-style/</guid><pubDate>Sat, 15 May 2021 14:39:07 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="总则">总则&lt;/h2>
+&lt;p>&lt;del>《&lt;a href="https://coderlmn.github.io/frontEndCourse/unmaintainable.html">如何编写无法维护的代码&lt;/a>》&lt;/del>&lt;/p>
+&lt;h2 id="后端">后端&lt;/h2>
+&lt;h3 id="php">PHP&lt;/h3>
+&lt;p>《&lt;a href="http://laravel-china.github.io/php-the-right-way/#code_style_guide">PHP 之道&lt;/a>》《&lt;a href="https://learnku.com/laravel/t/2081/psr-specification-psr-4-automatic-loading-specification">PSR 规范&lt;/a>》 &lt;a href="https://github.com/kalessil/phpinspectionsea">idea 插件&lt;/a>&lt;/p>
+&lt;h2 id="前端">前端&lt;/h2>
+&lt;p>《&lt;a href="https://juejin.cn/post/6901466994478940168">基于Vue的前端架构，我做了这15点&lt;/a>》&lt;/p>
+&lt;h3 id="javascript">JavaScript&lt;/h3>
+&lt;p>《&lt;a href="https://airbnb.io/javascript">Airbnb JavaScript 代码范式&lt;/a>》&lt;a href="https://github.com/airbnb/javascript">Github&lt;/a>&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E5%BC%80%E5%8F%91/">开发</category><category domain="https://ews.ink/tags/code/">Code</category></item><item><title>Re:从零开始的博客生涯 #6 Auto CI/CD</title><link>https://ews.ink/tech/hugo-6-auto-ci-cd/</link><guid isPermaLink="true">https://ews.ink/tech/hugo-6-auto-ci-cd/</guid><pubDate>Fri, 14 May 2021 19:24:43 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="思路">思路&lt;/h2>
 &lt;p>废话不多说，直接简述工作流：&lt;/p>
 &lt;div class="mermaid" align="center">
 graph TD
