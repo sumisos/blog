@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sun, 16 May 2021 19:00:50 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Notion API 简单上手</title><link>https://ews.ink/tech/notion-api/</link><guid isPermaLink="true">https://ews.ink/tech/notion-api/</guid><pubDate>Sun, 16 May 2021 14:07:10 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://github.com/makenotion/notion-sdk-js">&lt;img src="https://img.shields.io/badge/%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/dragonman225/notionapi-agent">&lt;img src="https://img.shields.io/badge/%E9%9D%9E%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/reycn/notion-help-bot/">&lt;img src="https://img.shields.io/badge/Telegram%20Bot-Help-info" alt="">&lt;/a>&lt;/span>&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 17 May 2021 02:30:59 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>API 重建计划 #1 Golenil</title><link>https://ews.ink/tech/api-typescript-express/</link><guid isPermaLink="true">https://ews.ink/tech/api-typescript-express/</guid><pubDate>Mon, 17 May 2021 01:06:38 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h3 align="center">🚀 Express RESTful API Using TypeScript&lt;/h3>
+&lt;span class="sticker">
+&lt;a href="https://github.com/ljlm0402/typescript-express-starter" target="_blank">&lt;img src="https://img.shields.io/badge/ljlm0402-typescript--express--starter-blue?logo=github" alt="npm Downloads" />&lt;/a>
+&lt;a href="http://npm.im/typescript-express-starter" target="_blank">&lt;img src="https://img.shields.io/npm/v/typescript-express-starter" alt="npm Version" />&lt;/a>
+&lt;a href="http://npm.im/typescript-express-starter" target="_blank">&lt;img src="https://img.shields.io/npm/l/typescript-express-starter" alt="Package License" />&lt;/a>
+&lt;a href="http://npm.im/typescript-express-starter" target="_blank">&lt;img src="https://img.shields.io/github/v/release/ljlm0402/typescript-express-starter" alt="Release Version" />&lt;/a>&lt;/a>
+&lt;/span>
+&lt;h2 id="搭建脚手架">搭建脚手架&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ npm install -g typescript-express-starter
+$ npx typescript-express-starter &lt;span class="s2">&amp;#34;project name&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后 &lt;code>npm run dev&lt;/code> 就可以跑了。&lt;/p>
+&lt;h2 id="新增依赖">新增依赖&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ npm install axios --save
+$ npm install cheerio --save
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>根据需求编写代码。&lt;/p>
+&lt;h2 id="拉取仓库">拉取仓库&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ ssh-keygen -C &lt;span class="s1">&amp;#39;记号&amp;#39;&lt;/span> -f ~/.ssh/deploy_key
+$ cat ~/.ssh/deploy_key.pub
+&lt;span class="c1"># 将公钥写入仓库的 `Deploy keys`&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>vim ~/.ssh/config&lt;/code>，输入内容：&lt;/p>
+&lt;pre>&lt;code>Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/deploy_key
+&lt;/code>&lt;/pre>&lt;p>&lt;code>ssh -T git@github.com&lt;/code> 测试连通性。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git clone git@github.com:&amp;lt;USERNAME&amp;gt;/&amp;lt;REPONAME&amp;gt;.git
+$ &lt;span class="nb">cd&lt;/span> &amp;lt;REPONAME&amp;gt;
+$ npm install
+$ &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;PORT=3000&amp;#34;&lt;/span> &amp;gt;&amp;gt; .env
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="正常运行">正常运行&lt;/h2>
+&lt;p>&lt;code>npm run start&lt;/code> 然后挂起就行了。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/node.js/">Node.js</category><category domain="https://ews.ink/tags/typescript/">TypeScript</category><category domain="https://ews.ink/tags/express/">Express</category><category domain="https://ews.ink/tags/api/">API</category></item><item><title>Notion API 简单上手</title><link>https://ews.ink/tech/notion-api/</link><guid isPermaLink="true">https://ews.ink/tech/notion-api/</guid><pubDate>Sun, 16 May 2021 14:07:10 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://github.com/makenotion/notion-sdk-js">&lt;img src="https://img.shields.io/badge/%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/dragonman225/notionapi-agent">&lt;img src="https://img.shields.io/badge/%E9%9D%9E%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/reycn/notion-help-bot/">&lt;img src="https://img.shields.io/badge/Telegram%20Bot-Help-info" alt="">&lt;/a>&lt;/span>&lt;/p>
 &lt;p>Notion 出了 API，惊了。不过暂时还没想好做什么。&lt;br>
 大概书评一类的？官方 demo 里维护 Github Issue 的思路也不错。&lt;/p>
 &lt;h2 id="可用性测试">可用性测试&lt;/h2>
@@ -98,15 +163,12 @@
 &lt;/span>&lt;span class="lnt">76
 &lt;/span>&lt;span class="lnt">77
 &lt;/span>&lt;span class="lnt">78
-&lt;/span>&lt;span class="lnt">79
-&lt;/span>&lt;span class="lnt">80
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Fs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;fs&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">Client&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;@notionhq/client&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">cfg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFileSync&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;./config.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;utf8&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">notion&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Client&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">auth&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">cfg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">NOTION_API_KEY&lt;/span> &lt;span class="p">});&lt;/span>
-&lt;span class="kr">const&lt;/span> &lt;span class="nx">database_id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">cfg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">DATABASE&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">DATABASE_ID&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;pre class="chroma">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">Client&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;@notionhq/client&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;./config.json&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">notion&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Client&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">auth&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">NOTION_API_KEY&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">database_id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">DATABASE&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">DATABASE_ID&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">search&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="kr">const&lt;/span> &lt;span class="nx">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">notion&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">databases&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">retrieve&lt;/span>&lt;span class="p">({&lt;/span>
 &lt;span class="nx">database_id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">database_id&lt;/span>&lt;span class="p">,&lt;/span>
@@ -870,12 +932,11 @@ H --> |将整个分发仓库同步到你的服务器 / 对象存储| I(博客更
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">exclude_assets&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">cname&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.ACTIONS_DEPLOY_CNAME }}&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">commit_message&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ github.event.head_commit.message }}&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">user_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;Github-Actions[bot]&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">user_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;github-actions[bot]&amp;#39;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">user_email&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;github-actions[bot]@users.noreply.github.com&amp;#39;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>差不多逐行注释了，如有不理解的地方对照注释即可。&lt;/p>
-&lt;blockquote>
+&lt;/div>&lt;blockquote>
 &lt;p>&lt;code>${{ secrets.XXX }}&lt;/code> 在仓库的 &lt;code>Settings&lt;/code> 页面中的 &lt;code>Secrets&lt;/code> 项里设置。&lt;br>
 生成好密钥对，公钥放在 &lt;code>分发仓库&lt;/code> 的 &lt;code>Deploy keys&lt;/code> 项（记得勾上 &lt;code>Allow write access&lt;/code> 不然虚拟机拿不到 push 权限），私钥放在 &lt;code>写作仓库&lt;/code> 的 &lt;code>Secrets&lt;/code> 项。&lt;br>
 如果还有更基础的用法不清楚如何使用请自行搜索，此处不再赘述。&lt;/p>
@@ -918,7 +979,7 @@ H --> |将整个分发仓库同步到你的服务器 / 对象存储| I(博客更
 &lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">main&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">distribute&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="l">. Checkout Repo&lt;/span>&lt;span class="w">
