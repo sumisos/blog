@@ -1,4 +1,180 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sun, 16 May 2021 13:16:46 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>shields.io Badges 用法</title><link>https://ews.ink/tech/badges/</link><guid isPermaLink="true">https://ews.ink/tech/badges/</guid><pubDate>Sun, 16 May 2021 09:09:30 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://shields.io/">&lt;img src="https://img.shields.io/badge/shields.io-%E5%AE%98%E7%BD%91-info" alt="">&lt;/a>&lt;/span>&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sun, 16 May 2021 18:37:53 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Notion API 简单上手</title><link>https://ews.ink/tech/notion-api/</link><guid isPermaLink="true">https://ews.ink/tech/notion-api/</guid><pubDate>Sun, 16 May 2021 14:07:10 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://github.com/makenotion/notion-sdk-js">&lt;img src="https://img.shields.io/badge/%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/dragonman225/notionapi-agent">&lt;img src="https://img.shields.io/badge/%E9%9D%9E%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/reycn/notion-help-bot/">&lt;img src="https://img.shields.io/badge/Telegram%20Bot-Help-info" alt="">&lt;/a>&lt;/span>&lt;/p>
+&lt;p>Notion 出了 API，惊了。不过暂时还没想好做什么。&lt;br>
+大概书评一类的？官方 demo 里维护 Github Issue 的思路也不错。&lt;/p>
+&lt;h2 id="可用性测试">可用性测试&lt;/h2>
+&lt;ol>
+&lt;li>强烈建议 &lt;a href="https://www.notion.so/notion/Create-join-switch-workspaces-3b9be78982a940a7a27ce712ca6bdcf5#9332861c775543d0965f918924448a6d">新建一个 workspace&lt;/a> 专门用于构建 API，以免误操作致使隐私泄露。&lt;/li>
+&lt;li>前往 &lt;a href="https://www.notion.com/my-integrations">My integrations&lt;/a> 页面新建一个 &lt;code>Integration&lt;/code> 绑定（associate）想要刚刚创建好的 workspace。&lt;/li>
+&lt;li>记录下刚刚创建好的 &lt;code>Integration&lt;/code> 的 &lt;code>Internal Integration Token&lt;/code>（形如 &lt;code>secret_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/code>）。&lt;/li>
+&lt;li>来到刚刚创建好的 workspace，新建一个 table page，观察浏览器地址栏 &lt;code>https://www.notion.so/&amp;lt;workspace_domain&amp;gt;/&amp;lt;database_id&amp;gt;?v=......&lt;/code>，获得 &lt;code>database_id&lt;/code>。&lt;/li>
+&lt;li>&lt;strong>关键&lt;/strong>：点击右上角的 &lt;code>Share&lt;/code> -&amp;gt; &lt;code>Invite&lt;/code>，邀请刚刚建好的 &lt;code>Integration&lt;/code>。&lt;/li>
+&lt;/ol>
+&lt;p>一定要邀请对应的 &lt;code>Integration&lt;/code>，否则一直会报错 &lt;code>Could not find database with ID: ......&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ npm install @notionhq/client
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;span class="lnt">76
+&lt;/span>&lt;span class="lnt">77
+&lt;/span>&lt;span class="lnt">78
+&lt;/span>&lt;span class="lnt">79
+&lt;/span>&lt;span class="lnt">80
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Fs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;fs&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">Client&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;@notionhq/client&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">cfg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFileSync&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;./config.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;utf8&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">notion&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Client&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">auth&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">cfg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">NOTION_API_KEY&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">database_id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">cfg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">DATABASE&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">DATABASE_ID&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">search&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">notion&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">databases&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">retrieve&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">database_id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">database_id&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">filter&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">filter&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">select&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">notion&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">databases&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">query&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">database_id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">database_id&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">filter&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">filter&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="c1">//console.log(response);
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">results&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">properties&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">plain_text&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Tags&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">multi_select&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">notion&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">pages&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">parent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">database_id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">database_id&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nx">properties&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">newItem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">Name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">title&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">text&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Apple&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="cm">/*
+&lt;/span>&lt;span class="cm"> Price: {
+&lt;/span>&lt;span class="cm"> type: &amp;#34;number&amp;#34;,
+&lt;/span>&lt;span class="cm"> number: 1.49,
+&lt;/span>&lt;span class="cm"> },
+&lt;/span>&lt;span class="cm"> &amp;#34;Last ordered&amp;#34;: {
+&lt;/span>&lt;span class="cm"> type: &amp;#34;date&amp;#34;,
+&lt;/span>&lt;span class="cm"> date: {
+&lt;/span>&lt;span class="cm"> start: &amp;#34;2021-05-11&amp;#34;,
+&lt;/span>&lt;span class="cm"> },
+&lt;/span>&lt;span class="cm"> },
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">timeFilter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">property&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Last ordered&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">date&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">past_week&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">filter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">property&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Name&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">text&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">contains&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;pp&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="c1">//insert(newItem);
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">select&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>到这里写入读取都跑通了，剩下的就是结合实际需求开发了。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/note/">Note</category><category domain="https://ews.ink/tags/notion/">Notion</category></item><item><title>shields.io Badges 用法</title><link>https://ews.ink/tech/badges/</link><guid isPermaLink="true">https://ews.ink/tech/badges/</guid><pubDate>Sun, 16 May 2021 09:09:30 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://shields.io/">&lt;img src="https://img.shields.io/badge/shields.io-%E5%AE%98%E7%BD%91-info" alt="">&lt;/a>&lt;/span>&lt;/p>
 &lt;blockquote>
 &lt;p>如 &lt;a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent Encoding&lt;/a> 所指定，本文所有 URL 路径应使用 uri 转义。&lt;br>
 （例：&lt;code>c++&lt;/code> 应该是 &lt;code>c%2B%2B&lt;/code>，&lt;code>let's go&lt;/code> 应该是 &lt;code>let%27s%20go&lt;/code>，诸如此类）&lt;/p>
@@ -57,11 +233,20 @@ https://img.shields.io/static/v1?label=&amp;lt;LABEL&amp;gt;&amp;amp;message=&am
 &lt;p>访问接口获取响应后按照写好的路径读取指定数据，不如 &lt;code>endpoint&lt;/code> 用法省心，但胜在灵活，不必专门写固定格式的接口。&lt;br>
 注意 &lt;code>query&lt;/code> 字段取得的结果&lt;strong>会且只会&lt;/strong>显示在&lt;strong>右侧&lt;/strong>标签。&lt;br>
 &lt;a href="https://jsonpath.com/">JSON 路径验证&lt;/a>&lt;/p>
-&lt;p>&lt;code>json&lt;/code>、&lt;code>xml&lt;/code>、&lt;code>yaml&lt;/code> 依次为：&lt;/p>
+&lt;p>支持三种格式 &lt;code>json&lt;/code>、&lt;code>xml&lt;/code>、&lt;code>yaml&lt;/code> 依次为（注意路径区别）：&lt;/p>
 &lt;pre>&lt;code>https://img.shields.io/badge/dynamic/json?url=&amp;lt;URL&amp;gt;&amp;amp;label=&amp;lt;LABEL&amp;gt;&amp;amp;query=&amp;lt;$.DATA.SUBDATA&amp;gt;&amp;amp;color=&amp;lt;COLOR&amp;gt;&amp;amp;prefix=&amp;lt;PREFIX&amp;gt;&amp;amp;suffix=&amp;lt;SUFFIX&amp;gt;
 https://img.shields.io/badge/dynamic/xml?url=&amp;lt;URL&amp;gt;&amp;amp;label=&amp;lt;LABEL&amp;gt;&amp;amp;query=&amp;lt;//data/subdata&amp;gt;&amp;amp;color=&amp;lt;COLOR&amp;gt;&amp;amp;prefix=&amp;lt;PREFIX&amp;gt;&amp;amp;suffix=&amp;lt;SUFFIX&amp;gt;
 https://img.shields.io/badge/dynamic/yaml?url=&amp;lt;URL&amp;gt;&amp;amp;label=&amp;lt;LABEL&amp;gt;&amp;amp;query=&amp;lt;$.DATA.SUBDATA&amp;gt;&amp;amp;color=&amp;lt;COLOR&amp;gt;&amp;amp;prefix=&amp;lt;PREFIX&amp;gt;&amp;amp;suffix=&amp;lt;SUFFIX&amp;gt;
-&lt;/code>&lt;/pre>&lt;h2 id="样式-styles">样式 Styles&lt;/h2>
+&lt;/code>&lt;/pre>&lt;h3 id="整活">整活&lt;/h3>
+&lt;p>新建一个 Repo，push 一个 &lt;code>.json&lt;/code> 文件，可以把仓库当成简陋的接口用。比如：&lt;/p>
+&lt;pre>&lt;code>https://github.com/&amp;lt;用户名&amp;gt;/&amp;lt;仓库名&amp;gt;/raw/main/&amp;lt;文件名&amp;gt;.json
+&lt;/code>&lt;/pre>&lt;p>访问这个地址，响应就是 JSON 文件的内容。剩下不用我多说了 8。&lt;/p>
+&lt;p>配合 &lt;code>shields.io&lt;/code> 的 &lt;code>dynamic&lt;/code> 用法：&lt;/p>
+&lt;p>&lt;a href="https://github.com/sumisos/sumisos/blob/main/env.yaml">&lt;img src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fgithub.com%2Fsumisos%2Fsumisos%2Fraw%2Fmain%2Fenv.yaml&amp;amp;label=echo&amp;amp;query=%24.echo.string1&amp;amp;color=important&amp;amp;prefix=%5B%20&amp;amp;suffix=%20%5D" alt="">&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>当然直接用 &lt;a href="https://gist.github.com/">gist&lt;/a> 也可以。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="样式-styles">样式 Styles&lt;/h2>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -489,7 +674,12 @@ https://img.shields.io/badge/dynamic/yaml?url=&amp;lt;URL&amp;gt;&amp;amp;label=
 &lt;p>访问 &lt;a href="https://badges.toozhao.com/">Badger&lt;/a>，点击正中间的 &lt;code>Create your badge&lt;/code> 按钮。&lt;br>
 复制粘贴生成的 Markdown 代码即可统计 &lt;code>该页面访问总次数&lt;/code>。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/git/">Git</category><category domain="https://ews.ink/tags/github/">Github</category><category domain="https://ews.ink/tags/markdown/">Markdown</category></item><item><title>个人偏好的代码范式</title><link>https://ews.ink/tech/dev-code-style/</link><guid isPermaLink="true">https://ews.ink/tech/dev-code-style/</guid><pubDate>Sat, 15 May 2021 14:39:07 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="总则">总则&lt;/h2>
 &lt;p>&lt;del>《&lt;a href="https://coderlmn.github.io/frontEndCourse/unmaintainable.html">如何编写无法维护的代码&lt;/a>》&lt;/del>&lt;/p>
-&lt;h2 id="后端">后端&lt;/h2>
+&lt;pre>&lt;code>#include　《studio.h》
+mian viod（）
+{printf“how to drive people mad./n&amp;quot;；
+　 retrun o;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="后端">后端&lt;/h2>
 &lt;h3 id="php">PHP&lt;/h3>
 &lt;p>《&lt;a href="http://laravel-china.github.io/php-the-right-way/#code_style_guide">PHP 之道&lt;/a>》《&lt;a href="https://learnku.com/laravel/t/2081/psr-specification-psr-4-automatic-loading-specification">PSR 规范&lt;/a>》 &lt;a href="https://github.com/kalessil/phpinspectionsea">idea 插件&lt;/a>&lt;/p>
 &lt;h2 id="前端">前端&lt;/h2>
@@ -814,7 +1004,7 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 &lt;td class="lntd">
 &lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;span class="nx">mediumZoom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelectorAll&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;div.post-body img:not([data-no-zoom],[data-sticker],.no-zoom,.sticker)&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">mediumZoom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelectorAll&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;div.post-body img:not(img[data-no-zoom], img[data-sticker], img.no-zoom, img.sticker, span img)&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nx">background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)&amp;#39;&lt;/span>
 &lt;span class="p">})&lt;/span>
 &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -853,6 +1043,17 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 &lt;/span>&lt;span class="lnt">28
 &lt;/span>&lt;span class="lnt">29
 &lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre class="chroma">&lt;code class="language-scss" data-lang="scss">&lt;span class="cm">/* 自定义样式文件
@@ -870,16 +1071,24 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 感谢 MemE 主题使用的图片缩放库 medium-zoom.js 支持 CSS 选择器
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 详见 https://github.com/francoischalifour/medium-zoom#selectors
 &lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;span class="nt">img&lt;/span>&lt;span class="nc">.sticker&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">@mixin&lt;/span>&lt;span class="nf"> inline-image&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="c1">// 禁用图片换行居中 便于直接在文中插入表情包
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 已默认禁用图片点击缩放功能
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">display&lt;/span>&lt;span class="nd">:&lt;/span> &lt;span class="nt">inline&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="nt">margin&lt;/span>&lt;span class="nd">:&lt;/span> &lt;span class="nt">auto&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="p">}&lt;/span>
+&lt;span class="nt">img&lt;/span>&lt;span class="nc">.sticker&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">@include&lt;/span>&lt;span class="nd"> inline-image&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
 &lt;span class="nt">img&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">data-sticker&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="c1">// 同上 实际中的另一种用法
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// class=&amp;#34;sticker&amp;#34; =&amp;gt; data-sticker
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">@extend&lt;/span> &lt;span class="nt">img&lt;/span>&lt;span class="nc">.sticker&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">@include&lt;/span>&lt;span class="nd"> inline-image&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">span&lt;/span>&lt;span class="nc">.sticker&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">display&lt;/span>&lt;span class="nd">:block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nt">text-align&lt;/span>&lt;span class="nd">:center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">img&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">span&lt;/span>&lt;span class="nc">.sticker&lt;/span> &lt;span class="k">&amp;amp;&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">@include&lt;/span>&lt;span class="nd"> inline-image&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -1069,14 +1278,36 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 &lt;/span>&lt;span class="lnt"> 8
 &lt;/span>&lt;span class="lnt"> 9
 &lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">{{ range $.Site.Data.meta.shields.info }}
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;display:block;text-align:center;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">{{ $version := $.Site.Data.meta.version }}
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;sticker&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+{{ range $.Site.Data.meta.shields.blog }}
+{{if .href}} &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .href }}&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {{end}}
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .src }}&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+{{if .href}} &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {{end}}
+{{ end }}
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://github.com/gohugoio/hugo&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://img.shields.io/badge/hugo-{{- $version.hugo -}}-blue.svg?logo=hugo&amp;amp;logoColor=fff&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://github.com/reuixiy/hugo-theme-meme&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://img.shields.io/badge/{{- $version.theme.name -}}-{{- $version.theme.version -}}-blue.svg&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+{{ range $.Site.Data.meta.shields.other }}
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;sticker&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 {{if .title}} &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h4&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{- .title -}}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h4&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {{end}}
 {{ range .links }}
 {{if .href}} &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .href }}&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {{end}}
-&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .src }}&amp;#34;&lt;/span> &lt;span class="na">data-sticker&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .src }}&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 {{if .href}} &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {{end}}
 {{ end }}
 &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -1107,21 +1338,35 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 &lt;/span>&lt;span class="lnt">19
 &lt;/span>&lt;span class="lnt">20
 &lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">info&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>-&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">blog&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;pre class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">blog&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>-&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com/gohugoio/hugo&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">src&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://img.shields.io/badge/hugo-v0.83.1%2fextended-brightgreen.svg?logo=hugo&amp;amp;logoColor=fff&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">src&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://img.shields.io/badge/hugo-v0.83.1%2fextended-blue.svg?logo=hugo&amp;amp;logoColor=fff&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>-&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com/reuixiy/hugo-theme-meme&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">src&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://img.shields.io/badge/MemE-v4.5.0-blue.svg&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">other&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>-&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">server&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">server1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Demo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>-&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com/python/cpython&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">src&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://img.shields.io/badge/Python-v3.8.2-blue?logo=python&amp;amp;logoColor=white&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>-&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com/tiangolo/fastapi&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">src&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://img.shields.io/badge/FastAPI-v0.61.1-blue?logo=fastapi&amp;amp;logoColor=white&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>-&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">server2&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Project&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>-&lt;span class="w">
@@ -2724,7 +2969,6 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;th style="text-align:center">荣和概率&lt;/th>
 &lt;th style="text-align:center">放铳概率&lt;/th>
 &lt;th style="text-align:center">自摸概率&lt;/th>
-&lt;th>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -2734,7 +2978,6 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;td style="text-align:center">99.812%&lt;/td>
 &lt;td style="text-align:center">0.057%&lt;/td>
 &lt;td style="text-align:center">0.048%&lt;/td>
-&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">12 种 13 牌&lt;/td>
@@ -2742,7 +2985,6 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;td style="text-align:center">66.542%&lt;/td>
 &lt;td style="text-align:center">10.637%&lt;/td>
 &lt;td style="text-align:center">9.859%&lt;/td>
-&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">12 种 12 牌&lt;/td>
@@ -2750,7 +2992,6 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;td style="text-align:center">55.718%&lt;/td>
 &lt;td style="text-align:center">14.052%&lt;/td>
 &lt;td style="text-align:center">13.162%&lt;/td>
-&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">11 种 12 牌&lt;/td>
@@ -2758,7 +2999,6 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;td style="text-align:center">20.960%&lt;/td>
 &lt;td style="text-align:center">23.977%&lt;/td>
 &lt;td style="text-align:center">22.067%&lt;/td>
-&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">11 种 11 牌&lt;/td>
@@ -2766,7 +3006,6 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;td style="text-align:center">19.749%&lt;/td>
 &lt;td style="text-align:center">24.525%&lt;/td>
 &lt;td style="text-align:center">22.381%&lt;/td>
-&lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">10 种 11 牌&lt;/td>
@@ -2774,7 +3013,6 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;td style="text-align:center">6.464%&lt;/td>
 &lt;td style="text-align:center">27.919%&lt;/td>
 &lt;td style="text-align:center">25.453%&lt;/td>
-&lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
