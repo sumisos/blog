@@ -1,4 +1,529 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 17 May 2021 02:30:59 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>API 重建计划 #1 Golenil</title><link>https://ews.ink/tech/api-typescript-express/</link><guid isPermaLink="true">https://ews.ink/tech/api-typescript-express/</guid><pubDate>Mon, 17 May 2021 01:06:38 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h3 align="center">🚀 Express RESTful API Using TypeScript&lt;/h3>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 17 May 2021 16:40:03 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>宝塔面板 Cheat Sheet</title><link>https://ews.ink/tech/bt-panel-code/</link><guid isPermaLink="true">https://ews.ink/tech/bt-panel-code/</guid><pubDate>Mon, 17 May 2021 10:50:51 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://www.bt.cn/btcode.html">&lt;img src="https://img.shields.io/badge/%E6%9D%A5%E6%BA%90-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-info" alt="">&lt;/a> &lt;img src="https://img.shields.io/badge/%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0%E4%BA%8E-2021--05--17-blue" alt="">&lt;/span>&lt;/p>
+&lt;p>手动抄了十分钟才发现这也太长了，要抄到猴年马月去啊，蠢死了。&lt;br>
+还是简单写个爬虫吧：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">axios&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;axios&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">cheerio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;cheerio&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;fs&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">spider&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">axios&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">$&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">cheerio&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">content&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;div.bt_code_all&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">first&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">titles&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">content&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;h2.th2&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">each&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">elem&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">titles&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">chapters&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">content&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;div.btcode&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">each&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">elem&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">chapters&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;span&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">not&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.info&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">each&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">elem&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">chapters&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="nx">chapters&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">section&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;pre&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">each&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">elem&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">chapters&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">titles&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">titles&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">chapters&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">chapters&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">markdown&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">titles&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">markdown&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="s2">&amp;#34;## &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">titles&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;\n&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">chapters&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">markdown&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="s2">&amp;#34;### &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">chapters&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">section&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;\n&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">markdown&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="s2">&amp;#34;```\n&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">chapters&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">text&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;\n```\n\n&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;output.md&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">markdown&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">trim&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="s2">&amp;#34;utf8&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;写入文件失败! 错误信息: &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;已将爬取结果保存到 output.md&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">spider&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://www.bt.cn/btcode.html&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="安装宝塔">安装宝塔&lt;/h2>
+&lt;h3 id="centos-安装脚本">Centos 安装脚本&lt;/h3>
+&lt;pre>&lt;code>yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;amp;&amp;amp; sh install.sh
+&lt;/code>&lt;/pre>&lt;h3 id="ubuntudeepin-安装脚本">Ubuntu/Deepin 安装脚本&lt;/h3>
+&lt;pre>&lt;code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;amp;&amp;amp; sudo bash install.sh
+&lt;/code>&lt;/pre>&lt;h3 id="debian-安装脚本">Debian 安装脚本&lt;/h3>
+&lt;pre>&lt;code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;amp;&amp;amp; bash install.sh
+&lt;/code>&lt;/pre>&lt;h3 id="fedora-安装脚本">Fedora 安装脚本&lt;/h3>
+&lt;pre>&lt;code>wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;amp;&amp;amp; bash install.sh
+&lt;/code>&lt;/pre>&lt;h2 id="管理宝塔">管理宝塔&lt;/h2>
+&lt;h3 id="宝塔工具箱">宝塔工具箱&lt;/h3>
+&lt;pre>&lt;code>bt
+&lt;/code>&lt;/pre>&lt;h3 id="停止面板">停止面板&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/bt stop
+&lt;/code>&lt;/pre>&lt;h3 id="启动面板">启动面板&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/bt start
+&lt;/code>&lt;/pre>&lt;h3 id="重启面板">重启面板&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/bt restart
+&lt;/code>&lt;/pre>&lt;h3 id="卸载面板">卸载面板&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/bt stop &amp;amp;&amp;amp; chkconfig --del bt &amp;amp;&amp;amp; rm -f /etc/init.d/bt &amp;amp;&amp;amp; rm -rf /www/server/panel
+&lt;/code>&lt;/pre>&lt;h3 id="查看当前面板端口">查看当前面板端口&lt;/h3>
+&lt;pre>&lt;code>cat /www/server/panel/data/port.pl
+&lt;/code>&lt;/pre>&lt;h3 id="修改面板端口如要改成-8881centos-6">修改面板端口，如要改成 8881（CentOS 6）&lt;/h3>
+&lt;pre>&lt;code>echo '8881' &amp;gt; /www/server/panel/data/port.pl &amp;amp;&amp;amp; /etc/init.d/bt restart
+iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport 8881 -j ACCEPT
+service iptables save
+service iptables restart
+&lt;/code>&lt;/pre>&lt;h3 id="修改面板端口如要改成-8881centos-7">修改面板端口，如要改成 8881（CentOS 7）&lt;/h3>
+&lt;pre>&lt;code>echo '8881' &amp;gt; /www/server/panel/data/port.pl &amp;amp;&amp;amp; /etc/init.d/bt restart
+firewall-cmd --permanent --zone=public --add-port=8881/tcp
+firewall-cmd --reload
+&lt;/code>&lt;/pre>&lt;blockquote>
+&lt;p>多行代码块 &lt;code>&amp;lt;pre&amp;gt;&lt;/code> 官网只显示一行，真 nm 绝了，排版鬼才。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="强制修改-mysql-管理密码如要改成-123456">强制修改 MySQL 管理密码，如要改成 123456&lt;/h3>
+&lt;pre>&lt;code>cd /www/server/panel &amp;amp;&amp;amp; python tools.py root 123456
+&lt;/code>&lt;/pre>&lt;h3 id="修改面板密码如要改成-123456">修改面板密码，如要改成 123456&lt;/h3>
+&lt;pre>&lt;code>cd /www/server/panel &amp;amp;&amp;amp; python tools.py panel 123456
+&lt;/code>&lt;/pre>&lt;h3 id="查看宝塔日志">查看宝塔日志&lt;/h3>
+&lt;pre>&lt;code>cat /tmp/panelBoot.pl
+&lt;/code>&lt;/pre>&lt;h3 id="查看软件安装日志">查看软件安装日志&lt;/h3>
+&lt;pre>&lt;code>cat /tmp/panelExec.log
+&lt;/code>&lt;/pre>&lt;h3 id="站点配置文件位置">站点配置文件位置&lt;/h3>
+&lt;pre>&lt;code>/www/server/panel/vhost
+&lt;/code>&lt;/pre>&lt;h3 id="删除域名绑定面板">删除域名绑定面板&lt;/h3>
+&lt;pre>&lt;code>rm -f /www/server/panel/data/domain.conf
+&lt;/code>&lt;/pre>&lt;h3 id="清理登陆限制">清理登陆限制&lt;/h3>
+&lt;pre>&lt;code>rm -f /www/server/panel/data/*.login
+&lt;/code>&lt;/pre>&lt;h3 id="查看面板授权-ip">查看面板授权 IP&lt;/h3>
+&lt;pre>&lt;code>cat /www/server/panel/data/limitip.conf
+&lt;/code>&lt;/pre>&lt;h3 id="关闭访问限制">关闭访问限制&lt;/h3>
+&lt;pre>&lt;code>rm -f /www/server/panel/data/limitip.conf
+&lt;/code>&lt;/pre>&lt;h3 id="查看许可域名">查看许可域名&lt;/h3>
+&lt;pre>&lt;code>cat /www/server/panel/data/domain.conf
+&lt;/code>&lt;/pre>&lt;h3 id="关闭面板-ssl">关闭面板 SSL&lt;/h3>
+&lt;pre>&lt;code>rm -f /www/server/panel/data/ssl.pl &amp;amp;&amp;amp; /etc/init.d/bt restart
+&lt;/code>&lt;/pre>&lt;h3 id="查看面板错误日志">查看面板错误日志&lt;/h3>
+&lt;pre>&lt;code>cat /tmp/panelBoot
+&lt;/code>&lt;/pre>&lt;h3 id="查看数据库错误日志">查看数据库错误日志&lt;/h3>
+&lt;pre>&lt;code>cat /www/server/data/*.err
+&lt;/code>&lt;/pre>&lt;h3 id="站点配置文件目录nginx">站点配置文件目录（Nginx）&lt;/h3>
+&lt;pre>&lt;code>/www/server/panel/vhost/nginx
+&lt;/code>&lt;/pre>&lt;h3 id="站点配置文件目录apache">站点配置文件目录（Apache）&lt;/h3>
+&lt;pre>&lt;code>/www/server/panel/vhost/apache
+&lt;/code>&lt;/pre>&lt;h3 id="站点默认目录">站点默认目录&lt;/h3>
+&lt;pre>&lt;code>/www/wwwroot
+&lt;/code>&lt;/pre>&lt;h3 id="数据库备份目录">数据库备份目录&lt;/h3>
+&lt;pre>&lt;code>/www/backup/database
+&lt;/code>&lt;/pre>&lt;h3 id="站点备份目录">站点备份目录&lt;/h3>
+&lt;pre>&lt;code>/www/backup/site
+&lt;/code>&lt;/pre>&lt;h3 id="站点日志">站点日志&lt;/h3>
+&lt;pre>&lt;code>/www/wwwlogs
+&lt;/code>&lt;/pre>&lt;h2 id="nginx-服务管理">Nginx 服务管理&lt;/h2>
+&lt;h3 id="nginx-安装目录">Nginx 安装目录&lt;/h3>
+&lt;pre>&lt;code>/www/server/nginx
+&lt;/code>&lt;/pre>&lt;h3 id="启动-nginx">启动 Nginx&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/nginx start
+&lt;/code>&lt;/pre>&lt;h3 id="停止-nginx">停止 Nginx&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/nginx stop
+&lt;/code>&lt;/pre>&lt;h3 id="重启-nginx">重启 Nginx&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/nginx restart
+&lt;/code>&lt;/pre>&lt;h3 id="重载-nginx-配置">重载 Nginx 配置&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/nginx reload
+&lt;/code>&lt;/pre>&lt;h3 id="nginx-配置文件位置">Nginx 配置文件位置&lt;/h3>
+&lt;pre>&lt;code>/www/server/nginx/conf/nginx.conf
+&lt;/code>&lt;/pre>&lt;h2 id="apache-服务管理">Apache 服务管理&lt;/h2>
+&lt;h3 id="apache-安装目录">Apache 安装目录&lt;/h3>
+&lt;pre>&lt;code>/www/server/httpd
+&lt;/code>&lt;/pre>&lt;h3 id="启动-apache">启动 Apache&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/httpd start
+&lt;/code>&lt;/pre>&lt;h3 id="停止-apache">停止 Apache&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/httpd stop
+&lt;/code>&lt;/pre>&lt;h3 id="重启-apache">重启 Apache&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/httpd restart
+&lt;/code>&lt;/pre>&lt;h3 id="重载-apache-配置">重载 Apache 配置&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/httpd reload
+&lt;/code>&lt;/pre>&lt;h3 id="apache-配置文件位置">Apache 配置文件位置&lt;/h3>
+&lt;pre>&lt;code>/www/server/apache/conf/httpd.conf
+&lt;/code>&lt;/pre>&lt;h2 id="mysql-服务管理">MySQL 服务管理&lt;/h2>
+&lt;h3 id="mysql-安装目录">MySQL 安装目录&lt;/h3>
+&lt;pre>&lt;code>/www/server/mysql
+&lt;/code>&lt;/pre>&lt;h3 id="phpmyadmin-安装目录">phpMyAdmin 安装目录&lt;/h3>
+&lt;pre>&lt;code>/www/server/phpmyadmin
+&lt;/code>&lt;/pre>&lt;h3 id="数据存储目录">数据存储目录&lt;/h3>
+&lt;pre>&lt;code>/www/server/data
+&lt;/code>&lt;/pre>&lt;h3 id="启动-mysql">启动 MySQL&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/mysqld start
+&lt;/code>&lt;/pre>&lt;h3 id="停止-mysql">停止 MySQL&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/mysqld stop
+&lt;/code>&lt;/pre>&lt;h3 id="重启-mysql">重启 MySQL&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/mysqld restart
+&lt;/code>&lt;/pre>&lt;h3 id="重载-mysql-配置">重载 MySQL 配置&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/mysqld reload
+&lt;/code>&lt;/pre>&lt;h3 id="mysql-配置文件位置">MySQL 配置文件位置&lt;/h3>
+&lt;pre>&lt;code>/etc/my.cnf
+&lt;/code>&lt;/pre>&lt;h2 id="ftp-服务管理">FTP 服务管理&lt;/h2>
+&lt;h3 id="ftp-安装目录">FTP 安装目录&lt;/h3>
+&lt;pre>&lt;code>/www/server/pure-ftpd
+&lt;/code>&lt;/pre>&lt;h3 id="启动-ftp">启动 FTP&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/pure-ftpd start
+&lt;/code>&lt;/pre>&lt;h3 id="停止-ftp">停止 FTP&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/pure-ftpd stop
+&lt;/code>&lt;/pre>&lt;h3 id="重启-ftp">重启 FTP&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/pure-ftpd restart
+&lt;/code>&lt;/pre>&lt;h3 id="ftp-配置文件位置">FTP 配置文件位置&lt;/h3>
+&lt;pre>&lt;code>/www/server/pure-ftpd/etc/pure-ftpd.conf
+&lt;/code>&lt;/pre>&lt;h2 id="php-服务管理">PHP 服务管理&lt;/h2>
+&lt;h3 id="php-安装目录">PHP 安装目录&lt;/h3>
+&lt;pre>&lt;code>/www/server/php
+&lt;/code>&lt;/pre>&lt;h3 id="启动-php">启动 PHP&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/php-fpm-{52|53|54|55|56|70|71|72|73|74} start
+&lt;/code>&lt;/pre>&lt;h3 id="停止-php">停止 PHP&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/php-fpm-{52|53|54|55|56|70|71|72|73|74} stop
+&lt;/code>&lt;/pre>&lt;h3 id="重启-php">重启 PHP&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/php-fpm-{52|53|54|55|56|70|71|72|73|74} restart
+&lt;/code>&lt;/pre>&lt;h3 id="重载-php-配置">重载 PHP 配置&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/php-fpm-{52|53|54|55|56|70|71|72|73|74} reload
+&lt;/code>&lt;/pre>&lt;h3 id="php-配置文件位置">PHP 配置文件位置&lt;/h3>
+&lt;pre>&lt;code>/www/server/php/{52|53|54|55|56|70|71|72|73|74}/etc/php.ini
+&lt;/code>&lt;/pre>&lt;h2 id="redis-服务管理">Redis 服务管理&lt;/h2>
+&lt;h3 id="redis-安装目录">Redis 安装目录&lt;/h3>
+&lt;pre>&lt;code>/www/server/redis
+&lt;/code>&lt;/pre>&lt;h3 id="启动-redis">启动 Redis&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/redis start
+&lt;/code>&lt;/pre>&lt;h3 id="停止-redis">停止 Redis&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/redis stop
+&lt;/code>&lt;/pre>&lt;h3 id="redis-配置文件位置">Redis 配置文件位置&lt;/h3>
+&lt;pre>&lt;code>/www/server/redis/redis.conf
+&lt;/code>&lt;/pre>&lt;h2 id="memcached-服务管理">Memcached 服务管理&lt;/h2>
+&lt;h3 id="memcached-安装目录">Memcached 安装目录&lt;/h3>
+&lt;pre>&lt;code>/usr/local/memcached
+&lt;/code>&lt;/pre>&lt;h3 id="启动-memcached">启动 Memcached&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/memcached start
+&lt;/code>&lt;/pre>&lt;h3 id="停止-memcached">停止 Memcached&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/memcached stop
+&lt;/code>&lt;/pre>&lt;h3 id="重启-memcached">重启 Memcached&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/memcached restart
+&lt;/code>&lt;/pre>&lt;h3 id="重载-memcached-配置">重载 Memcached 配置&lt;/h3>
+&lt;pre>&lt;code>/etc/init.d/memcached reload
+&lt;/code>&lt;/pre></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/">宝塔面板</category><category domain="https://ews.ink/tags/bt.cn/">bt.cn</category></item><item><title>同时使用 Github 以及 Gitee 进行版本管理</title><link>https://ews.ink/tech/git-github-gitee/</link><guid isPermaLink="true">https://ews.ink/tech/git-github-gitee/</guid><pubDate>Mon, 17 May 2021 10:06:26 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="通常用法">通常用法&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ ssh-keygen -C &lt;span class="s2">&amp;#34;&amp;lt;注释(一般是注册邮箱)&amp;gt;&amp;#34;&lt;/span>
+$ cat ~/.ssh/id_rsa.pub &lt;span class="c1"># 把公钥放到 Github/Gitee 账户的 SSH Key 即可&lt;/span>
+&lt;span class="c1">## 然后可以验证连通性 ##&lt;/span>
+$ ssh -T git@github.com
+&lt;span class="c1"># 或者&lt;/span>
+$ ssh -T git@gitee.com
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="同时使用多个账户">同时使用多个账户&lt;/h2>
+&lt;p>首先还是生成 SSH-Key：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ ssh-keygen -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s1">&amp;#39;apple@mail.com&amp;#39;&lt;/span> -f ~/.ssh/github_ssh_key
+$ ssh-keygen -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s1">&amp;#39;apple@mail.com&amp;#39;&lt;/span> -f ~/.ssh/gitee_ssh_key
+$ ssh-keygen -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s1">&amp;#39;banana@mail.com&amp;#39;&lt;/span> -f ~/.ssh/github_ssh_key_2
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>vim ~/.ssh/config&lt;/code> 编辑配置文件：&lt;/p>
+&lt;pre>&lt;code># Default Github User(Github User apple@mail.com)
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/github_ssh_key
+# Another Github User(Github User2 banana@mail.com)
+Host github.com-2
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/github_ssh_key_2
+# Default Gitee User(Gitee User apple@mail.com)
+Host gitee.com
+HostName gitee.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/gitee_ssh_key
+&lt;/code>&lt;/pre>&lt;p>默认账户没什么好说的，需要注意&lt;strong>第二个&lt;/strong> github 账户应该使用：&lt;/p>
+&lt;pre>&lt;code>git@github.com-2:&amp;lt;USERNAME&amp;gt;/&amp;lt;REPONAME&amp;gt;.git
+&lt;/code>&lt;/pre>&lt;p>重点是里面的 &lt;code>github.com-2&lt;/code> 应该对应 &lt;code>config&lt;/code> 配置文件里的 &lt;code>Host&lt;/code>，可以自行替换（比如换成 &lt;code>p**nhub.com&lt;/code>）。&lt;/p>
+&lt;p>设置完成后依次测试连通性：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ ssh -T git@github.com
+$ ssh -T git@github.com-2
+$ ssh -T git@gitee.com
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="实际使用">实际使用&lt;/h2>
+&lt;p>众所周知把本地分支推送到远程应该：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git push -u origin &amp;lt;分支名&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>所以同时使用 Gitee 的话：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git push -u origin main
+$ git push gitee main
+&lt;span class="c1"># 切换其他分支&lt;/span>
+$ git git checkout -b develop
+$ git push -u origin develop
+$ git push gitee develop
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/git/">Git</category><category domain="https://ews.ink/tags/github/">Github</category><category domain="https://ews.ink/tags/ssh/">SSH</category></item><item><title>使用 Android 登录 linux: Termux 的简单使用</title><link>https://ews.ink/tech/android-termux/</link><guid isPermaLink="true">https://ews.ink/tech/android-termux/</guid><pubDate>Mon, 17 May 2021 09:45:48 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>首先下载著名的「linux 终端 upon 安卓 - &lt;a href="https://play.google.com/store/apps/details?id=com.termux">Termux&lt;/a>」。&lt;/p>
+&lt;h2 id="用电脑-ssh-登录手机-termux">用电脑 SSH 登录手机 Termux&lt;/h2>
+&lt;p>手边有电脑建议使用电脑操作：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ pkg install openssh &lt;span class="c1"># 安装SSH服务&lt;/span>
+$ termux-setup-storage &lt;span class="c1"># 挂载手机本地存储&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a href="https://ews.ink/tech/linux-ssh-keys">生成 SSH-Key&lt;/a>，并把公钥导入到手机里，有两种方法。&lt;/p>
+&lt;p>一是将公钥文件 &lt;code>xxx.pub&lt;/code> 保存到手机存储空间，比如照片文件夹 &lt;code>DCIM&lt;/code>。
+放在其他文件夹也行，具体对应关系参考下图。&lt;/p>
+&lt;p>&lt;img src="https://i.loli.net/2020/03/25/zNx3LvkYfbVFJem.png" alt="Termux 与手机存储空间对应关系">&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ cat ~/storage/dcim/xxx.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys &lt;span class="c1"># 将公钥内容保存到SSH白名单&lt;/span>
+$ sshd &lt;span class="c1"># 启动SSH服务&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>二是直接把公钥内容以文本形式从电脑发送到手机。&lt;br>
+手机复制后 &lt;code>vi ~/.ssh/authorized_keys&lt;/code> 输入 &lt;code>i&lt;/code> 进入编辑模式，长按屏幕，PASTE。&lt;br>
+注意只能是 &lt;code>vi&lt;/code>，因为 Termux 原生自带的是阉割版的 vim，并且只支持 &lt;code>vi&lt;/code> 命令。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ ifconfig wlan0 &lt;span class="c1"># 查看当前手机IP&lt;/span>
+$ whoami &lt;span class="c1"># 查看当前用户名&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>电脑使用 SSH 软件连接 &lt;code>[手机IP]:8022&lt;/code>（Termux 默认 SSH 端口为 8022）并用对应的「用户名」和「私钥」登录即可。&lt;/p>
+&lt;h2 id="安装-archlinux">安装 ArchLinux&lt;/h2>
+&lt;p>用不惯 Termux 自带的 linux？没关系，经典的 Arch 也是可以装的。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ pkg install wget
+$ pkg install proot
+$ pkg install bsdtar
+$ wget https://sdrausty.github.io/TermuxArch/setupTermuxArch.sh
+$ shell setupTermuxArch.sh 运行安装脚本
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>耐心等待下载/解压完成，视网速和手机性能不同，这一步耗费的时间也会有差异。&lt;br>
+安装成功后会自动进入 ArchLinux 环境，可以使用 &lt;code>exit&lt;/code> 退出。&lt;/p>
+&lt;blockquote>
+&lt;p>注意：Android 重启 Termux 进程后默认系统仍是 Termux，需要手动运行 &lt;code>startarch&lt;/code> 进入 ArchLinux 环境。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="奥义套娃ssh">奥义·套娃SSH&lt;/h2>
+&lt;p>在 linux 中使用 SSH-Key 登录别的服务器可以运行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ ssh &amp;lt;username&amp;gt;@&amp;lt;hostname&amp;gt; -i ~/.ssh/&amp;lt;your_id_rsa_file&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;code>hostname&lt;/code> 可以是 IP，也可以是正确解析的域名。&lt;/p>
+&lt;/blockquote>
+&lt;p>用这种方式可以通过 Termux 登录任何一台提供 SSH 服务的服务器。&lt;/p>
+&lt;p>首先还是生成密钥对，公钥放在目标服务器的 &lt;code>authorized_keys&lt;/code>，私钥参考之前说过的方法导入到手机 Termux 里。&lt;/p>
+&lt;p>&lt;code>vi ~/go2server.sh&lt;/code> 新建一个 shell 脚本，输入以下内容并保存：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># 假设登录的是 root 用户&lt;/span>
+&lt;span class="c1"># 假设目标机 SSH 端口为 22&lt;/span>
+&lt;span class="c1"># 假设私钥文件名为 target_server_id_rsa&lt;/span>
+&lt;span class="c1"># 假设已经导入到 Termux 的 ~/.ssh/ 目录下&lt;/span>
+ssh root@&amp;lt;hostname&amp;gt; -p &lt;span class="m">22&lt;/span> -i ~/.ssh/target_server_id_rsa
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以后就可以快速便捷地登录服务器了：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ chmod +x ~/go2server.sh &lt;span class="c1"># 增加脚本执行权限&lt;/span>
+$ ~/go2server.sh &lt;span class="c1"># 运行脚本&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当然，这个操作的意义不是简单的套娃。&lt;br>
+而是意味着从此以后只要手机能上网，就能登录任何一台服务器。&lt;br>
+相当于把 Termux 当成手机的 SSH 客户端用。&lt;/p>
+&lt;p>Termux 并不是只能做这些，最简单的登录 SSH 只是牛刀小试罢了。&lt;br>
+说到底 Termux 就是一个 linux 系统，大部分 linux 能做的都能在上面实现，更多玩法可以自行开发。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/ssh/">SSH</category><category domain="https://ews.ink/tags/termux/">Termux</category></item><item><title>使用 SSH 登录 Linux: SSH-Key 的简单使用</title><link>https://ews.ink/tech/linux-ssh-keys/</link><guid isPermaLink="true">https://ews.ink/tech/linux-ssh-keys/</guid><pubDate>Mon, 17 May 2021 09:22:48 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>SSH-Key 用途有很多，用得最多的主要还是「SSH 登录」和「Github 鉴权」。
+背景知识日后有空再补充，直接讲用法。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ ssh-keygen -t &amp;lt;加密算法&amp;gt; -b &amp;lt;指定密钥长度&amp;gt; -C &lt;span class="s2">&amp;#34;&amp;lt;注释&amp;gt;&amp;#34;&lt;/span> -f &amp;lt;指定文件名&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>其中 &lt;code>加密算法&lt;/code> 默认为 &lt;code>rsa&lt;/code>(SSH-2)，&lt;code>指定密钥长度&lt;/code> 默认为 &lt;code>2048&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ ssh-keygen -C &lt;span class="s2">&amp;#34;yourmark&amp;#34;&lt;/span> -f ~/.ssh/keys_filename
+$ cat ~/.ssh/keys_filename.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
+$ chmod -R &lt;span class="m">700&lt;/span> ~/.ssh
+$ chmod &lt;span class="m">600&lt;/span> ~/.ssh/authorized_keys
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接着运行&lt;code>vim /etc/ssh/sshd_config&lt;/code>编辑ssh配置文件：&lt;/p>
+&lt;pre>&lt;code>## 允许使用ssh-key验证并登录 ##
+RSAAuthentication yes
+PubkeyAuthentication yes
+#PermitRootLogin prohibit-password
+## 上面这行的意思是允许登录root 但禁止直接登录root 即只能用别的账户登录成功后切换到root ##
+## 不用动它 新增下面这行就行 ##
+PermitRootLogin yes # 允许root直接登录
+&lt;/code>&lt;/pre>&lt;p>把&lt;code>~/.ssh/id_rsa&lt;/code>（私钥文件）下载到本地PC，直接打开复制粘贴也好，用WinSCP下载也罢，总之把私钥保存到本地就行。
+保存好私钥之后运行&lt;code>service sshd restart&lt;/code>或者&lt;code>/etc/init.d/ssh restart&lt;/code>重启SSH服务。&lt;/p>
+&lt;blockquote>
+&lt;p>为了提高安全性可以直接禁止密码登录：
+&lt;code>vim /etc/ssh/sshd_config&lt;/code>打开配置文件，修改为&lt;code>PasswordAuthentication no&lt;/code>保存后重启SSH即可。
+此外还可以把默认的22端口修改为其他端口进一步提高安全性。&lt;/p>
+&lt;/blockquote></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/ssh/">SSH</category></item><item><title>API 重建计划 #1 Golenil</title><link>https://ews.ink/tech/api-typescript-express/</link><guid isPermaLink="true">https://ews.ink/tech/api-typescript-express/</guid><pubDate>Mon, 17 May 2021 01:06:38 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h3 align="center">🚀 Express RESTful API Using TypeScript&lt;/h3>
 &lt;span class="sticker">
 &lt;a href="https://github.com/ljlm0402/typescript-express-starter" target="_blank">&lt;img src="https://img.shields.io/badge/ljlm0402-typescript--express--starter-blue?logo=github" alt="npm Downloads" />&lt;/a>
 &lt;a href="http://npm.im/typescript-express-starter" target="_blank">&lt;img src="https://img.shields.io/npm/v/typescript-express-starter" alt="npm Version" />&lt;/a>
