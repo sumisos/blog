@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 17 May 2021 16:40:03 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>宝塔面板 Cheat Sheet</title><link>https://ews.ink/tech/bt-panel-code/</link><guid isPermaLink="true">https://ews.ink/tech/bt-panel-code/</guid><pubDate>Mon, 17 May 2021 10:50:51 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://www.bt.cn/btcode.html">&lt;img src="https://img.shields.io/badge/%E6%9D%A5%E6%BA%90-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-info" alt="">&lt;/a> &lt;img src="https://img.shields.io/badge/%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0%E4%BA%8E-2021--05--17-blue" alt="">&lt;/span>&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Tue, 18 May 2021 00:59:55 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>宝塔面板 Cheat Sheet</title><link>https://ews.ink/tech/bt-panel-code/</link><guid isPermaLink="true">https://ews.ink/tech/bt-panel-code/</guid><pubDate>Mon, 17 May 2021 10:50:51 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;span class="sticker">&lt;a href="https://www.bt.cn/btcode.html">&lt;img src="https://img.shields.io/badge/%E6%9D%A5%E6%BA%90-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-info" alt="">&lt;/a> &lt;img src="https://img.shields.io/badge/%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0%E4%BA%8E-2021--05--17-blue" alt="">&lt;/span>&lt;/p>
 &lt;p>手动抄了十分钟才发现这也太长了，要抄到猴年马月去啊，蠢死了。&lt;br>
 还是简单写个爬虫吧：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -346,9 +346,11 @@ $ ssh -T git@gitee.com
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git push -u origin &amp;lt;分支名&amp;gt;
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git remote add origin git@github.com:&lt;span class="o">[&lt;/span>username&lt;span class="o">]&lt;/span>/&lt;span class="o">[&lt;/span>reponame&lt;span class="o">]&lt;/span>.git
+$ git push -u origin &lt;span class="o">[&lt;/span>branch&lt;span class="o">]&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>所以同时使用 Gitee 的话：&lt;/p>
@@ -361,9 +363,12 @@ $ ssh -T git@gitee.com
 &lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;span class="lnt">6
 &lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git push -u origin main
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git remote add gitee git@gitee.com:&lt;span class="o">[&lt;/span>username&lt;span class="o">]&lt;/span>/&lt;span class="o">[&lt;/span>reponame&lt;span class="o">]&lt;/span>.git
+$ git push -u origin main
 $ git push gitee main
 &lt;span class="c1"># 切换其他分支&lt;/span>
 $ git git checkout -b develop
