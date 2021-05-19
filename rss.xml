@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Tue, 18 May 2021 22:05:54 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Bot 重建计划 #2 重启 Mirai</title><link>https://ews.ink/tech/bot-qq-mirai-2/</link><guid isPermaLink="true">https://ews.ink/tech/bot-qq-mirai-2/</guid><pubDate>Tue, 18 May 2021 12:16:19 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="使用-mirai-console-loader-installer">使用 Mirai Console Loader Installer&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 19 May 2021 19:49:14 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>解决 OneNote UWP 无法同步笔记本</title><link>https://ews.ink/tech/write-onenote-uwp-sync/</link><guid isPermaLink="true">https://ews.ink/tech/write-onenote-uwp-sync/</guid><pubDate>Wed, 19 May 2021 13:56:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
+&lt;blockquote>
+&lt;p>本文参考自《&lt;a href="https://zhuanlan.zhihu.com/p/128926805">Onenote 无法同步/同步失败的原因（附解决方案）&lt;/a>》。&lt;/p>
+&lt;/blockquote>
+&lt;p>在我出现这个问题之前，我有一个已经同步好的旧笔记本（存放在 OneDrive 里），Windows 和手机上都能互相同步，没毛病。&lt;br>
+不用什么特别的上网姿势，只要有网，直接就是同步的。&lt;br>
+至于这个笔记本我怎么弄好的已经忘掉了。&lt;/p>
+&lt;p>于是我在手机上新建了另一个笔记本，接着就出现问题了：&lt;br>
+手机上显示同步成功，但电脑上无法添加笔记本，提示 &lt;code>Sync failed&lt;/code>，错误代码 &lt;code>0xE4010641&lt;/code>。&lt;br>
+魔法上网没用，全局魔法也不行。&lt;/p>
+&lt;h2 id="解决方法">解决方法&lt;/h2>
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/128926805">知乎原文章&lt;/a> 提到的 &lt;a href="https://docs.microsoft.com/zh-cn/archive/blogs/fiddler/revisiting-fiddler-and-win8-immersive-applications">MSDN 文章&lt;/a> 已经失效了，但其实已经说得清楚了：&lt;/p>
+&lt;blockquote>
+&lt;p>很多 UWP 应用（包括 OneNote UWP）属于 &lt;code>Immersive applications&lt;/code>，这种应用不是直接跑在本地上的，而是被放到一个 &lt;code>AppContainer&lt;/code> 里跑。&lt;/p>
+&lt;/blockquote>
+&lt;p>又根据这篇 &lt;a href="https://stackoverflow.com/questions/28608754/unable-to-access-localhost-from-x-ms-webview?answertab=active#tab-top">Stack Overflow 回答&lt;/a> 可知：&lt;/p>
+&lt;blockquote>
+&lt;p>Immersive applications (and IE11 on the Desktop) run inside isolated processes known as “AppContainers.” By default, AppContainers are forbidden from sending network traffic to the local computer (loopback).&lt;/p>
+&lt;/blockquote>
+&lt;p>大意就是 &lt;ruby>&lt;rb>AppContainers&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Immersive applications&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> 发送网络数据 &lt;ruby>&lt;rb>环回&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>loopback&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> 到本地的时候会 &lt;ruby>&lt;rb>受限&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>forbidden&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>。&lt;/p>
+&lt;p>微软为这类问题提出了 &lt;a href="https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh780593(v=win.10)">解决方案&lt;/a>，简单说来就是通过工具指定 AppContainers 的 &lt;code>name&lt;/code> 或 &lt;code>app ID&lt;/code> &lt;ruby>&lt;rb>放通&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>exempt&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> 对应的应用。&lt;/p>
+&lt;p>提供这类功能的工具并不少，我们选用 &lt;a href="https://www.telerik.com/fiddler">Fiddler&lt;/a>。&lt;/p>
+&lt;p>&lt;a href="http://fiddler2.com/r/?GetFiddler4Beta">&lt;img src="https://img.shields.io/badge/Fiddler-%E7%82%B9%E5%87%BB%E4%B8%8B%E8%BD%BD-info" alt="">&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>安装 &lt;code>Fiddler&lt;/code>。这个软件过于自觉，安装完成不会自动创建桌面快捷方式，注意记住安到什么位置了。&lt;/li>
+&lt;li>启动 &lt;code>Fiddler&lt;/code>，点击左上角的 &lt;kbd>WinConfig&lt;/kbd> 按钮。&lt;/li>
+&lt;li>勾选 &lt;code>Onenote for Windows 10&lt;/code>（即 OneNote UWP），点击 &lt;kbd>Save Changes&lt;/kbd> 保存配置，然后正常使用就行了。&lt;/li>
+&lt;/ol></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E7%AC%94%E8%AE%B0/">笔记</category><category domain="https://ews.ink/tags/onenote/">OneNote</category><category domain="https://ews.ink/tags/fiddler/">Fiddler</category></item><item><title>Bot 重建计划 #2 重启 Mirai</title><link>https://ews.ink/tech/bot-qq-mirai-2/</link><guid isPermaLink="true">https://ews.ink/tech/bot-qq-mirai-2/</guid><pubDate>Tue, 18 May 2021 12:16:19 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="使用-mirai-console-loader-installer">使用 Mirai Console Loader Installer&lt;/h2>
 &lt;p>虽然本鸽断更已久，但经过大半年的发展，&lt;a href="https://github.com/mamoe/mirai">Mirai&lt;/a> 相关生态是越来越繁荣了，甚至有了自己的论坛 &lt;a href="https://mirai.mamoe.net">Mirai Forum&lt;/a>。&lt;/p>
 &lt;p>以前那个 &lt;del>mirai-console 的 wraper 的&lt;/del> wraper 好像停更了……&lt;br>
 现在用的是 iTXTech 的 &lt;a href="https://github.com/iTXTech/mcl-installer/releases">MCL Installer&lt;/a>，这里用 &lt;code>v1.0.2&lt;/code> 演示：&lt;/p>
