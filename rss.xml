@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 19 May 2021 23:31:02 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>解决 OneNote UWP 无法同步笔记本</title><link>https://ews.ink/tech/write-onenote-uwp-sync/</link><guid isPermaLink="true">https://ews.ink/tech/write-onenote-uwp-sync/</guid><pubDate>Wed, 19 May 2021 13:56:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Thu, 20 May 2021 10:50:05 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>解决 OneNote UWP 无法同步笔记本</title><link>https://ews.ink/tech/write-onenote-uwp-sync/</link><guid isPermaLink="true">https://ews.ink/tech/write-onenote-uwp-sync/</guid><pubDate>Wed, 19 May 2021 13:56:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
 &lt;blockquote>
 &lt;p>本文参考自《&lt;a href="https://zhuanlan.zhihu.com/p/128926805">Onenote 无法同步/同步失败的原因（附解决方案）&lt;/a>》。&lt;/p>
 &lt;/blockquote>
@@ -9,7 +9,7 @@
 手机上显示同步成功，但电脑上无法添加笔记本，提示 &lt;code>Sync failed&lt;/code>，错误代码 &lt;code>0xE4010641&lt;/code>。&lt;br>
 魔法上网没用，全局魔法也不行。&lt;/p>
 &lt;h2 id="解决方法">解决方法&lt;/h2>
-&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/128926805">知乎原文章&lt;/a> 提到的 &lt;a href="https://docs.microsoft.com/zh-cn/archive/blogs/fiddler/revisiting-fiddler-and-win8-immersive-applications">MSDN 文章&lt;/a> 已经失效了，但其实已经说得清楚了：&lt;/p>
+&lt;p>&lt;a href="https://zhuanlan.zhihu.com/p/128926805">知乎原文章&lt;/a> 提到的 &lt;a href="https://docs.microsoft.com/zh-cn/archive/blogs/fiddler/revisiting-fiddler-and-win8-immersive-applications">MSDN 文章&lt;/a> 已失效，但其实已经说得很清楚了：&lt;/p>
 &lt;blockquote>
 &lt;p>很多 UWP 应用（包括 OneNote UWP）属于 &lt;code>Immersive applications&lt;/code>，这种应用不是直接跑在本地上的，而是被放到一个 &lt;code>AppContainer&lt;/code> 里跑。&lt;/p>
 &lt;/blockquote>
@@ -3544,7 +3544,7 @@ A -- B -- C ----------- G main
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ choco install hugo-extended -confirm
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ choco install hugo-extended -confirm
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>或者用&lt;strong>管理员权限&lt;/strong>在 &lt;code>Powershell&lt;/code> 运行 &lt;code>Scoop&lt;/code>：&lt;/p>
@@ -3553,7 +3553,7 @@ A -- B -- C ----------- G main
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ scoop install hugo-extended
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ scoop install hugo-extended
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
@@ -3566,7 +3566,7 @@ A -- B -- C ----------- G main
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ brew install hugo
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ brew install hugo
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="linux-直接下载">Linux 直接下载&lt;/h3>
@@ -3582,7 +3582,7 @@ A -- B -- C ----------- G main
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ choco upgrade hugo-extended -confirm
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ choco upgrade hugo-extended -confirm
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>或者用&lt;strong>管理员权限&lt;/strong>在 &lt;code>Powershell&lt;/code> 运行 &lt;code>Scoop&lt;/code>：&lt;/p>
@@ -3591,7 +3591,7 @@ A -- B -- C ----------- G main
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ scoop update hugo-extended
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ scoop update hugo-extended
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="mac">Mac&lt;/h3>
@@ -3601,7 +3601,7 @@ A -- B -- C ----------- G main
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ brew upgrade hugo
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ brew upgrade hugo
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="linux">Linux&lt;/h3>
@@ -3614,7 +3614,7 @@ A -- B -- C ----------- G main
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ hugo new site hugo-demo
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ hugo new site hugo-demo
 $ &lt;span class="nb">cd&lt;/span> hugo-demo
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -3637,7 +3637,7 @@ config.toml 配置文件
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ hugo new posts/hello-world.md
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ hugo new posts/hello-world.md
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>以预设格式（&lt;code>hugo-demo\archetypes\default.md&lt;/code>）在正文目录（&lt;code>hugo-demo\content\posts\&lt;/code>）生成名为 &lt;code>hello-world.md&lt;/code> 的新文章。&lt;/p>
@@ -3647,7 +3647,7 @@ config.toml 配置文件
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ hugo
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ hugo
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>然后将 &lt;code>public&lt;/code> 文件夹直接放到任意 web 服务器（&lt;code>nginx&lt;/code>/&lt;code>Apache&lt;/code>/&lt;code>Caddy&lt;/code> 等）即可成功运行。&lt;/p>
@@ -3657,17 +3657,57 @@ config.toml 配置文件
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ hugo server -D -p &lt;span class="m">9527&lt;/span>
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ hugo server -p &lt;span class="m">9527&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
-&lt;p>加上 &lt;code>-D&lt;/code> 是呈现的网站包括草稿（即 &lt;code>meta 头&lt;/code>、或者官方称之为 &lt;code>Front Matter&lt;/code> 中的 &lt;code>draft&lt;/code> 字段为 &lt;code>true&lt;/code> 的文章）。&lt;br>
-加上 &lt;code>-p 9527&lt;/code> 是指定端口。&lt;br>
+&lt;p>加上 &lt;code>-p 9527&lt;/code> 是指定端口。&lt;br>
 如果直接运行 &lt;code>hugo server&lt;/code> 就是&lt;strong>不含草稿&lt;/strong>并运行在&lt;strong>默认端口&lt;/strong>（1313）的 web 服务。&lt;/p>
 &lt;/blockquote>
-&lt;p>然后用浏览器打开 &lt;a href="http://localhost:9527">http://localhost:9527&lt;/a> 或者 &lt;a href="http://127.0.0.1:9527">http://127.0.0.1:9527&lt;/a> （&lt;code>localhost&lt;/code> = &lt;code>127.0.0.1&lt;/code> = 本地）就能看到本地运行的网站了。&lt;/p>
-&lt;h3 id="更多命令">更多命令&lt;/h3>
-&lt;p>更多命令用法详见 &lt;a href="https://www.gohugo.org/doc/overview/usage/">官方文档&lt;/a>。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/blog/">Blog</category><category domain="https://ews.ink/tags/hugo/">Hugo</category></item><item><title>Windows Subsystem for Linux GUI 尝鲜</title><link>https://ews.ink/tech/wsl-gui/</link><guid isPermaLink="true">https://ews.ink/tech/wsl-gui/</guid><pubDate>Sat, 08 May 2021 01:37:49 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="准备-wsl">准备 WSL&lt;/h2>
+&lt;p>然后用浏览器打开 &lt;a href="http://localhost:9527">http://localhost:9527&lt;/a> 或者 &lt;a href="http://127.0.0.1:9527">http://127.0.0.1:9527&lt;/a> （「本地」= &lt;code>localhost&lt;/code> = &lt;code>127.0.0.1&lt;/code>）就能看到本地运行的网站了。&lt;/p>
+&lt;h3 id="加载所有文章">加载所有文章&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>hugo&lt;/code> 生成静态文件，默认 &lt;code>environment&lt;/code> 为 &lt;code>production&lt;/code>（生产环境）&lt;/li>
+&lt;li>&lt;code>hugo server&lt;/code> 运行网站服务，默认 &lt;code>environment&lt;/code> 为 &lt;code>development&lt;/code>（开发环境）&lt;/li>
+&lt;/ul>
+&lt;p>简单地 &lt;code>hugo server&lt;/code> 只会加载生产环境（&lt;code>production&lt;/code>）会展示的文章。&lt;/p>
+&lt;p>加载 &lt;code>.\content\&lt;/code> 目录下&lt;strong>所有&lt;/strong> Markdown 文件（&lt;code>*.md&lt;/code>）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ hugo server -D -E -F
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>每篇文章都有 &lt;code>meta header&lt;/code>（官方称之为 &lt;a href="https://gohugo.io/content-management/front-matter/">&lt;code>Front Matter&lt;/code>&lt;/a>），可以定义该篇文章的元数据：&lt;br>
+标题 / 标签 / 分类 / 是否为草稿 / 发表时间 / 过期时间 等各种信息。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;code>-D&lt;/code> / &lt;code>--buildDrafts&lt;/code> 加载草稿&lt;/li>
+&lt;li>&lt;code>-E&lt;/code> / &lt;code>--buildExpired&lt;/code> 加载过期的文章&lt;/li>
+&lt;li>&lt;code>-F&lt;/code> / &lt;code>--buildFuture&lt;/code> 加载未来的文章&lt;br>
+即文章的发表时间（你想写成什么时候都行）比&lt;strong>此时此刻&lt;/strong>晚&lt;/li>
+&lt;/ul>
+&lt;h3 id="livereload">LiveReload&lt;/h3>
+&lt;p>Hugo 自带 &lt;a href="https://github.com/livereload/livereload-js">LiveReload&lt;/a>，加上&lt;strong>默认开启&lt;/strong>的 &lt;code>--watch&lt;/code> 监视文件变动，一旦文件被修改就会自动热重载。&lt;br>
+但如果在本地绑定了域名（比如 &lt;code>http://local.hugo&lt;/code>），访问这个域名时 &lt;code>livereload.js&lt;/code> 可能会（错误地）尝试连接 &lt;code>ws://local.hugo:[PORT]&lt;/code>。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>[PORT]&lt;/code> 是 &lt;code>hugo server -p&lt;/code> 指定的端口，不指定则默认为 &lt;code>1313&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;p>这时可以用 &lt;code>--liveReloadPort&lt;/code> 指定 &lt;code>livereload.js&lt;/code> 连接 WebSocket 的端口：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ hugo server -p &lt;span class="m">9527&lt;/span> --liveReloadPort &lt;span class="m">80&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果本地绑定的域名和我一样是反代端口出来的，那么再访问 &lt;code>http://local.hugo&lt;/code> 就能正确地根据文件变动实时重载了。&lt;/p>
+&lt;h3 id="更多玩法">更多玩法&lt;/h3>
+&lt;p>更多命令用法详见 &lt;a href="https://gohugo.io/commands">官方文档&lt;/a>。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/blog/">Blog</category><category domain="https://ews.ink/tags/hugo/">Hugo</category></item><item><title>Windows Subsystem for Linux GUI 尝鲜</title><link>https://ews.ink/tech/wsl-gui/</link><guid isPermaLink="true">https://ews.ink/tech/wsl-gui/</guid><pubDate>Sat, 08 May 2021 01:37:49 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="准备-wsl">准备 WSL&lt;/h2>
 &lt;h3 id="全新安装-wsl-2-镜像">全新安装 WSL 2 镜像&lt;/h3>
 &lt;p>以&lt;strong>管理员权限&lt;/strong>运行命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
