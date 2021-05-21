@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Thu, 20 May 2021 10:50:05 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>解决 OneNote UWP 无法同步笔记本</title><link>https://ews.ink/tech/write-onenote-uwp-sync/</link><guid isPermaLink="true">https://ews.ink/tech/write-onenote-uwp-sync/</guid><pubDate>Wed, 19 May 2021 13:56:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 21 May 2021 18:13:08 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>解决 OneNote UWP 无法同步笔记本</title><link>https://ews.ink/tech/write-onenote-uwp-sync/</link><guid isPermaLink="true">https://ews.ink/tech/write-onenote-uwp-sync/</guid><pubDate>Wed, 19 May 2021 13:56:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
 &lt;blockquote>
 &lt;p>本文参考自《&lt;a href="https://zhuanlan.zhihu.com/p/128926805">Onenote 无法同步/同步失败的原因（附解决方案）&lt;/a>》。&lt;/p>
 &lt;/blockquote>
@@ -1513,14 +1513,15 @@ $ ./rr serve
 iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport 8881 -j ACCEPT
 service iptables save
 service iptables restart
-&lt;/code>&lt;/pre>&lt;h3 id="修改面板端口如要改成-8881centos-7">修改面板端口，如要改成 8881（CentOS 7）&lt;/h3>
+&lt;/code>&lt;/pre>&lt;h4 id="此处官网的显示有问题">此处官网的显示有问题&lt;/h4>
+&lt;p>多行代码块 &lt;code>&amp;lt;pre&amp;gt;&lt;/code> &lt;a href="https://www.bt.cn/btcode.html#main">官网只显示一行&lt;/a>，真 nm 绝了，排版鬼才。&lt;br>
+我还是爬出来才发现，官网 CentOS 6 和 7 的命令一样，但是分开写了两段。&lt;br>
+确实是 bug，不过是前端显示 bug。&lt;/p>
+&lt;h3 id="修改面板端口如要改成-8881centos-7">修改面板端口，如要改成 8881（CentOS 7）&lt;/h3>
 &lt;pre>&lt;code>echo '8881' &amp;gt; /www/server/panel/data/port.pl &amp;amp;&amp;amp; /etc/init.d/bt restart
 firewall-cmd --permanent --zone=public --add-port=8881/tcp
 firewall-cmd --reload
-&lt;/code>&lt;/pre>&lt;blockquote>
-&lt;p>多行代码块 &lt;code>&amp;lt;pre&amp;gt;&lt;/code> 官网只显示一行，真 nm 绝了，排版鬼才。&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="强制修改-mysql-管理密码如要改成-123456">强制修改 MySQL 管理密码，如要改成 123456&lt;/h3>
+&lt;/code>&lt;/pre>&lt;h3 id="强制修改-mysql-管理密码如要改成-123456">强制修改 MySQL 管理密码，如要改成 123456&lt;/h3>
 &lt;pre>&lt;code>cd /www/server/panel &amp;amp;&amp;amp; python tools.py root 123456
 &lt;/code>&lt;/pre>&lt;h3 id="修改面板密码如要改成-123456">修改面板密码，如要改成 123456&lt;/h3>
 &lt;pre>&lt;code>cd /www/server/panel &amp;amp;&amp;amp; python tools.py panel 123456
@@ -1679,7 +1680,12 @@ $ ssh-keygen -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s1">&amp;#3
 $ ssh-keygen -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s1">&amp;#39;banana@mail.com&amp;#39;&lt;/span> -f ~/.ssh/github_ssh_key_2
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;code>vim ~/.ssh/config&lt;/code> 编辑配置文件：&lt;/p>
+&lt;/div>&lt;blockquote>
+&lt;p>理论上应该可以共用同一对密钥吧，但是这样安全性就……&lt;br>
+多&lt;del>敲几行&lt;/del>复制粘贴几次又费不了多大劲，万一不小心把私钥暴露出去了，损失会小很多。&lt;br>
+拿 RSA 密钥对撞库是我未曾设想的道路。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>vim ~/.ssh/config&lt;/code> 编辑配置文件：&lt;/p>
 &lt;pre>&lt;code># Default Github User(Github User apple@mail.com)
 Host github.com
 HostName github.com
@@ -1697,7 +1703,8 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/gitee_ssh_key
 &lt;/code>&lt;/pre>&lt;p>默认账户没什么好说的，需要注意&lt;strong>第二个&lt;/strong> github 账户应该使用：&lt;/p>
 &lt;pre>&lt;code>git@github.com-2:&amp;lt;USERNAME&amp;gt;/&amp;lt;REPONAME&amp;gt;.git
-&lt;/code>&lt;/pre>&lt;p>重点是里面的 &lt;code>github.com-2&lt;/code> 应该对应 &lt;code>config&lt;/code> 配置文件里的 &lt;code>Host&lt;/code>，可以自行替换（比如换成 &lt;code>p**nhub.com&lt;/code>）。&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>重点是里面的 &lt;code>github.com-2&lt;/code> 应该对应 &lt;code>config&lt;/code> 配置文件里的 &lt;code>Host&lt;/code>。&lt;br>
+可以自行替换。&lt;del>比如换成 &lt;code>p**nhub.com&lt;/code>&lt;/del>&lt;/p>
 &lt;p>设置完成后依次测试连通性：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1719,7 +1726,7 @@ $ ssh -T git@gitee.com
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git remote add origin git@github.com:&lt;span class="o">[&lt;/span>username&lt;span class="o">]&lt;/span>/&lt;span class="o">[&lt;/span>reponame&lt;span class="o">]&lt;/span>.git
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git remote add origin git@github.com:&lt;span class="o">[&lt;/span>USERNAME&lt;span class="o">]&lt;/span>/&lt;span class="o">[&lt;/span>REPONAME&lt;span class="o">]&lt;/span>.git
 $ git push -u origin &lt;span class="o">[&lt;/span>branch&lt;span class="o">]&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -1737,10 +1744,10 @@ $ git push -u origin &lt;span class="o">[&lt;/span>branch&lt;span class="o">]&lt
 &lt;/span>&lt;span class="lnt">9
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git remote add gitee git@gitee.com:&lt;span class="o">[&lt;/span>username&lt;span class="o">]&lt;/span>/&lt;span class="o">[&lt;/span>reponame&lt;span class="o">]&lt;/span>.git
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git remote add gitee git@gitee.com:&lt;span class="o">[&lt;/span>USERNAME&lt;span class="o">]&lt;/span>/&lt;span class="o">[&lt;/span>REPONAME&lt;span class="o">]&lt;/span>.git
 $ git push -u origin main
 $ git push gitee main
-&lt;span class="c1"># 切换其他分支&lt;/span>
+&lt;span class="c1"># 推送其他分支&lt;/span>
 $ git checkout -b develop
 $ git push -u origin develop
 $ git push gitee develop
@@ -3435,7 +3442,7 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 gitGraph:
 options
 {
-"nodeSpacing": 90,
+"nodeSpacing": 110,
 "nodeRadius": 9
 }
 end
@@ -3460,7 +3467,7 @@ merge newbranch
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git checkout -branch feature
+&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ git checkout -b feature
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;pre>&lt;code> D -- E -- F feature
@@ -3526,10 +3533,19 @@ A -- B -- C ----------- G main
 &lt;p>这样就很好理解了吧，实际使用中最显著的区别就是如果是&lt;strong>禁用&lt;/strong> &lt;code>Fast forward&lt;/code> 的 merge，&lt;code>main&lt;/code> 分支回滚上一个版本会回到 &lt;code>C&lt;/code> 而不是 &lt;code>E&lt;/code>。&lt;/p>
 &lt;p>也就是说 &lt;code>--no-ff&lt;/code> 可以&lt;strong>隐藏被合并分支中的提交历史&lt;/strong>，如果不想让开发 &lt;code>被合并分支&lt;/code> 时产生的细碎 commit 扰乱 &lt;code>主分支&lt;/code> 的提交历史就可以用。&lt;br>
 但如果想在主分支上管理&lt;strong>每一个&lt;/strong> commit，直接 merge 就好了。&lt;/p>
+&lt;p>另外，如果想忽略&lt;strong>任何&lt;/strong>细碎的提交历史，即专注于主分支，直接根本完全 totally 不 care 其他分支，就要用到神奇的变基（&lt;code>rebase&lt;/code>）&lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/blog-2-git/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>了，懂的都懂这里就不 &lt;a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA">细说&lt;/a> 了。&lt;/p>
 &lt;h2 id="扩展阅读">扩展阅读&lt;/h2>
-&lt;p>《&lt;a href="https://git-scm.com/book/zh/v2/">Git 官方文档&lt;/a>》&lt;br>
+&lt;p>《&lt;a href="https://www.progit.cn/">Pro Git 中文版（第二版）&lt;/a>》《&lt;a href="https://git-scm.com/book/zh/v2/">Git 官方文档&lt;/a>》&lt;br>
 《&lt;a href="https://www.runoob.com/git/git-tutorial.html">菜鸟教程&lt;/a>》&lt;br>
-《&lt;a href="https://www.liaoxuefeng.com/wiki/896043488029600">阮一峰的 Wiki&lt;/a>》&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/blog/">Blog</category><category domain="https://ews.ink/tags/hugo/">Hugo</category><category domain="https://ews.ink/tags/git/">Git</category></item><item><title>Re:从零开始的博客生涯 #1 Hugo</title><link>https://ews.ink/tech/blog-1-hugo/</link><guid isPermaLink="true">https://ews.ink/tech/blog-1-hugo/</guid><pubDate>Fri, 14 May 2021 15:56:49 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;a href="https://git-scm.com/downloads">&lt;img src="https://img.shields.io/badge/git_version-v2.31.1-blue.svg?logo=git&amp;logoColor=fff" alt="Git Verion" data-sticker />&lt;/a> &lt;a href="https://github.com/gohugoio/hugo/releases">&lt;img src="https://img.shields.io/badge/hugo_version-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker />&lt;/a>&lt;/p>
+《&lt;a href="https://www.liaoxuefeng.com/wiki/896043488029600">阮一峰的 Wiki&lt;/a>》&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>「&lt;ruby>&lt;rb>变基&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>rebase&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>」这个词就是字面意思（改&lt;strong>变基&lt;/strong>底），但不是那种字面意思（&lt;strong>变&lt;/strong>成&lt;strong>基&lt;/strong>*），望周知。&amp;#160;&lt;a href="https://ews.ink/tech/blog-2-git/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/blog/">Blog</category><category domain="https://ews.ink/tags/hugo/">Hugo</category><category domain="https://ews.ink/tags/git/">Git</category></item><item><title>Re:从零开始的博客生涯 #1 Hugo</title><link>https://ews.ink/tech/blog-1-hugo/</link><guid isPermaLink="true">https://ews.ink/tech/blog-1-hugo/</guid><pubDate>Fri, 14 May 2021 15:56:49 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;a href="https://git-scm.com/downloads">&lt;img src="https://img.shields.io/badge/git_version-v2.31.1-blue.svg?logo=git&amp;logoColor=fff" alt="Git Verion" data-sticker />&lt;/a> &lt;a href="https://github.com/gohugoio/hugo/releases">&lt;img src="https://img.shields.io/badge/hugo_version-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker />&lt;/a>&lt;/p>
 &lt;h2 id="全新安装">全新安装&lt;/h2>
 &lt;h3 id="自行编译">自行编译&lt;/h3>
 &lt;p>下载 &lt;a href="https://github.com/gohugoio/hugo">源码&lt;/a> 自行编译二进制文件即可。&lt;br>
