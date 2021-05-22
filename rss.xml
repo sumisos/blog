@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 21 May 2021 19:31:05 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>解决 OneNote UWP 无法同步笔记本</title><link>https://ews.ink/tech/write-onenote-uwp-sync/</link><guid isPermaLink="true">https://ews.ink/tech/write-onenote-uwp-sync/</guid><pubDate>Wed, 19 May 2021 13:56:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sat, 22 May 2021 13:57:12 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>为什么行业前沿有这么多乱七八糟的标准</title><link>https://ews.ink/life/why-so-much-standards/</link><guid isPermaLink="true">https://ews.ink/life/why-so-much-standards/</guid><pubDate>Sat, 22 May 2021 11:02:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
+&lt;li>&lt;a href="https://ews.ink/tech/storage-sd-card" target="_blank">存储卡标准&lt;/a>&lt;/li>
+&lt;li>内存 DDR&lt;/li>
+&lt;li>USB&lt;/li>
+&lt;li>雷电&lt;/li>
+&lt;li>等等……&lt;/li>
+&lt;/ul>
+&lt;p>某个行业前沿技术出现百家争鸣的场面，是因为行业领先组织（不一定是企业）都想抢标准。&lt;br>
+是这样的，不仅仅是话语权的问题，主要是推行自己的标准能拿到巨大的先发优势。&lt;/p>
+&lt;p>大到可以碾压其他同行。到底有多大呢，这么说吧，苹果、谷歌、微软是靠什么起家的？&lt;br>
+科技？不完全对，是专利，专利才是科技在资本社会体现的本质。&lt;/p>
+&lt;p>反例可太多了：&lt;br>
+曾经的手机行业龙头老大，摩托罗拉，你听说过它在 14 年被联想收掉了吗。&lt;br>
+西方原来的逼格担当黑莓*（BlackBerry）呢？&lt;/p>
+&lt;blockquote>
+&lt;p>* 冷知识：水果黑莓是 &lt;code>蔷薇科 蔷薇亚科 悬钩子属&lt;/code>，跟草莓（&lt;code>蔷薇亚科 草莓属&lt;/code>）是近亲。&lt;br>
+跟蓝莓（&lt;code>杜鹃花科 越橘属 越橘亚属&lt;/code>）就差得远了，一个是 &lt;code>蔷薇目&lt;/code> 一个是 &lt;code>杜鹃花目&lt;/code>，比人和猴子的差别还大（都是 &lt;code>灵长目&lt;/code>）。&lt;br>
+冷知识 2：有种叫黑莓的 &lt;a href="https://www.drlmeng.com/blackberry.html">多肉&lt;/a> 其实是景天（&lt;code>景天科 风车草属&lt;/code>），长得像就这么叫了。多肉的命名一直很怪，毕竟大伙莳弄多肉讲究一个陶冶情操，是来搞艺术的，不是来搞学术的。&lt;br>
+冷知识 3：真正清热解毒活血止血入药叫 &lt;em>八宝&lt;/em> 那个景天指 &lt;em>绣球花&lt;/em> / &lt;em>三七&lt;/em>（&lt;code>景天科 八宝属&lt;/code>）。&lt;br>
+冷知识 4：景天植物是 &lt;code>被子植物门 木兰纲 蔷薇目&lt;/code>，一看门纲目老朋友啊。不过 &lt;code>木兰纲&lt;/code> 现在叫 &lt;code>双子叶植物纲&lt;/code>，多了去了。&lt;br>
+冷知识 5：仙剑挺多角色都是以中药命名的。&lt;/p>
+&lt;/blockquote>
+&lt;p>诺基亚的塞班（Symbian）呢，那时候能拿个塞班手机打游戏可太酷炫了，山寨功能机上各种 Java 开发的小游戏我们都是看不起的。现在诺基亚在哪？手持 Java 的 Oracle 又在哪？&lt;/p>
+&lt;p>现在的小孩可能没听过小灵通了，我这代人都知道「移动联通小灵通，后略」类似的顺口溜。&lt;br>
+国内首家用户上亿的科技公司，2000 年 70 亿刀的市值，&lt;strong>二〇〇〇 年&lt;/strong>，&lt;strong>7 Billion $&lt;/strong>。&lt;br>
+2G 时代运营商要给他们领导送礼才拿得到货，3G 一来直接死绝了。&lt;br>
+就算你觉得市值都是泡沫虚的，那你能想象移动联通电信求着手机公司拿渠道是什么水平吗。&lt;/p>
+&lt;p>柯达在胶卷这一块具有绝对统治力，不去争数码界的标准抱着胶卷啃老本，现在俨然转行数码收藏界泰斗了，留存于世的产品都躺在老法师们的冰箱里。&lt;/p>
+&lt;p>还有互联网这么大的风口都吹不起来的铁憨猪，雅虎。&lt;br>
+雅虎的骚操作我真的是服了，叫它「投资鬼才」不只是汤不热一件事。&lt;br>
+雅虎的乐子多了去了，蛮有意思的，有兴趣建议查一下当段子看。&lt;/p>
+&lt;p>你不抢标准，你可能没有达成过摩托罗拉、黑莓、诺基亚、UT 斯达康（小灵通）、柯达、雅虎……等等一时霸主曾经的辉煌，但你的下场可能比他们还惨，他们至少还有人记得。&lt;/p>
+&lt;p>这些龙头企业因为跟不上标准被时代淘汰，至少水花挺大吧。&lt;br>
+搁浅的鲸落炸了也能听个响，小鱼小虾可能从未发出过任何声音就归分解者了。&lt;/p></description><category domain="https://ews.ink/life/">life</category><category domain="https://ews.ink/tags/%E7%A7%91%E6%8A%80/">科技</category><category domain="https://ews.ink/tags/%E6%9D%82%E8%B0%88/">杂谈</category></item><item><title>解决 OneNote UWP 无法同步笔记本</title><link>https://ews.ink/tech/write-onenote-uwp-sync/</link><guid isPermaLink="true">https://ews.ink/tech/write-onenote-uwp-sync/</guid><pubDate>Wed, 19 May 2021 13:56:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
 &lt;blockquote>
 &lt;p>本文参考自《&lt;a href="https://zhuanlan.zhihu.com/p/128926805">Onenote 无法同步/同步失败的原因（附解决方案）&lt;/a>》。&lt;/p>
 &lt;/blockquote>
@@ -9830,7 +9863,98 @@ A：优先级从上至下：使用命令行参数启动，配置文件设置了 
 当随从挨打时，本来有 100 万的伤害需要在他身上结算——如果他已经是空血了（绝大部分时候如此），那这 100 万就抹了；如果他还有血（极少数情况，基本只有刚进图时），才会有（他分摊给你的）50 万伤害结算你的坚韧之后扣在你的血量上，这一下都吃不住的话只能说明这个层数怪物的强度超出了你目前的能力，不带团结只会死得更惨。&amp;#160;&lt;a href="https://ews.ink/game/diablo3-kormac-and-unity/#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/diablo3/">Diablo3</category><category domain="https://ews.ink/tags/%E5%9B%A2%E7%BB%93/">团结</category><category domain="https://ews.ink/tags/%E9%85%8D%E8%A3%85/">配装</category></item><item><title>CentOS 7 修改 SSH 端口</title><link>https://ews.ink/tech/linux-centos-ssh-port/</link><guid isPermaLink="true">https://ews.ink/tech/linux-centos-ssh-port/</guid><pubDate>Sat, 22 Dec 2018 19:25:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="起因">起因&lt;/h2>
+&lt;/section></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/diablo3/">Diablo3</category><category domain="https://ews.ink/tags/%E5%9B%A2%E7%BB%93/">团结</category><category domain="https://ews.ink/tags/%E9%85%8D%E8%A3%85/">配装</category></item><item><title>存储卡相关知识简单科普</title><link>https://ews.ink/tech/storage-sd-card/</link><guid isPermaLink="true">https://ews.ink/tech/storage-sd-card/</guid><pubDate>Sun, 14 Jul 2019 18:45:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="存储卡种类">存储卡种类&lt;/h2>
+&lt;p>大部分人都见过的存储卡应该有两种，大的和小的。&lt;/p>
+&lt;h3 id="trans-flash-card">Trans-flash Card&lt;/h3>
+&lt;p>小的就是前几年手机常用的存储卡，你管他叫 &lt;code>内存卡&lt;/code>*也好，&lt;code>SD 卡&lt;/code> 也罢，&lt;code>TF 卡&lt;/code> 也行，实际上人家原名 &lt;code>Trans-flash Card&lt;/code>，后来改名 &lt;code>Micro SD Card&lt;/code>。&lt;/p>
+&lt;blockquote>
+&lt;p>* 以前：——前略，内存卡 balabala&lt;br>
+——确实，不过那个其实应该叫存储卡&lt;/p>
+&lt;p>后来：——前略，（委屈）我说内存卡被骂了（那时候还没有 XX 警察和出警的梗）&lt;br>
+——FTMDP，就是内存卡就要叫内存卡就要叫就要叫就要叫就要叫&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="secure-digital-memory-card">Secure Digital Memory Card&lt;/h3>
+&lt;p>大的一般是相机用得多，那个才是&lt;strong>真正&lt;/strong>的 SD 卡（Secure Digital Memory Card）。&lt;br>
+其实这是一个大类，详细又分为：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>SDHC&lt;/code>（SD High Capacity）：一般我们叫的大 SD 卡就是这种&lt;/li>
+&lt;li>&lt;code>SDXC&lt;/code>（SD Extended Capacity）&lt;/li>
+&lt;li>&lt;code>SDUC&lt;/code>（SD Ultra Capacity）&lt;/li>
+&lt;/ul>
+&lt;p>其实就是容量和读写速度的区别，现在说相机用的 SD 卡一般默认指 SDHC。&lt;/p>
+&lt;h3 id="容量大小">容量大小&lt;/h3>
+&lt;p>虽然不同种类的 SD 卡直观来看是容量上的区别，如果看本质的话其实是文件系统的区别：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>普通 SD&lt;/code> 是 &lt;code>FAT16&lt;/code>（size &amp;lt; 2 GB）&lt;/li>
+&lt;li>&lt;code>SDHC&lt;/code> 是 &lt;code>FAT32&lt;/code>（size &amp;gt; 32 GB）&lt;/li>
+&lt;li>&lt;code>SDXC&lt;/code> 才是 &lt;code>exFAT&lt;/code>（size &amp;lt; 2 TB）&lt;/li>
+&lt;li>&lt;code>SDUC&lt;/code> 也是 &lt;code>exFAT&lt;/code>（size &amp;lt; 128 TB）&lt;/li>
+&lt;/ul>
+&lt;h3 id="读写速度">读写速度&lt;/h3>
+&lt;p>SDUC 是 SD 7.0 标准提出的两个种类之一，另一种是 SD Express（读取速度接近 1 GB/s）。&lt;br>
+SD Express 不是横向发展的种类，而是垂直方向上的技术拓展。&lt;br>
+它管的是传输速度，跟容量没关系，也就是说有：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>SDHC Express&lt;/code>&lt;/li>
+&lt;li>&lt;code>SDXC Express&lt;/code>&lt;/li>
+&lt;li>&lt;code>SDUC Express&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>另外还有 MS 卡（&lt;code>Memory Stick&lt;/code>，俗称 &lt;em>记忆棒&lt;/em>，索尼研发的*）和 CF 卡（&lt;code>Compact Flash&lt;/code>，闪迪制定标准的闪存卡）。&lt;br>
+要考古的话早年还有东芝和三星的 SM 卡（&lt;code>Smart Media&lt;/code>），西门子和闪迪的 MMC 卡（&lt;code>Multi-Media Card&lt;/code>），国内接触的比较少就不继续展开了。&lt;/p>
+&lt;blockquote>
+&lt;p>* 没错，就是 PlayStation 3 那个，童年回忆有了。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="存储卡速度">存储卡速度&lt;/h2>
+&lt;h3 id="总线速度标准">总线速度标准&lt;/h3>
+&lt;p>&lt;img src="https://www.sdcard.org/cms/wp-content/uploads/2021/04/bus_speed_img2021.png" alt="总线速度">&lt;/p>
+&lt;h3 id="速度等级">速度等级&lt;/h3>
+&lt;p>&lt;img src="https://www.sdcard.org/cms/wp-content/uploads/2021/03/video_speed-class_01.png" alt="速度等级">&lt;/p>
+&lt;p>即 Speed Class，分为四级：&lt;/p>
+&lt;ul>
+&lt;li>Class 2（&amp;gt; 2 MB/s）&lt;/li>
+&lt;li>Class 4（&amp;gt; 4 MB/s）&lt;/li>
+&lt;li>Class 6（&amp;gt; 6 MB/s）&lt;/li>
+&lt;li>Class 10（&amp;gt; 10 MB/s）&lt;/li>
+&lt;/ul>
+&lt;p>一般说的 Class 0 是指低于 Class 2 和没标注的。&lt;br>
+都 2020 年了，C10 以下也好意思拿出来卖？&lt;/p>
+&lt;h4 id="超高速速度等级">超高速速度等级&lt;/h4>
+&lt;p>分为两级：&lt;/p>
+&lt;ul>
+&lt;li>UHS-I（UHS Speed Class 1，&amp;gt; 10 MB/s）&lt;/li>
+&lt;li>UHS-III（UHS Speed Class 3，&amp;gt; 30 MB/s）&lt;/li>
+&lt;/ul>
+&lt;p>有一说一，现在还标着 C10 卖的卡的感觉都是用早年的最高标准骗外行。&lt;br>
+U1 = C10，你随便找张 U3 的卡岂不是等于 3 倍 C10 性能？&lt;br>
+如果非要杠，C10 就是 Class 的最高标准了，1 TB/s 不也是 C10？&lt;br>
+U1 也许会标 C10 好看一点，但凡他能达到 29.9 MB/s 他会放着 U3 不标去标什么 C10 吗？&lt;br>
+&lt;del>我感觉有可能，C10 确实比什么 U123 看起来高端。&lt;/del>&lt;/p>
+&lt;h4 id="视频速度等级">视频速度等级&lt;/h4>
+&lt;p>为什么视频速度会比「超高速」还高一个 level 啊？那就要问问最吃容量的文件格式是什么了。&lt;/p>
+&lt;p>音频弟弟就不用说了，目前的技术用数字信号记录音频是有其局限性的，上限（说的就是你，flac）摆在那里，群众对耳放 / 功放的追求又比较玄学。&lt;del>所以现在还有一大堆黑胶党&lt;/del>&lt;/p>
+&lt;p>而胶片 / 胶卷党就很难过了，人眼能接受的信息粒度是有限小的，就算你视力 5.2，能看清多远的极限就在那里，同样距离拍一张超高分辨率的照片 &lt;del>放大再放大，每根毛看得都清清楚楚&lt;/del> 一定是比人眼要清晰的。&lt;br>
+况且图像编码技术日新月异，胶片早就打不过数码了，战斗力差距还会随着技术发展越来越大。&lt;/p>
+&lt;p>图像再大也就一张图，视频可是能在 n 张图像（帧）的基础上无限增长的……&lt;br>
+&lt;del>那吃容量关速度什么事啊？&lt;/del> 每秒读写吞吐量都暴增了，可不就是速度的事了吗。&lt;br>
+现在不是都拍4K视频 &lt;del>120fps那种&lt;/del> 了吗，所以专门为它出了新的标准，分为五级：&lt;/p>
+&lt;ul>
+&lt;li>V6（6 MB/s）&lt;/li>
+&lt;li>V10（10 MB/s）&lt;/li>
+&lt;li>V30（30 MB/s）&lt;/li>
+&lt;li>V60（60 MB/s）&lt;/li>
+&lt;li>V90（90 MB/s）&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.sdcard.org/cms/wp-content/uploads/2021/03/video_speed-class_02.png" alt="视频画幅">&lt;/p>
+&lt;h3 id="应用-io-速度">应用 I/O 速度&lt;/h3>
+&lt;p>其实电商网站上最常标的是这个，一个是 A 比起其他字母看起来更牛批，另外日常使用中最关键的确实是应用 IO 速度，分为两级：&lt;/p>
+&lt;ul>
+&lt;li>Class 1（A1，随机读取 &amp;gt; 1500 IO/s，随机写入 &amp;gt; 500 IO/s，持续顺序写入* &amp;gt; 10 MB/s）&lt;/li>
+&lt;li>Class 1（A2，随机读取 &amp;gt; 4000 IO/s，随机写入 &amp;gt; 2000 IO/s，持续顺序写入 &amp;gt; 10 MB/s）&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>* &lt;ruby>&lt;rb>Sustained&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>持续&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> &lt;ruby>&lt;rb>Sequential&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>顺序&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> &lt;ruby>&lt;rb>Write performance&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>写入性能&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>：等 5G 普及了网速不再是瓶颈，手机下载速度就取决于这个了。&lt;del>不对啊，现在（2021）手机对 SD 卡的支持不太友好吧&lt;/del>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://www.sdcard.org/cms/wp-content/uploads/2020/12/img_application.jpg" alt="IO 速度">&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E7%A1%AC%E4%BB%B6/">硬件</category><category domain="https://ews.ink/tags/%E5%AD%98%E5%82%A8/">存储</category></item><item><title>CentOS 7 修改 SSH 端口</title><link>https://ews.ink/tech/linux-centos-ssh-port/</link><guid isPermaLink="true">https://ews.ink/tech/linux-centos-ssh-port/</guid><pubDate>Sat, 22 Dec 2018 19:25:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="起因">起因&lt;/h2>
 &lt;p>2018 年 12 月 22 日，手里一个 VPS 被攻击了。&lt;/p>
 &lt;blockquote>
 &lt;p>1C1G5M CentOS 7.0 x86_64位 BGP多线&lt;/p>
@@ -9911,4 +10035,124 @@ Port 12345
 Port 12345
 &lt;/code>&lt;/pre>&lt;p>&lt;code>systemctl restart sshd&lt;/code> 重启 ssh 服务即可。&lt;/p>
 &lt;h2 id="参考文档">参考文档&lt;/h2>
-&lt;p>《&lt;a href="https://blog.csdn.net/ausboyue/article/details/53691953">CentOS7设置ssh服务以及端口修改&lt;/a>》&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/centos/">CentOS</category><category domain="https://ews.ink/tags/ssh/">SSH</category></item></channel></rss>
+&lt;p>《&lt;a href="https://blog.csdn.net/ausboyue/article/details/53691953">CentOS7设置ssh服务以及端口修改&lt;/a>》&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/centos/">CentOS</category><category domain="https://ews.ink/tags/ssh/">SSH</category></item><item><title>树莓派食用手册 #1 安装系统与存储卡技术漫谈</title><link>https://ews.ink/tech/rpi-1-prepare-system/</link><guid isPermaLink="true">https://ews.ink/tech/rpi-1-prepare-system/</guid><pubDate>Sun, 25 Nov 2018 19:11:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;blockquote>
+&lt;p>2020.3.23：这块 3B+ 还是当初做毕设的时候买的，答辩完之后就一直吃灰了。&lt;br>
+最近折腾了一顿 NanoPi Neo2 发现貌似还是树莓派玩起来舒服一些。&lt;br>
+于是决定重新捡起来。&lt;/p>
+&lt;/blockquote>
+&lt;p>当初装的是官方 Raspbian 纯净版系统 &lt;code>RASPBIAN STRETCH LITE&lt;/code>，里面不算轮子的话除了毕设项目就是几个网页，稍微花时间回忆并开机验证了下，确信没有什么值得留念的，直接重装了。&lt;br>
+毕业设计？根据傻逼速率&lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/rpi-1-prepare-system/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，那早就是黑历史了，我巴不得消灭掉。&lt;br>
+小火汁摇了我吧，现在让我去改还不如直接重写，还省时省力一些。&lt;/p>
+&lt;h2 id="选系统">选系统&lt;/h2>
+&lt;p>&lt;del>据我所知目前的官方系统都是 32 位的。&lt;/del>&lt;/p>
+&lt;blockquote>
+&lt;p>2020.5 官方更新了 64 位的测试版系统：&lt;code>Debian64&lt;/code> + &lt;code>Pixel&lt;/code>……&lt;/p>
+&lt;/blockquote>
+&lt;p>之前的型号不太了解，反正树莓派 3B+ 以上肯定是 64 位的 CPU。&lt;/p>
+&lt;p>我选择「&lt;a href="https://github.com/openfans-community-offical/Debian-Pi-Aarch64">Debian Pi Aarch64&lt;/a>」，民间树莓派爱好者发行的树莓派 64 位 Debian。&lt;/p>
+&lt;p>为什么一定要上 64 位？
+简单来说 32 位系统是无法完全发挥 64 位板子的性能的，具体有兴趣了解可以自行查询各种资料和评测结果（举个 &lt;a href="https://github.com/openfans-community-offical/Debian-Pi-Aarch64/blob/master/README.md#1-4-some-system-performance-testing-results">栗子&lt;/a>），此处不再赘述。&lt;/p>
+&lt;p>其实网上流传的树莓派 64 位系统方案还是挺多的，我选择 &lt;code>Debian Pi Aarch64&lt;/code> 的原因是他们文档写得比较详细 + 开源 + 中文友好 + 测试数据详实。&lt;/p>
+&lt;h2 id="烧录系统">烧录系统&lt;/h2>
+&lt;p>如果把树莓派视为一台 PC，它的硬盘就是 &lt;code>Micro SD Card&lt;/code>，即 &lt;code>Trans-flash Card&lt;/code>，俗称「TF 卡 / （迷你）SD 卡」。&lt;br>
+之所以说 mini 是因为正常 SD 卡本来应该是大一号的版本，生活中经常看到给相机用的那种。&lt;br>
+详见《&lt;a href="https://ews.ink/tech/storage-sd-card" target="_blank">存储卡相关知识简单科普&lt;/a>》一文，看完应该对如何选存储卡没有疑问了。&lt;/p>
+&lt;p>以下内容基于我们已经选好 TF 卡的前提下。&lt;/p>
+&lt;h3 id="装机">装机&lt;/h3>
+&lt;blockquote>
+&lt;p>裸板可以跳过这一小节。&lt;/p>
+&lt;/blockquote>
+&lt;p>哎，树莓派是不是机器，是吧，我装树莓派也是装机，没毛病。&lt;br>
+不过这里要注意一点：&lt;/p>
+&lt;p>如果你是第一次玩树莓派，如果你给板子买了壳，那么——&lt;br>
+不管这个壳看起来插口留了多大，&lt;strong>一定要装完壳再装TF卡&lt;/strong>。&lt;/p>
+&lt;p>我当初大力出奇迹怼坏了一张 64G，一张 32G，纯憨批，没什么好说的。&lt;/p>
+&lt;h3 id="正式烧录系统">正式烧录系统&lt;/h3>
+&lt;p>众所周知，PC 装系统 = 板子烧录 img 到TF卡。如果是刚买的「Micro SD Card &lt;em>崭新出厂&lt;/em>」，建议用「&lt;a href="https://www.sdcard.org/downloads/formatter_4/eula_windows/index.html">SD Memory Card Formatter&lt;/a>」格式化一次。&lt;/p>
+&lt;p>准备好系统镜像，现在的&lt;a href="https://www.raspberrypi.org/downloads/raspbian/">官方系统&lt;/a>有三个版本：&lt;/p>
+&lt;ul>
+&lt;li>「&lt;a href="https://downloads.raspberrypi.org/raspbian_full_latest">Raspbian Buster with desktop and recommended software&lt;/a>」桌面版带推荐软件&lt;/li>
+&lt;li>「&lt;a href="https://downloads.raspberrypi.org/raspbian_latest">Raspbian Buster with desktop&lt;/a>」桌面版&lt;/li>
+&lt;li>「&lt;a href="https://downloads.raspberrypi.org/raspbian_lite_latest">Raspbian Buster Lite&lt;/a>」无桌面版&lt;/li>
+&lt;/ul>
+&lt;p>小孩子才做选择，我全都不要。&lt;/p>
+&lt;p>前文说了，我选择使用「&lt;a href="https://github.com/openfans-community-offical/Debian-Pi-Aarch64/blob/master/README.md#6-download-links">Debian Pi Aarch64&lt;/a>」，民间编译的 64 位 Debian。&lt;/p>
+&lt;p>确定下好的系统镜像是 &lt;code>.img&lt;/code> 格式，如果是其他格式（包括但不限于 &lt;code>.zip&lt;/code>/&lt;code>.tar&lt;/code>/&lt;code>.xz&lt;/code> 等等），请把压缩包里的 &lt;code>.img&lt;/code> 系统镜像文件解压出来。&lt;br>
+友情提醒：「&lt;a href="http://www.7-zip.org/download.html">7-Zip&lt;/a>」可以解压大部分压缩包格式。&lt;br>
+打个比方，在 Windows 上面解压 &lt;code>.xz&lt;/code> 属于基本操作。&lt;/p>
+&lt;p>确认过 TF 卡读写没问题就可以开始烧录了。&lt;br>
+我喜欢用「&lt;a href="https://www.balena.io/etcher/">Etcher&lt;/a>」（支持全平台 Windows / Mac / Linux，就一个字，专业），当然你更喜欢轻便小巧的「&lt;a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager&lt;/a>」（Windows 特供）也行。&lt;/p>
+&lt;p>注意烧录系统完成后，Windows 会重新读取TF卡，一般会发现两个盘。&lt;br>
+有一个是 Windows 能读写的是可以提前放配置文件进去的启动盘。&lt;br>
+另一个盘 Windows 无法识别，提醒你是否格式化，&lt;strong>绝对不要点格式化&lt;/strong>，Linux 系统的文件系统 Windows 读不出来怎么想都很合理吧。&lt;/p>
+&lt;blockquote>
+&lt;p>如果你烧录的是官方镜像，请注意以下内容：&lt;br>
+最好去 Windows 可以读的那个（大概只有几十 MB？）boot 盘的&lt;strong>根目录&lt;/strong>下新建一个文件，&lt;strong>命名为 &lt;code>ssh&lt;/code>（没有后缀名）&lt;/strong>。&lt;br>
+这是因为某次更新后 raspbian 为了安全起见默认禁用 ssh，但可以用这种方式手动打开。&lt;br>
+系统初始化的时候检测到根目录下有名为 &lt;code>ssh&lt;/code> 文件会删除此文件并启用 ssh。&lt;br>
+以前（18年）是这样，不太清楚现在还是不是，是多此一举也不会有问题。&lt;/p>
+&lt;/blockquote>
+&lt;p>本文之后的内容都以默认使用 Debian Pi Aarch64 为准，官方系统仅供参考。&lt;/p>
+&lt;h2 id="ssh-连接">SSH 连接&lt;/h2>
+&lt;p>准备好 SSH 连接软件，「&lt;a href="https://www.netsarang.com/zh/Xshell/">Xshell&lt;/a>」都不惜违反广告法自称「业界最强大的 SSH 客户机」了，不过如果你依然愿意使用「&lt;a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY&lt;/a>」的话也没有问题。&lt;/p>
+&lt;p>&lt;img src="https://i.loli.net/2020/03/23/Zf3Q7xOAuhkc8MG.png" alt="查看网络属性">&lt;/p>
+&lt;p>首先使用 PC 查看 &lt;code>网络属性&lt;/code>，记住名为 &lt;code>以太网&lt;/code> 的项，有多个以太网选 &lt;code>描述&lt;/code> 是网卡型号那个，截张图不费事吧。&lt;br>
+&lt;kbd>Win&lt;/kbd> + &lt;kbd>X&lt;/kbd> 打开 PowerShell 运行 &lt;code>ipconfig&lt;/code>，如果是连的 Wi-Fi，以太网一项的 &lt;code>媒体状态&lt;/code> 应该是 &lt;code>媒体已断开连接&lt;/code>。&lt;br>
+把 TF 卡插入树莓派（卡槽在板子背面），&lt;strong>用网线连接 PC 和树莓派&lt;/strong>，接通树莓派电源，再运行&lt;code>ipconfig&lt;/code>，以太网有了吧，有了就对了。&lt;br>
+PowerShell 运行 &lt;code>arp -a&lt;/code>，应该会有一个 MAC 地址 &lt;code>b8&lt;/code> 开头的动态 IP，那个就是树莓派的 IP。&lt;/p>
+&lt;p>如果这个 IP 用 22 端口连不进去——&lt;br>
+什么叫连不进去，用 SSH 软件连接这个 IP 无法打开，或者 &lt;code>telnet [IP] 22&lt;/code> 提示「无法打开到主机的连接」，就叫连不进去&lt;br>
+——那么就用路由器的 DHCP 给它分配一个 IP。&lt;/p>
+&lt;p>如何用 PC 把 Wi-Fi 分享给树莓派呢？&lt;/p>
+&lt;p>&lt;img src="https://i.loli.net/2020/03/23/b5aSFV2mD8jzo9k.png" alt="共享网络">&lt;/p>
+&lt;p>打开 &lt;code>控制面板&lt;/code> - &lt;code>网络和共享中心&lt;/code>，点击 &lt;code>WLAN&lt;/code> - &lt;code>属性&lt;/code>，切到 &lt;code>共享&lt;/code> 标签卡，勾选 &lt;code>允许其他网络用户通过此计算机的 Internet 连接来连接&lt;/code>，如果下面的让你填 &lt;code>家庭网络连接&lt;/code> 就填树莓派的网络连接，一般就是 &lt;code>以太网&lt;/code>。&lt;/p>
+&lt;p>打开路由器后台管理页面，新增一个 MAC 地址 &lt;code>b8&lt;/code> 开头的 IP，那个 IP 就是路由器分给（通过 PC 共享了网络的）树莓派的 IP。&lt;br>
+用 SSH 软件连接树莓派，初始账户 &lt;code>pi&lt;/code> / &lt;code>raspberry&lt;/code>，如果登录成功就大功告成了。&lt;br>
+在树莓派的终端运行 &lt;code>ifconfig wlan0&lt;/code> 可以看到树莓派当前IP。&lt;/p>
+&lt;blockquote>
+&lt;p>推荐用路由器给树莓派分配一个内网固定 IP，DHCP 每次自动分配的 IP 是随机的，只要不是太古早的路由器应该都有这个功能。&lt;br>
+给树莓派 MAC 绑定固定 IP 方便以后直接使用，你不想每次连接都要这样折腾一遍吧。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="默认root">默认root&lt;/h2>
+&lt;ol>
+&lt;li>&lt;code>sudo -i&lt;/code> 将当前用户从 pi 切换到 root&lt;/li>
+&lt;li>&lt;code>cd ~&lt;/code> 进入 &lt;code>/root&lt;/code> 工作目录&lt;/li>
+&lt;li>（可选）最好 &lt;code>sudo passwd root&lt;/code> 设置 root 密码并&lt;strong>牢记&lt;/strong>，忘记密码自行解决&lt;/li>
+&lt;li>&lt;code>ssh-keygen&lt;/code> 生成密钥对&lt;/li>
+&lt;li>&lt;code>cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys&lt;/code> 把刚刚生成的密钥对存进白名单&lt;/li>
+&lt;li>&lt;code>chmod -R 700 ~/.ssh&lt;/code> 确保 SSH 配置目录权限正确&lt;/li>
+&lt;li>&lt;code>chmod 600 ~/.ssh/authorized_keys&lt;/code> 确保白名单文件权限正确&lt;/li>
+&lt;li>&lt;code>vim /etc/ssh/sshd_config&lt;/code> 编辑 SSH 配置文件（&lt;code>:eq&lt;/code> 保存文件内容并退出 vim）：&lt;/li>
+&lt;/ol>
+&lt;pre>&lt;code>## 允许使用ssh-key验证并登录 ##
+RSAAuthentication yes
+PubkeyAuthentication yes
+#PermitRootLogin prohibit-password
+## 上面这行的意思是允许登录root 但禁止直接登录root 即只能用别的账户登录成功后 sudo -i 切换到root ##
+## 不用动它 新增下面这行就行 ##
+PermitRootLogin yes # 允许root直接登录
+&lt;/code>&lt;/pre>&lt;ol start="9">
+&lt;li>把 &lt;code>~/.ssh/id_rsa&lt;/code>（私钥文件）下载到本地 PC，直接打开复制粘贴也好，用 &lt;a href="https://winscp.net/eng/download.php">WinSCP&lt;/a> 下载也罢，总之把私钥保存到本地就行&lt;/li>
+&lt;li>&lt;code>systemctl restart sshd&lt;/code> / &lt;code>service sshd restart&lt;/code> / &lt;code>/etc/init.d/ssh restart&lt;/code> 重启 SSH&lt;/li>
+&lt;li>回到 Xshell，打开 &lt;code>工具&lt;/code> 菜单中的 &lt;code>用户密钥管理者&lt;/code> - &lt;code>导入&lt;/code>，把私钥导入 Xshell 然后登录会话的时候选 &lt;code>Public Key&lt;/code> 就 OK 了&lt;/li>
+&lt;/ol>
+&lt;p>（可选）配置完成后，为了提高安全性直接禁止密码登录：&lt;br>
+&lt;code>vim /etc/ssh/sshd_config&lt;/code> 打开配置文件，修改为 &lt;code>PasswordAuthentication no&lt;/code> 保存后重启 SSH 即可。&lt;br>
+此外还可以把默认的 22 端口修改为其他端口进一步提高安全性。&lt;/p>
+&lt;h2 id="修改主机名">修改主机名&lt;/h2>
+&lt;p>自己的树莓派当然有特别的称呼。&lt;br>
+如果都叫 &lt;code>raspbian&lt;/code> 那跟别人家的妖艳贱货有什么区别，对吧。&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>vim /etc/hostname&lt;/code> 把 &lt;code>raspbian&lt;/code> 修改新的名字。&lt;/li>
+&lt;li>如果想把 &lt;code>localhost&lt;/code> 的别名也改了，可以 &lt;code>vim /etc/hosts&lt;/code> 把 &lt;code>raspbian&lt;/code> 修改新的名字。&lt;/li>
+&lt;li>&lt;code>reboot&lt;/code> 重启后生效。&lt;/li>
+&lt;/ol>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>桥水基金的&lt;ruby>&lt;rb>雷&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Raymond&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>·&lt;ruby>&lt;rb>达里奥&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Dalio&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>的名言：「如果你现在不觉得一年前的自己是个傻逼，说明你这一年没学到什么东西」。&amp;#160;&lt;a href="https://ews.ink/tech/rpi-1-prepare-system/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/debian/">Debian</category><category domain="https://ews.ink/tags/%E7%A1%AC%E4%BB%B6/">硬件</category></item></channel></rss>
