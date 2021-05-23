@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sun, 23 May 2021 16:52:47 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Sublime &amp; VSCode 配置删除行尾空格</title><link>https://ews.ink/tech/write-dont-trailing-spaces/</link><guid isPermaLink="true">https://ews.ink/tech/write-dont-trailing-spaces/</guid><pubDate>Sun, 23 May 2021 14:08:11 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 24 May 2021 01:46:04 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Sublime &amp; VSCode 配置删除行尾空格</title><link>https://ews.ink/tech/write-dont-trailing-spaces/</link><guid isPermaLink="true">https://ews.ink/tech/write-dont-trailing-spaces/</guid><pubDate>Sun, 23 May 2021 14:08:11 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
 基本上所有码农，在&lt;del>码字&lt;/del> 文本编辑过程中都会遇到一个问题：空格。&lt;br>
 不管是轻量的编辑器，还是沉重的 IDE，空格总是无处不在，给排版工作带来巨大的负担。&lt;br>
 但我们没办法否定的是，空格同时也对排版起到了至关重要的作用。&lt;br>
@@ -93,11 +93,253 @@
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>舒服了。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/markdown/">Markdown</category><category domain="https://ews.ink/tags/sublime/">Sublime</category><category domain="https://ews.ink/tags/vscode/">VSCode</category></item><item><title>为什么行业前沿有这么多乱七八糟的标准</title><link>https://ews.ink/life/why-so-much-standards/</link><guid isPermaLink="true">https://ews.ink/life/why-so-much-standards/</guid><pubDate>Sat, 22 May 2021 11:02:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
+&lt;/div>&lt;p>舒服了。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/markdown/">Markdown</category><category domain="https://ews.ink/tags/sublime/">Sublime</category><category domain="https://ews.ink/tags/vscode/">VSCode</category></item><item><title>使用 proxychain4 安装 zsh</title><link>https://ews.ink/tech/linux-proxy-terminal/</link><guid isPermaLink="true">https://ews.ink/tech/linux-proxy-terminal/</guid><pubDate>Sun, 23 May 2021 12:21:40 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="proxychain-ng">proxychain-ng&lt;/h2>
+&lt;p>&lt;a href="https://github.com/rofl0r/proxychains-ng">proxychains ng&lt;/a> 的 ng 是 new generation 的意思，其实就是 proxychains4。&lt;br>
+&lt;strong>首先&lt;/strong>本地开启 socks5 代理（端口有了），然后继续：&lt;/p>
+&lt;h3 id="安装-proxychain4">安装 proxychain4&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt install proxychains4
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="配置-proxychain4">配置 proxychain4&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim /etc/proxychains.conf
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>网上有些博文写的 proxychains&lt;strong>4&lt;/strong> 用 &lt;code>/etc/proxychains4.conf&lt;/code>。&lt;br>
+当然是可以的，但就直接 &lt;code>/etc/proxychains.conf&lt;/code> 也会生效。&lt;br>
+甚至两个文件都存在的时候 &lt;code>proxychains.conf&lt;/code> 的优先级比 &lt;code>proxychains4.conf&lt;/code> 高。&lt;/p>
+&lt;/blockquote>
+&lt;p>中间都不用管，拉到最后：&lt;/p>
+&lt;pre>&lt;code>[ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to &amp;quot;tor&amp;quot;
+#socks4 127.0.0.1 9050
+socks5 [子网IP] [socket端口]
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>注意&lt;/strong>：如果是 WSL2 的话，IP 应该是&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ cat /etc/resolv.conf &lt;span class="p">|&lt;/span> grep nameserver &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{print $2}&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="测试">测试&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ curl www.httpbin.org/ip
+$ proxychains4 curl www.httpbin.org/ip
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接口返回的两个本机 IP 不一致，说明开启代理成功了。&lt;/p>
+&lt;h2 id="zsh">zsh&lt;/h2>
+&lt;p>大多数 Linux 系统默认终端是 &lt;code>/bin/bash&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$0&lt;/span> &lt;span class="c1"># 当前shell 也就是shell脚本开头#!/bin/bash声明的东西&lt;/span>
+$ &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$SHELL&lt;/span> &lt;span class="c1"># 默认shell&lt;/span>
+$ cat /etc/shells &lt;span class="c1"># 所有shell&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="安装-zsh">安装 zsh&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt-get install zsh -y
+$ zsh --version
+zsh 5.8 &lt;span class="o">(&lt;/span>x86_64-ubuntu-linux-gnu&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="安装-oh-my-zsh">安装 oh-my-zsh&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ sh -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="c1"># 或者&lt;/span>
+$ sh -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="c1"># 取决你用哪个客户端 curl还是wget&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>此处大概率会出现网络问题，我以前 WSL 1 问题不大，升成 WSL 2 全局也救不了。&lt;/p>
+&lt;p>这时就该前面装好的 proxychains4 出场了，注意 proxychains 的用法。&lt;br>
+它&lt;strong>不是&lt;/strong>新建一个虚拟网络环境，然后在虚拟环境里运行所有命令，哪有这么炫酷。&lt;br>
+它能代理的只有紧接在后面的命令，比如上面安装 zsh 那条：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ proxychains4 sh -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="c1"># 这是错误用法 代理sh是想干嘛&lt;/span>
+$ sh -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>proxychains4 wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="c1"># 这是正确姿势 用proxychains4代理wget&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;pre>&lt;code> __ __
+____ / /_ ____ ___ __ __ ____ _____/ /_
+/ __ \/ __ \ / __ `__ \/ / / / /_ / / ___/ __ \
+/ /_/ / / / / / / / / / / /_/ / / /_(__ ) / / /
+\____/_/ /_/ /_/ /_/ /_/\__, / /___/____/_/ /_/
+/____/ ....is now installed!
+&lt;/code>&lt;/pre>&lt;h3 id="下载自动补全插件">下载自动补全插件&lt;/h3>
+&lt;p>老规矩，网络问题 proxychains4 解决。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ git clone git://github.com/zsh-users/zsh-autosuggestions &lt;span class="nv">$ZSH_CUSTOM&lt;/span>/plugins/zsh-autosuggestions
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="下载命令高亮插件">下载命令高亮插件&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git &lt;span class="nv">$ZSH_CUSTOM&lt;/span>/plugins/zsh-syntax-highlighting
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="配置-oh-my-zsh">配置 oh-my-zsh&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim ~/.zshrc
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="更换主题">更换主题&lt;/h4>
+&lt;p>我最喜欢 &lt;a href="https://github.com/agnoster/agnoster-zsh-theme">&lt;em>agnoster&lt;/em>&lt;/a>，就一个字，精致。&lt;br>
+用不同前景色背景色配合做出来的箭头形分隔符真的很有创意，设计感拉满。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nv">ZSH_THEME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;agnoster&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其实默认的 &lt;em>robbyrussell&lt;/em> 就很棒，简洁大方。&lt;/p>
+&lt;p>另外推荐 &lt;a href="https://github.com/sindresorhus/pure">&lt;em>pure&lt;/em>&lt;/a>，清爽到性冷淡。&lt;/p>
+&lt;blockquote>
+&lt;p>如果想用 &lt;a href="https://github.com/ohmyzsh/ohmyzsh/wiki/themes">&lt;em>更多主题&lt;/em>&lt;/a> 要 &lt;code>ls ~/.oh-my-zsh/themes | grep [主题名字]&lt;/code> 看看本地有没有。&lt;br>
+有的话可以直接修改配置启用。没有的话就要另行下载（&lt;code>git clone&lt;/code>）了。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="启用插件">启用插件&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nv">plugins&lt;/span>&lt;span class="o">=(&lt;/span>
+git
+zsh-autosuggestions
+zsh-syntax-highlighting
+&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="配置命令别名">配置命令别名&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">alias&lt;/span> &lt;span class="nv">rzsh&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;source ~/.zshrc&amp;#34;&lt;/span>
+&lt;span class="c1"># cnpm&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">cnpm&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;npm --registry=https://registry.npm.taobao.org \
+&lt;/span>&lt;span class="s2"> --cache=&lt;/span>&lt;span class="nv">$HOME&lt;/span>&lt;span class="s2">/.npm/.cache/cnpm \
+&lt;/span>&lt;span class="s2"> --disturl=https://npm.taobao.org/dist \
+&lt;/span>&lt;span class="s2"> --userconfig=&lt;/span>&lt;span class="nv">$HOME&lt;/span>&lt;span class="s2">/.cnpmrc&amp;#34;&lt;/span>
+&lt;span class="c1"># 怎么舒服怎么来 比如 WSL 快速到达外面路径的快捷方式&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">gowork&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;cd /mnt/d/Workspace/Git&amp;#34;&lt;/span>
+&lt;span class="c1"># 再比如之前装好的 proxychains4&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">px&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;proxychains4&amp;#34;&lt;/span>
+&lt;span class="c1"># 如果装了 supervisorctl&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">sv&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;supervisorctl&amp;#34;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">svcfg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;vim /etc/supervisor/supervisord.conf&amp;#34;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">svr&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;supervisorctl update &amp;amp;&amp;amp; supervisorctl reload&amp;#34;&lt;/span>
+&lt;span class="c1"># 对了 thefuck 也要特别为 zsh 配置&lt;/span>
+&lt;span class="nb">eval&lt;/span> &lt;span class="k">$(&lt;/span>thefuck --alias fuck&lt;span class="k">)&lt;/span>
+&lt;span class="c1"># 等等&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>不过不推荐在这里配置 git 别名，git alias 还是老实写在 &lt;code>~/.gitconfig&lt;/code> 里吧。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="重载配置使新的配置生效">重载配置使新的配置生效&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ &lt;span class="nb">source&lt;/span> ~/.zshrc
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/zsh/">zsh</category><category domain="https://ews.ink/tags/proxychains/">proxychains</category></item><item><title>为什么行业前沿有这么多乱七八糟的标准</title><link>https://ews.ink/life/why-so-much-standards/</link><guid isPermaLink="true">https://ews.ink/life/why-so-much-standards/</guid><pubDate>Sat, 22 May 2021 11:02:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
 &lt;li>&lt;a href="https://ews.ink/tech/storage-sd-card" target="_blank">存储卡标准&lt;/a>&lt;/li>
 &lt;li>内存 DDR&lt;/li>
-&lt;li>USB&lt;/li>
-&lt;li>雷电&lt;/li>
+&lt;li>&lt;a href="https://ews.ink/tech/interface-usb-standard" target="_blank">USB 和雷电协议&lt;/a>&lt;/li>
 &lt;li>等等……&lt;/li>
 &lt;/ul>
 &lt;p>某个行业前沿技术出现百家争鸣的场面，是因为行业领先组织（不一定是企业）都想抢标准。&lt;br>
@@ -4200,7 +4442,7 @@ B 漫具体是怎么起家的，即使陈叔叔公关这一块拿捏得再死，
 &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>以上就是逆向过程，结果是带有格式类似 &lt;code>{title: 漫画名称, chapter: 章节名称, download_links: 本章节所有图片下载地址的数组}&lt;/code> 的对象。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E9%80%86%E5%90%91/">逆向</category><category domain="https://ews.ink/tags/comic/">Comic</category></item><item><title>计算机网络基础 干货</title><link>https://ews.ink/tech/network-hardware/</link><guid isPermaLink="true">https://ews.ink/tech/network-hardware/</guid><pubDate>Thu, 25 Mar 2021 13:54:52 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="速查表">速查表&lt;/h2>
+&lt;/div>&lt;p>以上就是逆向过程，结果是带有格式类似 &lt;code>{title: 漫画名称, chapter: 章节名称, download_links: 本章节所有图片下载地址的数组}&lt;/code> 的对象。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E9%80%86%E5%90%91/">逆向</category><category domain="https://ews.ink/tags/comic/">Comic</category></item><item><title>计算机网络基础 底层知识</title><link>https://ews.ink/tech/network-bottom/</link><guid isPermaLink="true">https://ews.ink/tech/network-bottom/</guid><pubDate>Thu, 25 Mar 2021 13:54:52 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="速查表">速查表&lt;/h2>
 &lt;p>OSI 七层模型从上至下：&lt;/p>
 &lt;ul>
 &lt;li>上三层
@@ -4482,21 +4724,26 @@ B 漫具体是怎么起家的，即使陈叔叔公关这一块拿捏得再死，
 &lt;li>超六类 &lt;code>CAT-6A&lt;/code> 企业级万兆网&lt;/li>
 &lt;/ul>
 &lt;p>结论：只是千兆网的话，超五类和六类没有区别，考虑到以后升级，装新房建议上六类。已经埋了超五类的家庭也没必要重新装修，等真的变成刚需了再升级也不迟。&lt;/p>
+&lt;h2 id="网速的计算方式">网速的计算方式&lt;/h2>
 &lt;p>另外，以太网传输速率（俗称网速）有&lt;strong>两套&lt;/strong>计量单位。&lt;br>
 拿「多少多少兆（全称兆比特，Megabits）」来举例：&lt;/p>
+&lt;p>小 b，即 Mbps（Megabits per second）或者 Mbit/s。&lt;br>
+这两个单位是同一个东西两种写法，类似茴香豆的茴艹头下面可以写回、囬、囘、𡇌&lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/network-bottom/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>。&lt;br>
+这里的 b 是 &lt;code>bit（比特位）&lt;/code>，可以存储 1 &lt;strong>位&lt;/strong> &lt;code>无符号二进制数（0 或 1）&lt;/code>，一般用于描述带宽。&lt;br>
+因为无论电信号还是光信号，人家物理层传的都是 0 和 1 的信号流，想要精确地描述具体传输了多少多少「&lt;strong>位&lt;/strong>」0 或 1 就是得用 bit 位。&lt;br>
+这就是带宽——&lt;ruby>&lt;rb>频&lt;strong>带宽&lt;/strong>度&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Band Width&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>：同一时刻（某个瞬间）这个频带最多能通过多大的信息量。&lt;/p>
+&lt;p>大 B，即 MB/s，这里的 B 是指 &lt;code>Byte（字节）&lt;/code>，可以存储 8 位 &lt;code>无符号二进制数（0 或 1）&lt;/code>，换算成十进制就是 0 - 255（&lt;code>0000 0000&lt;/code> - &lt;code>1111 1111&lt;/code>）。&lt;br>
+一般用于描述文件传输速度，因为操作系统的文件系统是用字节（byte）的，你看你电脑上文件都是多少多少 KB，没有 Kb 的吧？&lt;br>
+宏观描述文件大小（与之相对，描述 bit 传输属于微观）统一单位对人类友好，方便人为辨识。不统一的话，你想象一下每次估算一个文件大小要自己除以 8 是什么地狱绘图。&lt;/p>
+&lt;p>总而言之，由此可得：&lt;/p>
 &lt;ul>
-&lt;li>小 b，即 Mbps（megabits per second）或者 Mbit/s（这两个单位是同一个东西），这里的 b 是 &lt;code>bit（比特位）&lt;/code>，可以存储 1 位 &lt;code>无符号二进制数（0 或 1）&lt;/code>，一般用于描述带宽（因为无论电信号还是光信号，人家物理层传的都是 0 和 1 的信号流）。&lt;/li>
-&lt;li>大 B，MB/s，这里的 B 是指 &lt;code>byte（字节）&lt;/code>，可以存储 8 位 &lt;code>无符号二进制数（0 或 1）&lt;/code>，换成十进制就是 0 - 255，一般用于描述下载速度（因为操作系统的文件系统是用字节（byte）的，你看你的文件都是多少多少 KB，下载单位统一方便人为辨识）。&lt;/li>
+&lt;li>&lt;strong>1 Mbps&lt;/strong> = &lt;strong>1 Mbit/s&lt;/strong> = &lt;strong>0.125 MB/s&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>1 MB/s&lt;/strong> = &lt;strong>8 Mbps&lt;/strong> = &lt;strong>8 Mbit/s&lt;/strong>&lt;/li>
 &lt;/ul>
-&lt;p>由此可得：&lt;/p>
-&lt;ul>
-&lt;li>1 Mbps = 1 Mbit/s = 0.125 MB/s&lt;/li>
-&lt;li>1 MB/s = 8 Mbps = 8 Mbit/s&lt;/li>
-&lt;/ul>
-&lt;p>所以小 b 换大 B 首先除以 8，再加上传输过程中肯定有损失，再除去校验位之类用来保证数据包可靠性的元数据。千兆网峰值下载速度也就 100 MB/s 左右，百兆宽带 10 MB/s 左右，很正常。&lt;br>
-注意这还是理论峰值，如果加上手机电脑几台设备一起同时用网还要打折扣，用的是 Wi-Fi 不是有线连接再折扣，还是 2.4 GHz 频段继续折扣，楼层 Wi-Fi 过多挤占信道互相干扰……实际下载速度比这还低太正常了。&lt;br>
-不要再为难网络运营商的工程师了，人家上门最多也就给你重新拔插一下路由光猫（&lt;del>物理&lt;/del> 散热）。&lt;br>
-回家过年，家里连着十几台手机，我爸刷不动短视频一个电话让电信售后上门维修的时候我尴尬死了。&lt;/p>
+&lt;p>所以小 b 换大 B 首先除以 8，再加上传输过程中肯定有&lt;del>火耗&lt;/del> 信号损失，再除去校验位之类用来保证数据包可靠性的元数据。&lt;br>
+千兆网理论峰值下载速度也就 100 MB/s 左右，百兆宽带 10 MB/s 左右，很正常。&lt;/p>
+&lt;p>注意这还是&lt;strong>理论峰值&lt;/strong>，如果加上手机电脑平板一堆设备同时用网还要打折扣，用的是 Wi-Fi 不是有线连接再折扣，还是 2.4 GHz 频段继续折扣，楼层 Wi-Fi 过多挤占信道互相干扰……实际下载速度比这还低太正常了。不要再为难运营商的苦逼网工了，人家上门一看发现是这种情况还能怎么办，三言两语也解释不清还可能被认为是推卸责任，测完线和猫都没问题最多也就给你重新拔插一下路由光猫&lt;del>主动地被动&lt;/del>散热意思意思。&lt;br>
+回家过年家里两台路由器连着十几部手机，我爸刷不动短视频一个电话质问移动售后要求上门维修的时候我尴尬死了。&lt;/p>
 &lt;h2 id="光纤">光纤&lt;/h2>
 &lt;h3 id="全双工full-duplex与半双工half-duplex">全双工（Full Duplex）与半双工（Half Duplex）&lt;/h3>
 &lt;p>首先解释一下双工是什么意思，可以按照字面意思理解为「两种工作方式」。&lt;br>
@@ -4514,7 +4761,18 @@ B 漫具体是怎么起家的，即使陈叔叔公关这一块拿捏得再死，
 &lt;p>双模使用 LED 作为光源，所以光线是散射的，不是强光导致它的传输距离有限。&lt;br>
 但较低的生产成本是最大的优点。&lt;/p>
 &lt;p>一般看实际使用的传输距离，网络运营商从他们的基站牵到你们小区，肯定是单模才能实现。&lt;br>
-你自己买光纤给家里或者公司（同一栋楼内）用，那肯定是多模划算。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/internet/">Internet</category></item><item><title>计算机网络基础 IPv4</title><link>https://ews.ink/tech/network-ipv4/</link><guid isPermaLink="true">https://ews.ink/tech/network-ipv4/</guid><pubDate>Thu, 25 Mar 2021 12:56:52 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="格式">格式&lt;/h2>
+你自己买光纤给家里或者公司（同一栋楼内）用，那肯定是多模划算。&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>鲁迅《孔乙己》桥段，典出《康熙字典》。就是这四个字，最后的「𡇌」不是我编的：「口」字里一个「目」，码位 &lt;code>U+211CC&lt;/code>，HTML 实体 &lt;code>&amp;amp;#135628;&lt;/code> / &lt;code>&amp;amp;#x211CC;&lt;/code>，URL 编码 &lt;code>%F0%A1%87%8C&lt;/code>。&lt;br>
+&lt;img src="https://i.loli.net/2021/05/23/RCLFi2EctMvlmo6.jpg" alt="回字的四种写法">
+其实这玩意类似「壹隻憂鬱臺灣烏龜尋釁幾羣骯髒變態囓齒鱷龞，幾羣骯髒變態囓齒鱷龞圍毆壹隻憂鬱臺灣烏龜」那只讨打的乌龟，有点意思，但没什么🐔儿用。&lt;br>
+古体字当然不是糟粕，也值得研究；但它们确实已经被时代淘汰了，不吹不黑客观看待即可。&amp;#160;&lt;a href="https://ews.ink/tech/network-bottom/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/internet/">Internet</category></item><item><title>计算机网络基础 IPv4</title><link>https://ews.ink/tech/network-ipv4/</link><guid isPermaLink="true">https://ews.ink/tech/network-ipv4/</guid><pubDate>Thu, 25 Mar 2021 12:56:52 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="格式">格式&lt;/h2>
 &lt;p>IPv4 是由「点分号 &lt;code>.&lt;/code>」分隔开的 4 个「 8 位组」（占 8 位 &lt;code>0 或 1 的无符号二进制数&lt;/code> 即 &lt;code>bit&lt;/code>）。&lt;/p>
 &lt;p>形如 &lt;code>xxxx xxxx.xxxx xxxx.xxxx xxxx.xxxx xxxx&lt;/code>。&lt;/p>
 &lt;p>举例 &lt;code>1100 0000.1010 1000.0000 0000.0000 0001&lt;/code>。&lt;br>
