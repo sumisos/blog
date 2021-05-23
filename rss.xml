@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sat, 22 May 2021 13:57:12 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>为什么行业前沿有这么多乱七八糟的标准</title><link>https://ews.ink/life/why-so-much-standards/</link><guid isPermaLink="true">https://ews.ink/life/why-so-much-standards/</guid><pubDate>Sat, 22 May 2021 11:02:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sun, 23 May 2021 16:52:47 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Sublime &amp; VSCode 配置删除行尾空格</title><link>https://ews.ink/tech/write-dont-trailing-spaces/</link><guid isPermaLink="true">https://ews.ink/tech/write-dont-trailing-spaces/</guid><pubDate>Sun, 23 May 2021 14:08:11 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
+基本上所有码农，在&lt;del>码字&lt;/del> 文本编辑过程中都会遇到一个问题：空格。&lt;br>
+不管是轻量的编辑器，还是沉重的 IDE，空格总是无处不在，给排版工作带来巨大的负担。&lt;br>
+但我们没办法否定的是，空格同时也对排版起到了至关重要的作用。&lt;br>
+那么问题就变成了&lt;/p>
+&lt;h1>如何降服空格&lt;/h1>
+&lt;p>我最喜欢的两个文本编辑器 Sublime Text / Visual Studio Code* 都有这个功能，我相信大部分认真做的编辑器都会有这个功能的。&lt;/p>
+&lt;blockquote>
+&lt;p>* VSCode 当然是编辑器，VSCode 是 IDE 那 VS 是什么。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="自动去除行尾多余的空格">自动去除行尾多余的空格&lt;/h2>
+&lt;h3 id="sublime-text-3">Sublime Text 3&lt;/h3>
+&lt;p>菜单栏：&lt;code>Preferences&lt;/code> - &lt;code>Settings&lt;/code>，在右边（自定义配置）新增一行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">前略&lt;/span> &lt;span class="err">理论上&lt;/span> &lt;span class="err">JSON&lt;/span> &lt;span class="err">是不能写注释的&lt;/span> &lt;span class="err">知道这个意思就好&lt;/span>
+&lt;span class="nt">&amp;#34;trim_trailing_white_space_on_save&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="visual-studio-code">Visual Studio Code&lt;/h3>
+&lt;p>&lt;kbd>Ctrl&lt;/kbd> + &lt;kbd>Shift&lt;/kbd> + &lt;kbd>P&lt;/kbd>，输入 &lt;code>Preferences: Open Settings (JSON)&lt;/code> 打开配置文件 &lt;code>settings.json&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">前略&lt;/span>
+&lt;span class="nt">&amp;#34;files.trimTrailingWhitespace&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="不要自动去除行尾多余的空格">不要自动去除行尾多余的空格&lt;/h2>
+&lt;p>配置好正常用起来当然是很爽的，然后开始写 Markdown，感受到绝望*了吗。&lt;/p>
+&lt;blockquote>
+&lt;p>* Markdown 以行尾两个空格 &lt;code>__&lt;/code> 作为换行符（软回车）。&lt;/p>
+&lt;ul>
+&lt;li>硬回车：换行并换段&lt;/li>
+&lt;li>软回车：只换行，&lt;strong>不换段&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>本来辛辛苦苦分好的段落，一保存文件全没了。&lt;/p>
+&lt;p>怎么办呢，那当然也是有解决办法的。&lt;/p>
+&lt;h3 id="sublime-text-3-1">Sublime Text 3&lt;/h3>
+&lt;p>安装 &lt;a href="https://github.com/SublimeText/TrailingSpaces">TrailingSpaces&lt;/a> 插件，并把之前配置的 &lt;code>trim_trailing_white_space_on_save&lt;/code> 删掉。&lt;/p>
+&lt;p>菜单栏：&lt;code>Preferences&lt;/code> - &lt;code>Package Settings&lt;/code> - &lt;code>Trailing Spaces&lt;/code> - &lt;code>Settings&lt;/code>，&lt;br>
+在右边（自定义配置）新增一行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;trim_on_save&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>保存文件时仍然会自动去除行尾空格，但 &lt;code>.md&lt;/code> 格式的文件不会了。&lt;/p>
+&lt;h3 id="visual-studio-code-1">Visual Studio Code&lt;/h3>
+&lt;p>仍然打开配置文件 &lt;code>settings.json&lt;/code>，改成：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">前略&lt;/span>
+&lt;span class="nt">&amp;#34;files.trimTrailingWhitespace&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;markdown.preview.breaks&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;[markdown]&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;files.trimTrailingWhitespace&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>舒服了。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/markdown/">Markdown</category><category domain="https://ews.ink/tags/sublime/">Sublime</category><category domain="https://ews.ink/tags/vscode/">VSCode</category></item><item><title>为什么行业前沿有这么多乱七八糟的标准</title><link>https://ews.ink/life/why-so-much-standards/</link><guid isPermaLink="true">https://ews.ink/life/why-so-much-standards/</guid><pubDate>Sat, 22 May 2021 11:02:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
 &lt;li>&lt;a href="https://ews.ink/tech/storage-sd-card" target="_blank">存储卡标准&lt;/a>&lt;/li>
 &lt;li>内存 DDR&lt;/li>
 &lt;li>USB&lt;/li>
@@ -3757,7 +3852,15 @@ config.toml 配置文件
 &lt;/div>&lt;p>如果本地绑定的域名和我一样是反代端口出来的，那么再访问 &lt;code>http://local.hugo&lt;/code> 就能正确地根据文件变动实时重载了。&lt;/p>
 &lt;h3 id="更多玩法">更多玩法&lt;/h3>
 &lt;p>更多命令用法详见 &lt;a href="https://gohugo.io/commands">官方文档&lt;/a>。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/blog/">Blog</category><category domain="https://ews.ink/tags/hugo/">Hugo</category></item><item><title>Windows Subsystem for Linux GUI 尝鲜</title><link>https://ews.ink/tech/wsl-gui/</link><guid isPermaLink="true">https://ews.ink/tech/wsl-gui/</guid><pubDate>Sat, 08 May 2021 01:37:49 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="准备-wsl">准备 WSL&lt;/h2>
-&lt;h3 id="全新安装-wsl-2-镜像">全新安装 WSL 2 镜像&lt;/h3>
+&lt;h3 id="开启虚拟化">开启虚拟化&lt;/h3>
+&lt;p>&lt;code>设置&lt;/code> - 搜索 &lt;code>启用或关闭 Windows 功能&lt;/code>，勾上：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Hyper-V&lt;/code>&lt;/li>
+&lt;li>&lt;code>Windows Subsystem for Linux&lt;/code>&lt;/li>
+&lt;li>&lt;code>虚拟机平台&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>确定，重启。&lt;/p>
+&lt;h3 id="全新安装-wsl-2">全新安装 WSL 2&lt;/h3>
 &lt;p>以&lt;strong>管理员权限&lt;/strong>运行命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -3769,7 +3872,7 @@ config.toml 配置文件
 &lt;span class="p">$&lt;/span> &lt;span class="n">wsl&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-install&lt;/span> &lt;span class="n">-d&lt;/span> &lt;span class="n">Ubuntu&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="升级-wsl-2-镜像">升级 WSL 2 镜像&lt;/h3>
+&lt;/div>&lt;h3 id="升级到-wsl-2">升级到 WSL 2&lt;/h3>
 &lt;p>如果已经安装了 WSL 1，需要升级到 WSL 2。&lt;/p>
 &lt;p>运行命令&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -3789,7 +3892,7 @@ config.toml 配置文件
 &lt;pre class="chroma">&lt;code class="language-Powershell" data-lang="Powershell">&lt;span class="p">$&lt;/span> &lt;span class="n">wsl&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-set-version&lt;/span> &lt;span class="no">[distro_name]&lt;/span> &lt;span class="n">2&lt;/span> &lt;span class="c"># 注意自行替换 distro_name 成上一条命令对应发行版的 NAME&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="升级-wslg">升级 WSLg&lt;/h2>
+&lt;/div>&lt;h2 id="升级到-wslg">升级到 WSLg&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
@@ -3798,7 +3901,11 @@ config.toml 配置文件
 &lt;pre class="chroma">&lt;code class="language-Powershell" data-lang="Powershell">&lt;span class="p">$&lt;/span> &lt;span class="n">wsl&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="n">-update&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="实际体验">实际体验&lt;/h2>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>注意&lt;/strong>：只有 WSL 2 支持，WSL 1 不行。&lt;br>
+系统版本好像要 build 21362+（&lt;kbd>Win&lt;/kbd> + &lt;kbd>R&lt;/kbd>，&lt;code>winver&lt;/code>），反正我是把 Insider Preview 切到 dev 渠道升级系统，然后直接 &lt;code>wsl --update&lt;/code> 就好了。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="实际体验">实际体验&lt;/h2>
 &lt;p>本来我就是 WSL 重度用户，升级 GUI 简直挠到痒处。从此告别 VMware / VirtualBox。&lt;/p>
 &lt;p>显卡透传？硬盘挂载？网卡桥接？不知道哇没听说过，我是小白不懂这些，我安好就能用了啊。
 没别的，就是玩，哎。&lt;/p>
@@ -3806,10 +3913,11 @@ config.toml 配置文件
 &lt;p>谁不知道真想舒服多搞几台工作站 + 万兆内网 + 旁路由 + 兼职服务器的 NAS，比这高到哪里去了。我也想上，问题是穷啊。&lt;br>
 零（经济）成本把日常机升级到这个体验，我已经爽到了，还要啥 M1。&lt;/p>
 &lt;p>目前开发没有在 Ubuntu 上装 IDE，我还是配合 VSCode 插件食用的，玩够了再说。&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>注意&lt;/strong>：只有 WSL 2 支持，WSL 1 不行。&lt;br>
-系统版本好像要 build 21362+（&lt;kbd>Win&lt;/kbd>+&lt;kbd>R&lt;/kbd>，&lt;code>winver&lt;/code>），反正我是把 Insider Preview 切到 dev 渠道升级系统，然后直接 wsl --update 就好了。&lt;/p>
-&lt;/blockquote>
+&lt;p>另外，Linux 版 QQ 还能更拉垮一点吗？&lt;br>
+至于我为什么想在 Linux 上用 QQ 腾讯心里没点逼数吗？TIM 就是什么好东西吗？&lt;br>
+鹅厂的产品论良心程度，真的只比百度云毫不掩饰的丑恶吃相强得有限。&lt;br>
+尤其那个 WeGame，什么不可燃垃圾。&lt;br>
+起初全班只有我不用，毕业后据我所知只有可怜的 DNF 玩家还在用了。&lt;/p>
 &lt;h2 id="其他问题">其他问题&lt;/h2>
 &lt;h3 id="windows-预览体验计划-一片空白">Windows 预览体验计划 一片空白&lt;/h3>
 &lt;p>修改注册表，将 Telemetry 等级拉满即可修复。&lt;/p>
@@ -5293,7 +5401,7 @@ Conventional Commits 定出来除了约定俗成一看就懂以外，它真正 c
 &lt;h2 id="相关工具">相关工具&lt;/h2>
 &lt;p>&lt;a href="https://github.com/commitizen/cz-cli">Commitizen&lt;/a>&lt;br>
 &lt;a href="https://github.com/damianopetrungaro/php-commitizen">PHP 版 Commitizen&lt;/a>&lt;br>
-&lt;a href="https://github.com/commitsar-app/commitsar">检查提交信息是否符合规范的工具&lt;/a> 用 Go 写的，支持在 CI 的 Docker 镜像中使用&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/git/">Git</category><category domain="https://ews.ink/tags/github/">Github</category></item><item><title>Windows Subsystem for Linux 简单使用</title><link>https://ews.ink/tech/wsl-ubuntu/</link><guid isPermaLink="true">https://ews.ink/tech/wsl-ubuntu/</guid><pubDate>Tue, 29 Sep 2020 16:48:05 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>前略，决定重装WSL。&lt;/p>
+&lt;a href="https://github.com/commitsar-app/commitsar">检查提交信息是否符合规范的工具&lt;/a> 用 Go 写的，支持在 CI 的 Docker 镜像中使用&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/git/">Git</category><category domain="https://ews.ink/tags/github/">Github</category></item><item><title>Windows Subsystem for Linux 简单使用</title><link>https://ews.ink/tech/wsl-ubuntu/</link><guid isPermaLink="true">https://ews.ink/tech/wsl-ubuntu/</guid><pubDate>Tue, 29 Sep 2020 16:48:05 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>前略，决定重装 WSL。&lt;/p>
 &lt;p>想了下没什么必要换发行版，还是选择 Ubuntu 20.04。&lt;/p>
 &lt;h2 id="准备工作">准备工作&lt;/h2>
 &lt;p>备份目前内容：&lt;/p>
@@ -5306,7 +5414,7 @@ Conventional Commits 定出来除了约定俗成一看就懂以外，它真正 c
 &lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ &lt;span class="nb">cd&lt;/span>
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ &lt;span class="nb">cd&lt;/span>
 $ mkdir -r /mnt/d/temp/wsl_backup
 $ ln -s /mnt/d/temp/wsl_backup ~/temp
 $ cp -r ~/meta ~/temp/
@@ -5357,7 +5465,7 @@ $ cp -r ~/.* ~/temp/
 &lt;/span>&lt;span class="lnt">12
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ mv /etc/apt/sources.list /etc/apt/sources.list.backup
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ mv /etc/apt/sources.list /etc/apt/sources.list.backup
 $ vim /etc/apt/sources.list
 &lt;span class="c1"># 清华源 (参考 https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/)&lt;/span>
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
@@ -5385,7 +5493,7 @@ $ apt-get upgrade -y
 &lt;/span>&lt;span class="lnt">11
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ python3 --version &lt;span class="c1"># Python 3.8.2&lt;/span>
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ python3 --version &lt;span class="c1"># Python 3.8.2&lt;/span>
 $ mkdir ~/.pip
 $ vim ~/.pip/pip.conf
 &lt;span class="c1"># 豆瓣源&lt;/span>
@@ -5397,10 +5505,15 @@ use-mirrors &lt;span class="o">=&lt;/span> &lt;span class="nb">true&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
-&lt;p>吐槽一下，pip 豆瓣源，npm 淘宝源，老传统了，未必是最快的但用起来有种莫名的安心感，我也不知道为啥。&lt;/p>
+&lt;p>吐槽一句，系统清华源，pip 豆瓣源，npm 淘宝源，老传统了。&lt;br>
+未必是最优解，但用起来有种莫名的安心感，我也不知道为啥。&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="终端">终端&lt;/h3>
-&lt;p>WSL Ubuntu 20.04 自带 screen，但 zsh 还是要自己装。&lt;/p>
+&lt;p>WSL Ubuntu 20.04 自带 screen，但 zsh 还是要自己装。&lt;br>
+详情参考《&lt;a href="https://ews.ink/tech/linux-proxy-terminal" target="_blank">使用 proxychain4 安装 zsh&lt;/a>》。&lt;/p>
+&lt;h3 id="编译安装-lnmp--redis-环境">编译安装 LNMP &amp;amp; Redis 环境&lt;/h3>
+&lt;p>略&lt;/p>
+&lt;h3 id="设置服务开机自启">设置服务开机自启&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -5413,90 +5526,15 @@ use-mirrors &lt;span class="o">=&lt;/span> &lt;span class="nb">true&lt;/span>
 &lt;/span>&lt;span class="lnt"> 8
 &lt;/span>&lt;span class="lnt"> 9
 &lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ &lt;span class="nb">echo&lt;/span> &lt;span class="nv">$SHELL&lt;/span> &lt;span class="c1"># 默认是 /bin/shell&lt;/span>
-$ cat /etc/shells
-$ apt-get install zsh -y
-$ zsh --version &lt;span class="c1"># zsh 5.4.2 (x86_64-ubuntu-linux-gnu)&lt;/span>
-&lt;span class="c1"># 安装 oh-my-zsh&lt;/span>
-$ sh -c &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(&lt;/span>curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;span class="c1"># 或者&lt;/span>
-&lt;span class="c1"># sh -c &amp;#34;$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;#34;&lt;/span>
-&lt;span class="c1"># 网络问题自行解决&lt;/span>
-__ __
-____ / /_ ____ ___ __ __ ____ _____/ /_
-/ __ &lt;span class="se">\/&lt;/span> __ &lt;span class="se">\ &lt;/span> / __ &lt;span class="sb">`&lt;/span>__ &lt;span class="se">\/&lt;/span> / / / /_ / / ___/ __ &lt;span class="se">\
-&lt;/span>&lt;span class="se">&lt;/span>/ /_/ / / / / / / / / / / /_/ / / /_&lt;span class="o">(&lt;/span>__ &lt;span class="o">)&lt;/span> / / /
-&lt;span class="se">\_&lt;/span>___/_/ /_/ /_/ /_/ /_/&lt;span class="se">\_&lt;/span>_, / /___/____/_/ /_/
-/____/ ....is now installed!
-&lt;span class="c1"># 自动补全插件&lt;/span>
-$ git clone git://github.com/zsh-users/zsh-autosuggestions &lt;span class="nv">$ZSH_CUSTOM&lt;/span>/plugins/zsh-autosuggestions
-&lt;span class="c1"># 命令高亮插件&lt;/span>
-$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git &lt;span class="nv">$ZSH_CUSTOM&lt;/span>/plugins/zsh-syntax-highlighting
-&lt;span class="c1"># 编辑配置文件&lt;/span>
-$ vim ~/.zshrc
-&lt;span class="c1"># 启用插件&lt;/span>
-&lt;span class="nv">plugins&lt;/span>&lt;span class="o">=(&lt;/span>
-git
-zsh-autosuggestions
-zsh-syntax-highlighting
-&lt;span class="o">)&lt;/span>
-&lt;span class="c1"># 配置命令别名&lt;/span>
-&lt;span class="nb">alias&lt;/span> &lt;span class="nv">rzsh&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;source ~/.zshrc&amp;#39;&lt;/span>
-&lt;span class="c1"># 怎么舒服怎么来 比如&lt;/span>
-&lt;span class="nb">alias&lt;/span> &lt;span class="nv">gowork&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;cd /mnt/d/Workspace/Git&amp;#39;&lt;/span>
-$ 重载配置使新的配置生效
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="编译安装-lnmp--redis-环境">编译安装 LNMP &amp;amp; Redis 环境&lt;/h3>
-&lt;p>略&lt;/p>
-&lt;h3 id="设置服务开机自启">设置服务开机自启&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;span class="lnt">9
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ vim /etc/init.wsl
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ vim /etc/init.wsl
 &lt;span class="c1">#!/bin/sh&lt;/span>
-/etc/init.d/redis start
 /etc/init.d/nginx start
 /etc/init.d/mysqld start
 /etc/init.d/php-fpm-74 start
+/etc/init.d/redis start
+supervisord -c /etc/supervisor/supervisord.conf
 $ chmod +x /etc/init.wsl
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -5512,30 +5550,33 @@ $ chmod +x /etc/init.wsl
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="安装-nodejs">安装 Node.js&lt;/h3>
-&lt;p>参考&lt;a href="https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions">官方仓库&lt;/a>：&lt;/p>
+&lt;p>参考 &lt;a href="https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions">官方仓库&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ curl -sL https://deb.nodesource.com/setup_14.x &lt;span class="p">|&lt;/span> shell -
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ curl -sL https://deb.nodesource.com/setup_14.x &lt;span class="p">|&lt;/span> shell -
 $ apt-get install -y nodejs
-$ node -v &lt;span class="c1"># v14.12.0&lt;/span>
+$ node -v
+v14.12.0
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>node 没问题，npm 居然调用到了 win 下的，有 wsl 当然可以卸载了，不过那不是根治的方法。&lt;br>
-为了解决 wsl 和 win 的环境变量产生不必要的交叉的问题：&lt;/p>
+&lt;/div>&lt;p>node 没问题，npm 居然调用到了 Windows 下的，有 WSL 当然可以把 Windows 下的 npm 卸载了，不过那显然不是什么优雅的解决方案。&lt;br>
+为了解决 WSL 和 Windows 的环境变量产生不必要的交叉的问题：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;[interop]\nenabled=false\nappendWindowsPath=false&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> tee /etc/wsl.conf
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;[interop]\nenabled=false\nappendWindowsPath=false&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> tee /etc/wsl.conf
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>使用&lt;strong>管理员权限&lt;/strong>的 powershell 重启 wsl：&lt;/p>
+&lt;/div>&lt;p>使用&lt;strong>管理员权限&lt;/strong>的 PowerShell 重启 WSL：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
@@ -5552,21 +5593,19 @@ $ node -v &lt;span class="c1"># v14.12.0&lt;/span>
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;span class="lnt">2
 &lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-shell" data-lang="shell">$ npm -v &lt;span class="c1"># 6.14.8&lt;/span>
-&lt;span class="c1"># 配置淘宝源 参考https://developer.aliyun.com/mirror/NPM?from=tnpm&lt;/span>
-$ &lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;\n#alias for cnpm\nalias cnpm=&amp;#34;npm --registry=https://registry.npm.taobao.org \
-&lt;/span>&lt;span class="s1"> --cache=$HOME/.npm/.cache/cnpm \
-&lt;/span>&lt;span class="s1"> --disturl=https://npm.taobao.org/dist \
-&lt;/span>&lt;span class="s1"> --userconfig=$HOME/.cnpmrc&amp;#34;&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.zshrc &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">source&lt;/span> ~/.zshrc
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ npm -v
+6.14.8
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="结语">结语&lt;/h2>
+&lt;/div>&lt;h4 id="配置淘宝源">配置淘宝源&lt;/h4>
+&lt;p>参考 &lt;a href="https://developer.aliyun.com/mirror/NPM?from=tnpm">阿里镜像源的官方说明&lt;/a>：&lt;/p>
+&lt;pre>&lt;code>$ echo '\n#alias for cnpm\nalias cnpm=&amp;quot;npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc&amp;quot;' &amp;gt;&amp;gt; ~/.zshrc &amp;amp;&amp;amp; source ~/.zshrc
+&lt;/code>&lt;/pre>&lt;h2 id="结语">结语&lt;/h2>
 &lt;p>WSL 是真的香疯了，我不知道别人怎么吹的，对我来说就&lt;del>两&lt;/del>点：&lt;/p>
 &lt;ul>
 &lt;li>不用额外配置网络，开箱即用，镜像源一换弹射起飞（可以忽略，真要配也没多麻烦）&lt;/li>
@@ -5574,7 +5613,7 @@ $ &lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;\n#alias for c
 &lt;li>直接与 Windows 共享端口，开箱即用，无需任何映射&lt;/li>
 &lt;/ul>
 &lt;p>讲究一个&lt;strong>喂到嘴里&lt;/strong>，体验吊打任何常规虚拟机，这个项目真的牛逼。&lt;br>
-那句话怎么说的来着，Windows 是最好的 Linux 发行版。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/wsl/">WSL</category></item><item><title>改造原生 Laravel 框架</title><link>https://ews.ink/tech/api-laravel-modify/</link><guid isPermaLink="true">https://ews.ink/tech/api-laravel-modify/</guid><pubDate>Mon, 07 Sep 2020 17:20:26 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;blockquote>
+那句话怎么说的来着，Windows 是最好的 Linux 发行版。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/wsl/">WSL</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/ubuntu/">Ubuntu</category><category domain="https://ews.ink/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</category></item><item><title>改造原生 Laravel 框架</title><link>https://ews.ink/tech/api-laravel-modify/</link><guid isPermaLink="true">https://ews.ink/tech/api-laravel-modify/</guid><pubDate>Mon, 07 Sep 2020 17:20:26 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;blockquote>
 &lt;p>2020.9.8 更新：注意 Laravel 更新了 8.1.0，而本文内容基于 7.x，仅供参考。&lt;br>
 但其实大体来说区别不大，有些许出入自行替换即可。&lt;/p>
 &lt;/blockquote>
@@ -10035,7 +10074,7 @@ Port 12345
 Port 12345
 &lt;/code>&lt;/pre>&lt;p>&lt;code>systemctl restart sshd&lt;/code> 重启 ssh 服务即可。&lt;/p>
 &lt;h2 id="参考文档">参考文档&lt;/h2>
-&lt;p>《&lt;a href="https://blog.csdn.net/ausboyue/article/details/53691953">CentOS7设置ssh服务以及端口修改&lt;/a>》&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/centos/">CentOS</category><category domain="https://ews.ink/tags/ssh/">SSH</category></item><item><title>树莓派食用手册 #1 安装系统与存储卡技术漫谈</title><link>https://ews.ink/tech/rpi-1-prepare-system/</link><guid isPermaLink="true">https://ews.ink/tech/rpi-1-prepare-system/</guid><pubDate>Sun, 25 Nov 2018 19:11:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>《&lt;a href="https://blog.csdn.net/ausboyue/article/details/53691953">CentOS7设置ssh服务以及端口修改&lt;/a>》&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/centos/">CentOS</category><category domain="https://ews.ink/tags/ssh/">SSH</category></item><item><title>树莓派食用手册 #1 安装 Debian x64 系统</title><link>https://ews.ink/tech/rpi-1-prepare-system/</link><guid isPermaLink="true">https://ews.ink/tech/rpi-1-prepare-system/</guid><pubDate>Sun, 25 Nov 2018 19:11:00 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;blockquote>
 &lt;p>2020.3.23：这块 3B+ 还是当初做毕设的时候买的，答辩完之后就一直吃灰了。&lt;br>
 最近折腾了一顿 NanoPi Neo2 发现貌似还是树莓派玩起来舒服一些。&lt;br>
@@ -10095,6 +10134,7 @@ Port 12345
 &lt;/blockquote>
 &lt;p>本文之后的内容都以默认使用 Debian Pi Aarch64 为准，官方系统仅供参考。&lt;/p>
 &lt;h2 id="ssh-连接">SSH 连接&lt;/h2>
+&lt;h3 id="通用做法">通用做法&lt;/h3>
 &lt;p>准备好 SSH 连接软件，「&lt;a href="https://www.netsarang.com/zh/Xshell/">Xshell&lt;/a>」都不惜违反广告法自称「业界最强大的 SSH 客户机」了，不过如果你依然愿意使用「&lt;a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY&lt;/a>」的话也没有问题。&lt;/p>
 &lt;p>&lt;img src="https://i.loli.net/2020/03/23/Zf3Q7xOAuhkc8MG.png" alt="查看网络属性">&lt;/p>
 &lt;p>首先使用 PC 查看 &lt;code>网络属性&lt;/code>，记住名为 &lt;code>以太网&lt;/code> 的项，有多个以太网选 &lt;code>描述&lt;/code> 是网卡型号那个，截张图不费事吧。&lt;br>
@@ -10114,7 +10154,55 @@ PowerShell 运行 &lt;code>arp -a&lt;/code>，应该会有一个 MAC 地址 &lt;
 &lt;p>推荐用路由器给树莓派分配一个内网固定 IP，DHCP 每次自动分配的 IP 是随机的，只要不是太古早的路由器应该都有这个功能。&lt;br>
 给树莓派 MAC 绑定固定 IP 方便以后直接使用，你不想每次连接都要这样折腾一遍吧。&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="默认root">默认root&lt;/h2>
+&lt;h3 id="debian-pi-aarch64-特有福利">Debian-Pi-Aarch64 特有福利&lt;/h3>
+&lt;p>根据 &lt;a href="https://github.com/openfans-community-offical/Debian-Pi-Aarch64/blob/master/README.md#3-4-pre-configured-items">官方文档&lt;/a> 我们得知烧录成功 Debian-Pi-Aarch64 的系统有几个预配置项。&lt;br>
+烧录完的 TF 卡不要急着拔，打开 Windows 也能正常读写的 boot 盘。&lt;/p>
+&lt;p>编辑里面根目录下的 &lt;code>wpa_supplicant.conf&lt;/code> 文件：&lt;/p>
+&lt;pre>&lt;code>country=CN
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+## ssid 无线 Wi-Fi 名称
+## psk 无线 Wi-Fi 密码
+## priority 优先级 数字越大越优先
+## WIFI 1 / 常驻 Wi-Fi ##
+network={
+ssid=&amp;quot;your-wifi1-ssid&amp;quot;
+psk=&amp;quot;wifi1-password&amp;quot;
+priority=10
+id_str=&amp;quot;router&amp;quot;
+}
+## WIFI 2 / 备用 Wi-Fi ##
+network={
+ssid=&amp;quot;your-wifi2-ssid&amp;quot;
+psk=&amp;quot;wifi2-password&amp;quot;
+priority=2
+id_str=&amp;quot;phone-hotspot&amp;quot;
+}
+&lt;/code>&lt;/pre>&lt;p>光是配置好这个文件&lt;strong>并不代表&lt;/strong>就能开机直连 Wi-Fi 了，还要运行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ systemctl disable network-manager
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>禁用掉原来的网络管理器，让这个配置文件生效。&lt;/p>
+&lt;p>那么问题就转变成了如何开机运行这一行指令，我有上中下三策。&lt;/p>
+&lt;p>下策：如果电脑是台式，把显示器和键盘接到树莓派上，那还要什么开机准备，直接上，配置好了再拔掉。&lt;/p>
+&lt;p>中策：其实显示器是多余的，如果你手边只有笔记本一时也找不到显示器，USB 键盘你应该有吧。烧录好系统，通电开机后稍等一会（等他自动扩展根分区并自动进行相关配置，期间会重启三次）。然后直接接上键盘盲打命令 &lt;code>systemctl disable network-manager&lt;/code> &lt;kbd>Enter&lt;/kbd> &lt;code>reboot&lt;/code> &lt;kbd>Enter&lt;/kbd> 不就完了。&lt;/p>
+&lt;p>上策：这些手段都不太聪明的样子。boot 盘里还有个叫 &lt;code>rc-local&lt;/code> 的文件，这是开机自动运行的脚本。用文本编辑器打开：&lt;/p>
+&lt;pre>&lt;code>#!/bin/bash
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ &amp;quot;$_IP&amp;quot; ]; then
+printf &amp;quot;IP address is %s\n&amp;quot; &amp;quot;$_IP&amp;quot;
+fi
+echo &amp;quot;rc-local bash echo test.&amp;quot;
+systemctl disable network-manager
+exit 0
+&lt;/code>&lt;/pre>&lt;p>编辑好了插入 TF 卡通电，然后打开路由器后台，坐等树莓派连上来就行了。&lt;/p>
+&lt;h2 id="默认-root">默认 root&lt;/h2>
 &lt;ol>
 &lt;li>&lt;code>sudo -i&lt;/code> 将当前用户从 pi 切换到 root&lt;/li>
 &lt;li>&lt;code>cd ~&lt;/code> 进入 &lt;code>/root&lt;/code> 工作目录&lt;/li>
