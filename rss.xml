@@ -1,4 +1,414 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 24 May 2021 01:46:04 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Sublime &amp; VSCode 配置删除行尾空格</title><link>https://ews.ink/tech/write-dont-trailing-spaces/</link><guid isPermaLink="true">https://ews.ink/tech/write-dont-trailing-spaces/</guid><pubDate>Sun, 23 May 2021 14:08:11 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 24 May 2021 14:35:06 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>USB 相关知识简单科普</title><link>https://ews.ink/tech/interface-usb-standard/</link><guid isPermaLink="true">https://ews.ink/tech/interface-usb-standard/</guid><pubDate>Sun, 23 May 2021 20:44:46 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="usb-协议性能标准">USB 协议性能标准&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">目前协议名&lt;/th>
+&lt;th style="text-align:center">曾用协议名&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度*&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0 Low-Speed&lt;/td>
+&lt;td style="text-align:center">USB 1.0&lt;/td>
+&lt;td style="text-align:center">1.5 Mbps&lt;/td>
+&lt;td style="text-align:center">0.1875 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0 Full-Speed&lt;/td>
+&lt;td style="text-align:center">USB 1.1&lt;/td>
+&lt;td style="text-align:center">12 Mbps&lt;/td>
+&lt;td style="text-align:center">1.5 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0 High-Speed&lt;/td>
+&lt;td style="text-align:center">USB 2.0&lt;/td>
+&lt;td style="text-align:center">480 Mbps&lt;/td>
+&lt;td style="text-align:center">60 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2 Gen1&lt;/td>
+&lt;td style="text-align:center">USB 3.0 / USB 3.1 Gen1&lt;/td>
+&lt;td style="text-align:center">5 Gbps&lt;/td>
+&lt;td style="text-align:center">640 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2 Gen2 x1&lt;/td>
+&lt;td style="text-align:center">USB 3.1 / USB 3.1 Gen2&lt;/td>
+&lt;td style="text-align:center">10 Gbps&lt;/td>
+&lt;td style="text-align:center">1280 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2 Gen2 x2&lt;/td>
+&lt;td style="text-align:center">USB 3.2&lt;/td>
+&lt;td style="text-align:center">20 Gbps&lt;/td>
+&lt;td style="text-align:center">2560 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB4 Gen2 x2&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">20 Gbps&lt;/td>
+&lt;td style="text-align:center">2560 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB4 Gen3 x2&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">40 Gbps&lt;/td>
+&lt;td style="text-align:center">5120 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>* 理论速度为什么光看数字低于带宽的 1 / 8，我在《&lt;a href="https://ews.ink/tech/network-bottom/#%E7%BD%91%E9%80%9F%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F" target="_blank">网速的计算方式&lt;/a>》一节中详细说明过。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="usb-命名演进过程usb-if-真是不干人事">USB 命名演进过程（USB-IF 真是不干人事）&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">最初协议名&lt;/th>
+&lt;th style="text-align:center">第二次改名&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">第三次改名&lt;/th>
+&lt;th style="text-align:center">目前协议名&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 1.0&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">2003 年&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">USB 2.0 Low-Speed&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 1.1&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">2003 年&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">USB 2.0 Full-Speed&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">2003 年&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">USB 2.0 High-Speed&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.0&lt;/td>
+&lt;td style="text-align:center">2013 年&lt;/td>
+&lt;td style="text-align:center">USB 3.1 Gen1&lt;/td>
+&lt;td style="text-align:center">2019 年&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.1&lt;/td>
+&lt;td style="text-align:center">2013 年&lt;/td>
+&lt;td style="text-align:center">USB 3.1 Gen2&lt;/td>
+&lt;td style="text-align:center">2019 年&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 2 x1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">2019 年&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 2 x2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="usb-if-起源">USB-IF 起源&lt;/h2>
+&lt;p>1994 年，微软和英特尔倡导发起成立了 USB 开发者论坛（USB Implementers Forum），旨在推进 USB 的技术发展与标准化。&lt;/p>
+&lt;h2 id="物理接口">物理接口&lt;/h2>
+&lt;p>&lt;img src="https://i.loli.net/2021/05/23/MPWFIviU2qeYyKm.png" alt="USB">&lt;/p>
+&lt;h3 id="type-a">Type-A&lt;/h3>
+&lt;ul>
+&lt;li>Standard Type-A USB 接口
+&lt;ul>
+&lt;li>USB 2.0 协议（4 金属触点）&lt;/li>
+&lt;li>USB 3.0 协议（9 金属触点）：一般是蓝色，很多人教你区分 2.0 和 3.0 看颜色，其实未必准确（我见过青色的，&lt;del>我 TM&lt;/del>），但是看金属触点就靠谱得多了&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Mini Type-A USB 接口&lt;/li>
+&lt;li>Micro Type-A USB 接口
+&lt;ul>
+&lt;li>USB 2.0 协议&lt;/li>
+&lt;li>USB 3.0 协议&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>除了经典的标准 Type-A 熬死了所有后辈，坚挺到了今天。&lt;br>
+别的 Type-A 都已经死绝了，以前是用在 MP3 / MP4 上。&lt;/p>
+&lt;blockquote>
+&lt;p>我很怀疑现在的年轻人是否知道 MP3，不是 &lt;code>.mp3&lt;/code>，是专门播放 &lt;code>.mp3&lt;/code> 的硬件。&lt;br>
+也许听个歌还有专门的机器对他们来说是一件很难想象的事。&lt;br>
+但就是我这代人的童年回忆，我们小学初中哪有什么手机甚至电脑，能玩贪吃蛇就很吊了，几个小伙伴一个魔塔玩一下午很平常的事。&lt;br>
+半夜躲在被窝里听 MP3 就是最大的乐子之一。发展到 MP4 可以看点 360p 的&lt;em>高清&lt;/em>电影，这个时候电子娱乐开始抬头，街上甚至出现了代下歌曲 / 电影的店。&lt;br>
+后来还炒过什么 MP5 的概念，再后来出了智能机，就没有然后了，连功能机都没有了。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="type-b">Type-B&lt;/h3>
+&lt;ul>
+&lt;li>Standard Type-B USB 接口：长得很奇葩，方的，一般出现于打印机上
+&lt;ul>
+&lt;li>USB 2.0 协议（4 金属触点）&lt;/li>
+&lt;li>USB 3.0 协议（9 金属触点，比 2.0 版高一块，但兼容 2.0）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Mini Type-B USB 接口（5 金属触点，只有 2.0）：出现于功能机（现在叫老年机）上，一些 MP3 / MP4 也挣扎着活到了这个时代&lt;/li>
+&lt;li>Micro Type-B USB 接口
+&lt;ul>
+&lt;li>USB 2.0 协议（5 金属触点）：就是以前老的安卓手机上那种，我还记得我第一部智能机是高中的时候，后来发现我的 USB 口怎么跟别人的不太一样&lt;/li>
+&lt;li>USB 3.0 协议（10 金属触点）：就是 2.0 版加宽了一块，常见于老式的移动硬盘*上&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>* 我以前挂载在树莓派上当微型 NAS 用的那块老希捷就是。&lt;br>
+这实属新丐中丐了，树莓派 + 1 T 移动盘，丐到这种程度也不用考虑啥 UPS 了。&lt;br>
+结果后来真就遇见一次停电，树莓派屁事没有，硬盘挂了。&lt;br>
+上面还有好多好东西，好多天上地下仅此一份的独家记忆，现在想起心还会滴血。&lt;br>
+再次强调&lt;strong>数据无价，谨慎操作&lt;/strong>。重要文件尽量做好备份和容灾。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="type-c">Type-C&lt;/h3>
+&lt;p>俗称的 USB-C，只有这一种形状，最显著的特点支持正反插。&lt;br>
+好像有人叫华为口，可是这也不是华为发明的啊，甚至都不是华为引进的*……&lt;/p>
+&lt;blockquote>
+&lt;p>* 国内最早用上 Type-C 的手机厂商如果我没记错是下周回国。&lt;br>
+没错他们还做过手机，我家还有一部，我大一还是大二用来当过一段时间备用机。&lt;/p>
+&lt;/blockquote>
+&lt;p>Type-C 厉害的地方不止正反插实在是太方便了——
+这种方便只能用「先进性」来形容，给人类降低了极大的心智负担。稍微想象一下 Type-A 发明三十年来，全人类加一起总共在「为了给 USB 区分正反面」这件事上浪费了多少时间。&lt;br>
+——支持正反插还有个好处是拔插受力是相对均衡的，不管是接口还是插头，使用寿命都比以前的安卓口要长得多。&lt;br>
+并且 Type-C 拥有史无前例的 &lt;strong>24 个金属触点&lt;/strong>，这意味着甚至有多的触点用不上。&lt;br>
+如此多 I/O 口带来的是超级强大的功能，兼容 USB 2.0 / USB 3.0 / USB4 / 雷电 3 / 雷电 4 / 100W+ 供电都是小意思。&lt;br>
+但并不是所有 Type-C 都这么吊，实际上市面流通的大部分 Type-C，包括很多手机大厂的原装数据线，都是阉割后的丐版 Type-C。&lt;br>
+全功能 Type-C 要大几百呢，后面讲 USB4 会解释凭什么卖这么贵。&lt;br>
+当然了，也不会也一直这么贵。连资本家都忍不了，卖得贵没用，卖得掉才是资本想要的。&lt;/p>
+&lt;h2 id="通信协议">通信协议&lt;/h2>
+&lt;p>注意：本文给协议这个分代是我自己想的，我个人是这样理解的。&lt;br>
+我并没有能力为这个结论的权威性背书，请悉知。&lt;/p>
+&lt;h3 id="第一代">第一代&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">起初 - 2003 年&lt;/th>
+&lt;th style="text-align:center">2003 年改名后&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 1.0&lt;/td>
+&lt;td style="text-align:center">USB 2.0 Low-Speed&lt;/td>
+&lt;td style="text-align:center">1.5 Mbps&lt;/td>
+&lt;td style="text-align:center">0.1875 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 1.1&lt;/td>
+&lt;td style="text-align:center">USB 2.0 Full-Speed&lt;/td>
+&lt;td style="text-align:center">12 Mbps&lt;/td>
+&lt;td style="text-align:center">1.5 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0&lt;/td>
+&lt;td style="text-align:center">USB 2.0 High-Speed&lt;/td>
+&lt;td style="text-align:center">480 Mbps&lt;/td>
+&lt;td style="text-align:center">60 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="第二代">第二代&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">起初 - 2013 年&lt;/th>
+&lt;th style="text-align:center">2013 年改名后&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.0&lt;/td>
+&lt;td style="text-align:center">USB 3.1 Gen1&lt;/td>
+&lt;td style="text-align:center">5 Gbps&lt;/td>
+&lt;td style="text-align:center">640 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.1&lt;/td>
+&lt;td style="text-align:center">USB 3.1 Gen2&lt;/td>
+&lt;td style="text-align:center">10 Gbps&lt;/td>
+&lt;td style="text-align:center">1280 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="第三代">第三代&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">2019 年改名之前&lt;/th>
+&lt;th style="text-align:center">目前协议名&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.1 Gen1&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 1&lt;/td>
+&lt;td style="text-align:center">5 Gbps&lt;/td>
+&lt;td style="text-align:center">640 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.1 Gen2&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 2 x1&lt;/td>
+&lt;td style="text-align:center">10 Gbps&lt;/td>
+&lt;td style="text-align:center">1280 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 2 x2&lt;/td>
+&lt;td style="text-align:center">20 Gbps&lt;/td>
+&lt;td style="text-align:center">2560 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="神必的雷电协议">神必的雷电协议&lt;/h3>
+&lt;p>英特尔发现 USB 已经被他们玩坏了，就丢下微软找苹果合作开发了强大的 &lt;ruby>&lt;rb>雷电&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Thunderbolt&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> 协议。&lt;br>
+雷电 1 / 雷电 2 用的 Mini DP，雷电 3 / 雷电 4 才升级到 Type-C 进行一个飞的起。&lt;br>
+雷电协议强到什么程度呢，可以让笔记本外接显卡（显卡坞技术），用雷电口&lt;strong>外接&lt;/strong>的显卡进行实时计算并与 CPU 通信。&lt;/p>
+&lt;p>想想确实很美，但好多人可能听都没听说过，移动硬盘就算了，显卡还能外接来跑的？&lt;br>
+事实上也是，由于这个技术需要直通 CPU，英特尔在其中收了一笔高昂的专利授权费用，导致支持这个功能的笔记本价格普遍上天。门槛实在太高了，根本没有市场。&lt;br>
+而价格能上天的笔记本就算不是专门的游戏本，打个游戏还是没问题的，反过来其实又用不上外接显卡的雷电协议，这就陷入了 American Chopper Argument Meme 的循环。&lt;/p>
+&lt;p>&lt;img src="https://i.loli.net/2021/05/24/S1rOGL5uD2eqW6g.jpg" alt="">&lt;/p>
+&lt;p>英特尔一看，吗的不对劲了，赶紧带着雷电 3 回 USB-IF 找微软，说：&lt;br>
+「老婆你看，我出去没有光是鬼混，这不给你带了个娃回来。家里的娃不行，这个娃，彳亍！」&lt;br>
+微软一想：反正回来了，算了。凑活过吧，还能离咋地。&lt;br>
+再说这个娃确实牛逼，咱们家的基业算是有希望了。&lt;/p>
+&lt;p>于是 USB-IF 在雷电 3 的基础上推出了&lt;strong>免费&lt;/strong>的 USB4 协议。&lt;br>
+英特尔自己想赚钱没成，不得已回去赚口碑，表示「给行业和消费者带来了双赢的局面」。&lt;br>
+这就是 USB4 的诞生和「雷电 3 / USB4 互相兼容」的原因。&lt;/p>
+&lt;p>然后英特尔一扭头又回去找苹果，说：&lt;br>
+「果妹，上一个娃属实牛逼，帮忙把市场打开了，咱们再生一个赚大钱吧~」&lt;br>
+接着做出了雷电 4，继续搞技术认证，继续收认证费。&lt;br>
+这就是雷电 4 的诞生和「雷电 3 / USB4 / 雷电 4 互相兼容」的原因。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">功能&lt;/th>
+&lt;th style="text-align:center">雷电 3&lt;/th>
+&lt;th style="text-align:center">USB4&lt;/th>
+&lt;th style="text-align:center">雷电 4&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">兼容 USB 协议规范&lt;/td>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">物理接口型号*&lt;/td>
+&lt;td style="text-align:center">Type-C&lt;/td>
+&lt;td style="text-align:center">Type-C&lt;/td>
+&lt;td style="text-align:center">Type-C&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">带宽&lt;/td>
+&lt;td style="text-align:center">20 | 40 Gbps&lt;/td>
+&lt;td style="text-align:center">20 | 40 Gbps&lt;/td>
+&lt;td style="text-align:center">40 Gbps&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">动态分配带宽&lt;/td>
+&lt;td style="text-align:center">不支持&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">外接显卡&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">强制开启 DMA* 保护&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">强制支持充电&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">视频传输协议&lt;/td>
+&lt;td style="text-align:center">Display Port 1.2&lt;/td>
+&lt;td style="text-align:center">可选 Display Port 1.4&lt;/td>
+&lt;td style="text-align:center">Display Port 1.4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">快速充电协议&lt;/td>
+&lt;td style="text-align:center">USB PD 3.0&lt;/td>
+&lt;td style="text-align:center">USB PD 3.0&lt;/td>
+&lt;td style="text-align:center">USB PD 3.0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">反向供电最小功率&lt;/td>
+&lt;td style="text-align:center">15 W&lt;/td>
+&lt;td style="text-align:center">7.5 W&lt;/td>
+&lt;td style="text-align:center">15 W&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>* 注意这是一个充分不必要条件：&lt;br>
+USB4 / 雷电协议一定是 Type-C 接口，但 Type-C 接口未必是 USB4 / 雷电协议。&lt;br>
+目前市面上的 Type-C 反而大部分是 USB 3.0（或者说各种 3.2 Gen X）。&lt;/p>
+&lt;p>* &lt;ruby>&lt;rb>直接内存访问&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Direct Memory Access&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>：硬件之间不通过 CPU 的数据传输。&lt;br>
+减轻了 CPU 的负载，毕竟 CPU 需要管理大量系统中断来分配时间片（我挂过操作系统）；并且不再吃 CPU 的性能瓶颈，能跑多快看 DMA 控制器，跑完才会把总线控制权还给 CPU。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="第四代">第四代&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">协议名&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB4 Gen2 x2&lt;/td>
+&lt;td style="text-align:center">20 Gbps&lt;/td>
+&lt;td style="text-align:center">2560 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB4 Gen3 x2&lt;/td>
+&lt;td style="text-align:center">40 Gbps&lt;/td>
+&lt;td style="text-align:center">5120 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="总结">总结&lt;/h2>
+&lt;ul>
+&lt;li>USB4 只支持 Type-C 接口，所以 USB4 一定是 Type-C，Type-C 就是 USB 的未来&lt;/li>
+&lt;li>但 Type-C 未必是 USB4，根据目前的市场情况很可能是 USB 3.0&lt;/li>
+&lt;li>雷电 3 / 雷电 4 / USB4 互相兼容&lt;/li>
+&lt;li>显卡坞技术想得很美，但长得丑啊&lt;/li>
+&lt;/ul></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E7%A7%91%E6%8A%80/">科技</category><category domain="https://ews.ink/tags/usb/">USB</category><category domain="https://ews.ink/tags/%E9%9B%B7%E7%94%B5/">雷电</category></item><item><title>Sublime &amp; VSCode 配置删除行尾空格</title><link>https://ews.ink/tech/write-dont-trailing-spaces/</link><guid isPermaLink="true">https://ews.ink/tech/write-dont-trailing-spaces/</guid><pubDate>Sun, 23 May 2021 14:08:11 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
 基本上所有码农，在&lt;del>码字&lt;/del> 文本编辑过程中都会遇到一个问题：空格。&lt;br>
 不管是轻量的编辑器，还是沉重的 IDE，空格总是无处不在，给排版工作带来巨大的负担。&lt;br>
 但我们没办法否定的是，空格同时也对排版起到了至关重要的作用。&lt;br>
@@ -336,7 +746,286 @@ zsh-syntax-highlighting
 &lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ &lt;span class="nb">source&lt;/span> ~/.zshrc
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/zsh/">zsh</category><category domain="https://ews.ink/tags/proxychains/">proxychains</category></item><item><title>为什么行业前沿有这么多乱七八糟的标准</title><link>https://ews.ink/life/why-so-much-standards/</link><guid isPermaLink="true">https://ews.ink/life/why-so-much-standards/</guid><pubDate>Sat, 22 May 2021 11:02:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
+&lt;/div></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/zsh/">zsh</category><category domain="https://ews.ink/tags/proxychains/">proxychains</category></item><item><title>Supervisor: 一个 screen 的强力竞品</title><link>https://ews.ink/tech/linux-supervisor/</link><guid isPermaLink="true">https://ews.ink/tech/linux-supervisor/</guid><pubDate>Sat, 22 May 2021 19:02:41 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>一个人膨胀只会害了自己，抱持既定成见故步自封不可取。&lt;br>
+我起初还看不上 Python 写的 Supervisor，沉迷 screen，甚至自己手写过服务*。&lt;/p>
+&lt;blockquote>
+&lt;p>* 不是 &lt;code>.service&lt;/code> 插进 &lt;code>/etc/systemd/system/&lt;/code> 就叫服务（准确地说是 daemon 进程）。&lt;br>
+单脚本&lt;strong>无依赖&lt;/strong>支持 &lt;code>start&lt;/code> / &lt;code>stop&lt;/code> / &lt;code>restart&lt;/code> / &lt;code>status&lt;/code> 才叫服务。&lt;br>
+支持开机自启 / 状态自检 / 自动重启当然要有，但那是「特性」，不是「依赖」。&lt;/p>
+&lt;/blockquote>
+&lt;p>在前段时间为了 &lt;a href="https://ews.ink/tech/wsl-gui" target="_blank">WSLg&lt;/a> 重装 WSL 之前，我用 Hugo 跑的本地网页文档都还是手写的服务。&lt;br>
+舍不得换。刚写好的时候更是不得了，后来机缘巧合用上 Supervisor 才感觉自己像个沙口。&lt;/p>
+&lt;p>&lt;img src="https://i.loli.net/2021/05/24/cPM2wTXKrZm8DHR.gif" alt="">&lt;/p>
+&lt;h2 id="安装">安装&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt install -y supervisor
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="配置">配置&lt;/h2>
+&lt;h3 id="主配置文件">主配置文件&lt;/h3>
+&lt;p>从 &lt;a href="http://supervisord.org/configuration.html">官方文档&lt;/a> 可知配置文件的读取顺序：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>../etc/supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>../supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>$CWD/supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>$CWD/etc/supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>/etc/supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>/etc/supervisor/supervisord.conf&lt;/code>（v3.3.0+）&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>很多 Debian 和 Ubuntu 版本的 Supervisor 都把 &lt;code>/etc/supervisor/supervisord.conf&lt;/code> 加入了搜索路径。但 PyPI 包只有 3.3.0 以上的版本才包括这个路径，用 pip 安装的话要注意。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>vim /etc/supervisor/supervisord.conf&lt;/code> 编辑主配置文件：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">[&lt;/span>unix_http_server&lt;span class="o">]&lt;/span>
+&lt;span class="nv">file&lt;/span>&lt;span class="o">=&lt;/span>/tmp/supervisor.sock &lt;span class="c1"># UNIX的socket文件 supervisorctl会用XML-RPC连接到这个文件来和supervisord通信&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">chmod&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0700&lt;/span> &lt;span class="c1"># socket文件的权限 默认为0700&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">chown&lt;/span>&lt;span class="o">=&lt;/span>root:root &lt;span class="c1"># socket文件的owner 格式uid:gid&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="o">[&lt;/span>inet_http_server&lt;span class="o">]&lt;/span> &lt;span class="c1"># 注意这一行也被注释掉了&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">port&lt;/span>&lt;span class="o">=&lt;/span>127.0.0.1:9001 &lt;span class="c1"># web管理后台运行的ip和端口 建议不要放给公网 一定要放的话注意安全&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">username&lt;/span>&lt;span class="o">=&lt;/span>user &lt;span class="c1"># web管理后台的用户名&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">password&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">123&lt;/span> &lt;span class="c1"># web管理后台的密码&lt;/span>
+&lt;span class="o">[&lt;/span>supervisord&lt;span class="o">]&lt;/span>
+&lt;span class="nv">logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/supervisord.log &lt;span class="c1"># 主程序的日志文件 默认为$CWD/supervisord.log&lt;/span>
+&lt;span class="nv">logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>50MB &lt;span class="c1"># 单个日志文件大小 默认为50MB 0为不限制大小&lt;/span>
+&lt;span class="nv">logfile_backups&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> &lt;span class="c1"># 日志记录文件备份数量 默认为10份 0为不备份&lt;/span>
+&lt;span class="nv">loglevel&lt;/span>&lt;span class="o">=&lt;/span>info &lt;span class="c1"># 日志级别 默认为info 可以为critical/error/warn/info/debug/trace/blather&lt;/span>
+&lt;span class="nv">umask&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">022&lt;/span> &lt;span class="c1"># 主程序的umask 默认为022&lt;/span>
+&lt;span class="nv">pidfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/supervisord.pid &lt;span class="c1"># 记录pid的文件 默认为$CWD/supervisord.pid&lt;/span>
+&lt;span class="nv">nodaemon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">false&lt;/span> &lt;span class="c1"># 是否在前台启动 默认为false(以daemon方式启动)&lt;/span>
+&lt;span class="nv">minfds&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1024&lt;/span> &lt;span class="c1"># 允许打开文件描述符的最小值 默认为1024&lt;/span>
+&lt;span class="nv">minprocs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">200&lt;/span> &lt;span class="c1"># 允许打开的进程数的最小值 默认为200&lt;/span>
+&lt;span class="o">[&lt;/span>supervisorctl&lt;span class="o">]&lt;/span>
+&lt;span class="nv">serverurl&lt;/span>&lt;span class="o">=&lt;/span>unix:///tmp/supervisor.sock &lt;span class="c1"># 连接到supervisord的url&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">serverurl&lt;/span>&lt;span class="o">=&lt;/span>http://localhost:9001 &lt;span class="c1"># 通过http的方式连接supervisord&lt;/span>
+&lt;span class="o">[&lt;/span>include&lt;span class="o">]&lt;/span>
+&lt;span class="nv">files&lt;/span>&lt;span class="o">=&lt;/span>/etc/supervisor/conf.d/*.conf &lt;span class="c1"># 其他配置文件路径&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="示例">示例&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">[&lt;/span>unix_http_server&lt;span class="o">]&lt;/span>
+&lt;span class="nv">file&lt;/span> &lt;span class="o">=&lt;/span> /var/run/supervisor.sock
+&lt;span class="nv">chmod&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0700&lt;/span>
+&lt;span class="nv">chown&lt;/span> &lt;span class="o">=&lt;/span> root:users
+&lt;span class="o">[&lt;/span>inet_http_server&lt;span class="o">]&lt;/span>
+&lt;span class="nv">port&lt;/span> &lt;span class="o">=&lt;/span> 127.0.0.1:9001
+&lt;span class="nv">username&lt;/span> &lt;span class="o">=&lt;/span> admin
+&lt;span class="nv">password&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">123456&lt;/span>
+&lt;span class="o">[&lt;/span>supervisord&lt;span class="o">]&lt;/span>
+&lt;span class="nv">logfile&lt;/span> &lt;span class="o">=&lt;/span> /var/log/supervisor/supervisord.log
+&lt;span class="nv">logfile_maxbytes&lt;/span> &lt;span class="o">=&lt;/span> 50MB
+&lt;span class="nv">logfile_backups&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">10&lt;/span>
+&lt;span class="nv">pidfile&lt;/span> &lt;span class="o">=&lt;/span> /var/run/supervisord.pid
+&lt;span class="nv">childlogdir&lt;/span> &lt;span class="o">=&lt;/span> /var/log/supervisor
+&lt;span class="o">[&lt;/span>rpcinterface:supervisor&lt;span class="o">]&lt;/span>
+supervisor.rpcinterface_factory &lt;span class="o">=&lt;/span> supervisor.rpcinterface:make_main_rpcinterface
+&lt;span class="o">[&lt;/span>supervisorctl&lt;span class="o">]&lt;/span>
+&lt;span class="nv">serverurl&lt;/span> &lt;span class="o">=&lt;/span> unix:///var/run/supervisor.sock
+&lt;span class="o">[&lt;/span>include&lt;span class="o">]&lt;/span>
+&lt;span class="nv">files&lt;/span> &lt;span class="o">=&lt;/span> /root/app/supervisor/conf
+&lt;span class="o">[&lt;/span>group:hugo&lt;span class="o">]&lt;/span>
+&lt;span class="nv">programs&lt;/span> &lt;span class="o">=&lt;/span> docs,blog
+&lt;span class="nv">priority&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">500&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="子程序配置文件">子程序配置文件&lt;/h3>
+&lt;p>放在主程序配置文件 &lt;code>[include]&lt;/code> 设置的路径下。&lt;br>
+比如 &lt;code>vim /etc/supervisor/conf.d/test.conf&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">[&lt;/span>program:test&lt;span class="o">]&lt;/span> &lt;span class="c1"># 子程序的名字 supervisorctl管理的就是这个&lt;/span>
+&lt;span class="nv">user&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">test&lt;/span> &lt;span class="c1"># 运行子程序的用户&lt;/span>
+&lt;span class="nv">directory&lt;/span>&lt;span class="o">=&lt;/span>/tmp/ &lt;span class="c1"># 子程序运行的工作目录&lt;/span>
+&lt;span class="nv">command&lt;/span>&lt;span class="o">=&lt;/span>/bin/sleep &lt;span class="m">100&lt;/span> &lt;span class="c1"># 子程序运行的具体命令&lt;/span>
+&lt;span class="nv">autostart&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">true&lt;/span> &lt;span class="c1"># 子程序是否跟随supervisor主程序一起启动 默认true&lt;/span>
+&lt;span class="nv">autorestart&lt;/span>&lt;span class="o">=&lt;/span>unexpected &lt;span class="c1"># false从不重启 true总是重启只要一退出就重启 unexpected仅抛出错误退出时重启&lt;/span>
+&lt;span class="nv">exitcodes&lt;/span>&lt;span class="o">=&lt;/span>0,2 &lt;span class="c1"># 定义[正常退出]的退出码 不在这个列表里的错误代码会触发unexpected的autorestart&lt;/span>
+&lt;span class="nv">startretries&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> &lt;span class="c1"># 尝试重启的次数 3为3次以后仍未启动则不再重启并显示状态FATAL 默认3次&lt;/span>
+&lt;span class="nv">startsecs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> &lt;span class="c1"># 启动成功的判断时间 1为启动后1秒还在运行(没有抛出错误并退出)则视为启动成功 默认1秒&lt;/span>
+&lt;span class="nv">stdout_logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/test_sv.log &lt;span class="c1"># 正常日志log输出文件路径&lt;/span>
+&lt;span class="nv">stdout_logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>20MB &lt;span class="c1"># stdout日志记录文件大小 默认50MB&lt;/span>
+&lt;span class="nv">stdout_logfile_backups&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> &lt;span class="c1"># stdout日志记录文件备份数量 默认10份&lt;/span>
+&lt;span class="nv">redirect_stderr&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">false&lt;/span> &lt;span class="c1"># 是否将error重定向至普通log 换句话说是否合并所有日志输出&lt;/span>
+&lt;span class="nv">stderr_logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/test_sv.err &lt;span class="c1"># 错误日志error输出文件路径&lt;/span>
+&lt;span class="nv">stderr_logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>20MB &lt;span class="c1"># stderr日志记录文件大小 对应stdout&lt;/span>
+&lt;span class="nv">stderr_logfile_backups&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> &lt;span class="c1"># stderr日志记录文件备份数 对应stdout&lt;/span>
+&lt;span class="nv">priority&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">999&lt;/span> &lt;span class="c1"># 优先级 值越小越优先 默认999&lt;/span>
+&lt;span class="nv">numprocs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> &lt;span class="c1"># 进程数量 &amp;gt;1表示多进程 产生的参数process_num是第几个启动的进程&lt;/span>
+&lt;span class="nv">process_name&lt;/span>&lt;span class="o">=&lt;/span>%&lt;span class="o">(&lt;/span>program_name&lt;span class="o">)&lt;/span>s_%&lt;span class="o">(&lt;/span>process_num&lt;span class="o">)&lt;/span>02d &lt;span class="c1"># 如果开启多进程 某个子进程的命名格式 形如test_00/test_01&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="示例-1">示例&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">[&lt;/span>program:docs&lt;span class="o">]&lt;/span>
+&lt;span class="nv">user&lt;/span>&lt;span class="o">=&lt;/span>root
+&lt;span class="nv">directory&lt;/span>&lt;span class="o">=&lt;/span>/mnt/d/Workspace/Git/Repo/Blog/local-docs/
+&lt;span class="nv">command&lt;/span>&lt;span class="o">=&lt;/span>/root/app/hugo server -p &lt;span class="m">1314&lt;/span> --minify --theme book --watch -D -E -F
+&lt;span class="nv">autostart&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">true&lt;/span>
+&lt;span class="nv">autorestart&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">true&lt;/span>
+&lt;span class="nv">startsecs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">2&lt;/span>
+&lt;span class="nv">stdout_logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/log/supervisor/docs.out.log
+&lt;span class="nv">stdout_logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>2MB
+&lt;span class="nv">stderr_logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/log/supervisor/docs.err.log
+&lt;span class="nv">stderr_logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>2MB
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="使用">使用&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ supervisorctl &lt;span class="nb">help&lt;/span> &lt;span class="c1"># 查看用法&lt;/span>
+$ supervisorctl status &lt;span class="c1"># 查看所有子程序的状态&lt;/span>
+$ supervisorctl stop hugo &lt;span class="c1"># 停止名为 hugo 的子程序&lt;/span>
+$ supervisorctl clear api &lt;span class="c1"># 清除名为 api 的子程序的输出日志&lt;/span>
+$ supervisorctl start &lt;span class="nb">test&lt;/span> &lt;span class="c1"># 启动名为 test 的子程序&lt;/span>
+$ supervisorctl restart all &lt;span class="c1"># 重启所有子程序&lt;/span>
+$ supervisorctl update all &lt;span class="c1"># 重载全部配置文件&lt;/span>
+$ supervisorctl reload &lt;span class="c1"># 重启 supervisord 主程序&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="常见问题">常见问题&lt;/h2>
+&lt;h3 id="unixvarrunsupervisorsock-no-such-file">&lt;code>unix:///var/run/supervisor.sock no such file&lt;/code>&lt;/h3>
+&lt;p>你确定 Supervisor 真的&lt;strong>正在运行&lt;/strong>中吗？&lt;br>
+重启服务器并&lt;strong>不代表&lt;/strong>就会自动运行 Supervisor，它是值守其他程序的，不是值守它自己。&lt;br>
+&lt;code>supervisord -c /etc/supervisord.conf&lt;/code> 手动启动 Supervisor。&lt;/p>
+&lt;h3 id="supervisorctl-stop-xxx-关不掉-xxx">&lt;code>supervisorctl stop xxx&lt;/code> 关不掉 &lt;code>xxx&lt;/code>&lt;/h3>
+&lt;p>这种情况有可能是启动了多个 Supervisor，导致&lt;strong>同一时间&lt;/strong>有多个 Supervisor 在一起管理。&lt;/p>
+&lt;p>&lt;code>ps -aux | grep supervisord | grep -v grep&lt;/code> 查看正在运行的 Supervisor 进程；&lt;br>
+如果有两个或以上，那就说明确实是这种情况。&lt;br>
+原因可能是 Supervisor 本来已经在运行了，结果又运行了一个新的。&lt;/p>
+&lt;p>不是人家业务逻辑写得烂，Linux 程序还特意写单例的有心人真的不多。&lt;br>
+Windows 的应用程序动动鼠标就点开了，开个软件还要特意过一遍脑子才是奇葩。&lt;br>
+Linux 操作系统这么底层，启动程序的心智成本高也很合理，不然瞎玩玩坏了怎么办。&lt;/p>
+&lt;p>可以运行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ ps -aux &lt;span class="p">|&lt;/span> grep supervisord &lt;span class="p">|&lt;/span> grep -v grep &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{print $2}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> xargs &lt;span class="nb">kill&lt;/span> -9
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>强制关闭正在运行的所有 Supervisor，然后重新运行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ supervisord -c /etc/supervisor/supervisord.conf
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>启动唯一指定 Supervisor。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/supervisor/">Supervisor</category></item><item><title>为什么行业前沿有这么多乱七八糟的标准</title><link>https://ews.ink/life/why-so-much-standards/</link><guid isPermaLink="true">https://ews.ink/life/why-so-much-standards/</guid><pubDate>Sat, 22 May 2021 11:02:25 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;ul>
 &lt;li>&lt;a href="https://ews.ink/tech/storage-sd-card" target="_blank">存储卡标准&lt;/a>&lt;/li>
 &lt;li>内存 DDR&lt;/li>
 &lt;li>&lt;a href="https://ews.ink/tech/interface-usb-standard" target="_blank">USB 和雷电协议&lt;/a>&lt;/li>
@@ -4159,7 +4848,7 @@ config.toml 配置文件
 至于我为什么想在 Linux 上用 QQ 腾讯心里没点逼数吗？TIM 就是什么好东西吗？&lt;br>
 鹅厂的产品论良心程度，真的只比百度云毫不掩饰的丑恶吃相强得有限。&lt;br>
 尤其那个 WeGame，什么不可燃垃圾。&lt;br>
-起初全班只有我不用，毕业后据我所知只有可怜的 DNF 玩家还在用了。&lt;/p>
+起初全班只有我不用，毕业之后据我所知只有可怜的 DNF 玩家还在用了。&lt;/p>
 &lt;h2 id="其他问题">其他问题&lt;/h2>
 &lt;h3 id="windows-预览体验计划-一片空白">Windows 预览体验计划 一片空白&lt;/h3>
 &lt;p>修改注册表，将 Telemetry 等级拉满即可修复。&lt;/p>

@@ -1,4 +1,414 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><title type="text">Everybody Wants Some</title><subtitle type="html">人傻又健忘，记点什么</subtitle><updated>2021-05-24T01:46:03+08:00</updated><id>https://ews.ink/</id><link rel="alternate" type="text/html" href="https://ews.ink/"/><link rel="self" type="application/atom+xml" href="https://ews.ink/atom.xml"/><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator><entry><title type="text">Sublime &amp; VSCode 配置删除行尾空格</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/write-dont-trailing-spaces/"/><id>https://ews.ink/tech/write-dont-trailing-spaces/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-23T14:08:11+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。 基本上所有码……</summary><content type="html">&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><title type="text">Everybody Wants Some</title><subtitle type="html">人傻又健忘，记点什么</subtitle><updated>2021-05-24T14:35:06+08:00</updated><id>https://ews.ink/</id><link rel="alternate" type="text/html" href="https://ews.ink/"/><link rel="self" type="application/atom+xml" href="https://ews.ink/atom.xml"/><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><generator uri="https://gohugo.io/" version="0.83.1">Hugo</generator><entry><title type="text">USB 相关知识简单科普</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/interface-usb-standard/"/><id>https://ews.ink/tech/interface-usb-standard/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-23T20:44:46+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">USB 协议性能标准 目前协议名 曾用协议名 带宽 理论速度* USB 2.0 Low-Speed USB 1.0 1.5 Mbps 0.1875 MB/s USB 2.0 Full-Speed USB 1.1 12 Mbps 1.5 MB/s……</summary><content type="html">&lt;h2 id="usb-协议性能标准">USB 协议性能标准&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">目前协议名&lt;/th>
+&lt;th style="text-align:center">曾用协议名&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度*&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0 Low-Speed&lt;/td>
+&lt;td style="text-align:center">USB 1.0&lt;/td>
+&lt;td style="text-align:center">1.5 Mbps&lt;/td>
+&lt;td style="text-align:center">0.1875 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0 Full-Speed&lt;/td>
+&lt;td style="text-align:center">USB 1.1&lt;/td>
+&lt;td style="text-align:center">12 Mbps&lt;/td>
+&lt;td style="text-align:center">1.5 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0 High-Speed&lt;/td>
+&lt;td style="text-align:center">USB 2.0&lt;/td>
+&lt;td style="text-align:center">480 Mbps&lt;/td>
+&lt;td style="text-align:center">60 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2 Gen1&lt;/td>
+&lt;td style="text-align:center">USB 3.0 / USB 3.1 Gen1&lt;/td>
+&lt;td style="text-align:center">5 Gbps&lt;/td>
+&lt;td style="text-align:center">640 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2 Gen2 x1&lt;/td>
+&lt;td style="text-align:center">USB 3.1 / USB 3.1 Gen2&lt;/td>
+&lt;td style="text-align:center">10 Gbps&lt;/td>
+&lt;td style="text-align:center">1280 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2 Gen2 x2&lt;/td>
+&lt;td style="text-align:center">USB 3.2&lt;/td>
+&lt;td style="text-align:center">20 Gbps&lt;/td>
+&lt;td style="text-align:center">2560 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB4 Gen2 x2&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">20 Gbps&lt;/td>
+&lt;td style="text-align:center">2560 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB4 Gen3 x2&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">40 Gbps&lt;/td>
+&lt;td style="text-align:center">5120 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>* 理论速度为什么光看数字低于带宽的 1 / 8，我在《&lt;a href="https://ews.ink/tech/network-bottom/#%E7%BD%91%E9%80%9F%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F" target="_blank">网速的计算方式&lt;/a>》一节中详细说明过。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="usb-命名演进过程usb-if-真是不干人事">USB 命名演进过程（USB-IF 真是不干人事）&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">最初协议名&lt;/th>
+&lt;th style="text-align:center">第二次改名&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">第三次改名&lt;/th>
+&lt;th style="text-align:center">目前协议名&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 1.0&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">2003 年&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">USB 2.0 Low-Speed&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 1.1&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">2003 年&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">USB 2.0 Full-Speed&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">2003 年&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">USB 2.0 High-Speed&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.0&lt;/td>
+&lt;td style="text-align:center">2013 年&lt;/td>
+&lt;td style="text-align:center">USB 3.1 Gen1&lt;/td>
+&lt;td style="text-align:center">2019 年&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.1&lt;/td>
+&lt;td style="text-align:center">2013 年&lt;/td>
+&lt;td style="text-align:center">USB 3.1 Gen2&lt;/td>
+&lt;td style="text-align:center">2019 年&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 2 x1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">2019 年&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 2 x2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="usb-if-起源">USB-IF 起源&lt;/h2>
+&lt;p>1994 年，微软和英特尔倡导发起成立了 USB 开发者论坛（USB Implementers Forum），旨在推进 USB 的技术发展与标准化。&lt;/p>
+&lt;h2 id="物理接口">物理接口&lt;/h2>
+&lt;p>&lt;img src="https://i.loli.net/2021/05/23/MPWFIviU2qeYyKm.png" alt="USB">&lt;/p>
+&lt;h3 id="type-a">Type-A&lt;/h3>
+&lt;ul>
+&lt;li>Standard Type-A USB 接口
+&lt;ul>
+&lt;li>USB 2.0 协议（4 金属触点）&lt;/li>
+&lt;li>USB 3.0 协议（9 金属触点）：一般是蓝色，很多人教你区分 2.0 和 3.0 看颜色，其实未必准确（我见过青色的，&lt;del>我 TM&lt;/del>），但是看金属触点就靠谱得多了&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Mini Type-A USB 接口&lt;/li>
+&lt;li>Micro Type-A USB 接口
+&lt;ul>
+&lt;li>USB 2.0 协议&lt;/li>
+&lt;li>USB 3.0 协议&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>除了经典的标准 Type-A 熬死了所有后辈，坚挺到了今天。&lt;br>
+别的 Type-A 都已经死绝了，以前是用在 MP3 / MP4 上。&lt;/p>
+&lt;blockquote>
+&lt;p>我很怀疑现在的年轻人是否知道 MP3，不是 &lt;code>.mp3&lt;/code>，是专门播放 &lt;code>.mp3&lt;/code> 的硬件。&lt;br>
+也许听个歌还有专门的机器对他们来说是一件很难想象的事。&lt;br>
+但就是我这代人的童年回忆，我们小学初中哪有什么手机甚至电脑，能玩贪吃蛇就很吊了，几个小伙伴一个魔塔玩一下午很平常的事。&lt;br>
+半夜躲在被窝里听 MP3 就是最大的乐子之一。发展到 MP4 可以看点 360p 的&lt;em>高清&lt;/em>电影，这个时候电子娱乐开始抬头，街上甚至出现了代下歌曲 / 电影的店。&lt;br>
+后来还炒过什么 MP5 的概念，再后来出了智能机，就没有然后了，连功能机都没有了。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="type-b">Type-B&lt;/h3>
+&lt;ul>
+&lt;li>Standard Type-B USB 接口：长得很奇葩，方的，一般出现于打印机上
+&lt;ul>
+&lt;li>USB 2.0 协议（4 金属触点）&lt;/li>
+&lt;li>USB 3.0 协议（9 金属触点，比 2.0 版高一块，但兼容 2.0）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Mini Type-B USB 接口（5 金属触点，只有 2.0）：出现于功能机（现在叫老年机）上，一些 MP3 / MP4 也挣扎着活到了这个时代&lt;/li>
+&lt;li>Micro Type-B USB 接口
+&lt;ul>
+&lt;li>USB 2.0 协议（5 金属触点）：就是以前老的安卓手机上那种，我还记得我第一部智能机是高中的时候，后来发现我的 USB 口怎么跟别人的不太一样&lt;/li>
+&lt;li>USB 3.0 协议（10 金属触点）：就是 2.0 版加宽了一块，常见于老式的移动硬盘*上&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>* 我以前挂载在树莓派上当微型 NAS 用的那块老希捷就是。&lt;br>
+这实属新丐中丐了，树莓派 + 1 T 移动盘，丐到这种程度也不用考虑啥 UPS 了。&lt;br>
+结果后来真就遇见一次停电，树莓派屁事没有，硬盘挂了。&lt;br>
+上面还有好多好东西，好多天上地下仅此一份的独家记忆，现在想起心还会滴血。&lt;br>
+再次强调&lt;strong>数据无价，谨慎操作&lt;/strong>。重要文件尽量做好备份和容灾。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="type-c">Type-C&lt;/h3>
+&lt;p>俗称的 USB-C，只有这一种形状，最显著的特点支持正反插。&lt;br>
+好像有人叫华为口，可是这也不是华为发明的啊，甚至都不是华为引进的*……&lt;/p>
+&lt;blockquote>
+&lt;p>* 国内最早用上 Type-C 的手机厂商如果我没记错是下周回国。&lt;br>
+没错他们还做过手机，我家还有一部，我大一还是大二用来当过一段时间备用机。&lt;/p>
+&lt;/blockquote>
+&lt;p>Type-C 厉害的地方不止正反插实在是太方便了——
+这种方便只能用「先进性」来形容，给人类降低了极大的心智负担。稍微想象一下 Type-A 发明三十年来，全人类加一起总共在「为了给 USB 区分正反面」这件事上浪费了多少时间。&lt;br>
+——支持正反插还有个好处是拔插受力是相对均衡的，不管是接口还是插头，使用寿命都比以前的安卓口要长得多。&lt;br>
+并且 Type-C 拥有史无前例的 &lt;strong>24 个金属触点&lt;/strong>，这意味着甚至有多的触点用不上。&lt;br>
+如此多 I/O 口带来的是超级强大的功能，兼容 USB 2.0 / USB 3.0 / USB4 / 雷电 3 / 雷电 4 / 100W+ 供电都是小意思。&lt;br>
+但并不是所有 Type-C 都这么吊，实际上市面流通的大部分 Type-C，包括很多手机大厂的原装数据线，都是阉割后的丐版 Type-C。&lt;br>
+全功能 Type-C 要大几百呢，后面讲 USB4 会解释凭什么卖这么贵。&lt;br>
+当然了，也不会也一直这么贵。连资本家都忍不了，卖得贵没用，卖得掉才是资本想要的。&lt;/p>
+&lt;h2 id="通信协议">通信协议&lt;/h2>
+&lt;p>注意：本文给协议这个分代是我自己想的，我个人是这样理解的。&lt;br>
+我并没有能力为这个结论的权威性背书，请悉知。&lt;/p>
+&lt;h3 id="第一代">第一代&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">起初 - 2003 年&lt;/th>
+&lt;th style="text-align:center">2003 年改名后&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 1.0&lt;/td>
+&lt;td style="text-align:center">USB 2.0 Low-Speed&lt;/td>
+&lt;td style="text-align:center">1.5 Mbps&lt;/td>
+&lt;td style="text-align:center">0.1875 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 1.1&lt;/td>
+&lt;td style="text-align:center">USB 2.0 Full-Speed&lt;/td>
+&lt;td style="text-align:center">12 Mbps&lt;/td>
+&lt;td style="text-align:center">1.5 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 2.0&lt;/td>
+&lt;td style="text-align:center">USB 2.0 High-Speed&lt;/td>
+&lt;td style="text-align:center">480 Mbps&lt;/td>
+&lt;td style="text-align:center">60 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="第二代">第二代&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">起初 - 2013 年&lt;/th>
+&lt;th style="text-align:center">2013 年改名后&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.0&lt;/td>
+&lt;td style="text-align:center">USB 3.1 Gen1&lt;/td>
+&lt;td style="text-align:center">5 Gbps&lt;/td>
+&lt;td style="text-align:center">640 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.1&lt;/td>
+&lt;td style="text-align:center">USB 3.1 Gen2&lt;/td>
+&lt;td style="text-align:center">10 Gbps&lt;/td>
+&lt;td style="text-align:center">1280 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="第三代">第三代&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">2019 年改名之前&lt;/th>
+&lt;th style="text-align:center">目前协议名&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.1 Gen1&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 1&lt;/td>
+&lt;td style="text-align:center">5 Gbps&lt;/td>
+&lt;td style="text-align:center">640 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.1 Gen2&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 2 x1&lt;/td>
+&lt;td style="text-align:center">10 Gbps&lt;/td>
+&lt;td style="text-align:center">1280 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB 3.2&lt;/td>
+&lt;td style="text-align:center">USB 3.2 Gen 2 x2&lt;/td>
+&lt;td style="text-align:center">20 Gbps&lt;/td>
+&lt;td style="text-align:center">2560 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="神必的雷电协议">神必的雷电协议&lt;/h3>
+&lt;p>英特尔发现 USB 已经被他们玩坏了，就丢下微软找苹果合作开发了强大的 &lt;ruby>&lt;rb>雷电&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Thunderbolt&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> 协议。&lt;br>
+雷电 1 / 雷电 2 用的 Mini DP，雷电 3 / 雷电 4 才升级到 Type-C 进行一个飞的起。&lt;br>
+雷电协议强到什么程度呢，可以让笔记本外接显卡（显卡坞技术），用雷电口&lt;strong>外接&lt;/strong>的显卡进行实时计算并与 CPU 通信。&lt;/p>
+&lt;p>想想确实很美，但好多人可能听都没听说过，移动硬盘就算了，显卡还能外接来跑的？&lt;br>
+事实上也是，由于这个技术需要直通 CPU，英特尔在其中收了一笔高昂的专利授权费用，导致支持这个功能的笔记本价格普遍上天。门槛实在太高了，根本没有市场。&lt;br>
+而价格能上天的笔记本就算不是专门的游戏本，打个游戏还是没问题的，反过来其实又用不上外接显卡的雷电协议，这就陷入了 American Chopper Argument Meme 的循环。&lt;/p>
+&lt;p>&lt;img src="https://i.loli.net/2021/05/24/S1rOGL5uD2eqW6g.jpg" alt="">&lt;/p>
+&lt;p>英特尔一看，吗的不对劲了，赶紧带着雷电 3 回 USB-IF 找微软，说：&lt;br>
+「老婆你看，我出去没有光是鬼混，这不给你带了个娃回来。家里的娃不行，这个娃，彳亍！」&lt;br>
+微软一想：反正回来了，算了。凑活过吧，还能离咋地。&lt;br>
+再说这个娃确实牛逼，咱们家的基业算是有希望了。&lt;/p>
+&lt;p>于是 USB-IF 在雷电 3 的基础上推出了&lt;strong>免费&lt;/strong>的 USB4 协议。&lt;br>
+英特尔自己想赚钱没成，不得已回去赚口碑，表示「给行业和消费者带来了双赢的局面」。&lt;br>
+这就是 USB4 的诞生和「雷电 3 / USB4 互相兼容」的原因。&lt;/p>
+&lt;p>然后英特尔一扭头又回去找苹果，说：&lt;br>
+「果妹，上一个娃属实牛逼，帮忙把市场打开了，咱们再生一个赚大钱吧~」&lt;br>
+接着做出了雷电 4，继续搞技术认证，继续收认证费。&lt;br>
+这就是雷电 4 的诞生和「雷电 3 / USB4 / 雷电 4 互相兼容」的原因。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">功能&lt;/th>
+&lt;th style="text-align:center">雷电 3&lt;/th>
+&lt;th style="text-align:center">USB4&lt;/th>
+&lt;th style="text-align:center">雷电 4&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">兼容 USB 协议规范&lt;/td>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;td style="text-align:center">USB4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">物理接口型号*&lt;/td>
+&lt;td style="text-align:center">Type-C&lt;/td>
+&lt;td style="text-align:center">Type-C&lt;/td>
+&lt;td style="text-align:center">Type-C&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">带宽&lt;/td>
+&lt;td style="text-align:center">20 | 40 Gbps&lt;/td>
+&lt;td style="text-align:center">20 | 40 Gbps&lt;/td>
+&lt;td style="text-align:center">40 Gbps&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">动态分配带宽&lt;/td>
+&lt;td style="text-align:center">不支持&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">外接显卡&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;td style="text-align:center">支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">强制开启 DMA* 保护&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">强制支持充电&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">视频传输协议&lt;/td>
+&lt;td style="text-align:center">Display Port 1.2&lt;/td>
+&lt;td style="text-align:center">可选 Display Port 1.4&lt;/td>
+&lt;td style="text-align:center">Display Port 1.4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">快速充电协议&lt;/td>
+&lt;td style="text-align:center">USB PD 3.0&lt;/td>
+&lt;td style="text-align:center">USB PD 3.0&lt;/td>
+&lt;td style="text-align:center">USB PD 3.0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">反向供电最小功率&lt;/td>
+&lt;td style="text-align:center">15 W&lt;/td>
+&lt;td style="text-align:center">7.5 W&lt;/td>
+&lt;td style="text-align:center">15 W&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>* 注意这是一个充分不必要条件：&lt;br>
+USB4 / 雷电协议一定是 Type-C 接口，但 Type-C 接口未必是 USB4 / 雷电协议。&lt;br>
+目前市面上的 Type-C 反而大部分是 USB 3.0（或者说各种 3.2 Gen X）。&lt;/p>
+&lt;p>* &lt;ruby>&lt;rb>直接内存访问&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Direct Memory Access&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>：硬件之间不通过 CPU 的数据传输。&lt;br>
+减轻了 CPU 的负载，毕竟 CPU 需要管理大量系统中断来分配时间片（我挂过操作系统）；并且不再吃 CPU 的性能瓶颈，能跑多快看 DMA 控制器，跑完才会把总线控制权还给 CPU。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="第四代">第四代&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">协议名&lt;/th>
+&lt;th style="text-align:center">带宽&lt;/th>
+&lt;th style="text-align:center">理论速度&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">USB4 Gen2 x2&lt;/td>
+&lt;td style="text-align:center">20 Gbps&lt;/td>
+&lt;td style="text-align:center">2560 MB/s&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">USB4 Gen3 x2&lt;/td>
+&lt;td style="text-align:center">40 Gbps&lt;/td>
+&lt;td style="text-align:center">5120 MB/s&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="总结">总结&lt;/h2>
+&lt;ul>
+&lt;li>USB4 只支持 Type-C 接口，所以 USB4 一定是 Type-C，Type-C 就是 USB 的未来&lt;/li>
+&lt;li>但 Type-C 未必是 USB4，根据目前的市场情况很可能是 USB 3.0&lt;/li>
+&lt;li>雷电 3 / 雷电 4 / USB4 互相兼容&lt;/li>
+&lt;li>显卡坞技术想得很美，但长得丑啊&lt;/li>
+&lt;/ul></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%A7%91%E6%8A%80/" term="科技" label="科技"/><category scheme="https://ews.ink/tags/usb/" term="USB" label="USB"/><category scheme="https://ews.ink/tags/%E9%9B%B7%E7%94%B5/" term="雷电" label="雷电"/></entry><entry><title type="text">Sublime &amp; VSCode 配置删除行尾空格</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/write-dont-trailing-spaces/"/><id>https://ews.ink/tech/write-dont-trailing-spaces/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-23T14:08:11+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。 基本上所有码……</summary><content type="html">&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
 基本上所有码农，在&lt;del>码字&lt;/del> 文本编辑过程中都会遇到一个问题：空格。&lt;br>
 不管是轻量的编辑器，还是沉重的 IDE，空格总是无处不在，给排版工作带来巨大的负担。&lt;br>
 但我们没办法否定的是，空格同时也对排版起到了至关重要的作用。&lt;br>
@@ -93,7 +503,7 @@
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>舒服了。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/markdown/" term="Markdown" label="Markdown"/><category scheme="https://ews.ink/tags/sublime/" term="Sublime" label="Sublime"/><category scheme="https://ews.ink/tags/vscode/" term="VSCode" label="VSCode"/></entry><entry><title type="text">使用 proxychain4 安装 zsh</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-proxy-terminal/"/><id>https://ews.ink/tech/linux-proxy-terminal/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-23T12:21:40+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">proxychain-ng proxychains ng 的 ng 是 new generation 的意思，其实就是 proxychains4。 首先本地开启 socks5 代理（端口有……</summary><content type="html">&lt;h2 id="proxychain-ng">proxychain-ng&lt;/h2>
+&lt;/div>&lt;p>舒服了。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/markdown/" term="Markdown" label="Markdown"/><category scheme="https://ews.ink/tags/sublime/" term="Sublime" label="Sublime"/><category scheme="https://ews.ink/tags/vscode/" term="VSCode" label="VSCode"/></entry><entry><title type="text">使用 proxychain4 安装 zsh</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-proxy-terminal/"/><id>https://ews.ink/tech/linux-proxy-terminal/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-23T12:21:40+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">proxychain-ng proxychains ng 的 ng 是 new generation 的意思，其实就是 proxychains4。 首先本地开启 socks5 代理（端口有……</summary><content type="html">&lt;h2 id="proxychain-ng">proxychain-ng&lt;/h2>
 &lt;p>&lt;a href="https://github.com/rofl0r/proxychains-ng">proxychains ng&lt;/a> 的 ng 是 new generation 的意思，其实就是 proxychains4。&lt;br>
 &lt;strong>首先&lt;/strong>本地开启 socks5 代理（端口有了），然后继续：&lt;/p>
 &lt;h3 id="安装-proxychain4">安装 proxychain4&lt;/h3>
@@ -336,7 +746,286 @@ zsh-syntax-highlighting
 &lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ &lt;span class="nb">source&lt;/span> ~/.zshrc
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/zsh/" term="zsh" label="zsh"/><category scheme="https://ews.ink/tags/proxychains/" term="proxychains" label="proxychains"/></entry><entry><title type="text">为什么行业前沿有这么多乱七八糟的标准</title><link rel="alternate" type="text/html" href="https://ews.ink/life/why-so-much-standards/"/><id>https://ews.ink/life/why-so-much-standards/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-22T11:02:25+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">存储卡标准 内存 DDR USB 和雷电协议 等等…… 某个行业前沿技术出现百家争鸣的场面，是因为行业领……</summary><content type="html">&lt;ul>
+&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/zsh/" term="zsh" label="zsh"/><category scheme="https://ews.ink/tags/proxychains/" term="proxychains" label="proxychains"/></entry><entry><title type="text">Supervisor: 一个 screen 的强力竞品</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-supervisor/"/><id>https://ews.ink/tech/linux-supervisor/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-22T19:02:41+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">一个人膨胀只会害了自己，抱持既定成见故步自封不可取。 我起初还看不上 Python 写的 Superv……</summary><content type="html">&lt;p>一个人膨胀只会害了自己，抱持既定成见故步自封不可取。&lt;br>
+我起初还看不上 Python 写的 Supervisor，沉迷 screen，甚至自己手写过服务*。&lt;/p>
+&lt;blockquote>
+&lt;p>* 不是 &lt;code>.service&lt;/code> 插进 &lt;code>/etc/systemd/system/&lt;/code> 就叫服务（准确地说是 daemon 进程）。&lt;br>
+单脚本&lt;strong>无依赖&lt;/strong>支持 &lt;code>start&lt;/code> / &lt;code>stop&lt;/code> / &lt;code>restart&lt;/code> / &lt;code>status&lt;/code> 才叫服务。&lt;br>
+支持开机自启 / 状态自检 / 自动重启当然要有，但那是「特性」，不是「依赖」。&lt;/p>
+&lt;/blockquote>
+&lt;p>在前段时间为了 &lt;a href="https://ews.ink/tech/wsl-gui" target="_blank">WSLg&lt;/a> 重装 WSL 之前，我用 Hugo 跑的本地网页文档都还是手写的服务。&lt;br>
+舍不得换。刚写好的时候更是不得了，后来机缘巧合用上 Supervisor 才感觉自己像个沙口。&lt;/p>
+&lt;p>&lt;img src="https://i.loli.net/2021/05/24/cPM2wTXKrZm8DHR.gif" alt="">&lt;/p>
+&lt;h2 id="安装">安装&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt install -y supervisor
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="配置">配置&lt;/h2>
+&lt;h3 id="主配置文件">主配置文件&lt;/h3>
+&lt;p>从 &lt;a href="http://supervisord.org/configuration.html">官方文档&lt;/a> 可知配置文件的读取顺序：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>../etc/supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>../supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>$CWD/supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>$CWD/etc/supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>/etc/supervisord.conf&lt;/code>&lt;/li>
+&lt;li>&lt;code>/etc/supervisor/supervisord.conf&lt;/code>（v3.3.0+）&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>很多 Debian 和 Ubuntu 版本的 Supervisor 都把 &lt;code>/etc/supervisor/supervisord.conf&lt;/code> 加入了搜索路径。但 PyPI 包只有 3.3.0 以上的版本才包括这个路径，用 pip 安装的话要注意。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>vim /etc/supervisor/supervisord.conf&lt;/code> 编辑主配置文件：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">[&lt;/span>unix_http_server&lt;span class="o">]&lt;/span>
+&lt;span class="nv">file&lt;/span>&lt;span class="o">=&lt;/span>/tmp/supervisor.sock &lt;span class="c1"># UNIX的socket文件 supervisorctl会用XML-RPC连接到这个文件来和supervisord通信&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">chmod&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">0700&lt;/span> &lt;span class="c1"># socket文件的权限 默认为0700&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">chown&lt;/span>&lt;span class="o">=&lt;/span>root:root &lt;span class="c1"># socket文件的owner 格式uid:gid&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="o">[&lt;/span>inet_http_server&lt;span class="o">]&lt;/span> &lt;span class="c1"># 注意这一行也被注释掉了&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">port&lt;/span>&lt;span class="o">=&lt;/span>127.0.0.1:9001 &lt;span class="c1"># web管理后台运行的ip和端口 建议不要放给公网 一定要放的话注意安全&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">username&lt;/span>&lt;span class="o">=&lt;/span>user &lt;span class="c1"># web管理后台的用户名&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">password&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">123&lt;/span> &lt;span class="c1"># web管理后台的密码&lt;/span>
+&lt;span class="o">[&lt;/span>supervisord&lt;span class="o">]&lt;/span>
+&lt;span class="nv">logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/supervisord.log &lt;span class="c1"># 主程序的日志文件 默认为$CWD/supervisord.log&lt;/span>
+&lt;span class="nv">logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>50MB &lt;span class="c1"># 单个日志文件大小 默认为50MB 0为不限制大小&lt;/span>
+&lt;span class="nv">logfile_backups&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> &lt;span class="c1"># 日志记录文件备份数量 默认为10份 0为不备份&lt;/span>
+&lt;span class="nv">loglevel&lt;/span>&lt;span class="o">=&lt;/span>info &lt;span class="c1"># 日志级别 默认为info 可以为critical/error/warn/info/debug/trace/blather&lt;/span>
+&lt;span class="nv">umask&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">022&lt;/span> &lt;span class="c1"># 主程序的umask 默认为022&lt;/span>
+&lt;span class="nv">pidfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/supervisord.pid &lt;span class="c1"># 记录pid的文件 默认为$CWD/supervisord.pid&lt;/span>
+&lt;span class="nv">nodaemon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">false&lt;/span> &lt;span class="c1"># 是否在前台启动 默认为false(以daemon方式启动)&lt;/span>
+&lt;span class="nv">minfds&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1024&lt;/span> &lt;span class="c1"># 允许打开文件描述符的最小值 默认为1024&lt;/span>
+&lt;span class="nv">minprocs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">200&lt;/span> &lt;span class="c1"># 允许打开的进程数的最小值 默认为200&lt;/span>
+&lt;span class="o">[&lt;/span>supervisorctl&lt;span class="o">]&lt;/span>
+&lt;span class="nv">serverurl&lt;/span>&lt;span class="o">=&lt;/span>unix:///tmp/supervisor.sock &lt;span class="c1"># 连接到supervisord的url&lt;/span>
+&lt;span class="p">;&lt;/span>&lt;span class="nv">serverurl&lt;/span>&lt;span class="o">=&lt;/span>http://localhost:9001 &lt;span class="c1"># 通过http的方式连接supervisord&lt;/span>
+&lt;span class="o">[&lt;/span>include&lt;span class="o">]&lt;/span>
+&lt;span class="nv">files&lt;/span>&lt;span class="o">=&lt;/span>/etc/supervisor/conf.d/*.conf &lt;span class="c1"># 其他配置文件路径&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="示例">示例&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">[&lt;/span>unix_http_server&lt;span class="o">]&lt;/span>
+&lt;span class="nv">file&lt;/span> &lt;span class="o">=&lt;/span> /var/run/supervisor.sock
+&lt;span class="nv">chmod&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0700&lt;/span>
+&lt;span class="nv">chown&lt;/span> &lt;span class="o">=&lt;/span> root:users
+&lt;span class="o">[&lt;/span>inet_http_server&lt;span class="o">]&lt;/span>
+&lt;span class="nv">port&lt;/span> &lt;span class="o">=&lt;/span> 127.0.0.1:9001
+&lt;span class="nv">username&lt;/span> &lt;span class="o">=&lt;/span> admin
+&lt;span class="nv">password&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">123456&lt;/span>
+&lt;span class="o">[&lt;/span>supervisord&lt;span class="o">]&lt;/span>
+&lt;span class="nv">logfile&lt;/span> &lt;span class="o">=&lt;/span> /var/log/supervisor/supervisord.log
+&lt;span class="nv">logfile_maxbytes&lt;/span> &lt;span class="o">=&lt;/span> 50MB
+&lt;span class="nv">logfile_backups&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">10&lt;/span>
+&lt;span class="nv">pidfile&lt;/span> &lt;span class="o">=&lt;/span> /var/run/supervisord.pid
+&lt;span class="nv">childlogdir&lt;/span> &lt;span class="o">=&lt;/span> /var/log/supervisor
+&lt;span class="o">[&lt;/span>rpcinterface:supervisor&lt;span class="o">]&lt;/span>
+supervisor.rpcinterface_factory &lt;span class="o">=&lt;/span> supervisor.rpcinterface:make_main_rpcinterface
+&lt;span class="o">[&lt;/span>supervisorctl&lt;span class="o">]&lt;/span>
+&lt;span class="nv">serverurl&lt;/span> &lt;span class="o">=&lt;/span> unix:///var/run/supervisor.sock
+&lt;span class="o">[&lt;/span>include&lt;span class="o">]&lt;/span>
+&lt;span class="nv">files&lt;/span> &lt;span class="o">=&lt;/span> /root/app/supervisor/conf
+&lt;span class="o">[&lt;/span>group:hugo&lt;span class="o">]&lt;/span>
+&lt;span class="nv">programs&lt;/span> &lt;span class="o">=&lt;/span> docs,blog
+&lt;span class="nv">priority&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">500&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="子程序配置文件">子程序配置文件&lt;/h3>
+&lt;p>放在主程序配置文件 &lt;code>[include]&lt;/code> 设置的路径下。&lt;br>
+比如 &lt;code>vim /etc/supervisor/conf.d/test.conf&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">[&lt;/span>program:test&lt;span class="o">]&lt;/span> &lt;span class="c1"># 子程序的名字 supervisorctl管理的就是这个&lt;/span>
+&lt;span class="nv">user&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">test&lt;/span> &lt;span class="c1"># 运行子程序的用户&lt;/span>
+&lt;span class="nv">directory&lt;/span>&lt;span class="o">=&lt;/span>/tmp/ &lt;span class="c1"># 子程序运行的工作目录&lt;/span>
+&lt;span class="nv">command&lt;/span>&lt;span class="o">=&lt;/span>/bin/sleep &lt;span class="m">100&lt;/span> &lt;span class="c1"># 子程序运行的具体命令&lt;/span>
+&lt;span class="nv">autostart&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">true&lt;/span> &lt;span class="c1"># 子程序是否跟随supervisor主程序一起启动 默认true&lt;/span>
+&lt;span class="nv">autorestart&lt;/span>&lt;span class="o">=&lt;/span>unexpected &lt;span class="c1"># false从不重启 true总是重启只要一退出就重启 unexpected仅抛出错误退出时重启&lt;/span>
+&lt;span class="nv">exitcodes&lt;/span>&lt;span class="o">=&lt;/span>0,2 &lt;span class="c1"># 定义[正常退出]的退出码 不在这个列表里的错误代码会触发unexpected的autorestart&lt;/span>
+&lt;span class="nv">startretries&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">3&lt;/span> &lt;span class="c1"># 尝试重启的次数 3为3次以后仍未启动则不再重启并显示状态FATAL 默认3次&lt;/span>
+&lt;span class="nv">startsecs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> &lt;span class="c1"># 启动成功的判断时间 1为启动后1秒还在运行(没有抛出错误并退出)则视为启动成功 默认1秒&lt;/span>
+&lt;span class="nv">stdout_logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/test_sv.log &lt;span class="c1"># 正常日志log输出文件路径&lt;/span>
+&lt;span class="nv">stdout_logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>20MB &lt;span class="c1"># stdout日志记录文件大小 默认50MB&lt;/span>
+&lt;span class="nv">stdout_logfile_backups&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> &lt;span class="c1"># stdout日志记录文件备份数量 默认10份&lt;/span>
+&lt;span class="nv">redirect_stderr&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">false&lt;/span> &lt;span class="c1"># 是否将error重定向至普通log 换句话说是否合并所有日志输出&lt;/span>
+&lt;span class="nv">stderr_logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/test_sv.err &lt;span class="c1"># 错误日志error输出文件路径&lt;/span>
+&lt;span class="nv">stderr_logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>20MB &lt;span class="c1"># stderr日志记录文件大小 对应stdout&lt;/span>
+&lt;span class="nv">stderr_logfile_backups&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span> &lt;span class="c1"># stderr日志记录文件备份数 对应stdout&lt;/span>
+&lt;span class="nv">priority&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">999&lt;/span> &lt;span class="c1"># 优先级 值越小越优先 默认999&lt;/span>
+&lt;span class="nv">numprocs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span> &lt;span class="c1"># 进程数量 &amp;gt;1表示多进程 产生的参数process_num是第几个启动的进程&lt;/span>
+&lt;span class="nv">process_name&lt;/span>&lt;span class="o">=&lt;/span>%&lt;span class="o">(&lt;/span>program_name&lt;span class="o">)&lt;/span>s_%&lt;span class="o">(&lt;/span>process_num&lt;span class="o">)&lt;/span>02d &lt;span class="c1"># 如果开启多进程 某个子进程的命名格式 形如test_00/test_01&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="示例-1">示例&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="o">[&lt;/span>program:docs&lt;span class="o">]&lt;/span>
+&lt;span class="nv">user&lt;/span>&lt;span class="o">=&lt;/span>root
+&lt;span class="nv">directory&lt;/span>&lt;span class="o">=&lt;/span>/mnt/d/Workspace/Git/Repo/Blog/local-docs/
+&lt;span class="nv">command&lt;/span>&lt;span class="o">=&lt;/span>/root/app/hugo server -p &lt;span class="m">1314&lt;/span> --minify --theme book --watch -D -E -F
+&lt;span class="nv">autostart&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">true&lt;/span>
+&lt;span class="nv">autorestart&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">true&lt;/span>
+&lt;span class="nv">startsecs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">2&lt;/span>
+&lt;span class="nv">stdout_logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/log/supervisor/docs.out.log
+&lt;span class="nv">stdout_logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>2MB
+&lt;span class="nv">stderr_logfile&lt;/span>&lt;span class="o">=&lt;/span>/tmp/log/supervisor/docs.err.log
+&lt;span class="nv">stderr_logfile_maxbytes&lt;/span>&lt;span class="o">=&lt;/span>2MB
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="使用">使用&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ supervisorctl &lt;span class="nb">help&lt;/span> &lt;span class="c1"># 查看用法&lt;/span>
+$ supervisorctl status &lt;span class="c1"># 查看所有子程序的状态&lt;/span>
+$ supervisorctl stop hugo &lt;span class="c1"># 停止名为 hugo 的子程序&lt;/span>
+$ supervisorctl clear api &lt;span class="c1"># 清除名为 api 的子程序的输出日志&lt;/span>
+$ supervisorctl start &lt;span class="nb">test&lt;/span> &lt;span class="c1"># 启动名为 test 的子程序&lt;/span>
+$ supervisorctl restart all &lt;span class="c1"># 重启所有子程序&lt;/span>
+$ supervisorctl update all &lt;span class="c1"># 重载全部配置文件&lt;/span>
+$ supervisorctl reload &lt;span class="c1"># 重启 supervisord 主程序&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="常见问题">常见问题&lt;/h2>
+&lt;h3 id="unixvarrunsupervisorsock-no-such-file">&lt;code>unix:///var/run/supervisor.sock no such file&lt;/code>&lt;/h3>
+&lt;p>你确定 Supervisor 真的&lt;strong>正在运行&lt;/strong>中吗？&lt;br>
+重启服务器并&lt;strong>不代表&lt;/strong>就会自动运行 Supervisor，它是值守其他程序的，不是值守它自己。&lt;br>
+&lt;code>supervisord -c /etc/supervisord.conf&lt;/code> 手动启动 Supervisor。&lt;/p>
+&lt;h3 id="supervisorctl-stop-xxx-关不掉-xxx">&lt;code>supervisorctl stop xxx&lt;/code> 关不掉 &lt;code>xxx&lt;/code>&lt;/h3>
+&lt;p>这种情况有可能是启动了多个 Supervisor，导致&lt;strong>同一时间&lt;/strong>有多个 Supervisor 在一起管理。&lt;/p>
+&lt;p>&lt;code>ps -aux | grep supervisord | grep -v grep&lt;/code> 查看正在运行的 Supervisor 进程；&lt;br>
+如果有两个或以上，那就说明确实是这种情况。&lt;br>
+原因可能是 Supervisor 本来已经在运行了，结果又运行了一个新的。&lt;/p>
+&lt;p>不是人家业务逻辑写得烂，Linux 程序还特意写单例的有心人真的不多。&lt;br>
+Windows 的应用程序动动鼠标就点开了，开个软件还要特意过一遍脑子才是奇葩。&lt;br>
+Linux 操作系统这么底层，启动程序的心智成本高也很合理，不然瞎玩玩坏了怎么办。&lt;/p>
+&lt;p>可以运行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ ps -aux &lt;span class="p">|&lt;/span> grep supervisord &lt;span class="p">|&lt;/span> grep -v grep &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;{print $2}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> xargs &lt;span class="nb">kill&lt;/span> -9
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>强制关闭正在运行的所有 Supervisor，然后重新运行：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ supervisord -c /etc/supervisor/supervisord.conf
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>启动唯一指定 Supervisor。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/supervisor/" term="Supervisor" label="Supervisor"/></entry><entry><title type="text">为什么行业前沿有这么多乱七八糟的标准</title><link rel="alternate" type="text/html" href="https://ews.ink/life/why-so-much-standards/"/><id>https://ews.ink/life/why-so-much-standards/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-22T11:02:25+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">存储卡标准 内存 DDR USB 和雷电协议 等等…… 某个行业前沿技术出现百家争鸣的场面，是因为行业领……</summary><content type="html">&lt;ul>
 &lt;li>&lt;a href="https://ews.ink/tech/storage-sd-card" target="_blank">存储卡标准&lt;/a>&lt;/li>
 &lt;li>内存 DDR&lt;/li>
 &lt;li>&lt;a href="https://ews.ink/tech/interface-usb-standard" target="_blank">USB 和雷电协议&lt;/a>&lt;/li>
@@ -368,7 +1057,7 @@ zsh-syntax-highlighting
 雅虎的乐子多了去了，蛮有意思的，有兴趣建议查一下当段子看。&lt;/p>
 &lt;p>你不抢标准，你可能没有达成过摩托罗拉、黑莓、诺基亚、UT 斯达康（小灵通）、柯达、雅虎……等等一时霸主曾经的辉煌，但你的下场可能比他们还惨，他们至少还有人记得。&lt;/p>
 &lt;p>这些龙头企业因为跟不上标准被时代淘汰，至少水花挺大吧。&lt;br>
-搁浅的鲸落炸了也能听个响，小鱼小虾可能从未发出过任何声音就归分解者了。&lt;/p></content><category scheme="https://ews.ink/life/" term="life" label="life"/><category scheme="https://ews.ink/tags/%E7%A7%91%E6%8A%80/" term="科技" label="科技"/><category scheme="https://ews.ink/tags/%E6%9D%82%E8%B0%88/" term="杂谈" label="杂谈"/></entry><entry><title type="text">解决 OneNote UWP 无法同步笔记本</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/write-onenote-uwp-sync/"/><id>https://ews.ink/tech/write-onenote-uwp-sync/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-19T13:56:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文参考自《Onenote 无法同步/同步失败的原因（附解决方案）》。 在我出现这个问题……</summary><content type="html">&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
+搁浅的鲸落炸了也能听个响，小鱼小虾可能从未发出过任何声音就归分解者了。&lt;/p></content><category scheme="https://ews.ink/life/" term="life" label="life"/><category scheme="https://ews.ink/tags/%E7%A7%91%E6%8A%80/" term="科技" label="科技"/><category scheme="https://ews.ink/tags/%E6%9D%82%E8%B0%88/" term="杂谈" label="杂谈"/></entry><entry><title type="text">解决 OneNote UWP 无法同步笔记本</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/write-onenote-uwp-sync/"/><id>https://ews.ink/tech/write-onenote-uwp-sync/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-19T13:56:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文参考自《Onenote 无法同步/同步失败的原因（附解决方案）》。 在我出现这个问题……</summary><content type="html">&lt;p>&lt;img src="https://pic1.zhimg.com/v2-d38e14f396e7cc7eb61a44af56c234c7_1440w.jpg?source=172ae18b" alt="">&lt;/p>
 &lt;blockquote>
 &lt;p>本文参考自《&lt;a href="https://zhuanlan.zhihu.com/p/128926805">Onenote 无法同步/同步失败的原因（附解决方案）&lt;/a>》。&lt;/p>
 &lt;/blockquote>
@@ -395,7 +1084,7 @@ zsh-syntax-highlighting
 &lt;li>安装 &lt;code>Fiddler&lt;/code>。这个软件过于自觉，安装完成不会自动创建桌面快捷方式，注意记住安到什么位置了。&lt;/li>
 &lt;li>启动 &lt;code>Fiddler&lt;/code>，点击左上角的 &lt;kbd>WinConfig&lt;/kbd> 按钮。&lt;/li>
 &lt;li>勾选 &lt;code>Onenote for Windows 10&lt;/code>（即 OneNote UWP），点击 &lt;kbd>Save Changes&lt;/kbd> 保存配置，然后正常使用就行了。&lt;/li>
-&lt;/ol></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%AC%94%E8%AE%B0/" term="笔记" label="笔记"/><category scheme="https://ews.ink/tags/onenote/" term="OneNote" label="OneNote"/><category scheme="https://ews.ink/tags/fiddler/" term="Fiddler" label="Fiddler"/></entry><entry><title type="text">Bot 重建计划 #2 重启 Mirai</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/bot-qq-mirai-2/"/><id>https://ews.ink/tech/bot-qq-mirai-2/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-18T12:16:19+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">使用 Mirai Console Loader Installer 虽然本鸽断更已久，但经过大半年的发展，Mirai 相关生态是越来越繁荣了，……</summary><content type="html">&lt;h2 id="使用-mirai-console-loader-installer">使用 Mirai Console Loader Installer&lt;/h2>
+&lt;/ol></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%AC%94%E8%AE%B0/" term="笔记" label="笔记"/><category scheme="https://ews.ink/tags/onenote/" term="OneNote" label="OneNote"/><category scheme="https://ews.ink/tags/fiddler/" term="Fiddler" label="Fiddler"/></entry><entry><title type="text">Bot 重建计划 #2 重启 Mirai</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/bot-qq-mirai-2/"/><id>https://ews.ink/tech/bot-qq-mirai-2/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-18T12:16:19+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">使用 Mirai Console Loader Installer 虽然本鸽断更已久，但经过大半年的发展，Mirai 相关生态是越来越繁荣了，……</summary><content type="html">&lt;h2 id="使用-mirai-console-loader-installer">使用 Mirai Console Loader Installer&lt;/h2>
 &lt;p>虽然本鸽断更已久，但经过大半年的发展，&lt;a href="https://github.com/mamoe/mirai">Mirai&lt;/a> 相关生态是越来越繁荣了，甚至有了自己的论坛 &lt;a href="https://mirai.mamoe.net">Mirai Forum&lt;/a>。&lt;/p>
 &lt;p>以前那个 &lt;del>mirai-console 的 wraper 的&lt;/del> wraper 好像停更了……&lt;br>
 现在用的是 iTXTech 的 &lt;a href="https://github.com/iTXTech/mcl-installer/releases">MCL Installer&lt;/a>，这里用 &lt;code>v1.0.2&lt;/code> 演示：&lt;/p>
@@ -680,7 +1369,7 @@ usage: mcl
 所有功能均由额外的插件实现，那么插件从哪来呢？&lt;/p>
 &lt;p>&lt;span class="sticker">&lt;a href="https://mirai.mamoe.net/category/11/%E6%8F%92%E4%BB%B6%E5%8F%91%E5%B8%83">&lt;img src="https://img.shields.io/badge/%E5%AE%98%E6%96%B9%E8%AE%BA%E5%9D%9B-%E6%8F%92%E4%BB%B6%E5%8F%91%E5%B8%83%E7%89%88%E5%9D%97-Color" alt="">&lt;/a> &lt;a href="https://github.com/project-mirai/awesome-mirai">&lt;img src="https://img.shields.io/badge/%E7%A4%BE%E5%8C%BA%E7%9B%B8%E5%85%B3%E9%A1%B9%E7%9B%AE-%E6%97%A7%E4%BB%93%E5%BA%93-Color" alt="">&lt;/a>&lt;/span>&lt;/p>
 &lt;p>一般的 &lt;code>.jar&lt;/code> 插件放入 &lt;code>./plugins/&lt;/code> 目录后启动 &lt;code>./mcl&lt;/code> 即可。&lt;br>
-如果有特殊用法的请参照插件作者的说明。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/bot/" term="Bot" label="Bot"/><category scheme="https://ews.ink/tags/qq/" term="QQ" label="QQ"/><category scheme="https://ews.ink/tags/mirai/" term="Mirai" label="Mirai"/></entry><entry><title type="text">API 重建计划 #2 PHP Laravel</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-php-laravel-2/"/><id>https://ews.ink/tech/api-php-laravel-2/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-18T01:26:50+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Laravel 中文文档 升级 Composer 1 $ composer self-update --2 新建项目 1 2 3 $ composer global require laravel/installer $ laravel new &amp;#34;project name&amp;#34; $ php artisan serve 将代码部署到服务……</summary><content type="html">&lt;p>&lt;a href="https://learnku.com/docs/laravel/8.x">Laravel 中文文档&lt;/a>&lt;/p>
+如果有特殊用法的请参照插件作者的说明。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/bot/" term="Bot" label="Bot"/><category scheme="https://ews.ink/tags/qq/" term="QQ" label="QQ"/><category scheme="https://ews.ink/tags/mirai/" term="Mirai" label="Mirai"/></entry><entry><title type="text">API 重建计划 #2 PHP Laravel</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-php-laravel-2/"/><id>https://ews.ink/tech/api-php-laravel-2/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-18T01:26:50+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Laravel 中文文档 升级 Composer 1 $ composer self-update --2 新建项目 1 2 3 $ composer global require laravel/installer $ laravel new &amp;#34;project name&amp;#34; $ php artisan serve 将代码部署到服务……</summary><content type="html">&lt;p>&lt;a href="https://learnku.com/docs/laravel/8.x">Laravel 中文文档&lt;/a>&lt;/p>
 &lt;h2 id="升级-composer">升级 Composer&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -1738,7 +2427,7 @@ Which application server you would like to use?:
 $ ./rr serve
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/php/" term="PHP" label="PHP"/><category scheme="https://ews.ink/tags/laravel/" term="Laravel" label="Laravel"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">宝塔面板 Cheat Sheet</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-bt-panel-code/"/><id>https://ews.ink/tech/linux-bt-panel-code/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-17T10:50:51+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">手动抄了十分钟才发现这也太长了，要抄到猴年马月去啊，蠢死了。 还是简单写个爬虫吧： 1 2……</summary><content type="html">&lt;p>&lt;span class="sticker">&lt;a href="https://www.bt.cn/btcode.html">&lt;img src="https://img.shields.io/badge/%E6%9D%A5%E6%BA%90-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-info" alt="">&lt;/a> &lt;img src="https://img.shields.io/badge/%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0%E4%BA%8E-2021--05--17-blue" alt="">&lt;/span>&lt;/p>
+&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/php/" term="PHP" label="PHP"/><category scheme="https://ews.ink/tags/laravel/" term="Laravel" label="Laravel"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">宝塔面板 Cheat Sheet</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-bt-panel-code/"/><id>https://ews.ink/tech/linux-bt-panel-code/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-17T10:50:51+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">手动抄了十分钟才发现这也太长了，要抄到猴年马月去啊，蠢死了。 还是简单写个爬虫吧： 1 2……</summary><content type="html">&lt;p>&lt;span class="sticker">&lt;a href="https://www.bt.cn/btcode.html">&lt;img src="https://img.shields.io/badge/%E6%9D%A5%E6%BA%90-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3-info" alt="">&lt;/a> &lt;img src="https://img.shields.io/badge/%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0%E4%BA%8E-2021--05--17-blue" alt="">&lt;/span>&lt;/p>
 &lt;p>手动抄了十分钟才发现这也太长了，要抄到猴年马月去啊，蠢死了。&lt;br>
 还是简单写个爬虫吧：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -2016,7 +2705,7 @@ firewall-cmd --reload
 &lt;pre>&lt;code>/etc/init.d/memcached restart
 &lt;/code>&lt;/pre>&lt;h3 id="重载-memcached-配置">重载 Memcached 配置&lt;/h3>
 &lt;pre>&lt;code>/etc/init.d/memcached reload
-&lt;/code>&lt;/pre></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/javascript/" term="JavaScript" label="JavaScript"/><category scheme="https://ews.ink/tags/bt.cn/" term="bt.cn" label="bt.cn"/></entry><entry><title type="text">同时使用 Github 以及 Gitee 进行版本管理</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/git-github-gitee/"/><id>https://ews.ink/tech/git-github-gitee/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-17T10:06:26+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">通常用法 1 2 3 4 5 6 7 $ ssh-keygen -C &amp;#34;&amp;lt;注释(一般是注册邮箱)&amp;gt;&amp;#34……</summary><content type="html">&lt;h2 id="通常用法">通常用法&lt;/h2>
+&lt;/code>&lt;/pre></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/javascript/" term="JavaScript" label="JavaScript"/><category scheme="https://ews.ink/tags/bt.cn/" term="bt.cn" label="bt.cn"/></entry><entry><title type="text">同时使用 Github 以及 Gitee 进行版本管理</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/git-github-gitee/"/><id>https://ews.ink/tech/git-github-gitee/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-17T10:06:26+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">通常用法 1 2 3 4 5 6 7 $ ssh-keygen -C &amp;#34;&amp;lt;注释(一般是注册邮箱)&amp;gt;&amp;#34……</summary><content type="html">&lt;h2 id="通常用法">通常用法&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
@@ -2123,7 +2812,7 @@ $ git push -u origin develop
 $ git push gitee develop
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/git/" term="Git" label="Git"/><category scheme="https://ews.ink/tags/github/" term="Github" label="Github"/><category scheme="https://ews.ink/tags/ssh/" term="SSH" label="SSH"/></entry><entry><title type="text">Android 上的 Linux: Termux 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-android-termux/"/><id>https://ews.ink/tech/linux-android-termux/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-17T09:45:48+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">首先下载著名的「linux 终端 upon 安卓 - Termux」。 用电脑 SSH 登录手机 Termux 手边有电脑建……</summary><content type="html">&lt;p>首先下载著名的「linux 终端 upon 安卓 - &lt;a href="https://play.google.com/store/apps/details?id=com.termux">Termux&lt;/a>」。&lt;/p>
+&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/git/" term="Git" label="Git"/><category scheme="https://ews.ink/tags/github/" term="Github" label="Github"/><category scheme="https://ews.ink/tags/ssh/" term="SSH" label="SSH"/></entry><entry><title type="text">Android 上的 Linux: Termux 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-android-termux/"/><id>https://ews.ink/tech/linux-android-termux/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-17T09:45:48+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">首先下载著名的「linux 终端 upon 安卓 - Termux」。 用电脑 SSH 登录手机 Termux 手边有电脑建……</summary><content type="html">&lt;p>首先下载著名的「linux 终端 upon 安卓 - &lt;a href="https://play.google.com/store/apps/details?id=com.termux">Termux&lt;/a>」。&lt;/p>
 &lt;h2 id="用电脑-ssh-登录手机-termux">用电脑 SSH 登录手机 Termux&lt;/h2>
 &lt;p>手边有电脑建议使用电脑操作：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -2234,7 +2923,7 @@ $ ~/go2server.sh &lt;span class="c1"># 运行脚本&lt;/span>
 而是意味着从此以后只要手机能上网，就能登录任何一台服务器。&lt;br>
 相当于把 Termux 当成手机的 SSH 客户端用。&lt;/p>
 &lt;p>Termux 并不是只能做这些，最简单的登录 SSH 只是牛刀小试罢了。&lt;br>
-说到底 Termux 就是一个 linux 系统，大部分 linux 能做的都能在上面实现，更多玩法可以自行开发。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/ssh/" term="SSH" label="SSH"/><category scheme="https://ews.ink/tags/termux/" term="Termux" label="Termux"/></entry><entry><title type="text">SSH 登录 Linux: SSH-Key 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-ssh-keys/"/><id>https://ews.ink/tech/linux-ssh-keys/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-17T09:22:48+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p>SSH-Key 用途有很多，用得最多的主要还是「SSH 登录」和「Github 鉴权」。
+说到底 Termux 就是一个 linux 系统，大部分 linux 能做的都能在上面实现，更多玩法可以自行开发。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/ssh/" term="SSH" label="SSH"/><category scheme="https://ews.ink/tags/termux/" term="Termux" label="Termux"/></entry><entry><title type="text">SSH 登录 Linux: SSH-Key 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-ssh-keys/"/><id>https://ews.ink/tech/linux-ssh-keys/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-17T09:22:48+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p>SSH-Key 用途有很多，用得最多的主要还是「SSH 登录」和「Github 鉴权」。
 背景知识日后有空再补充，直接讲用法。&lt;/p>……</summary><content type="html">&lt;p>SSH-Key 用途有很多，用得最多的主要还是「SSH 登录」和「Github 鉴权」。
 背景知识日后有空再补充，直接讲用法。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -2276,7 +2965,7 @@ PermitRootLogin yes # 允许root直接登录
 &lt;p>为了提高安全性可以直接禁止密码登录：
 &lt;code>vim /etc/ssh/sshd_config&lt;/code>打开配置文件，修改为&lt;code>PasswordAuthentication no&lt;/code>保存后重启SSH即可。
 此外还可以把默认的22端口修改为其他端口进一步提高安全性。&lt;/p>
-&lt;/blockquote></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/ssh/" term="SSH" label="SSH"/></entry><entry><title type="text">API 重建计划 #1 TypeScript Express</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-typescript-express/"/><id>https://ews.ink/tech/api-typescript-express/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-17T01:06:38+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">🚀 Express RESTful API Using TypeScript 搭建脚手架 1 2 $ npm install -g typescript-express-starter $ npx typescript-express-starter &amp;#34;project name&amp;#34; 然后 npm run dev 就可以跑了。 新增依赖 1 2 $ npm……</summary><content type="html">&lt;h3 align="center">🚀 Express RESTful API Using TypeScript&lt;/h3>
+&lt;/blockquote></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/ssh/" term="SSH" label="SSH"/></entry><entry><title type="text">API 重建计划 #1 TypeScript Express</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-typescript-express/"/><id>https://ews.ink/tech/api-typescript-express/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-17T01:06:38+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">🚀 Express RESTful API Using TypeScript 搭建脚手架 1 2 $ npm install -g typescript-express-starter $ npx typescript-express-starter &amp;#34;project name&amp;#34; 然后 npm run dev 就可以跑了。 新增依赖 1 2 $ npm……</summary><content type="html">&lt;h3 align="center">🚀 Express RESTful API Using TypeScript&lt;/h3>
 &lt;span class="sticker">
 &lt;a href="https://github.com/ljlm0402/typescript-express-starter" target="_blank">&lt;img src="https://img.shields.io/badge/ljlm0402-typescript--express--starter-blue?logo=github" alt="npm Downloads" />&lt;/a>
 &lt;a href="http://npm.im/typescript-express-starter" target="_blank">&lt;img src="https://img.shields.io/npm/v/typescript-express-starter" alt="npm Version" />&lt;/a>
@@ -2341,7 +3030,7 @@ $ &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;PORT=3000&amp;
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="正常运行">正常运行&lt;/h2>
-&lt;p>&lt;code>npm run start&lt;/code> 然后挂起就行了。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/node.js/" term="Node.js" label="Node.js"/><category scheme="https://ews.ink/tags/typescript/" term="TypeScript" label="TypeScript"/><category scheme="https://ews.ink/tags/express/" term="Express" label="Express"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">Notion API 简单上手</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/dev-notion-api/"/><id>https://ews.ink/tech/dev-notion-api/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-16T14:07:10+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Notion 出了 API，惊了。不过暂时还没想好做什么。 大概书评一类的？官方 demo 里维护 Github Issue 的思路也……</summary><content type="html">&lt;p>&lt;span class="sticker">&lt;a href="https://github.com/makenotion/notion-sdk-js">&lt;img src="https://img.shields.io/badge/%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/dragonman225/notionapi-agent">&lt;img src="https://img.shields.io/badge/%E9%9D%9E%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/reycn/notion-help-bot/">&lt;img src="https://img.shields.io/badge/Telegram%20Bot-Help-info" alt="">&lt;/a>&lt;/span>&lt;/p>
+&lt;p>&lt;code>npm run start&lt;/code> 然后挂起就行了。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/node.js/" term="Node.js" label="Node.js"/><category scheme="https://ews.ink/tags/typescript/" term="TypeScript" label="TypeScript"/><category scheme="https://ews.ink/tags/express/" term="Express" label="Express"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">Notion API 简单上手</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/dev-notion-api/"/><id>https://ews.ink/tech/dev-notion-api/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-16T14:07:10+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Notion 出了 API，惊了。不过暂时还没想好做什么。 大概书评一类的？官方 demo 里维护 Github Issue 的思路也……</summary><content type="html">&lt;p>&lt;span class="sticker">&lt;a href="https://github.com/makenotion/notion-sdk-js">&lt;img src="https://img.shields.io/badge/%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/dragonman225/notionapi-agent">&lt;img src="https://img.shields.io/badge/%E9%9D%9E%E5%AE%98%E6%96%B9-API-info" alt="">&lt;/a> &lt;a href="https://github.com/reycn/notion-help-bot/">&lt;img src="https://img.shields.io/badge/Telegram%20Bot-Help-info" alt="">&lt;/a>&lt;/span>&lt;/p>
 &lt;p>Notion 出了 API，惊了。不过暂时还没想好做什么。&lt;br>
 大概书评一类的？官方 demo 里维护 Github Issue 的思路也不错。&lt;/p>
 &lt;h2 id="可用性测试">可用性测试&lt;/h2>
@@ -2514,7 +3203,7 @@ $ &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;PORT=3000&amp;
 &lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">select&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>到这里写入读取都跑通了，剩下的就是结合实际需求开发了。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%AC%94%E8%AE%B0/" term="笔记" label="笔记"/><category scheme="https://ews.ink/tags/notion/" term="Notion" label="Notion"/></entry><entry><title type="text">shields.io Badges 用法</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/write-badges/"/><id>https://ews.ink/tech/write-badges/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-16T09:09:30+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">如 Percent Encoding 所指定，本文所有 URL 路径应使用 uri 转义。 （例：c++ 应该是 c%2B%2B，let'……</summary><content type="html">&lt;p>&lt;span class="sticker">&lt;a href="https://shields.io/">&lt;img src="https://img.shields.io/badge/shields.io-%E5%AE%98%E7%BD%91-info" alt="">&lt;/a>&lt;/span>&lt;/p>
+&lt;/div>&lt;p>到这里写入读取都跑通了，剩下的就是结合实际需求开发了。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%AC%94%E8%AE%B0/" term="笔记" label="笔记"/><category scheme="https://ews.ink/tags/notion/" term="Notion" label="Notion"/></entry><entry><title type="text">shields.io Badges 用法</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/write-badges/"/><id>https://ews.ink/tech/write-badges/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-16T09:09:30+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">如 Percent Encoding 所指定，本文所有 URL 路径应使用 uri 转义。 （例：c++ 应该是 c%2B%2B，let'……</summary><content type="html">&lt;p>&lt;span class="sticker">&lt;a href="https://shields.io/">&lt;img src="https://img.shields.io/badge/shields.io-%E5%AE%98%E7%BD%91-info" alt="">&lt;/a>&lt;/span>&lt;/p>
 &lt;blockquote>
 &lt;p>如 &lt;a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent Encoding&lt;/a> 所指定，本文所有 URL 路径应使用 uri 转义。&lt;br>
 （例：&lt;code>c++&lt;/code> 应该是 &lt;code>c%2B%2B&lt;/code>，&lt;code>let's go&lt;/code> 应该是 &lt;code>let%27s%20go&lt;/code>，诸如此类）&lt;/p>
@@ -2677,7 +3366,7 @@ https://img.shields.io/badge/dynamic/yaml?url=&amp;lt;URL&amp;gt;&amp;amp;label=
 &lt;h2 id="其他玩法">其他玩法&lt;/h2>
 &lt;h3 id="监控网站状态">监控网站状态&lt;/h3>
 &lt;pre>&lt;code>https://img.shields.io/website?up_color=brightgreen&amp;amp;up_message=Online&amp;amp;down_color=lightgrey&amp;amp;down_message=Offline&amp;amp;label=&amp;lt;LABEL&amp;gt;&amp;amp;url=&amp;lt;URL&amp;gt;&amp;amp;logo=nginx
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://img.shields.io/website?up_color=brightgreen&amp;up_message=Online&amp;down_color=lightgrey&amp;down_message=Offline&amp;label=Server%20Status&amp;url=https%3A%2F%2Fapi.osrp.run&amp;logo=nginx" data-no-zoom />&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/shields.io/" term="shields.io" label="shields.io"/><category scheme="https://ews.ink/tags/badges/" term="Badges" label="Badges"/><category scheme="https://ews.ink/tags/markdown/" term="Markdown" label="Markdown"/></entry><entry><title type="text">Steam 模拟手机令牌二步验证</title><link rel="alternate" type="text/html" href="https://ews.ink/game/steam-2fa/"/><id>https://ews.ink/game/steam-2fa/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-15T18:42:20+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">第三方 Steam 工具 第三方工具安全性各有不同，风险自负。 ArchiSteamFarm Steam++ WinAuth Steam Desktop Authenticator 以上工具都支持第三方的 Steam……</summary><content type="html">&lt;h2 id="第三方-steam-工具">第三方 Steam 工具&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://img.shields.io/website?up_color=brightgreen&amp;up_message=Online&amp;down_color=lightgrey&amp;down_message=Offline&amp;label=Server%20Status&amp;url=https%3A%2F%2Fapi.osrp.run&amp;logo=nginx" data-no-zoom />&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/shields.io/" term="shields.io" label="shields.io"/><category scheme="https://ews.ink/tags/badges/" term="Badges" label="Badges"/><category scheme="https://ews.ink/tags/markdown/" term="Markdown" label="Markdown"/></entry><entry><title type="text">Steam 模拟手机令牌二步验证</title><link rel="alternate" type="text/html" href="https://ews.ink/game/steam-2fa/"/><id>https://ews.ink/game/steam-2fa/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-15T18:42:20+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">第三方 Steam 工具 第三方工具安全性各有不同，风险自负。 ArchiSteamFarm Steam++ WinAuth Steam Desktop Authenticator 以上工具都支持第三方的 Steam……</summary><content type="html">&lt;h2 id="第三方-steam-工具">第三方 Steam 工具&lt;/h2>
 &lt;blockquote>
 &lt;p>第三方工具安全性各有不同，风险自负。&lt;/p>
 &lt;/blockquote>
@@ -2846,7 +3535,7 @@ https://img.shields.io/badge/dynamic/yaml?url=&amp;lt;URL&amp;gt;&amp;amp;label=
 &lt;p>我是 &lt;a href="https://keepass.info">KeePass&lt;/a> 用户，TOTP 插件还蛮多的，我用的 &lt;a href="https://keepass.info/plugins.html#keetraytotp">KeeTrayTOTP&lt;/a>。&lt;br>
 用上面的软件绑定手机令牌后导出，用文本编辑器打开 &lt;code>.maFile&lt;/code> 文件，会有 &lt;code>uri&lt;/code> 项：&lt;/p>
 &lt;pre>&lt;code>&amp;quot;uri&amp;quot;: &amp;quot;otpauth://totp/Steam:[your_steam_username]?secret=[totp_secret]&amp;amp;issuer=Steam&amp;quot;,
-&lt;/code>&lt;/pre>&lt;p>记录下 &lt;code>[totp_secret]&lt;/code>，这个就是 Steam 令牌作为 TOTP 工具时的序列号。&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/steam/" term="Steam" label="Steam"/><category scheme="https://ews.ink/tags/totp/" term="TOTP" label="TOTP"/></entry><entry><title type="text">Github 用户资料页面玩法</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/github-profile-readme/"/><id>https://ews.ink/tech/github-profile-readme/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-15T15:55:27+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">开始 众所周知，创建一个和用户名相同的 Repo，这个 Repo 的 README.md 内容就会显示在用户资料主页面……</summary><content type="html">&lt;h2 id="开始">开始&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>记录下 &lt;code>[totp_secret]&lt;/code>，这个就是 Steam 令牌作为 TOTP 工具时的序列号。&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/steam/" term="Steam" label="Steam"/><category scheme="https://ews.ink/tags/totp/" term="TOTP" label="TOTP"/></entry><entry><title type="text">Github 用户资料页面玩法</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/github-profile-readme/"/><id>https://ews.ink/tech/github-profile-readme/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-15T15:55:27+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">开始 众所周知，创建一个和用户名相同的 Repo，这个 Repo 的 README.md 内容就会显示在用户资料主页面……</summary><content type="html">&lt;h2 id="开始">开始&lt;/h2>
 &lt;p>众所周知，创建一个和用户名相同的 Repo，这个 Repo 的 &lt;code>README.md&lt;/code> 内容就会显示在用户资料主页面。&lt;br>
 所以在这个 markdown 文档里写什么，用户资料页就会显示什么，那么就可以开始玩了。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -3012,7 +3701,7 @@ https://img.shields.io/badge/dynamic/yaml?url=&amp;lt;URL&amp;gt;&amp;amp;label=
 &lt;/div>&lt;p>&lt;a href="https://github.com/sumisos">&lt;img src="https://github-readme-stats.vercel.app/api/wakatime?username=sumisos&amp;amp;show_icons=true&amp;amp;theme=great-gatsby" alt="Wakatime Stats">&lt;/a>&lt;/p>
 &lt;h2 id="pv-统计">PV 统计&lt;/h2>
 &lt;p>访问 &lt;a href="https://badges.toozhao.com/">Badger&lt;/a>，点击正中间的 &lt;code>Create your badge&lt;/code> 按钮。&lt;br>
-复制粘贴生成的 Markdown 代码即可统计 &lt;code>该页面访问总次数&lt;/code>。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/git/" term="Git" label="Git"/><category scheme="https://ews.ink/tags/github/" term="Github" label="Github"/><category scheme="https://ews.ink/tags/markdown/" term="Markdown" label="Markdown"/></entry><entry><title type="text">个人偏好的代码范式</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/dev-code-style/"/><id>https://ews.ink/tech/dev-code-style/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-15T14:39:07+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">总则 《如何编写无法维护的代码》 #include 《studio.h》 mian viod（） {printf“h……</summary><content type="html">&lt;h2 id="总则">总则&lt;/h2>
+复制粘贴生成的 Markdown 代码即可统计 &lt;code>该页面访问总次数&lt;/code>。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/git/" term="Git" label="Git"/><category scheme="https://ews.ink/tags/github/" term="Github" label="Github"/><category scheme="https://ews.ink/tags/markdown/" term="Markdown" label="Markdown"/></entry><entry><title type="text">个人偏好的代码范式</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/dev-code-style/"/><id>https://ews.ink/tech/dev-code-style/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-15T14:39:07+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">总则 《如何编写无法维护的代码》 #include 《studio.h》 mian viod（） {printf“h……</summary><content type="html">&lt;h2 id="总则">总则&lt;/h2>
 &lt;p>&lt;del>《&lt;a href="https://coderlmn.github.io/frontEndCourse/unmaintainable.html">如何编写无法维护的代码&lt;/a>》&lt;/del>&lt;/p>
 &lt;pre>&lt;code>#include　《studio.h》
 mian viod（）
@@ -3025,7 +3714,7 @@ mian viod（）
 &lt;h2 id="前端">前端&lt;/h2>
 &lt;p>《&lt;a href="https://juejin.cn/post/6901466994478940168">基于Vue的前端架构，我做了这15点&lt;/a>》&lt;/p>
 &lt;h3 id="javascript">JavaScript&lt;/h3>
-&lt;p>《&lt;a href="https://airbnb.io/javascript">Airbnb JavaScript 代码范式&lt;/a>》&lt;a href="https://github.com/airbnb/javascript">Github&lt;/a>&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E5%BC%80%E5%8F%91/" term="开发" label="开发"/><category scheme="https://ews.ink/tags/code/" term="Code" label="Code"/></entry><entry><title type="text">Re:从零开始的博客生涯 #6 Auto CI/CD</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-6-auto-ci-cd/"/><id>https://ews.ink/tech/blog-6-auto-ci-cd/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-14T19:24:43+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">思路 废话不多说，直接简述工作流： graph TD A(本地写作) --|命令行运行 `git push`| B[git push 动作] B --……</summary><content type="html">&lt;h2 id="思路">思路&lt;/h2>
+&lt;p>《&lt;a href="https://airbnb.io/javascript">Airbnb JavaScript 代码范式&lt;/a>》&lt;a href="https://github.com/airbnb/javascript">Github&lt;/a>&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E5%BC%80%E5%8F%91/" term="开发" label="开发"/><category scheme="https://ews.ink/tags/code/" term="Code" label="Code"/></entry><entry><title type="text">Re:从零开始的博客生涯 #6 Auto CI/CD</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-6-auto-ci-cd/"/><id>https://ews.ink/tech/blog-6-auto-ci-cd/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-14T19:24:43+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">思路 废话不多说，直接简述工作流： graph TD A(本地写作) --|命令行运行 `git push`| B[git push 动作] B --……</summary><content type="html">&lt;h2 id="思路">思路&lt;/h2>
 &lt;p>废话不多说，直接简述工作流：&lt;/p>
 &lt;div class="mermaid" align="center">
 graph TD
@@ -3284,7 +3973,7 @@ H --> |将整个分发仓库同步到你的服务器 / 对象存储| I(博客更
 &lt;p>一系列补救工作：根据各种线索推理出更新出错部分的时间和标志，然后去写作仓库里翻找出需要的版本，回滚之后重新编译，把重新生成的静态文件上传，之后再把写作仓库回滚到最新版本。&amp;#160;&lt;a href="https://ews.ink/tech/blog-6-auto-ci-cd/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://ews.ink/tags/github-action/" term="Github Action" label="Github Action"/></entry><entry><title type="text">Re:从零开始的博客生涯 #5 Github Action</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-5-github-action/"/><id>https://ews.ink/tech/blog-5-github-action/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-14T19:23:27+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">简介 使用 Git 中，你可以写一个脚本 .yml（就是 .yaml，跟 jpg = jepg 是同样的道理）放在本……</summary><content type="html">&lt;h2 id="简介">简介&lt;/h2>
+&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://ews.ink/tags/github-action/" term="Github Action" label="Github Action"/></entry><entry><title type="text">Re:从零开始的博客生涯 #5 Github Action</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-5-github-action/"/><id>https://ews.ink/tech/blog-5-github-action/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-14T19:23:27+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">简介 使用 Git 中，你可以写一个脚本 .yml（就是 .yaml，跟 jpg = jepg 是同样的道理）放在本……</summary><content type="html">&lt;h2 id="简介">简介&lt;/h2>
 &lt;p>使用 Git 中，你可以写一个脚本 &lt;code>.yml&lt;/code>（就是 &lt;code>.yaml&lt;/code>，跟 &lt;code>jpg&lt;/code> = &lt;code>jepg&lt;/code> 是同样的道理）放在本地 Repo 里（必须放在 &lt;code>.github/workflows/&lt;/code> 目录下）一起 push 到远程仓库。&lt;br>
 Github 收到活动会自动进行判断，当脚本里写的触发条件达成时，就会临时分配一个虚拟机给你，在这个虚拟机上继续运行完整脚本。&lt;br>
 这就是「Github Action」服务。&lt;/p>
@@ -3311,7 +4000,7 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 &lt;/div>
 &lt;/div>&lt;p>然后在仓库路径下直接执行 &lt;code>act&lt;/code> 命令即可调试 Github Action 脚本。&lt;/p>
 &lt;h2 id="入门">入门&lt;/h2>
-&lt;p>具体细节自行查阅资料，详见 &lt;a href="https://docs.github.com/cn/actions/quickstart">Github 官方文档&lt;/a> 或 &lt;a href="https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html">阮一峰的博客&lt;/a>。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://ews.ink/tags/github-action/" term="Github Action" label="Github Action"/></entry><entry><title type="text">Re:从零开始的博客生涯 #4 魔改 MemE</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-4-meme-modify/"/><id>https://ews.ink/tech/blog-4-meme-modify/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-14T15:56:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">魔改图片缩放 操作 新建文件 ./layouts/partials/third-party……</summary><content type="html">&lt;p>&lt;a href="https://github.com/gohugoio/hugo/releases">&lt;img src="https://img.shields.io/badge/hugo_version-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker />&lt;/a> &lt;a href="https://github.com/reuixiy/hugo-theme-meme">&lt;img src="https://img.shields.io/badge/MemE-v4.5.0-blue.svg" alt="MemE Verion" data-sticker />&lt;/a>&lt;/p>
+&lt;p>具体细节自行查阅资料，详见 &lt;a href="https://docs.github.com/cn/actions/quickstart">Github 官方文档&lt;/a> 或 &lt;a href="https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html">阮一峰的博客&lt;/a>。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://ews.ink/tags/github-action/" term="Github Action" label="Github Action"/></entry><entry><title type="text">Re:从零开始的博客生涯 #4 魔改 MemE</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-4-meme-modify/"/><id>https://ews.ink/tech/blog-4-meme-modify/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-14T15:56:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">魔改图片缩放 操作 新建文件 ./layouts/partials/third-party……</summary><content type="html">&lt;p>&lt;a href="https://github.com/gohugoio/hugo/releases">&lt;img src="https://img.shields.io/badge/hugo_version-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker />&lt;/a> &lt;a href="https://github.com/reuixiy/hugo-theme-meme">&lt;img src="https://img.shields.io/badge/MemE-v4.5.0-blue.svg" alt="MemE Verion" data-sticker />&lt;/a>&lt;/p>
 &lt;h2 id="魔改图片缩放">魔改图片缩放&lt;/h2>
 &lt;h3 id="操作">操作&lt;/h3>
 &lt;p>新建文件 &lt;code>./layouts/partials/third-party/medium-zoom.html&lt;/code>，输入内容：&lt;/p>
@@ -3709,7 +4398,7 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 &lt;h3 id="效果-1">效果&lt;/h3>
 &lt;p>完成就是 &lt;a href="https://ews.ink/">首页&lt;/a> 展示的效果了。&lt;/p>
 &lt;p>即一排排徽章：&lt;br>
-&lt;img src="https://img.shields.io/badge/Git-v2.31.1-blue.svg?logo=git&amp;logoColor=fff" alt="Git Verion" data-sticker /> &lt;img src="https://img.shields.io/badge/Hugo-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker /> &lt;img src="https://img.shields.io/badge/MemE-v4.5.0-blue.svg" alt="MemE Verion" data-sticker />&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/></entry><entry><title type="text">Re:从零开始的博客生涯 #3 Theme MemE</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-3-hugo-theme/"/><id>https://ews.ink/tech/blog-3-hugo-theme/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-14T15:56:51+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装 MemE 主题 1 $ git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme 升级 MemE 主题 1 $ git submodule update --rebase --remote 使用主题 1 2 3 $ rm config.toml &amp;amp;&amp;amp; cp themes/meme/config-examples/zh-cn/config.toml config.toml # 进……</summary><content type="html">&lt;p>&lt;a href="https://github.com/gohugoio/hugo/releases">&lt;img src="https://img.shields.io/badge/hugo_version-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker />&lt;/a> &lt;a href="https://github.com/reuixiy/hugo-theme-meme">&lt;img src="https://img.shields.io/badge/MemE-v4.5.0-blue.svg" alt="MemE Verion" data-sticker />&lt;/a>&lt;/p>
+&lt;img src="https://img.shields.io/badge/Git-v2.31.1-blue.svg?logo=git&amp;logoColor=fff" alt="Git Verion" data-sticker /> &lt;img src="https://img.shields.io/badge/Hugo-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker /> &lt;img src="https://img.shields.io/badge/MemE-v4.5.0-blue.svg" alt="MemE Verion" data-sticker />&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/></entry><entry><title type="text">Re:从零开始的博客生涯 #3 Theme MemE</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-3-hugo-theme/"/><id>https://ews.ink/tech/blog-3-hugo-theme/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-14T15:56:51+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">安装 MemE 主题 1 $ git submodule add --depth 1 https://github.com/reuixiy/hugo-theme-meme.git themes/meme 升级 MemE 主题 1 $ git submodule update --rebase --remote 使用主题 1 2 3 $ rm config.toml &amp;amp;&amp;amp; cp themes/meme/config-examples/zh-cn/config.toml config.toml # 进……</summary><content type="html">&lt;p>&lt;a href="https://github.com/gohugoio/hugo/releases">&lt;img src="https://img.shields.io/badge/hugo_version-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker />&lt;/a> &lt;a href="https://github.com/reuixiy/hugo-theme-meme">&lt;img src="https://img.shields.io/badge/MemE-v4.5.0-blue.svg" alt="MemE Verion" data-sticker />&lt;/a>&lt;/p>
 &lt;h2 id="安装-meme-主题">安装 MemE 主题&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -3741,7 +4430,7 @@ Github 收到活动会自动进行判断，当脚本里写的触发条件达成�
 &lt;span class="p">$&lt;/span> &lt;span class="n">hugo&lt;/span> &lt;span class="n">server&lt;/span> &lt;span class="n">-D&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/></entry><entry><title type="text">Re:从零开始的博客生涯 #2 Git</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-2-git/"/><id>https://ews.ink/tech/blog-2-git/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-14T15:56:50+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">准备 Git 配置 Git 代理 1 $ git config --global http.proxy &amp;#39;socks5://127.0.0.1:10808&amp;#39; 升级 Git 1 $ git update-git-for-windows 关联本地和远程的仓库 本地已经准备好一个 Hugo……</summary><content type="html">&lt;p>&lt;a href="https://git-scm.com/downloads">&lt;img src="https://img.shields.io/badge/git_version-v2.31.1-blue.svg?logo=git&amp;logoColor=fff" alt="Git Verion" data-sticker />&lt;/a>&lt;/p>
+&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/></entry><entry><title type="text">Re:从零开始的博客生涯 #2 Git</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-2-git/"/><id>https://ews.ink/tech/blog-2-git/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-14T15:56:50+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">准备 Git 配置 Git 代理 1 $ git config --global http.proxy &amp;#39;socks5://127.0.0.1:10808&amp;#39; 升级 Git 1 $ git update-git-for-windows 关联本地和远程的仓库 本地已经准备好一个 Hugo……</summary><content type="html">&lt;p>&lt;a href="https://git-scm.com/downloads">&lt;img src="https://img.shields.io/badge/git_version-v2.31.1-blue.svg?logo=git&amp;logoColor=fff" alt="Git Verion" data-sticker />&lt;/a>&lt;/p>
 &lt;h2 id="准备-git">准备 Git&lt;/h2>
 &lt;h3 id="配置-git-代理">配置 Git 代理&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -3916,7 +4605,7 @@ A -- B -- C ----------- G main
 &lt;p>「&lt;ruby>&lt;rb>变基&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>rebase&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>」这个词就是字面意思（改&lt;strong>变基&lt;/strong>底），但不是那种字面意思（&lt;strong>变&lt;/strong>成&lt;strong>基&lt;/strong>*），望周知。&amp;#160;&lt;a href="https://ews.ink/tech/blog-2-git/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://ews.ink/tags/git/" term="Git" label="Git"/></entry><entry><title type="text">Re:从零开始的博客生涯 #1 Hugo</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-1-hugo/"/><id>https://ews.ink/tech/blog-1-hugo/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-14T15:56:49+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">全新安装 自行编译 下载 源码 自行编译二进制文件即可。 注意 Go 需要 1.3+ 版本，Windows 上编……</summary><content type="html">&lt;p>&lt;a href="https://git-scm.com/downloads">&lt;img src="https://img.shields.io/badge/git_version-v2.31.1-blue.svg?logo=git&amp;logoColor=fff" alt="Git Verion" data-sticker />&lt;/a> &lt;a href="https://github.com/gohugoio/hugo/releases">&lt;img src="https://img.shields.io/badge/hugo_version-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker />&lt;/a>&lt;/p>
+&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/><category scheme="https://ews.ink/tags/git/" term="Git" label="Git"/></entry><entry><title type="text">Re:从零开始的博客生涯 #1 Hugo</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-1-hugo/"/><id>https://ews.ink/tech/blog-1-hugo/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-14T15:56:49+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">全新安装 自行编译 下载 源码 自行编译二进制文件即可。 注意 Go 需要 1.3+ 版本，Windows 上编……</summary><content type="html">&lt;p>&lt;a href="https://git-scm.com/downloads">&lt;img src="https://img.shields.io/badge/git_version-v2.31.1-blue.svg?logo=git&amp;logoColor=fff" alt="Git Verion" data-sticker />&lt;/a> &lt;a href="https://github.com/gohugoio/hugo/releases">&lt;img src="https://img.shields.io/badge/hugo_version-v0.83.1%2fextended-blue.svg?logo=hugo&amp;logoColor=fff" alt="Hugo Verion" data-sticker />&lt;/a>&lt;/p>
 &lt;h2 id="全新安装">全新安装&lt;/h2>
 &lt;h3 id="自行编译">自行编译&lt;/h3>
 &lt;p>下载 &lt;a href="https://github.com/gohugoio/hugo">源码&lt;/a> 自行编译二进制文件即可。&lt;br>
@@ -4094,7 +4783,7 @@ config.toml 配置文件
 &lt;/div>
 &lt;/div>&lt;p>如果本地绑定的域名和我一样是反代端口出来的，那么再访问 &lt;code>http://local.hugo&lt;/code> 就能正确地根据文件变动实时重载了。&lt;/p>
 &lt;h3 id="更多玩法">更多玩法&lt;/h3>
-&lt;p>更多命令用法详见 &lt;a href="https://gohugo.io/commands">官方文档&lt;/a>。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/></entry><entry><title type="text">Windows Subsystem for Linux GUI 尝鲜</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/wsl-gui/"/><id>https://ews.ink/tech/wsl-gui/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-05-08T01:37:49+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">准备 WSL 开启虚拟化 设置 - 搜索 启用或关闭 Windows 功能，勾上： Hyper-V Windows Subsystem for Linux 虚拟机平台 确定，重启。 全……</summary><content type="html">&lt;h2 id="准备-wsl">准备 WSL&lt;/h2>
+&lt;p>更多命令用法详见 &lt;a href="https://gohugo.io/commands">官方文档&lt;/a>。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hugo/" term="Hugo" label="Hugo"/></entry><entry><title type="text">Windows Subsystem for Linux GUI 尝鲜</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/wsl-gui/"/><id>https://ews.ink/tech/wsl-gui/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-05-08T01:37:49+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">准备 WSL 开启虚拟化 设置 - 搜索 启用或关闭 Windows 功能，勾上： Hyper-V Windows Subsystem for Linux 虚拟机平台 确定，重启。 全……</summary><content type="html">&lt;h2 id="准备-wsl">准备 WSL&lt;/h2>
 &lt;h3 id="开启虚拟化">开启虚拟化&lt;/h3>
 &lt;p>&lt;code>设置&lt;/code> - 搜索 &lt;code>启用或关闭 Windows 功能&lt;/code>，勾上：&lt;/p>
 &lt;ul>
@@ -4160,7 +4849,7 @@ config.toml 配置文件
 至于我为什么想在 Linux 上用 QQ 腾讯心里没点逼数吗？TIM 就是什么好东西吗？&lt;br>
 鹅厂的产品论良心程度，真的只比百度云毫不掩饰的丑恶吃相强得有限。&lt;br>
 尤其那个 WeGame，什么不可燃垃圾。&lt;br>
-起初全班只有我不用，毕业后据我所知只有可怜的 DNF 玩家还在用了。&lt;/p>
+起初全班只有我不用，毕业之后据我所知只有可怜的 DNF 玩家还在用了。&lt;/p>
 &lt;h2 id="其他问题">其他问题&lt;/h2>
 &lt;h3 id="windows-预览体验计划-一片空白">Windows 预览体验计划 一片空白&lt;/h3>
 &lt;p>修改注册表，将 Telemetry 等级拉满即可修复。&lt;/p>
@@ -4181,7 +4870,7 @@ config.toml 配置文件
 &lt;span class="nb">New-ItemProperty&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$regPath&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="n">MaxTelemetryAllowed&lt;/span> &lt;span class="n">-Value&lt;/span> &lt;span class="nv">$level&lt;/span> &lt;span class="n">-Type&lt;/span> &lt;span class="n">Dword&lt;/span> &lt;span class="n">-Force&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>以&lt;strong>管理员权限&lt;/strong>运行该脚本并重启系统即可。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/wsl/" term="WSL" label="WSL"/></entry><entry><title type="text">逆向技术学习与研究之 coco 漫画</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/reverse-coco-comic/"/><id>https://ews.ink/tech/reverse-coco-comic/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-03-31T18:11:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 遇事不决看刑法 2021 年 3 月 1 日开始生效的《中华人民共和国刑法修正案（十一）》： 二十、……</summary><content type="html">&lt;h2 id="前言">前言&lt;/h2>
+&lt;/div>&lt;p>以&lt;strong>管理员权限&lt;/strong>运行该脚本并重启系统即可。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/wsl/" term="WSL" label="WSL"/></entry><entry><title type="text">逆向技术学习与研究之 coco 漫画</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/reverse-coco-comic/"/><id>https://ews.ink/tech/reverse-coco-comic/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-03-31T18:11:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 遇事不决看刑法 2021 年 3 月 1 日开始生效的《中华人民共和国刑法修正案（十一）》： 二十、……</summary><content type="html">&lt;h2 id="前言">前言&lt;/h2>
 &lt;h3 id="遇事不决看刑法">遇事不决看刑法&lt;/h3>
 &lt;p>2021 年 3 月 1 日开始生效的《&lt;a href="https://flk.npc.gov.cn/detail2.html?ZmY4MDgwODE3NTJiN2Q0MzAxNzZhOGExNzdlOTM1OGI%3D">中华人民共和国刑法修正案（十一）&lt;/a>》：&lt;/p>
 &lt;blockquote>
@@ -4443,7 +5132,7 @@ B 漫具体是怎么起家的，即使陈叔叔公关这一块拿捏得再死，
 &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>以上就是逆向过程，结果是带有格式类似 &lt;code>{title: 漫画名称, chapter: 章节名称, download_links: 本章节所有图片下载地址的数组}&lt;/code> 的对象。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E9%80%86%E5%90%91/" term="逆向" label="逆向"/><category scheme="https://ews.ink/tags/comic/" term="Comic" label="Comic"/></entry><entry><title type="text">计算机网络基础 底层知识</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/network-bottom/"/><id>https://ews.ink/tech/network-bottom/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-03-25T13:54:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">速查表 OSI 七层模型从上至下： 上三层 应用层（Application）：信息本体（数据是信……</summary><content type="html">&lt;h2 id="速查表">速查表&lt;/h2>
+&lt;/div>&lt;p>以上就是逆向过程，结果是带有格式类似 &lt;code>{title: 漫画名称, chapter: 章节名称, download_links: 本章节所有图片下载地址的数组}&lt;/code> 的对象。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E9%80%86%E5%90%91/" term="逆向" label="逆向"/><category scheme="https://ews.ink/tags/comic/" term="Comic" label="Comic"/></entry><entry><title type="text">计算机网络基础 底层知识</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/network-bottom/"/><id>https://ews.ink/tech/network-bottom/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-03-25T13:54:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">速查表 OSI 七层模型从上至下： 上三层 应用层（Application）：信息本体（数据是信……</summary><content type="html">&lt;h2 id="速查表">速查表&lt;/h2>
 &lt;p>OSI 七层模型从上至下：&lt;/p>
 &lt;ul>
 &lt;li>上三层
@@ -4773,7 +5462,7 @@ B 漫具体是怎么起家的，即使陈叔叔公关这一块拿捏得再死，
 古体字当然不是糟粕，也值得研究；但它们确实已经被时代淘汰了，不吹不黑客观看待即可。&amp;#160;&lt;a href="https://ews.ink/tech/network-bottom/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/internet/" term="Internet" label="Internet"/></entry><entry><title type="text">计算机网络基础 IPv4</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/network-ipv4/"/><id>https://ews.ink/tech/network-ipv4/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-03-25T12:56:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">格式 IPv4 是由「点分号 .」分隔开的 4 个「 8 位组」（占 8 位 0 或 1 的无符号二进制数 即 bit）……</summary><content type="html">&lt;h2 id="格式">格式&lt;/h2>
+&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/internet/" term="Internet" label="Internet"/></entry><entry><title type="text">计算机网络基础 IPv4</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/network-ipv4/"/><id>https://ews.ink/tech/network-ipv4/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-03-25T12:56:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">格式 IPv4 是由「点分号 .」分隔开的 4 个「 8 位组」（占 8 位 0 或 1 的无符号二进制数 即 bit）……</summary><content type="html">&lt;h2 id="格式">格式&lt;/h2>
 &lt;p>IPv4 是由「点分号 &lt;code>.&lt;/code>」分隔开的 4 个「 8 位组」（占 8 位 &lt;code>0 或 1 的无符号二进制数&lt;/code> 即 &lt;code>bit&lt;/code>）。&lt;/p>
 &lt;p>形如 &lt;code>xxxx xxxx.xxxx xxxx.xxxx xxxx.xxxx xxxx&lt;/code>。&lt;/p>
 &lt;p>举例 &lt;code>1100 0000.1010 1000.0000 0000.0000 0001&lt;/code>。&lt;br>
@@ -4885,7 +5574,7 @@ B 漫具体是怎么起家的，即使陈叔叔公关这一块拿捏得再死，
 &lt;li>192.168.0.0/16&lt;/li>
 &lt;/ul>
 &lt;p>这些 IP 被本地或者私有内部局域网使用。&lt;br>
-除此之外的 IP 都是公共 IP。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/internet/" term="Internet" label="Internet"/><category scheme="https://ews.ink/tags/ip/" term="IP" label="IP"/></entry><entry><title type="text">《末日准备狂》早期版本简单攻略</title><link rel="alternate" type="text/html" href="https://ews.ink/game/mr-prepper/"/><id>https://ews.ink/game/mr-prepper/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-03-19T21:11:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">游戏流程 主要进程 徒手造火箭。 第一阶段 支架 需要：石头 x50、金属 x20、玻璃 x10 解锁房间……</summary><content type="html">&lt;h2 id="游戏流程">游戏流程&lt;/h2>
+除此之外的 IP 都是公共 IP。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/internet/" term="Internet" label="Internet"/><category scheme="https://ews.ink/tags/ip/" term="IP" label="IP"/></entry><entry><title type="text">《末日准备狂》早期版本简单攻略</title><link rel="alternate" type="text/html" href="https://ews.ink/game/mr-prepper/"/><id>https://ews.ink/game/mr-prepper/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-03-19T21:11:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">游戏流程 主要进程 徒手造火箭。 第一阶段 支架 需要：石头 x50、金属 x20、玻璃 x10 解锁房间……</summary><content type="html">&lt;h2 id="游戏流程">游戏流程&lt;/h2>
 &lt;h3 id="主要进程">主要进程&lt;/h3>
 &lt;p>徒手造火箭。&lt;/p>
 &lt;h4 id="第一阶段-支架">第一阶段 支架&lt;/h4>
@@ -5159,7 +5848,7 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;p>总结一下，这是一个爽度十分有限的刷子游戏。&lt;br>
 有限到什么程度呢？有限到你全成就之后删游戏不会有哪怕一丁点犹豫，而且再也不想打开。&lt;/p>
 &lt;p>如果说后续更新了什么内容会让我重新下回来，大概只有超级补强基地设施的自动化，毕竟亲手打造流水线那种一劳永逸的感觉是真的愉悦（点名表扬缺氧 / 环世界 / 戴森球 / 异星工厂 / 岛屿生存者等）。&lt;br>
-或者更新特别精彩的主角逃生舱迫降后的内容（荒岛求生也是我的好球区）。&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/steam/" term="Steam" label="Steam"/><category scheme="https://ews.ink/tags/%E7%94%9F%E5%AD%98%E7%B1%BB%E6%B8%B8%E6%88%8F/" term="生存类游戏" label="生存类游戏"/></entry><entry><title type="text">日麻役种一览</title><link rel="alternate" type="text/html" href="https://ews.ink/game/majsoul-all/"/><id>https://ews.ink/game/majsoul-all/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-03-18T23:07:20+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">一番 立直（门前清限定） 门前清状态下只要听牌即可立直，立直状态下和牌 🀇🀈🀉🀜🀜🀜🀔🀕🀖……</summary><content type="html">&lt;h2 id="一番">一番&lt;/h2>
+或者更新特别精彩的主角逃生舱迫降后的内容（荒岛求生也是我的好球区）。&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/steam/" term="Steam" label="Steam"/><category scheme="https://ews.ink/tags/%E7%94%9F%E5%AD%98%E7%B1%BB%E6%B8%B8%E6%88%8F/" term="生存类游戏" label="生存类游戏"/></entry><entry><title type="text">日麻役种一览</title><link rel="alternate" type="text/html" href="https://ews.ink/game/majsoul-all/"/><id>https://ews.ink/game/majsoul-all/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-03-18T23:07:20+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">一番 立直（门前清限定） 门前清状态下只要听牌即可立直，立直状态下和牌 🀇🀈🀉🀜🀜🀜🀔🀕🀖……</summary><content type="html">&lt;h2 id="一番">一番&lt;/h2>
 &lt;h3 id="立直门前清限定">立直（门前清限定）&lt;/h3>
 &lt;p>门前清状态下只要听牌即可立直，立直状态下和牌&lt;br>
 &lt;span class="mahjong">🀇🀈🀉🀜🀜🀜🀔🀕🀖🀀🀀🀀🀁 🀁&lt;/span>&lt;/p>
@@ -5424,7 +6113,7 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 结论：九种直接下一把，十种可以追梦，十一种及以上建议不多 BB 直接国。&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="四家立直">四家立直&lt;/h3>
-&lt;p>四家全部宣告立直成功&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/%E9%BA%BB%E5%B0%86/" term="麻将" label="麻将"/></entry><entry><title type="text">日麻新手入门</title><link rel="alternate" type="text/html" href="https://ews.ink/game/majsoul-new/"/><id>https://ews.ink/game/majsoul-new/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-03-18T22:47:20+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本博客所有麻将使用 emoji 展示。 全套麻将牌的 emoji 出现在 emoji 版本 11.0 以及 Unicode 版本 5.1（🀄是出现在 emoji……</summary><content type="html">&lt;blockquote>
+&lt;p>四家全部宣告立直成功&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/%E9%BA%BB%E5%B0%86/" term="麻将" label="麻将"/></entry><entry><title type="text">日麻新手入门</title><link rel="alternate" type="text/html" href="https://ews.ink/game/majsoul-new/"/><id>https://ews.ink/game/majsoul-new/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-03-18T22:47:20+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本博客所有麻将使用 emoji 展示。 全套麻将牌的 emoji 出现在 emoji 版本 11.0 以及 Unicode 版本 5.1（🀄是出现在 emoji……</summary><content type="html">&lt;blockquote>
 &lt;p>本博客所有麻将使用 &lt;code>emoji&lt;/code> 展示。&lt;br>
 全套麻将牌的 emoji 出现在 emoji 版本 11.0 以及 Unicode 版本 5.1（🀄是出现在 emoji 版本 1.0）。&lt;br>
 &lt;mark>TODO&lt;/mark>：参考《&lt;a href="https://blog.yami.love/2020/12/18/emoji/">让emoji固定风格&lt;/a>》的思路统一麻将牌 emoji 风格。&lt;/p>
@@ -5520,7 +6209,7 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;blockquote>
 &lt;p>再强调一遍，如果和役牌，役牌一定要是刻子。&lt;br>
 雀头是不行的，不要再吊一张「风牌 / 三元牌」然后问为什么和不了了。&lt;/p>
-&lt;/blockquote></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/%E9%BA%BB%E5%B0%86/" term="麻将" label="麻将"/></entry><entry><title type="text">Steam 国区入库《雀魂》&amp;《决斗链接》</title><link rel="alternate" type="text/html" href="https://ews.ink/game/steam-get-majsoul/"/><id>https://ews.ink/game/steam-get-majsoul/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2021-02-16T19:34:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">准备工作 安装好油猴脚本 AuTo Redeem Steamkey 3.0：这是一个网页端快速激活 Steam Key 的脚本，它还提供快速换……</summary><content type="html">&lt;h2 id="准备工作">准备工作&lt;/h2>
+&lt;/blockquote></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/%E9%BA%BB%E5%B0%86/" term="麻将" label="麻将"/></entry><entry><title type="text">Steam 国区入库《雀魂》&amp;《决斗链接》</title><link rel="alternate" type="text/html" href="https://ews.ink/game/steam-get-majsoul/"/><id>https://ews.ink/game/steam-get-majsoul/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2021-02-16T19:34:52+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">准备工作 安装好油猴脚本 AuTo Redeem Steamkey 3.0：这是一个网页端快速激活 Steam Key 的脚本，它还提供快速换……</summary><content type="html">&lt;h2 id="准备工作">准备工作&lt;/h2>
 &lt;ul>
 &lt;li>安装好油猴脚本 &lt;a href="https://greasyfork.org/zh-CN/scripts/36666-auto-redeem-steamkey">AuTo Redeem Steamkey 3.0&lt;/a>：这是一个网页端快速激活 Steam Key 的脚本，它还提供快速换区（购物车换区大法）和激活 sub 的功能，这里主要是用到「快速换区」。&lt;/li>
 &lt;li>科学上网&lt;/li>
@@ -5575,7 +6264,7 @@ P3 开始 BOSS 会投掷会爆炸的显示器，爆炸范围有点大，但其�
 &lt;blockquote>
 &lt;p>当然，K 社封了大陆 IP（国服是由网易独家代理的），因此游玩决斗链接需要全程科学上网。&lt;/p>
 &lt;/blockquote>
-&lt;p>全文完，Enjoy it。&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/steam/" term="Steam" label="Steam"/><category scheme="https://ews.ink/tags/%E9%9B%80%E9%AD%82/" term="雀魂" label="雀魂"/><category scheme="https://ews.ink/tags/%E5%86%B3%E6%96%97%E9%93%BE%E6%8E%A5/" term="决斗链接" label="决斗链接"/></entry><entry><title type="text">Git Commit Message 规范</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/git-commit-message/"/><id>https://ews.ink/tech/git-commit-message/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-10-28T19:10:36+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Commit Message 规范 规范这种事一般是赢家通吃的，也没什么好标新立异的，好用就行了。 基本上唯一的选……</summary><content type="html">&lt;h1 id="commit-message-规范">Commit Message 规范&lt;/h1>
+&lt;p>全文完，Enjoy it。&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/steam/" term="Steam" label="Steam"/><category scheme="https://ews.ink/tags/%E9%9B%80%E9%AD%82/" term="雀魂" label="雀魂"/><category scheme="https://ews.ink/tags/%E5%86%B3%E6%96%97%E9%93%BE%E6%8E%A5/" term="决斗链接" label="决斗链接"/></entry><entry><title type="text">Git Commit Message 规范</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/git-commit-message/"/><id>https://ews.ink/tech/git-commit-message/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-10-28T19:10:36+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Commit Message 规范 规范这种事一般是赢家通吃的，也没什么好标新立异的，好用就行了。 基本上唯一的选……</summary><content type="html">&lt;h1 id="commit-message-规范">Commit Message 规范&lt;/h1>
 &lt;p>规范这种事一般是赢家通吃的，也没什么好标新立异的，好用就行了。&lt;br>
 基本上唯一的选择，约定式提交（Conventional Commits）规范。&lt;br>
 （本文写就时）最新的&lt;a href="https://www.conventionalcommits.org/zh-hans/v1.0.0-beta.4/">文档&lt;/a>。&lt;/p>
@@ -5660,7 +6349,7 @@ Conventional Commits 定出来除了约定俗成一看就懂以外，它真正 c
 &lt;h2 id="相关工具">相关工具&lt;/h2>
 &lt;p>&lt;a href="https://github.com/commitizen/cz-cli">Commitizen&lt;/a>&lt;br>
 &lt;a href="https://github.com/damianopetrungaro/php-commitizen">PHP 版 Commitizen&lt;/a>&lt;br>
-&lt;a href="https://github.com/commitsar-app/commitsar">检查提交信息是否符合规范的工具&lt;/a> 用 Go 写的，支持在 CI 的 Docker 镜像中使用&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/git/" term="Git" label="Git"/><category scheme="https://ews.ink/tags/github/" term="Github" label="Github"/></entry><entry><title type="text">Windows Subsystem for Linux 简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/wsl-ubuntu/"/><id>https://ews.ink/tech/wsl-ubuntu/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-09-29T16:48:05+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前略，决定重装 WSL。 想了下没什么必要换发行版，还是选择 Ubuntu 20.04。 准备工作 备份目……</summary><content type="html">&lt;p>前略，决定重装 WSL。&lt;/p>
+&lt;a href="https://github.com/commitsar-app/commitsar">检查提交信息是否符合规范的工具&lt;/a> 用 Go 写的，支持在 CI 的 Docker 镜像中使用&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/git/" term="Git" label="Git"/><category scheme="https://ews.ink/tags/github/" term="Github" label="Github"/></entry><entry><title type="text">Windows Subsystem for Linux 简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/wsl-ubuntu/"/><id>https://ews.ink/tech/wsl-ubuntu/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-09-29T16:48:05+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前略，决定重装 WSL。 想了下没什么必要换发行版，还是选择 Ubuntu 20.04。 准备工作 备份目……</summary><content type="html">&lt;p>前略，决定重装 WSL。&lt;/p>
 &lt;p>想了下没什么必要换发行版，还是选择 Ubuntu 20.04。&lt;/p>
 &lt;h2 id="准备工作">准备工作&lt;/h2>
 &lt;p>备份目前内容：&lt;/p>
@@ -5872,7 +6561,7 @@ v14.12.0
 &lt;li>直接与 Windows 共享端口，开箱即用，无需任何映射&lt;/li>
 &lt;/ul>
 &lt;p>讲究一个&lt;strong>喂到嘴里&lt;/strong>，体验吊打任何常规虚拟机，这个项目真的牛逼。&lt;br>
-那句话怎么说的来着，Windows 是最好的 Linux 发行版。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/wsl/" term="WSL" label="WSL"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/ubuntu/" term="Ubuntu" label="Ubuntu"/><category scheme="https://ews.ink/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" term="虚拟机" label="虚拟机"/></entry><entry><title type="text">改造原生 Laravel 框架</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-laravel-modify/"/><id>https://ews.ink/tech/api-laravel-modify/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-09-07T17:20:26+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">2020.9.8 更新：注意 Laravel 更新了 8.1.0，而本文内容基于 7.x，仅供参考。 但其实大体来说区别不……</summary><content type="html">&lt;blockquote>
+那句话怎么说的来着，Windows 是最好的 Linux 发行版。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/wsl/" term="WSL" label="WSL"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/ubuntu/" term="Ubuntu" label="Ubuntu"/><category scheme="https://ews.ink/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" term="虚拟机" label="虚拟机"/></entry><entry><title type="text">改造原生 Laravel 框架</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-laravel-modify/"/><id>https://ews.ink/tech/api-laravel-modify/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-09-07T17:20:26+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">2020.9.8 更新：注意 Laravel 更新了 8.1.0，而本文内容基于 7.x，仅供参考。 但其实大体来说区别不……</summary><content type="html">&lt;blockquote>
 &lt;p>2020.9.8 更新：注意 Laravel 更新了 8.1.0，而本文内容基于 7.x，仅供参考。&lt;br>
 但其实大体来说区别不大，有些许出入自行替换即可。&lt;/p>
 &lt;/blockquote>
@@ -6696,7 +7385,7 @@ try_files $uri $uri/ /index.php?$query_string;
 &lt;code>公网服务器 -&amp;gt; 套nginx -&amp;gt; 套内网穿透 -&amp;gt; 套树莓派 -&amp;gt; 套虚拟机 -&amp;gt; 套nginx&lt;/code>&lt;br>
 感觉也只能用来测试了，真要当生产力的话，多一层套娃等于砍一截瓶颈。&lt;br>
 不过好玩确实挺好玩的。&lt;/p>
-&lt;/blockquote></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/php/" term="PHP" label="PHP"/><category scheme="https://ews.ink/tags/laravel/" term="Laravel" label="Laravel"/><category scheme="https://ews.ink/tags/devops/" term="DevOps" label="DevOps"/></entry><entry><title type="text">PHP Web 框架 Laravel 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-php-laravel/"/><id>https://ews.ink/tech/api-php-laravel/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-09-07T15:29:44+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">其实没什么好选的，我估摸着这个项目最终并发不太可能高到「不得不换 Java 或者 Go」的情况。……</summary><content type="html">&lt;p>其实没什么好选的，我估摸着这个项目最终并发不太可能高到「不得不换 Java 或者 Go」的情况。&lt;br>
+&lt;/blockquote></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/php/" term="PHP" label="PHP"/><category scheme="https://ews.ink/tags/laravel/" term="Laravel" label="Laravel"/><category scheme="https://ews.ink/tags/devops/" term="DevOps" label="DevOps"/></entry><entry><title type="text">PHP Web 框架 Laravel 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-php-laravel/"/><id>https://ews.ink/tech/api-php-laravel/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-09-07T15:29:44+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">其实没什么好选的，我估摸着这个项目最终并发不太可能高到「不得不换 Java 或者 Go」的情况。……</summary><content type="html">&lt;p>其实没什么好选的，我估摸着这个项目最终并发不太可能高到「不得不换 Java 或者 Go」的情况。&lt;br>
 所以在「满足作为一个 API 基本的要求」的情况下最优先的就是「快速开发」，那肯定是我&lt;del>朋友&lt;/del>第一喜欢的 PHP了。&lt;/p>
 &lt;h2 id="准备开发环境">准备开发环境&lt;/h2>
 &lt;p>开发机是 Windows，从来没考虑过 VIM 写 PHP 是什么体验 &lt;del>也不想尝试&lt;/del>。&lt;/p>
@@ -6794,7 +7483,7 @@ Laravel 这是想追上 PHP 版本号啊。&lt;del>不对已经追上了&lt;/del
 脱离具体应用跨系统讨论进程和线程是一个很玄学的东西，如果不是立志于深耕操作系统方向的话不必深究。&amp;#160;&lt;a href="https://ews.ink/tech/api-php-laravel/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/php/" term="PHP" label="PHP"/><category scheme="https://ews.ink/tags/laravel/" term="Laravel" label="Laravel"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">Python 定时任务框架 APScheduler</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-flask-apscheduler/"/><id>https://ews.ink/tech/api-flask-apscheduler/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-08-21T10:58:03+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Python 的定时任务调度，选择最成熟的 APScheduler，没什么问题。 一开始尝试直接引入……</summary><content type="html">&lt;p>Python 的定时任务调度，选择最成熟的 APScheduler，没什么问题。&lt;/p>
+&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/php/" term="PHP" label="PHP"/><category scheme="https://ews.ink/tags/laravel/" term="Laravel" label="Laravel"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">Python 定时任务框架 APScheduler</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-flask-apscheduler/"/><id>https://ews.ink/tech/api-flask-apscheduler/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-08-21T10:58:03+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Python 的定时任务调度，选择最成熟的 APScheduler，没什么问题。 一开始尝试直接引入……</summary><content type="html">&lt;p>Python 的定时任务调度，选择最成熟的 APScheduler，没什么问题。&lt;/p>
 &lt;p>一开始尝试直接引入 apscheduler，用是蛮好用，不过卡在了启动上。&lt;br>
 当我都做好写个 wrapper 的心理准备的时候，留了个心眼搜了一下，发现已经有 Flask-APScheduler 这个现成库了。&lt;del>妈的智障&lt;/del>&lt;/p>
 &lt;p>入口文件 &lt;code>web/api.py&lt;/code>：&lt;/p>
@@ -6909,7 +7598,7 @@ Laravel 这是想追上 PHP 版本号啊。&lt;del>不对已经追上了&lt;/del
 &lt;/div>
 &lt;/div>&lt;p>然后随便加点细节（比如多任务 / 鉴权 / 锁止装置之类的）：&lt;br>
 &lt;img src="https://i.loli.net/2020/08/21/V2bUipsl5Z1e4Wk.png" alt="半成品">&lt;/p>
-&lt;p>已经能用啦。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/python/" term="Python" label="Python"/><category scheme="https://ews.ink/tags/flask/" term="Flask" label="Flask"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/><category scheme="https://ews.ink/tags/apscheduler/" term="APScheduler" label="APScheduler"/></entry><entry><title type="text">Bot 重建计划 #1 QQ 机器人 Mirai</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/bot-qq-mirai/"/><id>https://ews.ink/tech/bot-qq-mirai/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-08-19T15:31:45+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">截至 8 月 2 日凌晨，各大 QQ 机器人框架纷纷关闭。 晨风直接去世（腾讯发了律师函，作者已进局……</summary><content type="html">&lt;p>截至 8 月 2 日凌晨，各大 QQ 机器人框架纷纷关闭。&lt;br>
+&lt;p>已经能用啦。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/python/" term="Python" label="Python"/><category scheme="https://ews.ink/tags/flask/" term="Flask" label="Flask"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/><category scheme="https://ews.ink/tags/apscheduler/" term="APScheduler" label="APScheduler"/></entry><entry><title type="text">Bot 重建计划 #1 QQ 机器人 Mirai</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/bot-qq-mirai/"/><id>https://ews.ink/tech/bot-qq-mirai/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-08-19T15:31:45+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">截至 8 月 2 日凌晨，各大 QQ 机器人框架纷纷关闭。 晨风直接去世（腾讯发了律师函，作者已进局……</summary><content type="html">&lt;p>截至 8 月 2 日凌晨，各大 QQ 机器人框架纷纷关闭。&lt;br>
 晨风直接去世（腾讯发了律师函，作者已进局子），酷 Q 停运&lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/bot-qq-mirai/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>。&lt;/p>
 &lt;p>各大框架停运的口径有如下原因：&lt;/p>
 &lt;ul>
@@ -7171,7 +7860,7 @@ P.S. 其实腾讯并没有动酷 Q，酷 Q 因为 Pro 版不管怎么算都是�
 &lt;p>不必要的迁移工作：其实 mirai 是可以通过一个叫 &lt;a href="https://github.com/iTXTech/mirai-native">&lt;code>mirai-native&lt;/code>&lt;/a> 的项目&lt;strong>直接加载酷 Q 的插件&lt;/strong>的，这是几乎无需额外编码的迁移方案。不过需要在 win 平台上运行 mirai，而且这种方案实现怎么说都算不上优雅，仅做权宜之计。&amp;#160;&lt;a href="https://ews.ink/tech/bot-qq-mirai/#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/bot/" term="Bot" label="Bot"/><category scheme="https://ews.ink/tags/qq/" term="QQ" label="QQ"/><category scheme="https://ews.ink/tags/mirai/" term="Mirai" label="Mirai"/></entry><entry><title type="text">Markdown 语法简单指北</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/write-markdown-syntax/"/><id>https://ews.ink/tech/write-markdown-syntax/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-07-29T15:23:06+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">灵感来源 本篇文章提供了一些能在 Hugo 的 content 文件中使用的基本 Markdown 语法的简单示例，同时也展示了基……</summary><content type="html">&lt;blockquote>
+&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/bot/" term="Bot" label="Bot"/><category scheme="https://ews.ink/tags/qq/" term="QQ" label="QQ"/><category scheme="https://ews.ink/tags/mirai/" term="Mirai" label="Mirai"/></entry><entry><title type="text">Markdown 语法简单指北</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/write-markdown-syntax/"/><id>https://ews.ink/tech/write-markdown-syntax/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-07-29T15:23:06+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">灵感来源 本篇文章提供了一些能在 Hugo 的 content 文件中使用的基本 Markdown 语法的简单示例，同时也展示了基……</summary><content type="html">&lt;blockquote>
 &lt;p>&lt;a href="https://themes.gohugo.io//theme/hugo-theme-meme/post/markdown-syntax/">灵感来源&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>本篇文章提供了一些能在 Hugo 的 content 文件中使用的基本 Markdown 语法的简单示例，同时也展示了基础 HTML 元素在&lt;ruby>&lt;rb>本 Hugo 主题&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>MemE&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>中用 CSS 绘制后是什么效果。&lt;/p>
@@ -7488,7 +8177,7 @@ X&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">sup&lt;/span>&lt;span 
 &lt;p>鲁迅《致杨霁云》 1934.12.13&amp;#160;&lt;a href="https://ews.ink/tech/write-markdown-syntax/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/markdown/" term="Markdown" label="Markdown"/></entry><entry><title type="text">Python Web 框架 Flask 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-python-flask/"/><id>https://ews.ink/tech/api-python-flask/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-07-28T15:14:47+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本节内容大量参考《Flask-RESTful 官方文档》 当前（2020.7.28）使用……</summary><content type="html">&lt;blockquote>
+&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/markdown/" term="Markdown" label="Markdown"/></entry><entry><title type="text">Python Web 框架 Flask 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-python-flask/"/><id>https://ews.ink/tech/api-python-flask/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-07-28T15:14:47+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本节内容大量参考《Flask-RESTful 官方文档》 当前（2020.7.28）使用……</summary><content type="html">&lt;blockquote>
 &lt;p>本节内容大量参考《&lt;a href="https://flask-restful.readthedocs.io/en/latest/">Flask-RESTful 官方文档&lt;/a>》&lt;/p>
 &lt;/blockquote>
 &lt;blockquote>
@@ -7585,7 +8274,7 @@ $ set FLASK_ENV=development
 $ flask run
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>实话说，Flask 的文档写得也不怎么样。但胜在简洁，感觉不错。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/python/" term="Python" label="Python"/><category scheme="https://ews.ink/tags/flask/" term="Flask" label="Flask"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">Python Web 框架 Django 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-python-django/"/><id>https://ews.ink/tech/api-python-django/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-07-27T19:47:14+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本节内容大量参考《Django REST Framework 官方文档》 新建项目 当前（2020.7.27）使用的……</summary><content type="html">&lt;blockquote>
+&lt;/div>&lt;p>实话说，Flask 的文档写得也不怎么样。但胜在简洁，感觉不错。&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/python/" term="Python" label="Python"/><category scheme="https://ews.ink/tags/flask/" term="Flask" label="Flask"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">Python Web 框架 Django 的简单使用</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/api-python-django/"/><id>https://ews.ink/tech/api-python-django/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-07-27T19:47:14+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本节内容大量参考《Django REST Framework 官方文档》 新建项目 当前（2020.7.27）使用的……</summary><content type="html">&lt;blockquote>
 &lt;p>本节内容大量参考《&lt;a href="https://www.django-rest-framework.org/tutorial/quickstart/">Django REST Framework 官方文档&lt;/a>》&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="新建项目">新建项目&lt;/h2>
@@ -7849,7 +8538,7 @@ PHP / Go / Java，彳亍！&lt;/p>
 应用是一个专门做某件事的网络应用程序；项目则是一个网站使用的配置和应用的集合。项目可以包含很多个应用；应用可以被很多个项目使用。by &lt;a href="https://docs.djangoproject.com/zh-hans/3.0/intro/tutorial01/#creating-the-polls-app">官方文档&lt;/a>&amp;#160;&lt;a href="https://ews.ink/tech/api-python-django/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/python/" term="Python" label="Python"/><category scheme="https://ews.ink/tags/django/" term="Django" label="Django"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">《Diablo3》S21 风暴试炼 猎魔人开荒及 Build</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-s21-demonhunter-build/"/><id>https://ews.ink/game/diablo3-s21-demonhunter-build/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-07-03T02:03:10+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">早上起来写这篇文章的时候迷迷糊糊地想，要涂什么剑油吃什么魔药。 但是我十年没有玩过巫师……</summary><content type="html">&lt;blockquote>
+&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/python/" term="Python" label="Python"/><category scheme="https://ews.ink/tags/django/" term="Django" label="Django"/><category scheme="https://ews.ink/tags/api/" term="API" label="API"/></entry><entry><title type="text">《Diablo3》S21 风暴试炼 猎魔人开荒及 Build</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-s21-demonhunter-build/"/><id>https://ews.ink/game/diablo3-s21-demonhunter-build/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-07-03T02:03:10+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">早上起来写这篇文章的时候迷迷糊糊地想，要涂什么剑油吃什么魔药。 但是我十年没有玩过巫师……</summary><content type="html">&lt;blockquote>
 &lt;p>早上起来写这篇文章的时候迷迷糊糊地想，要涂什么剑油吃什么魔药。&lt;br>
 但是我十年没有玩过巫师 3 了啊，迷惑。&lt;/p>
 &lt;/blockquote>
@@ -7969,7 +8658,7 @@ PHP / Go / Java，彳亍！&lt;/p>
 &lt;p>虽然深渊挖掘裤增伤比较低，但更容易赌出来，因此优先级高于猎手之怒。&amp;#160;&lt;a href="https://ews.ink/game/diablo3-s21-demonhunter-build/#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/><category scheme="https://ews.ink/tags/%E7%8C%8E%E9%AD%94%E4%BA%BA/" term="猎魔人" label="猎魔人"/><category scheme="https://ews.ink/tags/%E9%85%8D%E8%A3%85/" term="配装" label="配装"/></entry><entry><title type="text">《Diablo3》S21 风暴试炼 赛季要素</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-s21-version/"/><id>https://ews.ink/game/diablo3-s21-version/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-07-03T01:07:20+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">新赛季要素： 2020 年 7 月 3 日开始，版本号 2.6.9。 赛季 BUFF：每 90 秒随机在周围释放元……</summary><content type="html">&lt;p>新赛季要素：&lt;/p>
+&lt;/section></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/><category scheme="https://ews.ink/tags/%E7%8C%8E%E9%AD%94%E4%BA%BA/" term="猎魔人" label="猎魔人"/><category scheme="https://ews.ink/tags/%E9%85%8D%E8%A3%85/" term="配装" label="配装"/></entry><entry><title type="text">《Diablo3》S21 风暴试炼 赛季要素</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-s21-version/"/><id>https://ews.ink/game/diablo3-s21-version/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-07-03T01:07:20+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">新赛季要素： 2020 年 7 月 3 日开始，版本号 2.6.9。 赛季 BUFF：每 90 秒随机在周围释放元……</summary><content type="html">&lt;p>新赛季要素：&lt;/p>
 &lt;ul>
 &lt;li>2020 年 7 月 3 日开始，版本号 2.6.9。&lt;/li>
 &lt;li>赛季 BUFF：每 90 秒随机在周围释放元素 AOE。&lt;sup id="fnref:1">&lt;a href="https://ews.ink/game/diablo3-s21-version/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
@@ -8060,7 +8749,7 @@ PHP / Go / Java，彳亍！&lt;/p>
 40 不会不脆了 8，那是真的爷青结。&amp;#160;&lt;a href="https://ews.ink/game/diablo3-s21-version/#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/></entry><entry><title type="text">Always Sometimes Monsters</title><link rel="alternate" type="text/html" href="https://ews.ink/life/who-am-i/"/><id>https://ews.ink/life/who-am-i/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-06-30T14:25:24+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">我这个人是个自私自利，一点也不纯粹，德行或许有亏，尚未脱离低级趣味，也未必有益于人民……</summary><content type="html">&lt;p>我这个人是个自私自利，一点也不纯粹，德行或许有亏，尚未脱离低级趣味，也未必有益于人民的，&lt;strong>普通人&lt;/strong>。&lt;/p>
+&lt;/section></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/></entry><entry><title type="text">Always Sometimes Monsters</title><link rel="alternate" type="text/html" href="https://ews.ink/life/who-am-i/"/><id>https://ews.ink/life/who-am-i/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-06-30T14:25:24+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">我这个人是个自私自利，一点也不纯粹，德行或许有亏，尚未脱离低级趣味，也未必有益于人民……</summary><content type="html">&lt;p>我这个人是个自私自利，一点也不纯粹，德行或许有亏，尚未脱离低级趣味，也未必有益于人民的，&lt;strong>普通人&lt;/strong>。&lt;/p>
 &lt;hr>
 &lt;p>喜欢&lt;strong>折腾&lt;/strong>，喜欢研究 IT 技术。与什么方向或者什么语言都无关，我只是特别钟爱从零到一平地起高楼的无中生有。&lt;/p>
 &lt;p>我热爱创作。&lt;sup id="fnref:1">&lt;a href="https://ews.ink/life/who-am-i/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
@@ -8134,7 +8823,7 @@ PHP / Go / Java，彳亍！&lt;/p>
 从碧落到黄泉，不是谁在碧落谁在黄泉的问题，没有冒犯的意思。&amp;#160;&lt;a href="https://ews.ink/life/who-am-i/#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/life/" term="life" label="life"/><category scheme="https://ews.ink/tags/ews.ink/" term="ews.ink" label="ews.ink"/></entry><entry><title type="text">Mastodon 的安装与部署</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-mastodon-deploy/"/><id>https://ews.ink/tech/linux-mastodon-deploy/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-05-05T17:59:54+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前略，总之决定自建一个 SNS，了解相关知识之后决定使用 Mastodon。 前置工作 网上……</summary><content type="html">&lt;p>前略，总之决定自建一个 SNS，了解相关知识之后决定使用 Mastodon。&lt;/p>
+&lt;/section></content><category scheme="https://ews.ink/life/" term="life" label="life"/><category scheme="https://ews.ink/tags/ews.ink/" term="ews.ink" label="ews.ink"/></entry><entry><title type="text">Mastodon 的安装与部署</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-mastodon-deploy/"/><id>https://ews.ink/tech/linux-mastodon-deploy/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-05-05T17:59:54+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前略，总之决定自建一个 SNS，了解相关知识之后决定使用 Mastodon。 前置工作 网上……</summary><content type="html">&lt;p>前略，总之决定自建一个 SNS，了解相关知识之后决定使用 Mastodon。&lt;/p>
 &lt;!-- More -->
 &lt;h2 id="前置工作">前置工作&lt;/h2>
 &lt;p>网上很多文档提到的——直接指向&lt;a href="https://github.com/tootsuite/documentation/tree/master/content/en">官方文档仓库&lt;/a>的链接——都已经失效了，现在这个仓库是&lt;a href="https://docs.joinmastodon.org">文档页面&lt;/a>的静态文件。&lt;br>
@@ -8729,7 +9418,7 @@ $ docker-compose build &lt;span class="c1"># 重建 Image&lt;/span>
 $ docker-compose up -d &lt;span class="c1"># 重启 Container&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/centos/" term="CentOS" label="CentOS"/><category scheme="https://ews.ink/tags/mastodon/" term="Mastodon" label="Mastodon"/></entry><entry><title type="text">《Diablo3》S20 禁忌文献 死灵法师 Build</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-s20-necromancer-build/"/><id>https://ews.ink/game/diablo3-s20-necromancer-build/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-03-02T18:28:45+00:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 适用版本 20赛季（2.6.8） 起赛季角色不用赛季buff不如玩非赛。 ——《52 Things……</summary><content type="html">&lt;h2 id="前言">前言&lt;/h2>
+&lt;/div></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/centos/" term="CentOS" label="CentOS"/><category scheme="https://ews.ink/tags/mastodon/" term="Mastodon" label="Mastodon"/></entry><entry><title type="text">《Diablo3》S20 禁忌文献 死灵法师 Build</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-s20-necromancer-build/"/><id>https://ews.ink/game/diablo3-s20-necromancer-build/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-03-02T18:28:45+00:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 适用版本 20赛季（2.6.8） 起赛季角色不用赛季buff不如玩非赛。 ——《52 Things……</summary><content type="html">&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>适用版本 20赛季（2.6.8）&lt;/p>
 &lt;blockquote>
 &lt;p>起赛季角色不用赛季buff不如玩非赛。&lt;/p>
@@ -8934,7 +9623,7 @@ $ docker-compose up -d &lt;span class="c1"># 重启 Container&lt;/span>
 &lt;strong>&lt;a href="http://d.163.com/db/cn/49513/equipment/lost-time-70">失时&lt;/a>&lt;/strong> 减速加速&lt;br>
 &lt;strong>&lt;a href="http://d.163.com/db/cn/49513/equipment/dayntees-binding-70">但提的束缚&lt;/a>&lt;/strong> 50%减伤&lt;br>
 &lt;strong>&lt;a href="http://d.163.com/db/cn/49513/equipment/aquila-cuirass-70">天鹰斗衣&lt;/a>&lt;/strong> 50%减伤&lt;br>
-&lt;strong>&lt;a href="http://d.163.com/db/cn/49513/equipment/halcyons-ascent-70">赫西恩之飞升&lt;/a>&lt;/strong> 8s全屏控制&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/><category scheme="https://ews.ink/tags/%E9%85%8D%E8%A3%85/" term="配装" label="配装"/><category scheme="https://ews.ink/tags/%E6%AD%BB%E7%81%B5%E6%B3%95%E5%B8%88/" term="死灵法师" label="死灵法师"/></entry><entry><title type="text">重建 NexT 主题 Hexo 博客</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-hexo-remastered/"/><id>https://ews.ink/tech/blog-hexo-remastered/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-03-01T22:35:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id="前言">前言&lt;/h2>
+&lt;strong>&lt;a href="http://d.163.com/db/cn/49513/equipment/halcyons-ascent-70">赫西恩之飞升&lt;/a>&lt;/strong> 8s全屏控制&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/><category scheme="https://ews.ink/tags/%E9%85%8D%E8%A3%85/" term="配装" label="配装"/><category scheme="https://ews.ink/tags/%E6%AD%BB%E7%81%B5%E6%B3%95%E5%B8%88/" term="死灵法师" label="死灵法师"/></entry><entry><title type="text">重建 NexT 主题 Hexo 博客</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/blog-hexo-remastered/"/><id>https://ews.ink/tech/blog-hexo-remastered/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-03-01T22:35:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>我真的希望这是最后一次了。&lt;/p>
 &lt;blockquote>
 &lt;p>2021.5.18 更新：确实。&lt;del>这之后我就换成 Hugo 了&lt;/del>&lt;br>
@@ -9415,7 +10104,7 @@ $ chmod +x /var/repo/blog.git/hooks/post-receive &lt;span class="c1"># 设置钩
 &lt;p>出自&lt;s>《九阴真经》&lt;/s>《道德经》第七十七章。&amp;#160;&lt;a href="https://ews.ink/tech/blog-hexo-remastered/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hexo/" term="Hexo" label="Hexo"/><category scheme="https://ews.ink/tags/next/" term="NexT" label="NexT"/></entry><entry><title type="text">Powershell 实现直播源抓取工具及其实现思路</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/powershell-get-stream-link/"/><id>https://ews.ink/tech/powershell-get-stream-link/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2020-01-30T11:33:27+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 下面是本话唠的废话，只想看方法往下面拖到实现思路一章，只想要成果拉到最后。 我这个……</summary><content type="html">&lt;h2 id="前言">前言&lt;/h2>
+&lt;/section></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/blog/" term="Blog" label="Blog"/><category scheme="https://ews.ink/tags/hexo/" term="Hexo" label="Hexo"/><category scheme="https://ews.ink/tags/next/" term="NexT" label="NexT"/></entry><entry><title type="text">Powershell 实现直播源抓取工具及其实现思路</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/powershell-get-stream-link/"/><id>https://ews.ink/tech/powershell-get-stream-link/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2020-01-30T11:33:27+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 下面是本话唠的废话，只想看方法往下面拖到实现思路一章，只想要成果拉到最后。 我这个……</summary><content type="html">&lt;h2 id="前言">前言&lt;/h2>
 &lt;blockquote>
 &lt;p>下面是本话唠的废话，只想看方法往下面拖到实现思路一章，只想要成果拉到最后。&lt;br>
 我这个人比较容易孤独，为了避免自闭，我没事就会挂个直播在后台，漫无目的闲聊的人声可以给我一定的安全感。&lt;br>
@@ -9942,7 +10631,7 @@ A：优先级从上至下：使用命令行参数启动，配置文件设置了 
 &lt;h3 id="todo">TODO&lt;/h3>
 &lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 修复已知 BUG：如果直播间处于下播后的轮播状态，可能会误判正在直播而尝试无效抓取（点名批评斗鱼暴雪直播间）&lt;/li>
-&lt;/ul></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%9B%B4%E6%92%AD/" term="直播" label="直播"/><category scheme="https://ews.ink/tags/powershell/" term="Powershell" label="Powershell"/></entry><entry><title type="text">《Diablo3》S19 永恒之战 巫医 Build</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-s19-witchdoctor-build/"/><id>https://ews.ink/game/diablo3-s19-witchdoctor-build/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2019-11-28T20:22:00+00:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 巫医强啊，巫医他强就强在：同一层大米，他可以秒boss； 也可以被路边不知道哪里来……</summary><content type="html">&lt;h2 id="前言">前言&lt;/h2>
+&lt;/ul></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%9B%B4%E6%92%AD/" term="直播" label="直播"/><category scheme="https://ews.ink/tags/powershell/" term="Powershell" label="Powershell"/></entry><entry><title type="text">《Diablo3》S19 永恒之战 巫医 Build</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-s19-witchdoctor-build/"/><id>https://ews.ink/game/diablo3-s19-witchdoctor-build/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2019-11-28T20:22:00+00:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 巫医强啊，巫医他强就强在：同一层大米，他可以秒boss； 也可以被路边不知道哪里来……</summary><content type="html">&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>巫医强啊，巫医他强就强在：同一层大米，他可以秒boss；&lt;br>
 也可以被路边不知道哪里来的&lt;del>一般通过小怪&lt;/del> 不知名阿猫阿狗随随便便一个平A秒掉。&lt;br>
 更别说地面技能，更别说舔/跳/吸/标枪哥/吹箫哥，以及属实恶毒的小蜜蜂/地狱妖女/施虐狂魔/魅魔/恶毒妖妇等等等等。&lt;/p>
@@ -10058,7 +10747,7 @@ A：优先级从上至下：使用命令行参数启动，配置文件设置了 
 这就是金字塔尖的强者吗，恐怖如斯&lt;br>
 等我有空做个图[为所欲为.gif]&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;strong>&lt;a href="http://d.163.com/db/cn/49511/skill/big-bad-voodoo">巫毒狂舞&lt;/a>&lt;/strong> &lt;code>鬼魂恩泽&lt;/code> 替换 &lt;strong>&lt;a href="http://d.163.com/db/cn/49511/skill/horrify">惧灵&lt;/a>&lt;/strong>，加速增伤减伤回血一体神技。但是&lt;strong>并不推荐&lt;/strong>带，即使有&lt;a href="http://d.163.com/db/cn/49513/skill/grave-injustice">剥削死者&lt;/a>CD也略长，需要非常非常熟悉巫医的推图节奏&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/><category scheme="https://ews.ink/tags/%E9%85%8D%E8%A3%85/" term="配装" label="配装"/><category scheme="https://ews.ink/tags/%E5%B7%AB%E5%8C%BB/" term="巫医" label="巫医"/></entry><entry><title type="text">《Diablo3》随从配装以及团结用法</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-kormac-and-unity/"/><id>https://ews.ink/game/diablo3-kormac-and-unity/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2019-11-28T04:19:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">我只带骑士，别问我魔女盗贼怎么用， 我只能回答无可奉告不知道不清楚不了解。 追随者配装 圣……</summary><content type="html">&lt;p>我只带骑士，别问我魔女盗贼怎么用，&lt;br>
+&lt;p>&lt;strong>&lt;a href="http://d.163.com/db/cn/49511/skill/big-bad-voodoo">巫毒狂舞&lt;/a>&lt;/strong> &lt;code>鬼魂恩泽&lt;/code> 替换 &lt;strong>&lt;a href="http://d.163.com/db/cn/49511/skill/horrify">惧灵&lt;/a>&lt;/strong>，加速增伤减伤回血一体神技。但是&lt;strong>并不推荐&lt;/strong>带，即使有&lt;a href="http://d.163.com/db/cn/49513/skill/grave-injustice">剥削死者&lt;/a>CD也略长，需要非常非常熟悉巫医的推图节奏&lt;/p></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/><category scheme="https://ews.ink/tags/%E9%85%8D%E8%A3%85/" term="配装" label="配装"/><category scheme="https://ews.ink/tags/%E5%B7%AB%E5%8C%BB/" term="巫医" label="巫医"/></entry><entry><title type="text">《Diablo3》随从配装以及团结用法</title><link rel="alternate" type="text/html" href="https://ews.ink/game/diablo3-kormac-and-unity/"/><id>https://ews.ink/game/diablo3-kormac-and-unity/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2019-11-28T04:19:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">我只带骑士，别问我魔女盗贼怎么用， 我只能回答无可奉告不知道不清楚不了解。 追随者配装 圣……</summary><content type="html">&lt;p>我只带骑士，别问我魔女盗贼怎么用，&lt;br>
 我只能回答&lt;del>无可奉告&lt;/del>不知道不清楚不了解。&lt;/p>
 &lt;h2 id="追随者配装">追随者配装&lt;/h2>
 &lt;p>&lt;strong>圣殿骑士&lt;/strong> - &lt;strong>寇马克&lt;/strong>&lt;/p>
@@ -10166,7 +10855,7 @@ A：优先级从上至下：使用命令行参数启动，配置文件设置了 
 当随从挨打时，本来有 100 万的伤害需要在他身上结算——如果他已经是空血了（绝大部分时候如此），那这 100 万就抹了；如果他还有血（极少数情况，基本只有刚进图时），才会有（他分摊给你的）50 万伤害结算你的坚韧之后扣在你的血量上，这一下都吃不住的话只能说明这个层数怪物的强度超出了你目前的能力，不带团结只会死得更惨。&amp;#160;&lt;a href="https://ews.ink/game/diablo3-kormac-and-unity/#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/><category scheme="https://ews.ink/tags/%E5%9B%A2%E7%BB%93/" term="团结" label="团结"/><category scheme="https://ews.ink/tags/%E9%85%8D%E8%A3%85/" term="配装" label="配装"/></entry><entry><title type="text">存储卡相关知识简单科普</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/storage-sd-card/"/><id>https://ews.ink/tech/storage-sd-card/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2019-07-14T18:45:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">存储卡种类 大部分人都见过的存储卡应该有两种，大的和小的。 Trans-flash Card 小的就是前几年手机常用的……</summary><content type="html">&lt;h2 id="存储卡种类">存储卡种类&lt;/h2>
+&lt;/section></content><category scheme="https://ews.ink/game/" term="game" label="game"/><category scheme="https://ews.ink/tags/diablo3/" term="Diablo3" label="Diablo3"/><category scheme="https://ews.ink/tags/%E5%9B%A2%E7%BB%93/" term="团结" label="团结"/><category scheme="https://ews.ink/tags/%E9%85%8D%E8%A3%85/" term="配装" label="配装"/></entry><entry><title type="text">存储卡相关知识简单科普</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/storage-sd-card/"/><id>https://ews.ink/tech/storage-sd-card/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2019-07-14T18:45:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">存储卡种类 大部分人都见过的存储卡应该有两种，大的和小的。 Trans-flash Card 小的就是前几年手机常用的……</summary><content type="html">&lt;h2 id="存储卡种类">存储卡种类&lt;/h2>
 &lt;p>大部分人都见过的存储卡应该有两种，大的和小的。&lt;/p>
 &lt;h3 id="trans-flash-card">Trans-flash Card&lt;/h3>
 &lt;p>小的就是前几年手机常用的存储卡，你管他叫 &lt;code>内存卡&lt;/code>*也好，&lt;code>SD 卡&lt;/code> 也罢，&lt;code>TF 卡&lt;/code> 也行，实际上人家原名 &lt;code>Trans-flash Card&lt;/code>，后来改名 &lt;code>Micro SD Card&lt;/code>。&lt;/p>
@@ -10257,7 +10946,7 @@ U1 也许会标 C10 好看一点，但凡他能达到 29.9 MB/s 他会放着 U3 
 &lt;blockquote>
 &lt;p>* &lt;ruby>&lt;rb>Sustained&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>持续&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> &lt;ruby>&lt;rb>Sequential&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>顺序&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> &lt;ruby>&lt;rb>Write performance&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>写入性能&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>：等 5G 普及了网速不再是瓶颈，手机下载速度就取决于这个了。&lt;del>不对啊，现在（2021）手机对 SD 卡的支持不太友好吧&lt;/del>&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;img src="https://www.sdcard.org/cms/wp-content/uploads/2020/12/img_application.jpg" alt="IO 速度">&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%A1%AC%E4%BB%B6/" term="硬件" label="硬件"/><category scheme="https://ews.ink/tags/%E5%AD%98%E5%82%A8/" term="存储" label="存储"/></entry><entry><title type="text">CentOS 7 修改 SSH 端口</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-centos-ssh-port/"/><id>https://ews.ink/tech/linux-centos-ssh-port/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2018-12-22T19:25:25+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id="起因">起因&lt;/h2>
+&lt;p>&lt;img src="https://www.sdcard.org/cms/wp-content/uploads/2020/12/img_application.jpg" alt="IO 速度">&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/%E7%A1%AC%E4%BB%B6/" term="硬件" label="硬件"/><category scheme="https://ews.ink/tags/%E5%AD%98%E5%82%A8/" term="存储" label="存储"/></entry><entry><title type="text">CentOS 7 修改 SSH 端口</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/linux-centos-ssh-port/"/><id>https://ews.ink/tech/linux-centos-ssh-port/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2018-12-22T19:25:25+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id="起因">起因&lt;/h2>
 &lt;p>2018 年 12 月 22 日，手里一个 VPS 被攻击了。&lt;/p>
 &lt;blockquote>
 &lt;p>1C1G5M CentOS 7.0 x86_64位 BGP多线&lt;/p>
@@ -10342,7 +11031,7 @@ Port 12345
 Port 12345
 &lt;/code>&lt;/pre>&lt;p>&lt;code>systemctl restart sshd&lt;/code> 重启 ssh 服务即可。&lt;/p>
 &lt;h2 id="参考文档">参考文档&lt;/h2>
-&lt;p>《&lt;a href="https://blog.csdn.net/ausboyue/article/details/53691953">CentOS7设置ssh服务以及端口修改&lt;/a>》&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/centos/" term="CentOS" label="CentOS"/><category scheme="https://ews.ink/tags/ssh/" term="SSH" label="SSH"/></entry><entry><title type="text">树莓派食用手册 #1 安装 Debian x64 系统</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/rpi-1-prepare-system/"/><id>https://ews.ink/tech/rpi-1-prepare-system/</id><updated>2021-05-24T01:45:59+08:00</updated><published>2018-11-25T19:11:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>《&lt;a href="https://blog.csdn.net/ausboyue/article/details/53691953">CentOS7设置ssh服务以及端口修改&lt;/a>》&lt;/p></content><category scheme="https://ews.ink/tech/" term="tech" label="tech"/><category scheme="https://ews.ink/tags/linux/" term="Linux" label="Linux"/><category scheme="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/" term="运维" label="运维"/><category scheme="https://ews.ink/tags/centos/" term="CentOS" label="CentOS"/><category scheme="https://ews.ink/tags/ssh/" term="SSH" label="SSH"/></entry><entry><title type="text">树莓派食用手册 #1 安装 Debian x64 系统</title><link rel="alternate" type="text/html" href="https://ews.ink/tech/rpi-1-prepare-system/"/><id>https://ews.ink/tech/rpi-1-prepare-system/</id><updated>2021-05-24T14:35:02+08:00</updated><published>2018-11-25T19:11:00+08:00</published><author><name>Sumi</name><uri>https://ews.ink/</uri><email>po@ews.ink</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id="前言">前言&lt;/h2>
 &lt;blockquote>
 &lt;p>2020.3.23：这块 3B+ 还是当初做毕设的时候买的，答辩完之后就一直吃灰了。&lt;br>
 最近折腾了一顿 NanoPi Neo2 发现貌似还是树莓派玩起来舒服一些。&lt;br>
