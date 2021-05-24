@@ -1,4 +1,272 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 24 May 2021 14:35:06 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>USB 相关知识简单科普</title><link>https://ews.ink/tech/interface-usb-standard/</link><guid isPermaLink="true">https://ews.ink/tech/interface-usb-standard/</guid><pubDate>Sun, 23 May 2021 20:44:46 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="usb-协议性能标准">USB 协议性能标准&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 24 May 2021 19:50:49 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Debian 单独安装某个 unstable 的包</title><link>https://ews.ink/tech/linux-debian-unstable/</link><guid isPermaLink="true">https://ews.ink/tech/linux-debian-unstable/</guid><pubDate>Mon, 24 May 2021 16:41:43 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="修改稳定版软件源">修改稳定版软件源&lt;/h2>
+&lt;p>访问 &lt;a href="https://mirror.tuna.tsinghua.edu.cn/help/debian">清华大学开源软件镜像站&lt;/a>，选择 Debian 的 &lt;code>buster&lt;/code>，拿到国内镜像源。&lt;br>
+&lt;code>vim /etc/apt/sources.list&lt;/code> 编辑软件源：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释&lt;/span>
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+&lt;span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free&lt;/span>
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+&lt;span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free&lt;/span>
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+&lt;span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free&lt;/span>
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+&lt;span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt update &lt;span class="c1"># 更新软件源&lt;/span>
+$ apt install -y hugo &lt;span class="c1"># 安装 Hugo&lt;/span>
+$ hugo version &lt;span class="c1"># 查看 Hugo 版本&lt;/span>
+Hugo Static Site Generator v0.54.0/extended linux/arm64 BuildDate: 2019-06-04T19:16:36Z
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>0.54.0&lt;/code> / &lt;code>2019-06-04&lt;/code>，你在逗我吗，快整整两年了。&lt;/p>
+&lt;h2 id="查看软件包版本">查看软件包版本&lt;/h2>
+&lt;p>访问官方仓库 &lt;a href="https://packages.debian.org/search?keywords=hugo">Debian Hugo&lt;/a>，得知：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>buster&lt;/code> (stable) 的 Hugo 是 0.55.6 版本&lt;/li>
+&lt;li>&lt;code>sid&lt;/code> (unstable) 的 Hugo 是 0.80.0-6+b2 版本&lt;/li>
+&lt;/ul>
+&lt;h2 id="设置最新版镜像源">设置最新版镜像源&lt;/h2>
+&lt;p>继续从 &lt;a href="https://mirror.tuna.tsinghua.edu.cn/help/debian">清华镜像源&lt;/a> 拿到 Debian 的 &lt;code>sid&lt;/code>，&lt;code>apt edit-sources unstable&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释&lt;/span>
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ sid main contrib non-free
+&lt;span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ sid main contrib non-free&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样就添加了 &lt;code>sid&lt;/code>(unstable) 仓库（里面是最新版 / 开发版 / 尝鲜版）。&lt;/p>
+&lt;h2 id="apt-pinning">APT Pinning&lt;/h2>
+&lt;p>&lt;code>vim /etc/apt/preferences&lt;/code> 确保主体仍为 &lt;code>stable&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">Explanation: Uninstall or &lt;span class="k">do&lt;/span> not install any Debian-originated
+Explanation: package versions other than those in the stable distro
+Package: *
+Pin: release &lt;span class="nv">a&lt;/span>&lt;span class="o">=&lt;/span>stable
+Pin-Priority: &lt;span class="m">900&lt;/span>
+Package: *
+Pin: release &lt;span class="nv">o&lt;/span>&lt;span class="o">=&lt;/span>Debian
+Pin-Priority: -10
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>vim /etc/apt/preferences.d/90debian-unstable&lt;/code> 确保从 unstable 仓库单独拉取 hugo 包：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">Package: hugo
+Pin: release &lt;span class="nv">a&lt;/span>&lt;span class="o">=&lt;/span>unstable
+Pin-Priority: &lt;span class="m">900&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="万事俱备">万事俱备&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt update
+Hit:1 https://mirrors.tuna.tsinghua.edu.cn/debian buster InRelease
+Hit:2 https://mirrors.tuna.tsinghua.edu.cn/debian buster-updates InRelease
+Hit:3 https://mirrors.tuna.tsinghua.edu.cn/debian buster-backports InRelease
+Hit:4 https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates InRelease
+Hit:5 https://mirrors.tuna.tsinghua.edu.cn/debian sid InRelease
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+&lt;span class="m">1&lt;/span> package can be upgraded. Run &lt;span class="s1">&amp;#39;apt list --upgradable&amp;#39;&lt;/span> to see it.
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>更新软件源后发现有一个包可以升级，我猜是 Hugo。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt list -a --upgradable
+Listing... Done
+hugo/unstable 0.80.0-6+b2 arm64 &lt;span class="o">[&lt;/span>upgradable from: 0.55.6+really0.54.0-1&lt;span class="o">]&lt;/span>
+hugo/buster-backports 0.80.0-6~bpo10+1 arm64
+hugo/stable,now 0.55.6+really0.54.0-1 arm64 &lt;span class="o">[&lt;/span>installed,upgradable to: 0.80.0-6+b2&lt;span class="o">]&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>果然，那升级吧。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt upgrade hugo
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or &lt;span class="k">if&lt;/span> you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may &lt;span class="nb">help&lt;/span> to resolve the situation:
+The following packages have unmet dependencies:
+hugo : Depends: libsass1 &lt;span class="o">(&lt;/span>&amp;gt;&lt;span class="o">=&lt;/span> 3.6.3&lt;span class="o">)&lt;/span> but 3.5.5-4 is to be installed
+E: Broken packages
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>还得先升依赖，&lt;code>vim /etc/apt/preferences.d/90debian-unstable&lt;/code> 继续添加 unstable 的包：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">Package: hugo
+Pin: release &lt;span class="nv">a&lt;/span>&lt;span class="o">=&lt;/span>unstable
+Pin-Priority: &lt;span class="m">900&lt;/span>
+Package: libsass1 libc6 libgcc-s1 libstdc++6
+Pin: release &lt;span class="nv">a&lt;/span>&lt;span class="o">=&lt;/span>unstable
+Pin-Priority: &lt;span class="m">900&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt upgrade libsass1 libc6 libgcc-s1 libstdc++6 hugo -y
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后发现依赖是顺藤摸瓜越摸越多了。那你牛批。&lt;br>
+我输了，我本来想从仓库拉是因为懒，不是要整景，就是图以后 &lt;code>apt upgrade&lt;/code> 方便。&lt;/p>
+&lt;h2 id="光太暗地太滑鞋太紧框太歪网太烂球太差天太热吃太饱手感太差观众太少我太菜">光太暗地太滑鞋太紧框太歪网太烂球太差天太热吃太饱手感太差观众太少我太菜&lt;/h2>
+&lt;p>那还能咋办，老实下&lt;a href="https://github.com/gohugoio/hugo/releases/">二进制文件&lt;/a>吧。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ tar -xzvf hugo_0.83.1_Linux-ARM64.tar.gz
+$ chmod +x hugo
+$ ./hugo version
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>齐活。&lt;/p>
+&lt;p>但这都不重要，本文重点是 &lt;strong>APT Pinning&lt;/strong> 的用法。&lt;br>
+用法是没问题的，只是 Hugo 的依赖树给我整麻了。&lt;/p>
+&lt;h2 id="总结">总结&lt;/h2>
+&lt;p>通过观察可以得知：&lt;br>
+控制软件包到底是 stable 还是 unstable 实际上是通过自定义 Pin-Priority 不同优先级实现的。&lt;/p>
+&lt;p>&lt;code>man 5 apt_preferences&lt;/code> 可以查看具体说明：&lt;/p>
+&lt;pre>&lt;code>P &amp;gt;= 1000
+causes a version to be installed even if this constitutes a downgrade of the package
+990 &amp;lt;= P &amp;lt; 1000
+causes a version to be installed even if it does not come from the target release, unless the installed version is more recent
+500 &amp;lt;= P &amp;lt; 990
+causes a version to be installed unless there is a version available belonging to the target release or the installed version is more recent
+100 &amp;lt;= P &amp;lt; 500
+causes a version to be installed unless there is a version available belonging to some other distribution or the installed version is more recent
+0 &amp;lt; P &amp;lt; 100
+causes a version to be installed only if there is no installed version of the package
+P &amp;lt; 0
+prevents the version from being installed
+P = 0
+has undefined behaviour, do not use it.
+&lt;/code>&lt;/pre>&lt;p>一堆定语翻得我头皮发麻，搁这考英语申论呢：&lt;/p>
+&lt;pre>&lt;code>P &amp;lt; 0
+永远不安装新版本
+0 &amp;lt; P &amp;lt; 100
+只安装没有装过的船新版本
+100 &amp;lt;= P &amp;lt; 500
+只要新版本不是属于别的发行版的
+同时比本地的版本更高（如果本地已经装过的话）
+就安装新版本
+500 &amp;lt;= P &amp;lt; 990
+只要没有特别指定 target release（我不知道指什么）
+同时比本地的版本更高（如果本地已经装过的话）
+就安装新版本
+990 &amp;lt;= P &amp;lt; 1000
+除非比本地的版本更高（如果本地已经装过的话）
+否则即使特别指定 target release 也要安装新版本
+1000 &amp;lt;= P
+安 TMD
+安就完了 即使安完会降级（版本号降低）
+无论如何也要安装新找到那个版本
+&lt;/code>&lt;/pre></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/linux/">Linux</category><category domain="https://ews.ink/tags/%E8%BF%90%E7%BB%B4/">运维</category><category domain="https://ews.ink/tags/debian/">Debian</category><category domain="https://ews.ink/tags/apt/">apt</category></item><item><title>USB 相关知识简单科普</title><link>https://ews.ink/tech/interface-usb-standard/</link><guid isPermaLink="true">https://ews.ink/tech/interface-usb-standard/</guid><pubDate>Sun, 23 May 2021 20:44:46 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="usb-协议性能标准">USB 协议性能标准&lt;/h2>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -150,7 +418,7 @@
 &lt;blockquote>
 &lt;p>我很怀疑现在的年轻人是否知道 MP3，不是 &lt;code>.mp3&lt;/code>，是专门播放 &lt;code>.mp3&lt;/code> 的硬件。&lt;br>
 也许听个歌还有专门的机器对他们来说是一件很难想象的事。&lt;br>
-但就是我这代人的童年回忆，我们小学初中哪有什么手机甚至电脑，能玩贪吃蛇就很吊了，几个小伙伴一个魔塔玩一下午很平常的事。&lt;br>
+但就是我这代人的童年回忆，我们小学初中哪有什么手机甚至电脑，能玩贪吃蛇就很吊了，整到一台电脑几个小伙伴一个魔塔玩一下午是很平常的事。&lt;br>
 半夜躲在被窝里听 MP3 就是最大的乐子之一。发展到 MP4 可以看点 360p 的&lt;em>高清&lt;/em>电影，这个时候电子娱乐开始抬头，街上甚至出现了代下歌曲 / 电影的店。&lt;br>
 后来还炒过什么 MP5 的概念，再后来出了智能机，就没有然后了，连功能机都没有了。&lt;/p>
 &lt;/blockquote>
@@ -179,14 +447,15 @@
 &lt;/blockquote>
 &lt;h3 id="type-c">Type-C&lt;/h3>
 &lt;p>俗称的 USB-C，只有这一种形状，最显著的特点支持正反插。&lt;br>
-好像有人叫华为口，可是这也不是华为发明的啊，甚至都不是华为引进的*……&lt;/p>
+好像有人叫华为口，问题这也不是华为发明的啊，甚至都不是华为引进的*……&lt;/p>
 &lt;blockquote>
 &lt;p>* 国内最早用上 Type-C 的手机厂商如果我没记错是下周回国。&lt;br>
-没错他们还做过手机，我家还有一部，我大一还是大二用来当过一段时间备用机。&lt;/p>
+没错他们还做过手机，我家还有一部，我大一还是大二用来当过一段时间备用机。&lt;br>
+至于性能的话……这么说吧，颜值蛮高。&lt;/p>
 &lt;/blockquote>
-&lt;p>Type-C 厉害的地方不止正反插实在是太方便了——
+&lt;p>Type-C 厉害的地方不止正反插实在是太方便了——&lt;br>
 这种方便只能用「先进性」来形容，给人类降低了极大的心智负担。稍微想象一下 Type-A 发明三十年来，全人类加一起总共在「为了给 USB 区分正反面」这件事上浪费了多少时间。&lt;br>
-——支持正反插还有个好处是拔插受力是相对均衡的，不管是接口还是插头，使用寿命都比以前的安卓口要长得多。&lt;br>
+——支持正反插还有个好处是拔插受力相对均衡，不管是接口还是插头，使用寿命都比以前的安卓口要长得多。&lt;br>
 并且 Type-C 拥有史无前例的 &lt;strong>24 个金属触点&lt;/strong>，这意味着甚至有多的触点用不上。&lt;br>
 如此多 I/O 口带来的是超级强大的功能，兼容 USB 2.0 / USB 3.0 / USB4 / 雷电 3 / 雷电 4 / 100W+ 供电都是小意思。&lt;br>
 但并不是所有 Type-C 都这么吊，实际上市面流通的大部分 Type-C，包括很多手机大厂的原装数据线，都是阉割后的丐版 Type-C。&lt;br>
@@ -376,9 +645,9 @@
 &lt;blockquote>
 &lt;p>* 注意这是一个充分不必要条件：&lt;br>
 USB4 / 雷电协议一定是 Type-C 接口，但 Type-C 接口未必是 USB4 / 雷电协议。&lt;br>
-目前市面上的 Type-C 反而大部分是 USB 3.0（或者说各种 3.2 Gen X）。&lt;/p>
+目前市面上的 Type-C 反而大部分是 USB 3.0（或者说各种 USB 3.2 Gen X）。&lt;/p>
 &lt;p>* &lt;ruby>&lt;rb>直接内存访问&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Direct Memory Access&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>：硬件之间不通过 CPU 的数据传输。&lt;br>
-减轻了 CPU 的负载，毕竟 CPU 需要管理大量系统中断来分配时间片（我挂过操作系统）；并且不再吃 CPU 的性能瓶颈，能跑多快看 DMA 控制器，跑完才会把总线控制权还给 CPU。&lt;/p>
+减轻了 CPU 的负载压力，毕竟 CPU 需要管理大量系统中断来分配时间片（是这样的吧，我挂过操作系统）；并且不再吃 CPU 的性能瓶颈，能跑多快看 DMA 控制器，跑完才会把总线控制权还给 CPU。&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="第四代">第四代&lt;/h3>
 &lt;table>
@@ -405,10 +674,10 @@ USB4 / 雷电协议一定是 Type-C 接口，但 Type-C 接口未必是 USB4 / �
 &lt;h2 id="总结">总结&lt;/h2>
 &lt;ul>
 &lt;li>USB4 只支持 Type-C 接口，所以 USB4 一定是 Type-C，Type-C 就是 USB 的未来&lt;/li>
-&lt;li>但 Type-C 未必是 USB4，根据目前的市场情况很可能是 USB 3.0&lt;/li>
+&lt;li>但现在的 Type-C 未必是 USB4，根据目前的市场情况很可能是 USB 3.0&lt;/li>
 &lt;li>雷电 3 / 雷电 4 / USB4 互相兼容&lt;/li>
 &lt;li>显卡坞技术想得很美，但长得丑啊&lt;/li>
-&lt;/ul></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E7%A7%91%E6%8A%80/">科技</category><category domain="https://ews.ink/tags/usb/">USB</category><category domain="https://ews.ink/tags/%E9%9B%B7%E7%94%B5/">雷电</category></item><item><title>Sublime &amp; VSCode 配置删除行尾空格</title><link>https://ews.ink/tech/write-dont-trailing-spaces/</link><guid isPermaLink="true">https://ews.ink/tech/write-dont-trailing-spaces/</guid><pubDate>Sun, 23 May 2021 14:08:11 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
+&lt;/ul></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E7%A7%91%E6%8A%80/">科技</category><category domain="https://ews.ink/tags/usb/">USB</category><category domain="https://ews.ink/tags/%E9%9B%B7%E7%94%B5/">雷电</category></item><item><title>Sublime &amp; VSCode 配置删除行尾空格</title><link>https://ews.ink/tech/write-do-not-trailing-spaces/</link><guid isPermaLink="true">https://ews.ink/tech/write-do-not-trailing-spaces/</guid><pubDate>Sun, 23 May 2021 14:08:11 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>不管是程序员还是其他的文字工作者，大家都是 coder，叫一声码农没错吧。&lt;br>
 基本上所有码农，在&lt;del>码字&lt;/del> 文本编辑过程中都会遇到一个问题：空格。&lt;br>
 不管是轻量的编辑器，还是沉重的 IDE，空格总是无处不在，给排版工作带来巨大的负担。&lt;br>
 但我们没办法否定的是，空格同时也对排版起到了至关重要的作用。&lt;br>
@@ -654,7 +923,8 @@ ____ / /_ ____ ___ __ __ ____ _____/ /_
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h4 id="更换主题">更换主题&lt;/h4>
-&lt;p>我最喜欢 &lt;a href="https://github.com/agnoster/agnoster-zsh-theme">&lt;em>agnoster&lt;/em>&lt;/a>，就一个字，精致。&lt;br>
+&lt;p>其实默认的 &lt;em>robbyrussell&lt;/em> 就很棒，简洁大方。&lt;/p>
+&lt;p>不过我最喜欢 &lt;a href="https://github.com/agnoster/agnoster-zsh-theme">&lt;em>agnoster&lt;/em>&lt;/a>，就一个字，精致。&lt;br>
 用不同前景色背景色配合做出来的箭头形分隔符真的很有创意，设计感拉满。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -664,8 +934,7 @@ ____ / /_ ____ ___ __ __ ____ _____/ /_
 &lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nv">ZSH_THEME&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;agnoster&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>其实默认的 &lt;em>robbyrussell&lt;/em> 就很棒，简洁大方。&lt;/p>
-&lt;p>另外推荐 &lt;a href="https://github.com/sindresorhus/pure">&lt;em>pure&lt;/em>&lt;/a>，清爽到性冷淡。&lt;/p>
+&lt;/div>&lt;p>另外推荐 &lt;a href="https://github.com/sindresorhus/pure">&lt;em>pure&lt;/em>&lt;/a>，清爽到性冷淡。&lt;/p>
 &lt;blockquote>
 &lt;p>如果想用 &lt;a href="https://github.com/ohmyzsh/ohmyzsh/wiki/themes">&lt;em>更多主题&lt;/em>&lt;/a> 要 &lt;code>ls ~/.oh-my-zsh/themes | grep [主题名字]&lt;/code> 看看本地有没有。&lt;br>
 有的话可以直接修改配置启用。没有的话就要另行下载（&lt;code>git clone&lt;/code>）了。&lt;/p>
@@ -728,7 +997,7 @@ zsh-syntax-highlighting
 &lt;span class="c1"># 如果装了 supervisorctl&lt;/span>
 &lt;span class="nb">alias&lt;/span> &lt;span class="nv">sv&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;supervisorctl&amp;#34;&lt;/span>
 &lt;span class="nb">alias&lt;/span> &lt;span class="nv">svcfg&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;vim /etc/supervisor/supervisord.conf&amp;#34;&lt;/span>
-&lt;span class="nb">alias&lt;/span> &lt;span class="nv">svr&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;supervisorctl update &amp;amp;&amp;amp; supervisorctl reload&amp;#34;&lt;/span>
+&lt;span class="nb">alias&lt;/span> &lt;span class="nv">svr&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;supervisorctl update all &amp;amp;&amp;amp; supervisorctl reload&amp;#34;&lt;/span>
 &lt;span class="c1"># 对了 thefuck 也要特别为 zsh 配置&lt;/span>
 &lt;span class="nb">eval&lt;/span> &lt;span class="k">$(&lt;/span>thefuck --alias fuck&lt;span class="k">)&lt;/span>
 &lt;span class="c1"># 等等&lt;/span>
@@ -1113,9 +1382,10 @@ Binary Architecture (default: x64): 选择架构安装，默认x64
 如果操作系统为Windows并且需要使用 mirai-native，请选择 x32（而不是i386等其他名字）
 The latest stable version of iTXTech MCL is x.x.x 获取最新MCL并询问是否下载
 Would you like to download it? (Y/N, default: Y) Y：下载，N：取消
-&lt;/code>&lt;/pre>&lt;p>如果一直下不动，可以选择手动安装 JRE 11：&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>如果一直下不动，可以选择手动安装 JRE 11*：&lt;/p>
 &lt;blockquote>
-&lt;p>忘了在哪看到的，Mirai 某个组件似乎最低需要 11，虽然上面的 MCL Installer 说 8 - 15 都可以。&lt;br>
+&lt;p>* 忘了在哪看到的，Mirai 某个组件似乎最低需要 11。&lt;br>
+（虽然上面的 MCL Installer 说 8 - 15 都可以。）&lt;br>
 JRE 是 Java 必需的运行环境，JDK 除了运行环境之外还有开发工具。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -1126,7 +1396,7 @@ JRE 是 Java 必需的运行环境，JDK 除了运行环境之外还有开发工
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre class="chroma">&lt;code class="language-bash" data-lang="bash">$ apt-get update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt-get upgrade -y &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install openjdk-11-jre-headless -y
-$ ./mcl-installer
+$ ./mcl-installer &lt;span class="c1"># 再次运行 MCL Installer&lt;/span>
 &lt;span class="c1"># 问 Would you like to install Java? (Y/N, default: Y) 的时候 n 就完了&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -1212,7 +1482,7 @@ $ ./mcl --update-package net.mamoe:mirai-api-http --type plugin --channel stable
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">protocol&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ANDROID_PAD&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>未设置时默认为 &lt;code>ANDROID_PHONE&lt;/code>，换成 &lt;code>ANDROID_PAD&lt;/code> 可以通过验证码登录。&lt;/p>
+&lt;/div>&lt;p>未设置时默认登陆协议为 &lt;code>ANDROID_PHONE&lt;/code>，换成 &lt;code>ANDROID_PAD&lt;/code> 可以通过验证码登录。&lt;/p>
 &lt;p>如果 &lt;code>mirai-login-solver-selenium&lt;/code> 无限报错的话：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2492,7 +2762,7 @@ $ ./rr serve
 &lt;/span>&lt;span class="lnt">58
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">axios&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;axios&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;pre class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">axios&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;axios&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="kr">const&lt;/span> &lt;span class="nx">cheerio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;cheerio&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="kr">const&lt;/span> &lt;span class="nx">fs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;fs&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="kd">let&lt;/span> &lt;span class="nx">spider&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
@@ -2530,11 +2800,11 @@ $ ./rr serve
 &lt;span class="nx">markdown&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="s2">&amp;#34;```\n&amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">chapters&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">text&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34;\n```\n\n&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;output.md&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">markdown&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">trim&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="s2">&amp;#34;utf8&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;btcode.md&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">markdown&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">trim&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="s2">&amp;#34;utf8&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;写入文件失败! 错误信息: &amp;#34;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;已将爬取结果保存到 output.md&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;已将爬取结果保存到 btcode.md&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;span class="p">});&lt;/span>
 &lt;span class="p">})&lt;/span>
