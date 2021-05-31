@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 24 May 2021 19:50:49 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Debian 单独安装某个 unstable 的包</title><link>https://ews.ink/tech/linux-debian-unstable/</link><guid isPermaLink="true">https://ews.ink/tech/linux-debian-unstable/</guid><pubDate>Mon, 24 May 2021 16:41:43 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="修改稳定版软件源">修改稳定版软件源&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (Sumi)</managingEditor><webMaster>po@ews.ink (Sumi)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 31 May 2021 23:20:10 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Debian 单独安装某个 unstable 的包</title><link>https://ews.ink/tech/linux-debian-unstable/</link><guid isPermaLink="true">https://ews.ink/tech/linux-debian-unstable/</guid><pubDate>Mon, 24 May 2021 16:41:43 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="修改稳定版软件源">修改稳定版软件源&lt;/h2>
 &lt;p>访问 &lt;a href="https://mirror.tuna.tsinghua.edu.cn/help/debian">清华大学开源软件镜像站&lt;/a>，选择 Debian 的 &lt;code>buster&lt;/code>，拿到国内镜像源。&lt;br>
 &lt;code>vim /etc/apt/sources.list&lt;/code> 编辑软件源：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -3979,8 +3979,61 @@ mian viod（）
 }
 &lt;/code>&lt;/pre>&lt;h2 id="后端">后端&lt;/h2>
 &lt;h3 id="php">PHP&lt;/h3>
-&lt;p>《&lt;a href="http://laravel-china.github.io/php-the-right-way/#code_style_guide">PHP 之道&lt;/a>》《&lt;a href="https://learnku.com/laravel/t/2081/psr-specification-psr-4-automatic-loading-specification">PSR 规范&lt;/a>》 &lt;a href="https://github.com/kalessil/phpinspectionsea">idea 插件&lt;/a>&lt;/p>
-&lt;h2 id="前端">前端&lt;/h2>
+&lt;p>《&lt;a href="http://laravel-china.github.io/php-the-right-way/#code_style_guide">PHP 之道&lt;/a>》《&lt;a href="https://learnku.com/docs/psr">PSR 规范&lt;/a>》 &lt;a href="https://github.com/kalessil/phpinspectionsea">idea 插件&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;span class="k">namespace&lt;/span> &lt;span class="nx">Vendor\Package&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">use&lt;/span> &lt;span class="nx">FooInterface&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">use&lt;/span> &lt;span class="nx">BarClass&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nx">Bar&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">use&lt;/span> &lt;span class="nx">OtherVendor\OtherPackage\BazClass&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">class&lt;/span> &lt;span class="nc">Foo&lt;/span> &lt;span class="k">extends&lt;/span> &lt;span class="nx">Bar&lt;/span> &lt;span class="k">implements&lt;/span> &lt;span class="nx">FooInterface&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="k">public&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">sampleMethod&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$a&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nv">$b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">bar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">elseif&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$a&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nv">$b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nv">$foo&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="na">bar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$arg1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">BazClass&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="na">bar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nv">$arg2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nv">$arg3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">final&lt;/span> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">function&lt;/span> &lt;span class="nf">bar&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 方法体
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="前端">前端&lt;/h2>
 &lt;p>《&lt;a href="https://juejin.cn/post/6901466994478940168">基于Vue的前端架构，我做了这15点&lt;/a>》&lt;/p>
 &lt;h3 id="javascript">JavaScript&lt;/h3>
 &lt;p>《&lt;a href="https://airbnb.io/javascript">Airbnb JavaScript 代码范式&lt;/a>》&lt;a href="https://github.com/airbnb/javascript">Github&lt;/a>&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E5%BC%80%E5%8F%91/">开发</category><category domain="https://ews.ink/tags/code/">Code</category></item><item><title>Re:从零开始的博客生涯 #6 Auto CI/CD</title><link>https://ews.ink/tech/blog-6-auto-ci-cd/</link><guid isPermaLink="true">https://ews.ink/tech/blog-6-auto-ci-cd/</guid><pubDate>Fri, 14 May 2021 19:24:43 +0800</pubDate><author>po@ews.ink (Sumi)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="思路">思路&lt;/h2>
