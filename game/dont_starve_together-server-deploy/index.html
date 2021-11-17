@@ -1,0 +1,611 @@
+<!doctype html><html lang=zh-cn><head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><meta charset=utf-8><meta name=generator content="Hugo 0.83.1"><meta name=theme-color content="#fff"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=format-detection content="telephone=no, date=no, address=no, email=no"><meta http-equiv=cache-control content="no-transform"><meta http-equiv=cache-control content="no-siteapp"><title>《饥荒联机版》部署专有服务器 | Everybody Wants Some</title><link rel=stylesheet href=/css/meme.min.ed7f64e3dfc3b5991ede4314907721d2a1b2c7baee87cec0970c9d7cfdb693a7.css><script src=/js/meme.min.8cbe976441b5181abfd3093c9beee209b19cdbb1fa77c48d225a83ba81fa3fb1.js></script><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Ma+Shan+Zheng&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Sans+SC:wght@400;700&family=Noto+Serif+SC:wght@400;700&family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" media=print onload="this.media='all'"><noscript><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Ma+Shan+Zheng&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Sans+SC:wght@400;700&family=Noto+Serif+SC:wght@400;700&family=Source+Code+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript><meta name=author content="Sumi"><meta name=description content="配置用户权限 你乐意直接 root 一把梭也行，可以跳过这一节。 新建用户组和用户： 1 2 3 4 $ groupadd steam……"><link rel="shortcut icon" href=/favicon.ico type=image/x-icon><link rel=mask-icon href=/icons/safari-pinned-tab.svg color=#2a6df4><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-title content="Everybody Wants Some"><meta name=apple-mobile-web-app-status-bar-style content="black"><meta name=mobile-web-app-capable content="yes"><meta name=application-name content="Everybody Wants Some"><meta name=msapplication-starturl content="../../"><meta name=msapplication-TileColor content="#fff"><meta name=msapplication-TileImage content="../../icons/mstile-150x150.png"><link rel=manifest href=/manifest.json><link rel=canonical href=https://ews.ink/game/dont_starve_together-server-deploy/><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","datePublished":"2020-10-05T08:49:32+08:00","dateModified":"2021-11-18T02:23:04+08:00","url":"https://ews.ink/game/dont_starve_together-server-deploy/","headline":"《饥荒联机版》部署专有服务器","description":"配置用户权限 你乐意直接 root 一把梭也行，可以跳过这一节。 新建用户组和用户： 1 2 3 4 $ groupadd steam……","inLanguage":"zh-CN","articleSection":"game","wordCount":3035,"image":["https://i.loli.net/2021/11/11/jFbUQz6hypDP2Lv.png"],"author":{"@type":"Person","description":"Everybody Wants Some","email":"po@ews.ink","image":"https://ews.ink/icons/avatar.jpg","url":"https://ews.ink/","name":"Sumi"},"license":"[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)","publisher":{"@type":"Organization","name":"Everybody Wants Some","logo":{"@type":"ImageObject","url":"https://ews.ink/icons/apple-touch-icon.png"},"url":"https://ews.ink/"},"mainEntityOfPage":{"@type":"WebSite","@id":"https://ews.ink/"}}</script><meta name=twitter:card content="summary_large_image"><meta name=twitter:creator content="@sum1sos"><meta property="og:title" content="《饥荒联机版》部署专有服务器"><meta property="og:description" content="配置用户权限 你乐意直接 root 一把梭也行，可以跳过这一节。 新建用户组和用户： 1 2 3 4 $ groupadd steam……"><meta property="og:url" content="https://ews.ink/game/dont_starve_together-server-deploy/"><meta property="og:site_name" content="Everybody Wants Some"><meta property="og:locale" content="zh"><meta property="og:image" content="https://i.loli.net/2021/11/11/jFbUQz6hypDP2Lv.png"><meta property="og:type" content="article"><meta property="article:published_time" content="2020-10-05T08:49:32+08:00"><meta property="article:modified_time" content="2021-11-18T02:23:04+08:00"><meta property="article:section" content="game"></head><body><div class=container><header class=header><div class=header-wrapper><div class="header-inner single"><div class=site-brand><a href=/ class=brand>Everybody Wants Some</a></div><nav class=nav><ul class=menu id=menu><li class=menu-item><a href=/tags/><span class=menu-item-name>标签</span></a></li><li class=menu-item><a href=/tech/><span class=menu-item-name>技术</span></a></li><li class=menu-item><a href=/game/><span class=menu-item-name>游戏</span></a></li><li class=menu-item><a href=/life/><span class=menu-item-name>生活</span></a></li><li class=menu-item><a href=/about/><span class=menu-item-name>关于</span></a></li><li class=menu-item><a id=theme-switcher href=#><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5 242 7a18 18 0 0128 0l48.8 97.5L422.2 70A18 18 0 01442 89.8l-34.5 103.4L505 242a18 18 0 010 28l-97.5 48.8L442 422.2A18 18 0 01422.2 442l-103.4-34.5L270 505a18 18 0 01-28 0l-48.8-97.5L89.8 442A18 18 0 0170 422.2l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8L70 89.8A18 18 0 0189.8 70zM256 128a128 128 0 10.01.0M256 160a96 96 0 10.01.0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412A256 256 0 10181 5a11.5 11.5.0 00-5 20A201.5 201.5.0 0142 399a11.5 11.5.0 00-15 13"/></svg></a></li></ul></nav></div></div><input type=checkbox id=nav-toggle aria-hidden=true>
+<label for=nav-toggle class=nav-toggle></label><label for=nav-toggle class=nav-curtain></label></header><main class="main single" id=main><div class=main-inner><article class="content post h-entry" data-align=justify data-type=game data-toc-num=true><h1 class="post-title p-name">《饥荒联机版》部署专有服务器</h1><div class=post-meta><time datetime=2020-10-05T08:49:32+08:00 class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6.0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6.0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6.0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6.0 12 5.4 12 12v52h48c26.5.0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3.0 6-2.7 6-6z"/></svg>&nbsp;2020.10.5</time>
+<time datetime=2021-11-18T02:23:04+08:00 class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M4e2 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627.0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627.0-12 5.373-12 12v52H48C21.49 64 0 85.49.0 112v352c0 26.51 21.49 48 48 48h352c26.51.0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 4e2H54a6 6 0 01-6-6V160h352v298a6 6 0 01-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.11.18</time>
+<span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49.0 112v288c0 26.51 21.49 48 48 48h416c26.51.0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href=/game/ class="category-link p-category">Game</a></span>
+<span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3.0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9.0l60.1 60.1c18.8 18.7 18.8 49.1.0 67.9zM284.2 99.8 21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3.0-17l-111-111c-4.8-4.7-12.4-4.7-17.1.0zM124.1 339.9c-5.5-5.5-5.5-14.3.0-19.8l154-154c5.5-5.5 14.3-5.5 19.8.0s5.5 14.3.0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8.0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3035</span>
+<span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5.0-2e2-89.5-2e2-2e2S145.5 56 256 56s2e2 89.5 2e2 2e2-89.5 2e2-2e2 2e2zm61.8-104.4-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6.0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;7&nbsp;分钟</span>
+<span class="post-meta-item busuanzi-page-pv" id=busuanzi_container_page_pv><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon post-meta-icon"><path d="M288 144a110.94 110.94.0 00-31.24 5 55.4 55.4.0 017.24 27 56 56 0 01-56 56 55.4 55.4.0 01-27-7.24A111.71 111.71.0 10288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35.0 000 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35.0 000-29.19zM288 4e2c-98.65.0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 4e2 288 4e2z"/></svg>&nbsp;<span id=busuanzi_value_page_pv></span></span></div><nav class=contents><h2 id=contents class=contents-title>目录</h2><ol class=toc><li><a id=contents:配置用户权限 href=#配置用户权限>配置用户权限</a></li><li><a id=contents:安装-steamcmd href=#安装-steamcmd>安装 SteamCMD</a></li><li><a id=contents:安装-dont-starve-together-服务端 href=#安装-dont-starve-together-服务端>安装 Don't Starve Together 服务端</a></li><li><a id=contents:服务端配置 href=#服务端配置>服务端配置</a><ol><li><a id=contents:写入 href=#写入>写入</a></li><li><a id=contents:魔改官方脚本 href=#魔改官方脚本>魔改官方脚本</a></li></ol></li><li><a id=contents:idc-提供商安全组应该开放哪些端口 href=#idc-提供商安全组应该开放哪些端口>（IDC 提供商）安全组应该开放哪些端口</a></li></ol></nav><div class="post-body e-content"><h2 id=配置用户权限><a href=#配置用户权限 class=anchor-link><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96.0-59.27-59.26-59.27-155.7.0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757.0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037.0 01-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482.0 0120.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96.0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454.0 0020.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037.0 00-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639.0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href=#contents:配置用户权限 class=headings>配置用户权限</a></h2><blockquote><p>你乐意直接 root 一把梭也行，可以跳过这一节。</p></blockquote><p>新建用户组和用户：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ groupadd steam
+$ useradd gm --groups steam
+$ useradd dst --groups steam
+$ useradd l4d2 --groups steam
+</code></pre></td></tr></table></div></div></div><p>准备好安装目录并修改权限：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ mkdir /game
+$ chmod -R <span class=m>770</span> /game
+$ chown -R gm /game
+$ chgrp -R steam /game
+</code></pre></td></tr></table></div></div></div><p>设置 ACL（访问控制列表）：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ apt install acl -y
+$ setfacl -d --set g:steam:rwx /game
+$ setfacl -R -m g:steam:rwx /game
+$ chmod g+w /game
+</code></pre></td></tr></table></div></div></div><p>切换到对应用户：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ password dst
+$ su - dst
+</code></pre></td></tr></table></div></div></div><h2 id=安装-steamcmd><a href=#安装-steamcmd class=anchor-link><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96.0-59.27-59.26-59.27-155.7.0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757.0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037.0 01-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482.0 0120.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96.0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454.0 0020.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037.0 00-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639.0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href=#contents:安装-steamcmd class=headings>安装 SteamCMD</a></h2><p>前往 V 社官方的 <a href=https://developer.valvesoftware.com/wiki/SteamCMD target=_blank rel=noopener>SteamCMD Wiki</a> 页面，根据目录找到安装方式。<br>发现原来有官方包可以直接安装啊，我以前都是下载压缩包手动解压安装的。</p><p>我是 <strong>Ubuntu</strong> 20.04 <strong>64 位</strong>，因此按照官方给出的指示操作：<br>（权限问题自行解决，该加 <code>sudo</code> 就加）</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ add-apt-repository multiverse
+$ dpkg --add-architecture i386
+$ apt update
+$ apt install lib32gcc1 steamcmd -y
+</code></pre></td></tr></table></div></div></div><p>然后就安装好了，尝试运行：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ steamcmd
+<span class=c1># 如果你是手动安装的，那么应该是</span>
+<span class=c1># ./steamcmd.sh</span>
+
+Redirecting stderr to <span class=s1>&#39;/home/gm/.steam/logs/stderr.txt&#39;</span>
+<span class=o>[</span>  0%<span class=o>]</span> Checking <span class=k>for</span> available updates...
+<span class=o>[</span>----<span class=o>]</span> Verifying installation...
+Steam Console Client <span class=o>(</span>c<span class=o>)</span> Valve Corporation
+-- <span class=nb>type</span> <span class=s1>&#39;quit&#39;</span> to <span class=nb>exit</span> --
+Loading Steam API...OK
+
+Steam&gt;
+</code></pre></td></tr></table></div></div></div><p>成功，没啥问题，输入 <code>quit</code> 回车退出。</p><blockquote><p>如果提示：<br><code>Warning: failed to init SDL thread priority manager: SDL not found</code><br>说明你服务器没装 SDL。<br>CentOS 运行 <code>yum install SDL2 -y</code> 安装。<br>Ubuntu / Debian 运行 <code>apt-get install libsdl2-2.0 libsdl2-dev -y</code> 安装。<br>还是那句话，权限问题自行解决，该 <code>sudo</code> 就加。</p><p>或者<strong>直接忽略也行</strong>，这个其实无所谓。<br>SDL 是图形 / 声音 / IO 库，你的服务器又不 play 游戏，只是用来开服务端而已，不需要。<br>只不过每次登录 SteamCMD 它都会警告你一遍，很烦人就是。</p></blockquote><p>Steam 平台搞定，开始安装饥荒服务端。</p><h2 id=安装-dont-starve-together-服务端><a href=#安装-dont-starve-together-服务端 class=anchor-link><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96.0-59.27-59.26-59.27-155.7.0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757.0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037.0 01-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482.0 0120.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96.0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454.0 0020.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037.0 00-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639.0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href=#contents:安装-dont-starve-together-服务端 class=headings>安装 Don't Starve Together 服务端</a></h2><p>SteamCMD 支持命令参数队列，因此一条命令解决问题：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ steamcmd +login anonymous +force_install_dir /game/dst +app_update <span class=m>343050</span> validate +quit
+<span class=c1># 注意服务端强制安装到 /game/dst 目录，自行修改 ↑</span>
+
+<span class=o>[</span>  0%<span class=o>]</span> Checking <span class=k>for</span> available updates...
+<span class=o>[</span>----<span class=o>]</span> Verifying installation...
+Steam Console Client <span class=o>(</span>c<span class=o>)</span> Valve Corporation
+-- <span class=nb>type</span> <span class=s1>&#39;quit&#39;</span> to <span class=nb>exit</span> --
+Loading Steam API...OK
+
+Connecting anonymously to Steam Public...OK
+Waiting <span class=k>for</span> client config...OK
+Waiting <span class=k>for</span> user info...OK
+ Update state <span class=o>(</span>0x5<span class=o>)</span> verifying install, progress: 0.00 <span class=o>(</span><span class=m>0</span> / 2529116954<span class=o>)</span>
+ Update state <span class=o>(</span>0x5<span class=o>)</span> verifying install, progress: 8.12 <span class=o>(</span><span class=m>205436362</span> / 2529116954<span class=o>)</span>
+ Update state <span class=o>(</span>0x5<span class=o>)</span> verifying install, progress: 18.25 <span class=o>(</span><span class=m>461475494</span> / 2529116954<span class=o>)</span>
+ <span class=c1># 中略</span>
+ Update state <span class=o>(</span>0x5<span class=o>)</span> verifying install, progress: 94.07 <span class=o>(</span><span class=m>2379160642</span> / 2529116954<span class=o>)</span>
+Success! App <span class=s1>&#39;343050&#39;</span> fully installed.
+</code></pre></td></tr></table></div></div></div><p>安装成功。注意以后的<strong>更新饥荒服务端游戏版本</strong>也同样是这条命令。</p><p>尝试运行饥荒服务端：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ <span class=nb>cd</span> /game/dst <span class=o>&amp;&amp;</span> ls -l
+total <span class=m>30968</span>
+drwxrwx---+  <span class=m>4</span> dst steam     <span class=m>4096</span> Nov <span class=m>12</span> 20:37 bin
+drwxrwx---+  <span class=m>4</span> dst steam     <span class=m>4096</span> Nov <span class=m>12</span> 20:37 bin64
+drwxrwx---+ <span class=m>11</span> dst steam     <span class=m>4096</span> Nov <span class=m>12</span> 20:37 data
+-rwxrwx---+  <span class=m>1</span> dst steam   <span class=m>243381</span> Nov <span class=m>12</span> 20:37 dontstarve.xpm
+drwxrwx---+  <span class=m>2</span> dst steam     <span class=m>4096</span> Nov <span class=m>12</span> 20:37 linux64
+drwxrwx---+  <span class=m>2</span> dst steam     <span class=m>4096</span> Nov <span class=m>12</span> 20:37 mods
+drwxrwx---+  <span class=m>5</span> dst steam     <span class=m>4096</span> Nov <span class=m>12</span> 21:24 steamapps
+-rwxrwx---+  <span class=m>1</span> dst steam <span class=m>31433351</span> Nov <span class=m>12</span> 20:32 steamclient.so
+-rwxrwx---+  <span class=m>1</span> dst steam        <span class=m>7</span> Nov <span class=m>12</span> 20:37 version.txt
+
+$ ./bin/dontstarve_dedicated_server_nullrenderer
+./bin/dontstarve_dedicated_server_nullrenderer: error <span class=k>while</span> loading shared libraries: libcurl-gnutls.so.4: cannot open shared object file: No such file or directory
+</code></pre></td></tr></table></div></div></div><p>失败，找不到 <code>libcurl-gnutls.so.4</code>。啊哈，老问题了，每次都是这招，能不能整点新活。</p><p>你大概率是有这个库文件的，只是他这个笨比服务端找不到。</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ apt install mlocate -y <span class=o>&amp;&amp;</span> locate libcurl-gnutls.so.4
+
+<span class=c1># 果不其然</span>
+/usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4
+/usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.6.0
+</code></pre></td></tr></table></div></div></div><p>手动建立软链接：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ ln -s /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4 /game/dst/bin/lib32/libcurl-gnutls.so.4
+<span class=c1># 没有输出，说明成功了，linux 信奉「没有消息就是最好的消息」</span>
+
+<span class=c1># 再次尝试</span>
+$ ./bin/dontstarve_dedicated_server_nullrenderer
+./bin/dontstarve_dedicated_server_nullrenderer: error <span class=k>while</span> loading shared libraries: libcurl-gnutls.so.4: wrong ELF class: ELFCLASS64
+</code></pre></td></tr></table></div></div></div><p>库文件加载失败 <code>wrong ELF class: ELFCLASS64</code>，额，忘了我是 64 位。安装 32 位库：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ apt install libcurl4-gnutls-dev:i386 -y
+$ apt install libstdc++6:i386 -y
+</code></pre></td></tr></table></div></div></div><p>再次尝试：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ ./bin/dontstarve_dedicated_server_nullrenderer
+<span class=c1># 出来一大片报错，但这也是好消息</span>
+</code></pre></td></tr></table></div></div></div><p>翻到最前面可以看到：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash><span class=o>[</span>00:00:00<span class=o>]</span>: Starting Up
+<span class=o>[</span>00:00:00<span class=o>]</span>: Version: <span class=o>[</span>饥荒版本号<span class=o>]</span>
+<span class=o>[</span>00:00:00<span class=o>]</span>: Current time: <span class=o>[</span>当前时间<span class=o>]</span>
+
+<span class=o>[</span>00:00:00<span class=o>]</span>: System Name: Linux
+<span class=o>[</span>00:00:00<span class=o>]</span>: Host Name: <span class=o>[</span>服务器主机名<span class=o>]</span>
+<span class=o>[</span>00:00:00<span class=o>]</span>: Release<span class=o>(</span>Kernel<span class=o>)</span> Version: 5.4.0-48-generic
+<span class=o>[</span>00:00:00<span class=o>]</span>: Kernel Build Timestamp: <span class=o>[</span>服务器内核的发布时间<span class=o>]</span>
+<span class=o>[</span>00:00:00<span class=o>]</span>: Machine Arch: x86_64
+<span class=o>[</span>00:00:00<span class=o>]</span>: Don<span class=err>&#39;</span>t Starve Together: <span class=o>[</span>饥荒版本号<span class=o>]</span> LINUX
+<span class=o>[</span>00:00:00<span class=o>]</span>: Build Date: ****
+<span class=o>[</span>00:00:00<span class=o>]</span>: Mode: 32-bit
+<span class=o>[</span>00:00:00<span class=o>]</span>: Parsing <span class=nb>command</span> line
+<span class=o>[</span>00:00:00<span class=o>]</span>: Command Line Arguments: 
+<span class=o>[</span>00:00:00<span class=o>]</span>: Initializing distribution platform
+<span class=o>[</span>00:00:00<span class=o>]</span>: ....Done
+</code></pre></td></tr></table></div></div></div><p>启动成功，最后中断了只是因为缺少配置文件。<br>服务端没问题了，下面进入配置环节。</p><h2 id=服务端配置><a href=#服务端配置 class=anchor-link><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96.0-59.27-59.26-59.27-155.7.0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757.0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037.0 01-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482.0 0120.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96.0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454.0 0020.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037.0 00-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639.0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href=#contents:服务端配置 class=headings>服务端配置</a></h2><h3 id=写入><a href=#写入 class=anchor-link><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96.0-59.27-59.26-59.27-155.7.0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757.0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037.0 01-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482.0 0120.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96.0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454.0 0020.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037.0 00-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639.0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href=#contents:写入 class=headings>写入</a></h3><ol><li>打开 <a href="https://accounts.klei.com/account/game/servers?game=DontStarveTogether" target=_blank rel=noopener>Klei 官网</a>（右上可以切中文）管理饥荒服务器。</li><li>输入「集群名」，「添加新服务器」。</li><li>拿到「<ruby><rb>服务器票据</rb><rp>（</rp><rt>Server Token</rt><rp>）</rp></ruby>」，记录下来。</li></ol><h3 id=魔改官方脚本><a href=#魔改官方脚本 class=anchor-link><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96.0-59.27-59.26-59.27-155.7.0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757.0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037.0 01-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482.0 0120.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96.0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454.0 0020.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037.0 00-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639.0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href=#contents:魔改官方脚本 class=headings>魔改官方脚本</a></h3><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ <span class=nb>cd</span> ~ <span class=o>&amp;&amp;</span> <span class=nv>f</span><span class=o>=</span><span class=s2>&#34;dst_server.sh&#34;</span> <span class=o>&amp;&amp;</span> touch <span class=s2>&#34;</span><span class=nv>$f</span><span class=s2>&#34;</span> <span class=o>&amp;&amp;</span> chmod +x <span class=s2>&#34;</span><span class=nv>$f</span><span class=s2>&#34;</span> <span class=o>&amp;&amp;</span> <span class=nb>unset</span> f
+$ vim ~/dst_server.sh
+</code></pre></td></tr></table></div></div></div><p>修改自 <a href=https://accounts.klei.com/assets/gamesetup/linux/run_dedicated_servers.sh target=_blank rel=noopener>官方脚本</a>。</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Shell data-lang=Shell><span class=cp>#!/bin/bash
+</span><span class=cp></span>
+<span class=c1>#STEAMCMD_DIR=&#34;$HOME/steamcmd&#34;</span>
+<span class=nv>INSTALL_PATH</span><span class=o>=</span><span class=s2>&#34;/game/dst&#34;</span>
+<span class=nv>CONFIG_PATH</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$HOME</span><span class=s2>/.klei/DoNotStarveTogether&#34;</span>
+<span class=nv>CLUSTER_NAME</span><span class=o>=</span><span class=s2>&#34;MyDediServer&#34;</span>
+
+<span class=k>function</span> fail<span class=o>()</span>
+<span class=o>{</span>
+  <span class=nb>echo</span> Error: <span class=s2>&#34;</span><span class=nv>$@</span><span class=s2>&#34;</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+  <span class=nb>exit</span> <span class=m>1</span>
+<span class=o>}</span>
+
+<span class=k>function</span> check_for_file<span class=o>()</span>
+<span class=o>{</span>
+  <span class=k>if</span> <span class=o>[</span> ! -e <span class=s2>&#34;</span><span class=nv>$1</span><span class=s2>&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+    fail <span class=s2>&#34;Missing file: </span><span class=nv>$1</span><span class=s2>&#34;</span>
+  <span class=k>fi</span>
+<span class=o>}</span>
+
+<span class=k>function</span> print_help <span class=o>()</span> <span class=o>{</span>
+  <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$0</span><span class=s2> -h 查看帮助&#34;</span>
+<span class=o>}</span>
+
+<span class=k>function</span> init_config<span class=o>()</span>
+<span class=o>{</span>
+  <span class=k>if</span> <span class=o>[</span> ! -e <span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+    mkdir -p <span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/Master&#34;</span>
+    mkdir <span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/Caves&#34;</span>
+    touch <span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/cluster_token.txt&#34;</span>
+    cat &gt;<span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/cluster.ini&#34;</span> <span class=s>&lt;&lt;EOF
+</span><span class=s>
+</span><span class=s>[GAMEPLAY]
+</span><span class=s>game_mode = endless
+</span><span class=s>max_players = 6
+</span><span class=s>pvp = false
+</span><span class=s>pause_when_empty = true
+</span><span class=s>
+</span><span class=s>[NETWORK]
+</span><span class=s>CLUSTER_NAME = [服务器名字]
+</span><span class=s>cluster_description = [服务器描述]
+</span><span class=s>cluster_intention = cooperative
+</span><span class=s>cluster_language = zh
+</span><span class=s>cluster_password = [服务器密码]
+</span><span class=s>
+</span><span class=s>[MISC]
+</span><span class=s>console_enabled = true
+</span><span class=s>
+</span><span class=s>[SHARD]
+</span><span class=s>shard_enabled = true
+</span><span class=s>bind_ip = 0.0.0.0
+</span><span class=s>master_ip = 127.0.0.1
+</span><span class=s>master_port = 10889
+</span><span class=s>cluster_key = supersecretkey
+</span><span class=s>
+</span><span class=s>EOF</span>
+    cat &gt;<span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/Master/server.ini&#34;</span> <span class=s>&lt;&lt;EOF
+</span><span class=s>
+</span><span class=s>[NETWORK]
+</span><span class=s>server_port = 11000
+</span><span class=s>
+</span><span class=s>[SHARD]
+</span><span class=s>is_master = true
+</span><span class=s>
+</span><span class=s>[STEAM]
+</span><span class=s>master_server_port = 27018
+</span><span class=s>authentication_port = 8768
+</span><span class=s>
+</span><span class=s>EOF</span>
+    cat &gt;<span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/Caves/server.ini&#34;</span> <span class=s>&lt;&lt;EOF
+</span><span class=s>
+</span><span class=s>[NETWORK]
+</span><span class=s>server_port = 11001
+</span><span class=s>
+</span><span class=s>[SHARD]
+</span><span class=s>is_master = false
+</span><span class=s>name = Caves
+</span><span class=s>
+</span><span class=s>[STEAM]
+</span><span class=s>master_server_port = 27019
+</span><span class=s>authentication_port = 8769
+</span><span class=s>
+</span><span class=s>EOF</span>
+    cat &gt;<span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/Caves/worldgenoverride.lua&#34;</span> <span class=s>&lt;&lt;EOF
+</span><span class=s>return {
+</span><span class=s>    override_enabled = true,
+</span><span class=s>    preset = &#34;DST_CAVE&#34;,
+</span><span class=s>}
+</span><span class=s>EOF</span>
+  <span class=k>fi</span>
+  check_for_file <span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/cluster.ini&#34;</span>
+  check_for_file <span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/cluster_token.txt&#34;</span>
+  check_for_file <span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/Master/server.ini&#34;</span>
+  check_for_file <span class=s2>&#34;</span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/Caves/server.ini&#34;</span>
+  check_for_file <span class=s2>&#34;</span><span class=nv>$INSTALL_PATH</span><span class=s2>/bin64&#34;</span>
+<span class=o>}</span>
+
+<span class=k>function</span> upgrade<span class=o>()</span> <span class=o>{</span>
+  <span class=c1>#cd &#34;$STEAMCMD_DIR&#34; || fail &#34;Missing $STEAMCMD_DIR directory!&#34;</span>
+  <span class=c1>#check_for_file &#34;steamcmd.sh&#34;</span>
+  <span class=c1>#./steamcmd.sh +force_install_dir &#34;$INSTALL_PATH&#34; +login anonymous +app_update 343050 validate +quit</span>
+  steamcmd +force_install_dir <span class=s2>&#34;</span><span class=nv>$INSTALL_PATH</span><span class=s2>&#34;</span> +login anonymous +app_update <span class=m>343050</span> validate +quit
+  <span class=c1>#TODO 配置 mod</span>
+<span class=o>}</span>
+
+<span class=k>function</span> test<span class=o>()</span> <span class=o>{</span>
+  <span class=nv>tmp</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$INSTALL_PATH</span><span class=s2>/mods/dedicated_server_mods_setup.lua&#34;</span> <span class=p>|</span> sed -n <span class=s1>&#39;/^ServerModCollectionSetup/&#39;</span>
+  <span class=nb>echo</span> <span class=nv>$tmp</span>
+  <span class=nb>echo</span> <span class=s2>&#34;ServerModCollectionSetup(&#34;</span>2048193561<span class=s2>&#34;)&#34;</span> &gt;&gt; <span class=s2>&#34;</span><span class=nv>$INSTALL_PATH</span><span class=s2>/mods/dedicated_server_mods_setup.lua&#34;</span>
+<span class=o>}</span>
+
+<span class=k>function</span> run_server<span class=o>()</span> <span class=o>{</span>
+  <span class=nb>cd</span> <span class=s2>&#34;</span><span class=nv>$INSTALL_PATH</span><span class=s2>/bin64&#34;</span> <span class=o>||</span> fail
+
+  <span class=nv>run_shared</span><span class=o>=(</span>./dontstarve_dedicated_server_nullrenderer_x64<span class=o>)</span>
+  <span class=nv>run_shared</span><span class=o>+=(</span>-console<span class=o>)</span>
+  <span class=nv>run_shared</span><span class=o>+=(</span>-cluster <span class=s2>&#34;</span><span class=nv>$CLUSTER_NAME</span><span class=s2>&#34;</span><span class=o>)</span>
+  <span class=nv>run_shared</span><span class=o>+=(</span>-monitor_parent_process <span class=nv>$$</span><span class=o>)</span>
+
+  <span class=s2>&#34;</span><span class=si>${</span><span class=nv>run_shared</span><span class=p>[@]</span><span class=si>}</span><span class=s2>&#34;</span> -shard Caves  <span class=p>|</span> sed <span class=s1>&#39;s/^/Caves:  /&#39;</span> <span class=p>&amp;</span>
+  <span class=s2>&#34;</span><span class=si>${</span><span class=nv>run_shared</span><span class=p>[@]</span><span class=si>}</span><span class=s2>&#34;</span> -shard Master <span class=p>|</span> sed <span class=s1>&#39;s/^/Master: /&#39;</span>
+<span class=o>}</span>
+
+<span class=nv>TEMP</span><span class=o>=</span><span class=k>$(</span>
+  getopt -o chmuv --long config,help,mod,update,upgrade,version -n <span class=s2>&#34;</span><span class=nv>$0</span><span class=s2>&#34;</span> -- <span class=s2>&#34;</span><span class=nv>$@</span><span class=s2>&#34;</span>
+<span class=k>)</span>
+<span class=k>if</span> <span class=o>[</span> <span class=nv>$?</span> !<span class=o>=</span> <span class=m>0</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+  print_help
+  fail <span class=s2>&#34;Unverified Parameters&#34;</span>
+  <span class=nb>exit</span> <span class=m>1</span>
+<span class=k>fi</span>
+<span class=nb>eval</span> <span class=nb>set</span> -- <span class=s2>&#34;</span><span class=nv>$TEMP</span><span class=s2>&#34;</span>
+
+<span class=k>while</span> true<span class=p>;</span> <span class=k>do</span>
+  <span class=k>case</span> <span class=s2>&#34;</span><span class=nv>$1</span><span class=s2>&#34;</span> in
+  -c <span class=p>|</span> --config<span class=o>)</span>
+    <span class=nb>test</span>
+    <span class=nb>echo</span> <span class=s2>&#34;[DEBUG] TODO: 修改配置文件&#34;</span>
+    <span class=nb>exit</span> <span class=m>0</span>
+    <span class=p>;;</span>
+  -h <span class=p>|</span> --help<span class=o>)</span>
+    <span class=nb>echo</span> -e <span class=s2>&#34;Usage: </span><span class=nv>$0</span><span class=s2> [options]\n&#34;</span>
+    <span class=nb>echo</span> -e <span class=s2>&#34;Options:\n  --help, -h:    显示帮助\n\n  --version, -v: 版本信息&#34;</span>
+    <span class=nb>exit</span> <span class=m>0</span>
+    <span class=p>;;</span>
+  -m <span class=p>|</span> --mod<span class=o>)</span>
+    <span class=nb>echo</span> <span class=s2>&#34;[DEBUG] TODO: 修改 mod 文件&#34;</span>
+    <span class=nb>echo</span> <span class=s2>&#34;ls -l </span><span class=nv>$INSTALL_PATH</span><span class=s2>/mods&#34;</span>
+    <span class=nb>echo</span> <span class=s2>&#34;cat </span><span class=nv>$INSTALL_PATH</span><span class=s2>/mods/dedicated_server_mods_setup.lua&#34;</span>
+    <span class=nb>echo</span> <span class=s2>&#34;cat </span><span class=nv>$CONFIG_PATH</span><span class=s2>/</span><span class=nv>$CLUSTER_NAME</span><span class=s2>/Master/modoverrides.lua&#34;</span>
+    <span class=nb>exit</span> <span class=m>0</span>
+    <span class=p>;;</span>
+  -u <span class=p>|</span> --update <span class=p>|</span> --upgrade<span class=o>)</span>
+    upgrade
+    <span class=nb>shift</span>
+    <span class=p>;;</span>
+  -v <span class=p>|</span> --version<span class=o>)</span>
+    <span class=nb>echo</span> <span class=s2>&#34;Don&#39;t Starve Together v</span><span class=k>$(</span>cat <span class=nv>$INSTALL_PATH</span>/version.txt<span class=k>)</span><span class=s2>&#34;</span>
+    <span class=nb>exit</span> <span class=m>0</span>
+    <span class=p>;;</span>
+  --<span class=o>)</span>
+    <span class=nb>shift</span>
+    <span class=nb>break</span>
+    <span class=p>;;</span>
+  *<span class=o>)</span>
+    fail <span class=s2>&#34;Uknown Fatal&#34;</span>
+    <span class=p>;;</span>
+  <span class=k>esac</span>
+<span class=k>done</span>
+
+<span class=k>function</span> main<span class=o>()</span> <span class=o>{</span>
+  init_config
+  <span class=k>if</span> <span class=o>[</span> <span class=nv>$#</span> -ne <span class=m>0</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+    print_help
+    fail <span class=s2>&#34;Unverified Parameters&#34;</span>
+  <span class=k>else</span>
+    run_server
+  <span class=k>fi</span>
+<span class=o>}</span>
+
+main <span class=nv>$*</span>
+</code></pre></td></tr></table></div></div></div><blockquote><p>这个脚本没写完，也就是刚好能用的水平，有空再完善，仅供参考。</p></blockquote><p><img src=https://i.loli.net/2021/11/11/jFbUQz6hypDP2Lv.png title=TODO data-sticker></p><h2 id=idc-提供商安全组应该开放哪些端口><a href=#idc-提供商安全组应该开放哪些端口 class=anchor-link><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96.0-59.27-59.26-59.27-155.7.0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757.0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037.0 01-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482.0 0120.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96.0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454.0 0020.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037.0 00-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639.0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href=#contents:idc-提供商安全组应该开放哪些端口 class=headings>（IDC 提供商）安全组应该开放哪些端口</a></h2><p>妈的几年了网上到现在都没个定论（<del>害我抄不到作业</del>）。<br>服务端都搭好了，查个端口有那么难吗？</p><p>运行的服务端进程叫 <code>dontstarve_dedicated_server_nullrenderer</code> 是吧。</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ netstat -anp <span class=p>|</span> grep dontstarve
+tcp       <span class=m>78</span>      <span class=m>0</span> <span class=o>[</span>服务器内网IP<span class=o>]</span>:44514     13.213.127.91:443       CLOSE_WAIT  88282/./dontstarve_ 
+tcp        <span class=m>0</span>      <span class=m>0</span> <span class=o>[</span>服务器内网IP<span class=o>]</span>:43954     13.213.127.91:443       ESTABLISHED 88284/./dontstarve_ 
+tcp        <span class=m>0</span>      <span class=m>0</span> <span class=o>[</span>服务器内网IP<span class=o>]</span>:43729     101.226.183.185:443     ESTABLISHED 88282/./dontstarve_ 
+tcp        <span class=m>0</span>      <span class=m>0</span> <span class=o>[</span>服务器内网IP<span class=o>]</span>:43557     101.226.183.185:443     ESTABLISHED 88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:43028           0.0.0.0:*                           88282/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:39189           0.0.0.0:*                           88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:53540           0.0.0.0:*                           88282/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:27018           0.0.0.0:*                           88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:27019           0.0.0.0:*                           88282/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:10889           0.0.0.0:*                           88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:11000           0.0.0.0:*                           88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:11001           0.0.0.0:*                           88282/./dontstarve_ 
+unix  <span class=m>3</span>      <span class=o>[</span> <span class=o>]</span>         STREAM     CONNECTED     <span class=m>150724</span>   88282/./dontstarve_  
+unix  <span class=m>3</span>      <span class=o>[</span> <span class=o>]</span>         STREAM     CONNECTED     <span class=m>150723</span>   88282/./dontstarve_  
+unix  <span class=m>3</span>      <span class=o>[</span> <span class=o>]</span>         STREAM     CONNECTED     <span class=m>150228</span>   88284/./dontstarve_  
+unix  <span class=m>3</span>      <span class=o>[</span> <span class=o>]</span>         STREAM     CONNECTED     <span class=m>150227</span>   88284/./dontstarve_ 
+</code></pre></td></tr></table></div></div></div><p>以上是<ruby><rb>带进程信息的</rb><rp>（</rp><rt><code>--programs</code></rt><rp>）</rp></ruby><ruby><rb>全部</rb><rp>（</rp><rt><code>--all</code></rt><rp>）</rp></ruby>相关 socket 连接（尽量<ruby><rb>显示数字 IP</rb><rp>（</rp><rt><code>--numeric</code></rt><rp>）</rp></ruby>）：</p><ol><li><code>tcp</code> 的几个连接：<ul><li>我方是本服务器的内网 IP。盲猜是 NAT 转发导致的，不用管。</li><li>对方是 443 端口，HTTPS。<code>13.213.127.91</code> 查了是亚马逊的 EC2 服务器，显然是 Steam（或者 Klei）的 CDN。服务端在访问这几个网站，大概是 API 吧。</li></ul></li><li><code>udp</code> + <code>0.0.0.0:*</code> 有什么好说的，我猜是监听服务。</li><li><code>unix</code> 显然是 IPC（进程间通信），盲猜是地面服务器与洞穴服务器之间的连接。</li></ol><p>故技重施：</p><div class=highlight><div class=chroma><div class=table-container><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-Bash data-lang=Bash>$ netstat -lnp <span class=p>|</span> grep dontstarve
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:43028           0.0.0.0:*                           88282/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:39189           0.0.0.0:*                           88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:53540           0.0.0.0:*                           88282/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:27018           0.0.0.0:*                           88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:27019           0.0.0.0:*                           88282/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:10889           0.0.0.0:*                           88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:11000           0.0.0.0:*                           88284/./dontstarve_ 
+udp        <span class=m>0</span>      <span class=m>0</span> 0.0.0.0:11001           0.0.0.0:*                           88282/./dontstarve_
+</code></pre></td></tr></table></div></div></div><p>以上是<ruby><rb>带进程信息的</rb><rp>（</rp><rt><code>--programs</code></rt><rp>）</rp></ruby><ruby><rb><strong>正在监听中的</strong></rb><rp>（</rp><rt><code>--listening</code></rt><rp>）</rp></ruby>相关 socket 连接（尽量<ruby><rb>显示数字 IP</rb><rp>（</rp><rt><code>--numeric</code></rt><rp>）</rp></ruby>）。<br>结论很明显了，这几个端口就是服务端监听中（等待别人访问）的服务。<br><code>./dontstarve_*</code> 前的是 <code>pid</code>，<code>88282</code> 和 <code>88284</code> 一个是地面服务器，一个是洞穴服务器。</p><p><code>39189</code> / <code>43028</code> / <code>53540</code> 是随机的，我重启了服务端就变成了 <code>38354</code> / <code>48730</code> / <code>51428</code> / <code>53010</code>。<br>没错，变成了四个，因为 <code>10889</code> 居然离奇失踪了，稳定不变的只有 Master/Caves <code>server.ini</code> 里的 <code>master_port</code> 和 <code>master_server_port</code> 两组端口。</p><p>总之，这些端口对照配置文件可列出一个表：</p><div class=table-container><table><thead><tr><th style=text-align:center>策略</th><th style=text-align:center>方向</th><th style=text-align:center>端口</th><th style=text-align:center>协议</th><th style=text-align:center>作用</th><th style=text-align:center>配置文件</th><th style=text-align:center>配置项</th></tr></thead><tbody><tr><td style=text-align:center></td><td style=text-align:center></td><td style=text-align:center>10889</td><td style=text-align:center>UDP</td><td style=text-align:center></td><td style=text-align:center><code>cluster.ini</code></td><td style=text-align:center><code>master_port</code></td></tr><tr><td style=text-align:center>接受</td><td style=text-align:center>入</td><td style=text-align:center>11000</td><td style=text-align:center>UDP</td><td style=text-align:center>允许使用命令直连</td><td style=text-align:center><code>Master/server.ini</code></td><td style=text-align:center><code>server_port</code></td></tr><tr><td style=text-align:center>接受</td><td style=text-align:center>入</td><td style=text-align:center>11001</td><td style=text-align:center>UDP</td><td style=text-align:center></td><td style=text-align:center><code>Caves/server.ini</code></td><td style=text-align:center><code>server_port</code></td></tr><tr><td style=text-align:center>接受</td><td style=text-align:center>入</td><td style=text-align:center>27018</td><td style=text-align:center>UDP</td><td style=text-align:center>Ping 显示具体数值？</td><td style=text-align:center><code>Master/server.ini</code></td><td style=text-align:center><code>master_server_port</code></td></tr><tr><td style=text-align:center>接受</td><td style=text-align:center>入</td><td style=text-align:center>27019</td><td style=text-align:center>UDP</td><td style=text-align:center></td><td style=text-align:center><code>Caves/server.ini</code></td><td style=text-align:center><code>master_server_port</code></td></tr></tbody></table></div><p>上表中并没有 Master/Caves <code>server.ini</code> 中 <code>[STEAM]</code> 设置项的 <code>authentication_port</code> 端口。<br>看来验证（authenticate）这个过程是一次性（而不是持续监听）的。</p><p>根据我的实测，只需要开启 <code>11000</code> 一个端口就能在服务器列表刷出来并进入。<br>使用命令或启动参数连接到服务器也是用的这个端口。<br>即搭好服务端之后，你只需要开启「<strong>入方向</strong>」上「<strong><code>Master/server.ini</code></strong> 的 <strong><code>server_port</code></strong> 设置的端口」就能愉快游玩了。对了，记得是 <strong>UDP</strong> 协议，上面表里写得很清楚了。</p></div><ul class=post-copyright><li class="copyright-item author"><span class=copyright-item-text>作者</span>：<a href=https://ews.ink/ class="p-author h-card" target=_blank rel=noopener>Sumi</a></li><li class="copyright-item link"><span class=copyright-item-text>链接</span>：<a href=/game/dont_starve_together-server-deploy/ target=_blank rel=noopener>https://ews.ink/game/dont_starve_together-server-deploy/</a></li><li class="copyright-item license"><span class=copyright-item-text>许可</span>：<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank rel=noopener>CC BY-NC-SA 4.0</a></li></ul></article><div class=updated-badge-container><span title="Updated @2021-11-18 02:23:04 CST" style=cursor:help><svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-11-18</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-11-18</text></g></svg></span></div><div class=post-share><div class=share-items><div class="share-item twitter"><a href="https://twitter.com/share?url=https://ews.ink/game/dont_starve_together-server-deploy/&text=%e3%80%8a%e9%a5%a5%e8%8d%92%e8%81%94%e6%9c%ba%e7%89%88%e3%80%8b%e9%83%a8%e7%bd%b2%e4%b8%93%e6%9c%89%e6%9c%8d%e5%8a%a1%e5%99%a8&hashtags=%e9%a5%a5%e8%8d%92,Klei,&via=%25!s%28%3cnil%3e%29" title=分享到「Twitter」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645.0 138.72-105.583 298.558-298.558 298.558-59.452.0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055.0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421.0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391.0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04.0-57.828 46.782-104.934 104.934-104.934 30.213.0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></div><div class="share-item facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://ews.ink/game/dont_starve_together-server-deploy/&hashtag=%23%e9%a5%a5%e8%8d%92" title=分享到「Facebook」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14.0 55.52 4.84 55.52 4.84v61h-31.28c-30.8.0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a></div><div class="share-item linkedin"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://ews.ink/game/dont_starve_together-server-deploy/&title=%e3%80%8a%e9%a5%a5%e8%8d%92%e8%81%94%e6%9c%ba%e7%89%88%e3%80%8b%e9%83%a8%e7%bd%b2%e4%b8%93%e6%9c%89%e6%9c%8d%e5%8a%a1%e5%99%a8&summary=%e9%85%8d%e7%bd%ae%e7%94%a8%e6%88%b7%e6%9d%83%e9%99%90%20%e4%bd%a0%e4%b9%90%e6%84%8f%e7%9b%b4%e6%8e%a5%20root%20%e4%b8%80%e6%8a%8a%e6%a2%ad%e4%b9%9f%e8%a1%8c%ef%bc%8c%e5%8f%af%e4%bb%a5%e8%b7%b3%e8%bf%87%e8%bf%99%e4%b8%80%e8%8a%82%e3%80%82%20%e6%96%b0%e5%bb%ba%e7%94%a8%e6%88%b7%e7%bb%84%e5%92%8c%e7%94%a8%e6%88%b7%ef%bc%9a%201%202%203%204%20$%20groupadd%20steam%e2%80%a6%e2%80%a6&source=Everybody%20Wants%20Some" title=分享到「LinkedIn」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"/></svg></a></div><div class="share-item telegram"><a href="https://t.me/share/url?url=https://ews.ink/game/dont_starve_together-server-deploy/&text=%e3%80%8a%e9%a5%a5%e8%8d%92%e8%81%94%e6%9c%ba%e7%89%88%e3%80%8b%e9%83%a8%e7%bd%b2%e4%b8%93%e6%9c%89%e6%9c%8d%e5%8a%a1%e5%99%a8" title=分享到「Telegram」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a></div><div class="share-item qq"><a href="https://connect.qq.com/widget/shareqq/index.html?url=https://ews.ink/game/dont_starve_together-server-deploy/&title=%e3%80%8a%e9%a5%a5%e8%8d%92%e8%81%94%e6%9c%ba%e7%89%88%e3%80%8b%e9%83%a8%e7%bd%b2%e4%b8%93%e6%9c%89%e6%9c%8d%e5%8a%a1%e5%99%a8&summary=%e9%85%8d%e7%bd%ae%e7%94%a8%e6%88%b7%e6%9d%83%e9%99%90%20%e4%bd%a0%e4%b9%90%e6%84%8f%e7%9b%b4%e6%8e%a5%20root%20%e4%b8%80%e6%8a%8a%e6%a2%ad%e4%b9%9f%e8%a1%8c%ef%bc%8c%e5%8f%af%e4%bb%a5%e8%b7%b3%e8%bf%87%e8%bf%99%e4%b8%80%e8%8a%82%e3%80%82%20%e6%96%b0%e5%bb%ba%e7%94%a8%e6%88%b7%e7%bb%84%e5%92%8c%e7%94%a8%e6%88%b7%ef%bc%9a%201%202%203%204%20$%20groupadd%20steam%e2%80%a6%e2%80%a6&pics=https://i.loli.net/2021/11/11/jFbUQz6hypDP2Lv.png&site=Everybody%20Wants%20Some" title=分享到「QQ」 target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741.0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792.0.0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a></div><div class="share-item qrcode"><div class=qrcode-container title=通过「二维码」><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id=qrcode-img></div></div><script src=https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js></script><script>var typeNumber=0,errorCorrectionLevel='L',qr=qrcode(typeNumber,errorCorrectionLevel);qr.addData('https://ews.ink/game/dont_starve_together-server-deploy/'),qr.make(),document.getElementById('qrcode-img').innerHTML=qr.createImgTag()</script></div></div></div><div class=related-posts><h2 class=related-title>相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6.0-12-5.4-12-12v-92h-92c-6.6.0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6.0 12 5.4 12 12v92h92c6.6.0 12 5.4 12 12v56z"/></svg></h2><ul class=related-list><li class=related-item><a href=/game/dont_starve_together-server-lordran/ class=related-link>《饥荒联机版》服务器 Lordran</a></li><li class=related-item><a href=/game/dont_starve_together-mods-load-failed-fix/ class=related-link>《饥荒联机版》订阅的 Mod 加载失败问题</a></li><li class=related-item><a href=/game/dont_starve_together-3-craft/ class=related-link>《饥荒联机版》实用手册其三：合成</a></li><li class=related-item><a href=/game/dont_starve_together-2-food/ class=related-link>《饥荒联机版》实用手册其二：食物</a></li><li class=related-item><a href=/game/dont_starve_together-1-character/ class=related-link>《饥荒联机版》实用手册其一：人物</a></li></ul></div><footer class=minimal-footer><div class=post-tag><a href=/tags/%E9%A5%A5%E8%8D%92/ rel=tag class=post-tag-link>#饥荒</a> <a href=/tags/klei/ rel=tag class=post-tag-link>#klei</a></div><div class=post-category><a href=/game/ class="post-category-link active">game</a> | <a href=/tech/ class=post-category-link>tech</a> | <a href=/life/ class=post-category-link>life</a></div></footer><ul class=post-nav><li class=post-nav-prev><a href=/game/dont_starve_together-server-lordran/ rel=prev>&lt; 《饥荒联机版》服务器 Lordran</a></li><li class=post-nav-next><a href=/game/diablo3-s21-demonhunter-build/ rel=next>《Diablo3》S21 风暴试炼 猎魔人开荒及 Build ></a></li></ul></div></main><div id=back-to-top class=back-to-top><a href=#><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6.0-33.9L207 39c9.4-9.4 24.6-9.4 33.9.0l194.3 194.3c9.4 9.4 9.4 24.6.0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3.0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a></div><footer id=footer class=footer><div class=footer-inner><div class=site-info>©&nbsp;2018–2021&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3.0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Sumi</div><div class=site-copyright><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank rel=noopener>CC BY-NC-SA 4.0</a></div><div class=custom-footer><a href=http://www.beian.miit.gov.cn/ target=_blank rel=noopener>蜀ICP备17037841号-1</a></div></div></footer></div><script src=https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js></script><script>mediumZoom(document.querySelectorAll('div.post-body img:not(a img, img[no-zoom], img[data-sticker], img[data-emoji], img.no-zoom, img.sticker, img.emoji, span.sticker img)'),{background:'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'})</script><script src=https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js type=module defer></script><script async src=https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script></body></html>
