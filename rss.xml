@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 21 Mar 2022 23:23:30 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>《游戏王》有趣构筑记录</title><link>https://ews.ink/game/yu_gi_oh-interesting-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-interesting-deck/</guid><pubDate>Fri, 18 Mar 2022 09:11:33 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;details>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Tue, 22 Mar 2022 22:20:37 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>《游戏王》有趣构筑记录</title><link>https://ews.ink/game/yu_gi_oh-interesting-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-interesting-deck/</guid><pubDate>Fri, 18 Mar 2022 09:11:33 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;details>
 &lt;summary>战华（三国）&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">战华&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">战华&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -80,7 +80,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/4810585.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/82255872" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/82255872.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/69069911" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/69069911" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/69069911.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/82697249" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/82697249.jpg!half" />
@@ -114,7 +114,7 @@
 &lt;/details>
 &lt;details>
 &lt;summary>除外 + 烧血 阴间卡组&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">魔兽的大饵 &amp;#43; 异次元炸药 OTK&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23898021" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">魔兽的大饵 &amp;#43; 异次元炸药 OTK&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23898021" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23898021.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23898021" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23898021.jpg!half" />
@@ -195,7 +195,7 @@
 &lt;/a>&lt;a href="https://ygocdb.com/card/48814566" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/48814566.jpg!half" />
 &lt;/a>&lt;/div>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">55 卡 贪比 除外卡组&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/19665973" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">55 卡 贪比 除外卡组&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/19665973" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/19665973.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/19665973" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/19665973.jpg!half" />
@@ -305,7 +305,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/8628798.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/10813327" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/10813327.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49513164" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49513164" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/49513164.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/57314798" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/57314798.jpg!half" />
@@ -339,7 +339,7 @@
 &lt;/details>
 &lt;details>
 &lt;summary>高浓度 魔偶甜点 可爱的妹卡&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">一看就未完成的 魔偶甜点&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/91350799" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">一看就未完成的 魔偶甜点&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/91350799" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/91350799.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/91350799" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/91350799.jpg!half" />
@@ -419,7 +419,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20899496.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/53334471" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/53334471.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/37164373" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/37164373" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/37164373.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/37164373" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/37164373.jpg!half" />
@@ -449,7 +449,7 @@
 &lt;/details>
 &lt;details>
 &lt;summary>魔术师展开 凶饿毒 复制 独立夜莺 FTK&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://www.bilibili.com/video/BV1mS4y137aJ" target="_blank" rel="noopener noreferrer">魔术师 独立夜莺 凶饿毒 FTK&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/51531505" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1mS4y137aJ" target="_blank" rel="noopener noreferrer">魔术师 独立夜莺 凶饿毒 FTK&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/51531505" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/51531505.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/54941203" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/54941203.jpg!half" />
@@ -529,7 +529,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/74850403.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/1344018" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/1344018.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/76815942" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/76815942" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/76815942.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/53262004" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/53262004.jpg!half" />
@@ -553,7 +553,7 @@
 &lt;/details>
 &lt;details>
 &lt;summary>点火展开 转晶 + No.33 炸 究极幻神 FTK&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">No.33 究极幻神 FTK&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24131534" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">No.33 究极幻神 FTK&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24131534" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24131534.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/24131534" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24131534.jpg!half" />
@@ -633,7 +633,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/67616300.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/67616300" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/67616300.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/43387895" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/43387895" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/43387895.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/15248594" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/15248594.jpg!half" />
@@ -661,7 +661,7 @@
 &lt;/details>
 &lt;details>
 &lt;summary>被暴打的双子真龙&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">直播☆双子 真龙&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">直播☆双子 真龙&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -741,7 +741,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/61529473.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/61529473" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/61529473.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/36776089" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/36776089" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/36776089.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/72167543" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/72167543.jpg!half" />
@@ -775,7 +775,7 @@
 &lt;/details>
 &lt;details>
 &lt;summary>一个报社的棒子&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">重坑 除外 暴食兽 / 红莲兽&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/63845230" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">重坑 除外 暴食兽 / 红莲兽&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/63845230" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/63845230.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/63845230" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/63845230.jpg!half" />
@@ -855,7 +855,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/31548215.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/31548215" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/31548215.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/98978921" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/98978921" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/98978921.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/41999284" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/41999284.jpg!half" />
@@ -889,7 +889,7 @@
 &lt;/details>
 &lt;details>
 &lt;summary>霍普雷普霍普雷&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">魂 霍普&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">魂 霍普&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -969,7 +969,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24224830.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/31712840" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/31712840.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/65305468" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/65305468" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/65305468.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/26973555" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/26973555.jpg!half" />
@@ -1003,7 +1003,7 @@
 &lt;/details>
 &lt;details>
 &lt;summary>有手就行的源数&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://bbs.nga.cn/read.php?tid=30645552" target="_blank" rel="noopener noreferrer">源数 OTK&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/42352091" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://bbs.nga.cn/read.php?tid=30645552" target="_blank" rel="noopener noreferrer">源数 OTK&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/42352091" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/42352091.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/42352091" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/42352091.jpg!half" />
@@ -1083,7 +1083,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24299458.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23002292" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23002292.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/15232745" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/15232745" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/15232745.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/15232745" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/15232745.jpg!half" />
@@ -1113,7 +1113,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/4280258.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/88000953" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/88000953.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/69073023" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/69073023" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/69073023.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/21887175" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/21887175.jpg!half" />
@@ -1130,10 +1130,724 @@
 &lt;/a>&lt;/div>
 &lt;/details></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/yu-gi-oh/">Yu-Gi-Oh</category><category domain="https://ews.ink/tags/%E6%9E%84%E7%AD%91/">构筑</category></item><item><title>《游戏王》MD 活动「NR 杯」卡组构筑推荐</title><link>https://ews.ink/game/yu_gi_oh-n-and-r-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-n-and-r-deck/</guid><pubDate>Fri, 18 Mar 2022 07:54:24 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>3.23 ~ 4.4，Master Duel 开启新活动 NR 杯「N and R Rarity Festival」。&lt;br>
 只能用 N 卡和 R 卡，这可比超量杯有意思多了。&lt;/p>
+&lt;p>每次活动必有自爆卡车刷分，&lt;a href="https://ews.ink/game/yu_gi_oh-demolition-truck/" target="_blank">之前超量杯就写过&lt;/a>。&lt;br>
+不过这次 NR 杯有专门的禁限卡表，ban 掉了常用的自爆用卡。&lt;/p>
+&lt;details open="open">
+&lt;summary>NR 杯（2022.3.23）禁限卡表&lt;/summary>
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.masterduelmeta.com/articles/news/march-2022/nr-festival-banlist" target="_blank" rel="noopener noreferrer">NR 杯（2022.3.23）禁限卡表&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">禁止卡 Forbidden（限 0）&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">所有 SR 卡和 UR 卡 以及&lt;/div>&lt;a href="https://ygocdb.com/card/35112613" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/35112613.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/3549275" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/3549275.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/58185394" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/58185394.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/67316075" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/67316075.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/65056481" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/65056481.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/44682448" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/44682448.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/31571902" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/31571902.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/10248192" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/10248192.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/89801755" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/89801755.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/11481610" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/11481610.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/49306994" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/49306994.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/79323590" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/79323590.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/77098449" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/77098449.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/62980542" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/62980542.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/43262273" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/43262273.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/18252559" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/18252559.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/95676943" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/95676943.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/48814566" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/48814566.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/40633297" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/40633297.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/48276469" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/48276469.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/77859858" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/77859858.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/36378044" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/36378044.jpg!half" />
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">限制卡 Limited（限 1）&lt;/div>&lt;a href="https://ygocdb.com/card/44519536" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/44519536.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/70903634" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/70903634.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/8124921" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/8124921.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/7902349" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/7902349.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94230224" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94230224.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/79106360" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/79106360.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/69579761" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/69579761.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/3510565" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/3510565.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/48700891" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/48700891.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/53927679" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/53927679.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/6783559" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/6783559.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/43716289" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/43716289.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94667532" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94667532.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/97526666" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/97526666.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/69610326" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/69610326.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/57835716" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/57835716.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/23431858" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/23431858.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/744887" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/744887.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/7733560" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/7733560.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/78990927" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/78990927.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/1036974" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/1036974.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/19508728" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/19508728.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/47233801" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/47233801.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/21466326" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/21466326.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/21908319" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/21908319.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/42945701" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/42945701.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/73507661" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/73507661.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/76004142" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/76004142.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/34302287" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/34302287.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/21834870" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/21834870.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/82705573" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/82705573.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/61529473" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/61529473.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/19089195" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/19089195.jpg!half" />
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">准限制卡 Semi-Limited（限 2）&lt;/div>&lt;a href="https://ygocdb.com/card/74644400" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/74644400.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/31991800" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/31991800.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/38331564" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/38331564.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/88724332" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/88724332.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/68395509" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/68395509.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/73941492" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/73941492.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/31525442" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/31525442.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94982447" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94982447.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/60222213" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/60222213.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/99628747" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/99628747.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/87910978" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/87910978.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/75539614" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/75539614.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/47679935" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/47679935.jpg!half" />
+&lt;/a>&lt;/div>
+&lt;/details>
+&lt;h2 id="河马坏兽破坏轮打不过就跑">河马坏兽破坏轮打不过就跑&lt;/h2>
+&lt;p>然而该自爆还是能自爆。&lt;/p>
+&lt;details>
+&lt;summary>卡组构筑&lt;/summary>
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1yL411P7sV" target="_blank" rel="noopener noreferrer">全 NR 一言不合就自爆&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/19665973" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/19665973.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/19665973" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/19665973.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/19665973" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/19665973.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/41440148" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/41440148.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/48770333" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/48770333.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/48770333" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/48770333.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/48770333" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/48770333.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/63941210" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/63941210.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/63941210" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/63941210.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/63941210" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/63941210.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/7733560" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/7733560.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/87910978" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/87910978.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/87910978" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/87910978.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/9720537" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/9720537.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/9720537" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/9720537.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/9720537" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/9720537.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/90263923" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/90263923.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/90263923" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/90263923.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/90263923" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/90263923.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/33904024" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/33904024.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/33904024" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/33904024.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/33904024" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/33904024.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/58199906" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/58199906.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/58199906" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/58199906.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/58199906" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/58199906.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/18027138" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/18027138.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/18027138" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/18027138.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/18027138" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/18027138.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/11050415" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/11050415.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/11050415" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/11050415.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/11050415" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/11050415.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/83555666" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/83555666.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/83555666" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/83555666.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/83555666" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/83555666.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/67095270" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/67095270.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/67095270" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/67095270.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/67095270" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/67095270.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/92512625" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/92512625.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/92512625" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/92512625.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/92512625" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/92512625.jpg!half" />
+&lt;/a>&lt;/div>
+&lt;/details>
+&lt;dl>
+&lt;dt>A 方案&lt;/dt>
+&lt;dd>河马吸坏兽 ATK，拿回坏兽 A 上去&lt;/dd>
+&lt;/dl>
+&lt;ol>
+&lt;li>带了 6 只光坏兽（&lt;a href="https://www.ygocdb.com/card/48770333" target="_blank">&lt;b>雷击坏兽 雷鸣龙王&lt;/b>&lt;/a> &amp;amp; &lt;a href="https://www.ygocdb.com/card/63941210" target="_blank">&lt;b>坏星坏兽 席兹奇埃鲁&lt;/b>&lt;/a>）。&lt;/li>
+&lt;li>跳坏兽，发 &lt;a href="https://www.ygocdb.com/card/18027138" target="_blank">&lt;b>河马狂欢节&lt;/b>&lt;/a> / &lt;a href="https://www.ygocdb.com/card/11050415" target="_blank">&lt;b>超河马狂欢节&lt;/b>&lt;/a> 特召河马 token &lt;strong>攻击表示&lt;/strong>。&lt;/li>
+&lt;li>发 &lt;a href="https://www.ygocdb.com/card/90263923" target="_blank">&lt;b>闪光吸收&lt;/b>&lt;/a> 复制&lt;strong>光坏兽&lt;/strong>的攻击力。&lt;/li>
+&lt;li>用 &lt;a href="https://www.ygocdb.com/card/87910978" target="_blank">&lt;b>洗脑&lt;/b>&lt;/a> / &lt;a href="https://www.ygocdb.com/card/9720537" target="_blank">&lt;b>所有者的刻印&lt;/b>&lt;/a> 把坏兽拿回来，进战阶斩杀。&lt;/li>
+&lt;/ol>
+&lt;dl>
+&lt;dt>B 方案&lt;/dt>
+&lt;dd>时械神、次元壁、破坏轮削血&lt;/dd>
+&lt;/dl>
+&lt;ol>
+&lt;li>&lt;strong>空场&lt;/strong>特召 &lt;a href="https://www.ygocdb.com/card/7733560" target="_blank">&lt;b>时械神 米奇恩&lt;/b>&lt;/a> A 完烧&lt;strong>半血&lt;/strong>。&lt;/li>
+&lt;li>战阶发红坑 &lt;a href="https://www.ygocdb.com/card/67095270" target="_blank">&lt;b>次元壁&lt;/b>&lt;/a> / &lt;a href="https://www.ygocdb.com/card/83555666" target="_blank">&lt;b>破坏轮&lt;/b>&lt;/a> 解场 + 烧血。&lt;/li>
+&lt;/ol>
+&lt;dl>
+&lt;dt>C 方案&lt;/dt>
+&lt;dd>打不过，润了，速死下一把&lt;/dd>
+&lt;/dl>
+&lt;ol>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/58199906" target="_blank">&lt;b>电子融合支援&lt;/b>&lt;/a> 烧自己半血。&lt;/li>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/92512625" target="_blank">&lt;b>神之忠告&lt;/b>&lt;/a> 烧自己 3000 LP。&lt;/li>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/83555666" target="_blank">&lt;b>破坏轮&lt;/b>&lt;/a> 烧炸的怪兽攻击力。&lt;/li>
+&lt;li>河马直接撞坏兽。&lt;/li>
+&lt;/ol>
+&lt;h2 id="自称最强的威风链装">自称最强的威风链装&lt;/h2>
+&lt;details>
+&lt;summary>卡组构筑&lt;/summary>
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1Mq4y1v7og" target="_blank" rel="noopener noreferrer">全 NR 威风妖怪 炼装勇士&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/60473572" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/60473572.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/60473572" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/60473572.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/60473572" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/60473572.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/7868571" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/7868571.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/7868571" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/7868571.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/33256280" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/33256280.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/33256280" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/33256280.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/33256280" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/33256280.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/69351984" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/69351984.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/69351984" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/69351984.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/69351984" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/69351984.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/18716735" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/18716735.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/18716735" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/18716735.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/18716735" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/18716735.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/5506791" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/5506791.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/5506791" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/5506791.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/5506791" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/5506791.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/31991800" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/31991800.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/31991800" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/31991800.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94784213" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94784213.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94784213" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94784213.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94784213" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94784213.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/645794" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/645794.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/645794" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/645794.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/645794" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/645794.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/10117149" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/10117149.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/10024317" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/10024317.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/10024317" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/10024317.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/10024317" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/10024317.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/58549532" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/58549532.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/76473843" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/76473843.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/39564736" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/39564736.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/36183881" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/36183881.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/36183881" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/36183881.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/36183881" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/36183881.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/33327029" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/33327029.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/2572890" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/2572890.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/2572890" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/2572890.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/78949372" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/78949372.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/69711728" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/69711728.jpg!half" />
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/81612598" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/81612598.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/4688231" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/4688231.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/4688231" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/4688231.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/4688231" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/4688231.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/28016193" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/28016193.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/28016193" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/28016193.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/28016193" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/28016193.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/54401832" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/54401832.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/54401832" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/54401832.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50277355" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50277355.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50277355" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50277355.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/52119435" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/52119435.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/52119435" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/52119435.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/61728808" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/61728808.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/61728808" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/61728808.jpg!half" />
+&lt;/a>&lt;/div>
+&lt;/details>
+&lt;h2 id="自称最强的复仇屠魔">自称最强的复仇屠魔&lt;/h2>
+&lt;details>
+&lt;summary>卡组构筑&lt;/summary>
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1Yb4y1p7zk" target="_blank" rel="noopener noreferrer">全 NR 不知火 复仇死者&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/70491682" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/70491682.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/67267333" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/67267333.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/67267333" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/67267333.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/79783880" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/79783880.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/95492061" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/95492061.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/95492061" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/95492061.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/95492061" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/95492061.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/99423156" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/99423156.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/99423156" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/99423156.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/99423156" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/99423156.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/35818851" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/35818851.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/68989981" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/68989981.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/68989981" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/68989981.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/68989981" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/68989981.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/31772684" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/31772684.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/31772684" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/31772684.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/31772684" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/31772684.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/41562624" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/41562624.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/41562624" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/41562624.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/41562624" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/41562624.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/36016907" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/36016907.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/36016907" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/36016907.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/4388680" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/4388680.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/4388680" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/4388680.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/4388680" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/4388680.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/76871889" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/76871889.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/76871889" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/76871889.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94666032" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94666032.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94666032" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94666032.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94666032" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94666032.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/7986397" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/7986397.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/7986397" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/7986397.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/7986397" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/7986397.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/76798740" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/76798740.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/76798740" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/76798740.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/76798740" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/76798740.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/13965201" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/13965201.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/13965201" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/13965201.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/13965201" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/13965201.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/2287848" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/2287848.jpg!half" />
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/26326541" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/26326541.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/57288064" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/57288064.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/57288064" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/57288064.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/28240337" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/28240337.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/28240337" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/28240337.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/52711246" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/52711246.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/52711246" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/52711246.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/64554883" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/64554883.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/64689404" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/64689404.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/45742626" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/45742626.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50277355" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50277355.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50277355" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50277355.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50277355" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50277355.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/52119435" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/52119435.jpg!half" />
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/98978921" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/98978921.jpg!half" />
+&lt;/a>&lt;/div>
+&lt;/details>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">复仇死者&lt;/th>
+&lt;th style="text-align:center">效果&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/70491682" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/dark.png" alt="YGO Card Attribute of复仇死者·阿尼玛" />复仇死者·阿尼玛&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：墓效：除外自己回收 1 张除外的本家怪兽&lt;br/>②：作为仪式素材：战破直接除外&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/67267333" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/dark.png" alt="YGO Card Attribute of复仇死者·地狱犬" />复仇死者·地狱犬&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：墓效：丢 1 苏生&lt;br/>②：作为仪式素材：二速除外 1 张魔陷（取对象）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/31772684" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/dark.png" alt="YGO Card Attribute of复仇死者·归来者" />复仇死者·归来者&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：被破坏复生 1 次&lt;br/>②：作为仪式素材：二速除外 1 只怪兽（取对象）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/dark.png" alt="YGO Card Attribute of归魂复仇死者·屠魔侠" />归魂复仇死者·屠魔侠&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">2400 打点&lt;br/>①：伤判时除外墓地 1 只不死族上升 300 ATK&lt;br/>②：进墓检索 1 张仪式魔法，从卡组堆墓 1 只本家怪兽&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/76871889" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of复仇死者之夜" />复仇死者之夜&lt;img src="https://ews.ink/icons/ygo/cd.png" alt="YGO Card Icon of 复仇死者之夜" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：主要阶段丢 1 张手卡检索 1 只本家怪兽&lt;br/>②：本家怪兽战破后除外墓地 1 只本家怪兽可以继续连击&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/76798740" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of复仇死者的突击" />复仇死者的突击&lt;img src="https://ews.ink/icons/ygo/sg.png" alt="YGO Card Icon of 复仇死者的突击" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">从手卡 / 场上送墓 1 只不死族&lt;br/>从卡组拉出 1 只本家怪兽&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/94666032" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of归魂复仇死者的诞生" />归魂复仇死者的诞生&lt;img src="https://ews.ink/icons/ygo/ys.png" alt="YGO Card Icon of 归魂复仇死者的诞生" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：可以除外墓地仪式召唤手卡和墓地的仪式怪兽&lt;br/>②：墓效：除外自己给屠魔侠代破，&lt;strong>没有一回合一次&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/7986397" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of归魂复仇死者的爆诞" />归魂复仇死者的爆诞&lt;img src="https://ews.ink/icons/ygo/ys.png" alt="YGO Card Icon of 归魂复仇死者的爆诞" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">可以从卡组堆墓 1 只本家怪兽仪式召唤手卡和墓地的仪式怪兽&lt;br/>自肃：这个效果召唤的屠魔侠只有 2 回合寿命&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-trap">&lt;a href="https://www.ygocdb.com/card/2287848" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/trap.png" alt="YGO Card Attribute of复仇死者的移魂再诞" />复仇死者的移魂再诞&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：丢 1 张手卡苏生墓地 1 只本家怪兽&lt;br/>回收墓地 1 张仪式魔法&lt;br/>②：墓效：除外自己，回收 5 张除外的不死族&lt;br/>加入卡组洗切，抽 1&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">不知火&lt;/th>
+&lt;th style="text-align:center">效果&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/79783880" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/fire.png" alt="YGO Card Attribute of逢魔之妖刀-不知火" />逢魔之妖刀-不知火&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">解放自己从除外区特召 2 只不死族（怪兽效果无效化）&lt;br/>自肃：本回合只能特召不死族&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/99423156" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/fire.png" alt="YGO Card Attribute of不知火的宫司" />不知火的宫司&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：战吼：从手卡 / 墓地特召 1 只本家怪兽&lt;br/>②：被除外炸 对面 1 张表侧卡（取对象）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/35818851" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/fire.png" alt="YGO Card Attribute of不知火的武士" />不知火的武士&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：二速除外墓地 1 只不死族，伤害判定后除外交战目标&lt;br/>②：被除外回收墓地 1 张本家怪兽加入手卡&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/41562624" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/fire.png" alt="YGO Card Attribute of不知火的武部" />不知火的武部&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：战吼：从手卡 / 卡组特召 1 只本家怪兽&lt;br/>自肃：本回合只能特召不死族&lt;br/>②：被除外抽 1 丢 1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/26326541" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/fire.png" alt="YGO Card Attribute of业神-不知火" />业神-不知火&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：战吼：转防 / 转攻场上 1 只怪（取对象）&lt;br/>②：被除外特召 1 只 1 星 token&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/57288064" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/fire.png" alt="YGO Card Attribute of刀神-不知火" />刀神-不知火&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：每回合二速回收除外的 1 只不死族&lt;br/>对方 ATK 没有那只怪高的怪兽全部转防&lt;br/>②：被除外点名对面 1 只怪 - 500 ATK&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/52711246" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/fire.png" alt="YGO Card Attribute of妖神-不知火" />妖神-不知火&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">每回合除外场上 / 墓地 1 只怪兽，根据除外怪兽的属性：&lt;br>不死族：己方怪兽 + 300 ATK&lt;br>炎属性：炸 1 张魔陷&lt;br>同调：炸 1 只怪兽&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/13965201" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of逢华妖丽谭-不知火语" />逢华妖丽谭-不知火语&lt;img src="https://ews.ink/icons/ygo/sg.png" alt="YGO Card Icon of 逢华妖丽谭-不知火语" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">丢 1 只不死族，从卡组 / 墓地特召 1 只本家怪兽&lt;br/>对方场上有怪才能发动，特召的本家怪兽不能和 cost 同名&lt;br/>自肃：本回合只能特召不死族&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="英雄">英雄&lt;/h2>
+&lt;details>
+&lt;summary>卡组构筑&lt;/summary>
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1LY411n7oN" target="_blank" rel="noopener noreferrer">全 NR 融合 英雄&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/20721928" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/20721928.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/20721928" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/20721928.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/81570454" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/81570454.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/81570454" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/81570454.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50304345" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50304345.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50304345" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50304345.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50304345" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50304345.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/86188410" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/86188410.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/86188410" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/86188410.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/63060238" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/63060238.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/63060238" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/63060238.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/63060238" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/63060238.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/58346901" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/58346901.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/89252153" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/89252153.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/59793705" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/59793705.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/59793705" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/59793705.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/24094653" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/24094653.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/24094653" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/24094653.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/24094653" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/24094653.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/45906428" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/45906428.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/17194258" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/17194258.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/11881272" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/11881272.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/11881272" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/11881272.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/37478723" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/37478723.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/37478723" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/37478723.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/63035430" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/63035430.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/5318639" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/5318639.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/5318639" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/5318639.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/5318639" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/5318639.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94192409" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94192409.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94192409" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94192409.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/94192409" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/94192409.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/38761908" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/38761908.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/38761908" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/38761908.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/38761908" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/38761908.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/41440817" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/41440817.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/41440817" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/41440817.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/84298614" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/84298614.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/84298614" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/84298614.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/84298614" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/84298614.jpg!half" />
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/81003500" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/81003500.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/41517968" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/41517968.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/10526791" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/10526791.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/10526791" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/10526791.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/60493189" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/60493189.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/60493189" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/60493189.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/40251688" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/40251688.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/51735257" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/51735257.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/80796456" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/80796456.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/1948619" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/1948619.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/50277355" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/50277355.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/19324993" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/19324993.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/19324993" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/19324993.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/49725936" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/49725936.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/63813056" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/63813056.jpg!half" />
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/18114794" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/18114794.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/14087893" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/14087893.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/53582587" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/53582587.jpg!half" />
+&lt;/a>&lt;a href="https://ygocdb.com/card/59123194" target="_blank">
+&lt;img src="https://cdn.233.momobako.com/ygopro/pics/59123194.jpg!half" />
+&lt;/a>&lt;/div>
+&lt;/details>
 &lt;h2 id="三形金字塔">三形金字塔&lt;/h2>
 &lt;details>
 &lt;summary>卡组构筑&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://ews.ink/game/yu_gi_oh-triamid/" target="_blank" rel="noopener noreferrer">全 NR 三形金字塔&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44440058" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://ews.ink/game/yu_gi_oh-triamid/" target="_blank" rel="noopener noreferrer">全 NR 三形金字塔&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44440058" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/44440058.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/48519867" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/48519867.jpg!half" />
@@ -1213,7 +1927,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/96100333.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/96100333" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/96100333.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/70913714" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/70913714" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/70913714.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/64880894" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/64880894.jpg!half" />
@@ -1249,7 +1963,7 @@
 &lt;h2 id="无限起动-龙影神">无限起动 龙影神&lt;/h2>
 &lt;details>
 &lt;summary>卡组构筑&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://www.bilibili.com/video/BV1BL411A7m7" target="_blank" rel="noopener noreferrer">全 NR 无限起动 龙影神&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/35645105" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1BL411A7m7" target="_blank" rel="noopener noreferrer">全 NR 无限起动 龙影神&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/35645105" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/35645105.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/35645105" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/35645105.jpg!half" />
@@ -1329,7 +2043,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/2371506.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/2371506" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/2371506.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/51735257" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/51735257" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/51735257.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/60195675" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/60195675.jpg!half" />
@@ -1359,7 +2073,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/62541668.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23689428" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23689428.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/34492631" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/34492631" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/34492631.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/4334811" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/4334811.jpg!half" />
@@ -1437,7 +2151,7 @@
 &lt;h2 id="暗黑界-未界域-龙影神">暗黑界 未界域 龙影神&lt;/h2>
 &lt;details>
 &lt;summary>卡组构筑&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://www.bilibili.com/video/BV1qL4y1T7Kq" target="_blank" rel="noopener noreferrer">全 NR 暗黑界 未界域 龙影神&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/7623640" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1qL4y1T7Kq" target="_blank" rel="noopener noreferrer">全 NR 暗黑界 未界域 龙影神&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/7623640" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/7623640.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/7623640" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/7623640.jpg!half" />
@@ -1517,7 +2231,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/15083304.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/15083304" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/15083304.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/11411223" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/11411223" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/11411223.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/80796456" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/80796456.jpg!half" />
@@ -1685,37 +2399,49 @@
 &lt;blockquote>
 &lt;p>考虑做成一个前端网站。这里临时用 JS 做可行性验证，到时候还是用 TS 写。&lt;/p>
 &lt;/blockquote>
+&lt;details>
+&lt;summary>Todo List&lt;/summary>
 &lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>卡组格式转换 ydk ygm 等，类似 &lt;a href="https://www.ygo-sem.cn/yrp/deck.aspx">ydk 和 ygm 转换&lt;/a>&lt;/del>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 从录像文件 &lt;code>.yrp&lt;/code> 中提取卡组信息，类似「&lt;a href="http://deck.ourygo.top/yrp/parse.html">ourygo 的&lt;/a>」和「&lt;a href="https://www.ygo-sem.cn/yrp/">ygo-sem 的&lt;/a>」&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>展现卡图，类似 &lt;a href="http://deck.ourygo.top/ydk/show.html?ygotype=deck&amp;amp;v=1&amp;amp;d=FNhefVLXC2RMpY_w-43iOvy2SnXARcGDa4Gf-WWVKlHxmGQN9gbi5Y-FDdvkNIpufUXGkPmlV3n70HzV3OV58le_LRnThgSJlIImmKZAMuPJSqBUEax8yF1rIQy7GidRET65azdhGIVy2w4rI9b5cwTxrZ5JsWGN-uRnxrXZ0jdujdvkOJ9zVDCtMtezkT-6CuKtQso-yA">这样&lt;/a> 和 &lt;a href="https://srv.koishi.pro/deck.html">这样&lt;/a>&lt;/del>&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;del>点击卡组中的单卡跳转卡查页面&lt;/del>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 不用 jq（我不想）实现鼠标浮（hover）在单卡上弹出悬浮对话框显示卡片详情&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 批量转换卡名，支持切换中文、日文、英文，可部分选中，也提供一键复制按钮&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 在线编辑卡组，类似 YGOPro 编辑卡组功能（或许可以用 godot 写成桌面端？）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 原来做 &lt;a href="https://www.duellinksmeta.com/">DLM&lt;/a> 的现在做 MD 了（MDM）：「&lt;a href="https://www.masterduelmeta.com/deck-tester">Master Duel Meta - Deck Builder&lt;/a>」&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 当然可以做爬虫，但有现成的可以抄，试着&lt;a href="https://zhuanlan.zhihu.com/p/344885804">抄现成&lt;/a>：
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 卡组格式转换 ydk ygm 等，类似「&lt;a href="https://www.ygo-sem.cn/yrp/deck.aspx">YGO-Engine 的 ydk 和 ygm 转换&lt;/a>」&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 从录像文件 &lt;code>.yrp&lt;/code> 中提取卡组信息，类似「&lt;a href="http://deck.ourygo.top/yrp/parse.html">OURYGO 的&lt;/a>」和「&lt;a href="https://www.ygo-sem.cn/yrp/">YGO-Engine 的&lt;/a>」&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 展现卡图，类似「&lt;a href="http://deck.ourygo.top/ydk/show.html?ygotype=deck&amp;amp;v=1&amp;amp;d=FNhefVLXC2RMpY_w-43iOvy2SnXARcGDa4Gf-WWVKlHxmGQN9gbi5Y-FDdvkNIpufUXGkPmlV3n70HzV3OV58le_LRnThgSJlIImmKZAMuPJSqBUEax8yF1rIQy7GidRET65azdhGIVy2w4rI9b5cwTxrZ5JsWGN-uRnxrXZ0jdujdvkOJ9zVDCtMtezkT-6CuKtQso-yA">OURYGO 的&lt;/a>」和「&lt;a href="https://srv.koishi.pro/deck.html?name=%E7%94%B5%E5%AD%90%E9%BE%99.ydk&amp;amp;deck=4w1Sq5PWsaO2O23c11pO517NvTO7O71qd0TOAOA05HU0OD4KwknOFOF1oVbeOIOI2uCys0GwcjOM1sVqyOP17GijOS1P08S1s97AOV6hJdr4wGPtOYOY4gZM6ObOb1mVXY6LcrE0mWPaO06jJ8o66oC26V9WtOk5oYx16ykXJ5iRno0oL5x4UqN4Oq3l2Sc3cJ2M4fAu57GNDt5RmycOh25wlBOy6LPxTOS1clPwQ125Npbp7FrNhQ15Q152eeqLQ18Q180T5IH">Koishi 的&lt;/a>」&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 点击卡组中的单卡跳转卡查页面&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;del>不用 jq（我不想）实现鼠标浮（hover）在单卡上弹出悬浮对话框显示卡片详情&lt;/del>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;del>在线编辑卡组，类似 YGOPro 编辑卡组功能（或许可以用 godot 写成桌面端？）&lt;/del>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 原来做 &lt;a href="https://www.duellinksmeta.com/">DLM&lt;/a> 的现在做 MD 了（MDM）：「&lt;a href="https://www.masterduelmeta.com/deck-tester">Master Duel Meta - Deck Builder&lt;/a>」&lt;br>
+完美实现我想要的所有需求（从录像提取卡组除外，待实现）&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;del>获取 MDM 的卡组，当然可以做爬虫，但有现成的可以抄，试着抄现成&lt;/del>：
 &lt;ol>
-&lt;li>&lt;a href="https://www.bilibili.com/read/cv15370306">拓王神 组卡器 2.2 - 对应 MD 1.02&lt;/a>&lt;/li>
+&lt;li>逆向目标：&lt;a href="https://www.bilibili.com/read/cv15370306">拓王神 组卡器 2.2 - 对应 MD 1.02&lt;/a> 里的 &lt;code>masterduelmeta导出卡组.exe&lt;/code>&lt;/li>
 &lt;li>&lt;a href="https://github.com/extremecoders-re/pyinstxtractor">pyinstxtractor&lt;/a> 把 &lt;code>.exe&lt;/code> 反编译成 &lt;code>.pyc&lt;/code>&lt;/li>
-&lt;li>&lt;a href="https://github.com/rocky/python-uncompyle6">uncompyle6&lt;/a> 把 &lt;code>.pyc&lt;/code> 反编译成 &lt;code>.py&lt;/code> 源文件&lt;/li>
-&lt;li>&lt;code>https://www.masterduelmeta.com/saved-decks/6237f1a9ae690ec75fa5257d&lt;/code>&lt;/li>
+&lt;li>由于每个 &lt;code>.pyc&lt;/code> 文件都有 magic head，pyinstaller 生成 exe 的时候会把 pyc 的 magic 部分去掉，所以在反编译的时候需要自己补齐&lt;/li>
+&lt;li>通过 &lt;code>struct&lt;/code> 文件获取前 4 个字节（Python 编译的版本），加上 &lt;code>00 00 00 00&lt;/code> 4 个字节（本来应该是时间戳，不重要）组成 magic head&lt;/li>
+&lt;li>通过 &lt;a href="http://www.x-ways.net/winhex/">WinHex&lt;/a> 或者 &lt;a href="https://hexed.it/">hexed.it&lt;/a> 等工具把 magic head 重新写入 &lt;code>.pyc&lt;/code> 文件开头&lt;/li>
+&lt;li>发现 pyinstxtractor 生成 &lt;code>.pyc&lt;/code> 的已经是还原了 magic head 后的版本了，&lt;del>我就是过期资料的受害者&lt;/del>&lt;/li>
+&lt;li>&lt;a href="https://tool.lu/pyc/">在线反编译 pyc&lt;/a> 或者 &lt;a href="https://github.com/rocky/python-uncompyle6">uncompyle6&lt;/a>（不支持 Python 3.9 及以上，之前重装过电脑上只有 3.10，我还专门去装了个 3.8.6）把 &lt;code>.pyc&lt;/code> / &lt;code>.pyo&lt;/code> 反编译成 &lt;code>.py&lt;/code> 源文件&lt;/li>
+&lt;li>失败，原因不明。到目前为止沉没的时间成本已经够多了，该及时止损了，打住打住&lt;/li>
 &lt;/ol>
 &lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 自己写爬虫
+&lt;ol>
+&lt;li>本来应该用异步请求库 &lt;a href="https://docs.aiohttp.org/en/stable/">aiohttp&lt;/a>，但没有大规模用途，临时用 &lt;a href="https://docs.python-requests.org/zh_CN/latest/">requests&lt;/a> 就够了&lt;/li>
+&lt;li>DLM 的反爬做得可以啊，赞叹（你以前不是爬过吗&lt;del>什么记忆只有 7 秒的弱智金鱼&lt;/del>），静态网页只有 &lt;code>&amp;lt;a class=&amp;quot;image-wrapper svelte-152ds40 card-image-loading&amp;quot; /a&amp;gt;&lt;/code> 的占位符，具体内容后续动态加载，进一步使用 &lt;a href="https://www.selenium.dev/documentation/">Selenium&lt;/a> + &lt;a href="https://phantomjs.org/download.html">PhantomJS&lt;/a> 模拟浏览器加载 JS&lt;/li>
+&lt;li>获得的 HTML 用 &lt;a href="https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/">Beautiful Soup 4&lt;/a>（以及 &lt;a href="https://lxml.de/">lxml&lt;/a> 提高效率）解析&lt;/li>
+&lt;li>还原卡名，&lt;code>from urllib.parse import unquote&lt;/code> 解码 url 编码&lt;/li>
+&lt;li>卡片数据以前我是去 YGOPro 偷的根目录下的 &lt;code>card.cdb&lt;/code>（sqlite3），现在正好手上一堆 MD 相关工具，基本人手一个转换好的 &lt;code>cards.json&lt;/code>，直接用现成的了&lt;/li>
+&lt;li>妈的优化做多了有点入脑了，老是满脑子效率，魔怔了属于是。随便写个脚本难道还能有百万吞吐？真的怪。直接 &lt;code>json.loads(file.read())&lt;/code> 读成字典暴力遍历就完事了&lt;/li>
+&lt;li>搞定，输入 MDM 网址，输出 ydk 格式卡组代码&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 顺手把批量转换卡名写了，支持将整个卡组切换为中文名、日文名、英文名&lt;br>
+&lt;del>可部分选中，也提供一键复制按钮&lt;/del> 用脚本写的不考虑人机交互&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 爽到，从现在开始可以一行命令把 &lt;code>masterduelmeta.com&lt;/code> 的卡组抄到博客来了&lt;br>
+最后还是重复造轮子了？&lt;br>
+没有哦，&lt;code>masterduelmeta导出卡组.exe&lt;/code> 这个工具只能导出卡组，对其他格式毫无办法&lt;br>
+而我有导出任何卡组的需求，比如《&lt;a href="https://ews.ink/game/yu_gi_oh-n-and-r-deck/" target="_blank">「NR 杯」卡组构筑&lt;/a>》里用到的 &lt;a href="https://www.masterduelmeta.com/articles/news/march-2022/nr-festival-banlist">NR 杯禁限卡表&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="p">$&lt;/span> &lt;span class="n">python&lt;/span> &lt;span class="n">pyinstxtractor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">py&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">py&lt;/span>
-&lt;span class="p">$&lt;/span> &lt;span class="n">pip&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="n">uncompyle6&lt;/span>
-&lt;span class="p">$&lt;/span> &lt;span class="n">uncompyle6&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pyc&lt;/span> &lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">py&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="ydk-卡组代码">ydk 卡组代码&lt;/h2>
+&lt;/details>
+&lt;h2 id="ydk-卡组代码">ydk 卡组代码&lt;/h2>
 &lt;p>众所周知，广为流传的 &lt;code>.ydk&lt;/code> 格式简单易懂：&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>#main&lt;/code> 后面 - 主卡组&lt;/li>
@@ -1751,7 +2477,7 @@
 &lt;p>感谢 Hugo 强大的 &lt;a href="https://gohugo.io/templates/shortcode-templates/#custom-shortcode-examples">shortcode 功能&lt;/a> 支持高度客制化玩法，允许我轻松实现下面的呈现效果。&lt;br>
 卡查用的 &lt;a href="https://www.ygocdb.com/">百鸽&lt;/a>；卡图来自 &lt;code>momobako.com&lt;/code> 这个域名的 CDN（由知乎用户 &lt;a href="https://www.zhihu.com/people/nanahira">Nanahira&lt;/a> 提供）。&lt;/p>
 &lt;/blockquote>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">白龙卡组&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/71039903" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">白龙卡组&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/71039903" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/71039903.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/71039903" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/71039903.jpg!half" />
@@ -1775,7 +2501,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24094653.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/21082832" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/21082832.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/2129638" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/2129638" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/2129638.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/56532353" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/56532353.jpg!half" />
@@ -1787,7 +2513,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/40908371.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/40908371" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/40908371.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/20654247" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/20654247" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20654247.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/43228023" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/43228023.jpg!half" />
@@ -2415,7 +3141,7 @@
 取对象炸 1 只攻击力小于自己的怪兽，连接素材有黑怪的话还扣炸掉怪兽一半 ATK 的血&lt;/li>
 &lt;/ul>
 &lt;h2 id="示例构筑">示例构筑&lt;/h2>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">全 NR 三形金字塔&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44440058" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">全 NR 三形金字塔&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44440058" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/44440058.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/48519867" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/48519867.jpg!half" />
@@ -2495,7 +3221,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/96100333.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/96100333" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/96100333.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/70913714" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/70913714" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/70913714.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/64880894" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/64880894.jpg!half" />
@@ -3192,13 +3918,13 @@ A 站文章区风气这里不讨论，总归是自成风景；&lt;br>
 &lt;/span>&lt;/p>
 &lt;details open="open">
 &lt;summary>悲报：2022.3.13 森蚺 1 → 0&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">无敌的红爹&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/46986414" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">无敌的红爹&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/46986414" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/46986414.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/74677422" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/74677422.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/6172122" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/6172122.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/37818794" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/37818794" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/37818794.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
@@ -3367,7 +4093,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;li>&lt;a href="https://www.ygocdb.com/card/93854893">&lt;strong>宵星之机神 丁吉尔苏&lt;/strong>&lt;/a> R8 战吼&lt;ruby>&lt;rb>&lt;strong>不取对象&lt;/strong>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>吊打黄金卿&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>送墓（不是破坏），拔素材保护破坏&lt;/li>
 &lt;/ul>
 &lt;h2 id="示例卡组">示例卡组&lt;/h2>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://www.bilibili.com/video/BV1Zq4y187YL" target="_blank" rel="noopener noreferrer">龙女仆&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1Zq4y187YL" target="_blank" rel="noopener noreferrer">龙女仆&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -3447,7 +4173,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/36975314.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/77515704" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/77515704.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/41232647" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/41232647" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/41232647.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/41232647" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/41232647.jpg!half" />
@@ -3753,7 +4479,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;h2 id="示例构筑">示例构筑&lt;/h2>
 &lt;details open="open">
 &lt;summary>十二国&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">黄金国 十二国&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">黄金国 十二国&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/49036338.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/94145021" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/94145021.jpg!half" />
@@ -3843,7 +4569,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20590515.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/20590515" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20590515.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/74586817" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/74586817" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/74586817.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/50954680" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/50954680.jpg!half" />
@@ -3877,7 +4603,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;/details>
 &lt;details>
 &lt;summary>超融合 纯国&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">黄金国 纯国&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">黄金国 纯国&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/49036338.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -3967,7 +4693,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20590515.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/20590515" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20590515.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/95793022" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/95793022" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/95793022.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/74889525" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/74889525.jpg!half" />
@@ -4001,7 +4727,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;/details>
 &lt;details>
 &lt;summary>教导国&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">黄金国 教导国&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">黄金国 教导国&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -4091,7 +4817,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20590515.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/20590515" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20590515.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/80532587" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/80532587" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/80532587.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/41373230" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/41373230.jpg!half" />
@@ -4125,7 +4851,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;/details>
 &lt;details>
 &lt;summary>教导国 40 卡&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">黄金国 40 卡 教导国&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">黄金国 40 卡 教导国&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/49036338.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/94145021" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/94145021.jpg!half" />
@@ -4205,7 +4931,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20590515.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/20590515" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20590515.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/80532587" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/80532587" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/80532587.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/41373230" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/41373230.jpg!half" />
@@ -4464,7 +5190,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">泛用手坑&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">泛用手坑&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/14558127" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/14558127.jpg!half" />
@@ -4476,7 +5202,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/97268402.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/10045474" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/10045474.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/34267821" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/34267821" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/34267821.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24508238.jpg!half" />
@@ -4484,7 +5210,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img class="sticker" style="width: 46px; height: 69.391px; margin: 2px; border: 3px solid black; " />
 &lt;/a>&lt;a href="https://ygocdb.com/card/44155002" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/44155002.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/94145021" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/94145021" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/94145021.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/73642296" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/73642296.jpg!half" />
@@ -4525,7 +5251,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;h2 id="示例构筑">示例构筑&lt;/h2>
 &lt;details open="open">
 &lt;summary>纯本家毛毛&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://www.bilibili.com/video/BV1cu411d7o2?t=470.9" target="_blank" rel="noopener noreferrer">纯童话动物&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1cu411d7o2?t=470.9" target="_blank" rel="noopener noreferrer">纯童话动物&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24508238.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/82888408" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/82888408.jpg!half" />
@@ -4605,7 +5331,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/82134632.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/40975243" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/40975243.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44155002" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44155002" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/44155002.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/79606837" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/79606837.jpg!half" />
@@ -4640,7 +5366,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;/details>
 &lt;details>
 &lt;summary>铁兽毛毛&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://www.bilibili.com/video/BV1cu411d7o2?t=481.4" target="_blank" rel="noopener noreferrer">铁兽战线 童话动物&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/video/BV1cu411d7o2?t=481.4" target="_blank" rel="noopener noreferrer">铁兽战线 童话动物&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24508238.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/14816857" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/14816857.jpg!half" />
@@ -4720,7 +5446,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/96378317.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/40975243" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/40975243.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44155002" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44155002" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/44155002.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/79606837" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/79606837.jpg!half" />
@@ -4860,7 +5586,7 @@ end
 最终目标是每加一个连锁，脑中自动浮现出连锁结算完毕的场面，就算成熟的 YGO 玩家了。&lt;/p>
 &lt;p>刚开始有点懵也很正常，不用着急，一口也吃不成个胖子。&lt;br>
 总之就是多玩，打牌跟打架是一样的，多输多挨打，久了自然就会了。&lt;/p>
-&lt;p>连锁，很简单吧？好了，快去玩几把&lt;ruby>&lt;rb>试手&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>挨打&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>吧。&lt;/p></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/yu-gi-oh/">Yu-Gi-Oh</category><category domain="https://ews.ink/tags/%E8%BF%9E%E9%94%81/">连锁</category></item><item><title>《游戏王》常见泛用卡牌</title><link>https://ews.ink/game/yu_gi_oh-universal/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-universal/</guid><pubDate>Wed, 02 Feb 2022 15:06:15 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="效果怪兽">效果怪兽&lt;/h2>
+&lt;p>连锁，很简单吧？好了，快去玩几把&lt;ruby>&lt;rb>试手&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>挨打&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>吧。&lt;/p></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/yu-gi-oh/">Yu-Gi-Oh</category><category domain="https://ews.ink/tags/%E8%BF%9E%E9%94%81/">连锁</category></item><item><title>《游戏王》常见「泛用」卡牌</title><link>https://ews.ink/game/yu_gi_oh-universal/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-universal/</guid><pubDate>Wed, 02 Feb 2022 15:06:15 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="效果怪兽">效果怪兽&lt;/h2>
 &lt;h3 id="解场用">解场用&lt;/h3>
 &lt;h4 id="坏兽">坏兽&lt;/h4>
 &lt;p>包括海龟在内的各种&lt;a href="https://www.ygocdb.com/?search=%E5%9D%8F%E5%85%BD">&lt;strong>坏兽&lt;/strong>&lt;/a>：&lt;strong>解放&lt;/strong> &lt;strong>对方场上&lt;/strong> &lt;strong>任一&lt;/strong>怪兽在对方场上&lt;strong>攻击表示&lt;/strong>特殊召唤。&lt;br>
@@ -5084,7 +5810,7 @@ end
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/84211599" target="_blank">&lt;span class="ygo-card-text">
 &lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of金满而谦虚之壶" />金满而谦虚之壶&lt;/span>&lt;/a>&lt;/div>&lt;/td>
 &lt;td style="text-align:center">金谦壶&lt;/td>
-&lt;td style="text-align:center">除外 3 张或 6 张&lt;strong>额外&lt;/strong>，观星同等数量的卡，&lt;strong>抽 1&lt;/strong>，其余的卡沉底&lt;br/>自肃：本回合对方受到的伤害&lt;strong>减半&lt;/strong>（算好斩杀）&lt;/td>
+&lt;td style="text-align:center">除外 3 张或 6 张&lt;strong>额外&lt;/strong>，观星同等数量的卡&lt;br/>&lt;strong>抽 1&lt;/strong>，其余的卡沉底&lt;br/>自肃：本回合对方受到的伤害&lt;strong>减半&lt;/strong>（算好斩杀）&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5154,7 +5880,7 @@ end
 &lt;tr>
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/4064256" target="_blank">&lt;span class="ygo-card-text">
 &lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of不死世界" />不死世界&lt;img src="https://ews.ink/icons/ygo/cd.png" alt="YGO Card Icon of 不死世界" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
-&lt;td style="text-align:center">所有怪兽变成不死族&lt;/td>
+&lt;td style="text-align:center">所有怪兽变成不死族（一般搭配 &lt;a href="https://www.ygocdb.com/card/66570171" target="_blank">&lt;b>班西&lt;/b>&lt;/a> 保护）&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/76375976" target="_blank">&lt;span class="ygo-card-text">
@@ -5222,7 +5948,7 @@ end
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/48130397" target="_blank">&lt;span class="ygo-card-text">
 &lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of超融合" />超融合&lt;img src="https://ews.ink/icons/ygo/sg.png" alt="YGO Card Icon of 超融合" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
 &lt;td style="text-align:center">&lt;/td>
-&lt;td style="text-align:center">可以用对方场上的怪当融合素材&lt;br/>&lt;span style="color:red;">&lt;b>不会被康&lt;/b>&lt;/span>（不能被连锁，&lt;code>强制发动效果&lt;/code> 也不能连锁）&lt;br/>哪怕反击陷阱（三速）也不行，所以被戏称为「四速魔法」&lt;/td>
+&lt;td style="text-align:center">可以用对方场上的怪当融合素材&lt;br/>&lt;span style="color:red;">&lt;b>不会被康&lt;/b>&lt;/span>（不入连锁，&lt;code>强制发动效果&lt;/code> 也不能连锁它发动）&lt;br/>&lt;small>哪怕反击陷阱（三速）也不行，所以被戏称为「四速魔法」&lt;br/>然而并不能算真正的四速，因为&lt;br/>虽然它不会被别的卡连锁，但它也不能连锁三速的反击陷阱&lt;/small>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/24299458" target="_blank">&lt;span class="ygo-card-text">
@@ -5241,6 +5967,12 @@ end
 &lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of抹杀之指名者" />抹杀之指名者&lt;img src="https://ews.ink/icons/ygo/sg.png" alt="YGO Card Icon of 抹杀之指名者" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
 &lt;td style="text-align:center">剑指&lt;/td>
 &lt;td style="text-align:center">宣言一张卡除外，并无效同名卡片发的效果，直到本回合结束&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/14087893" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/spell.png" alt="YGO Card Attribute of月之书" />月之书&lt;img src="https://ews.ink/icons/ygo/sg.png" alt="YGO Card Icon of 月之书" />&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">月书&lt;/td>
+&lt;td style="text-align:center">二速盖 1 只怪，可攻可守&lt;br/>DL 里的白月光，人称钱之书。我抽出来 2 张，结果没玩了&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5267,6 +5999,16 @@ end
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-trap">&lt;a href="https://www.ygocdb.com/card/94192409" target="_blank">&lt;span class="ygo-card-text">
 &lt;img src="https://ews.ink/icons/ygo/trap.png" alt="YGO Card Attribute of强制脱出装置" />强制脱出装置&lt;/span>&lt;/a>&lt;/div>&lt;/td>
 &lt;td style="text-align:center">弹 1 只怪兽回手（取对象）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-trap">&lt;a href="https://www.ygocdb.com/card/41440817" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/trap.png" alt="YGO Card Attribute of心太炮式" />心太炮式&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">攻宣时弹 1 只怪兽回卡组（取对象）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;div class="ygo-card ygo-trap">&lt;a href="https://www.ygocdb.com/card/38761908" target="_blank">&lt;span class="ygo-card-text">
+&lt;img src="https://ews.ink/icons/ygo/trap.png" alt="YGO Card Attribute of伯吉斯异兽·高足杯虫" />伯吉斯异兽·高足杯虫&lt;/span>&lt;/a>&lt;/div>&lt;/td>
+&lt;td style="text-align:center">①：丢 1 张手卡除外场上 1 张卡（取对象，丢卡不是 cost）&lt;br/>②：墓效连锁陷阱发动，跳出来变成 2 星水属性通常怪兽&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-trap">&lt;a href="https://www.ygocdb.com/card/20899496" target="_blank">&lt;span class="ygo-card-text">
@@ -5485,6 +6227,22 @@ end
 &lt;table>
 &lt;thead>
 &lt;tr>
+&lt;th style="text-align:center">同调&lt;/th>
+&lt;th style="text-align:center">星级&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.ygocdb.com/card/30983281" target="_blank">&lt;b>加速同调星尘龙&lt;/b>&lt;/a>&lt;/td>
+&lt;td style="text-align:center">L8&lt;/td>
+&lt;td style="text-align:center">加速同调&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
 &lt;th style="text-align:center">连接&lt;/th>
 &lt;th style="text-align:center">LINK 值&lt;/th>
 &lt;th style="text-align:center">效果&lt;/th>
@@ -5662,7 +6420,7 @@ end
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/84815190" target="_blank">&lt;span class="ygo-card-text">
 &lt;img src="https://ews.ink/icons/ygo/wind.png" alt="YGO Card Attribute of鲜花女男爵" />鲜花女男爵&lt;/span>&lt;/a>&lt;/div>&lt;/td>
 &lt;td style="text-align:center">L10&lt;/td>
-&lt;td style="text-align:center">①：每回合无消耗炸 1 卡&lt;br/>②：每回合一康&lt;br/>③：二速跳回额外，苏生 1 只 9 星以下怪兽&lt;/td>
+&lt;td style="text-align:center">①：每回合免费炸 1 卡（取对象）&lt;br/>②：一生一次免费一康&lt;br/>（但是可以发 ③ 效果跳回额外重新调出来）&lt;br/>③：二速跳回额外，苏生 1 只 9 星以下怪兽&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5686,6 +6444,11 @@ end
 &lt;img src="https://ews.ink/icons/ygo/light.png" alt="YGO Card Attribute of未来No.0 未来龙皇 霍普" />未来No.0 未来龙皇 霍普&lt;/span>&lt;/a>&lt;/div>&lt;/td>
 &lt;td style="text-align:center">R1&lt;/td>
 &lt;td style="text-align:center">①：战斗 / 效果破坏抗性&lt;br/>②：拔素材康怪兽效果，康完牛过来&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.ygocdb.com/card/52653092" target="_blank">&lt;b>闪光 No.0 希望之异热同心&lt;/b>&lt;/a>&lt;/td>
+&lt;td style="text-align:center">R1&lt;/td>
+&lt;td style="text-align:center">用 3 只同阶级黑怪叠出，封锁效果&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/63504681" target="_blank">&lt;span class="ygo-card-text">
@@ -6103,7 +6866,7 @@ LL 铁后攻是很难突破，而且先攻吃到陨石是很难受的，陨石 /
 &lt;h2 id="示例构筑">示例构筑&lt;/h2>
 &lt;details open="open">
 &lt;summary>正常 LL 铁&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">LL 铁兽&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">LL 铁兽&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24508238.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/34550857" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/34550857.jpg!half" />
@@ -6183,7 +6946,7 @@ LL 铁后攻是很难突破，而且先攻吃到陨石是很难受的，陨石 /
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/10045474.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/40975243" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/40975243.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/65305468" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/65305468" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/65305468.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/8491961" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/8491961.jpg!half" />
@@ -6217,7 +6980,7 @@ LL 铁后攻是很难突破，而且先攻吃到陨石是很难受的，陨石 /
 &lt;/details>
 &lt;details>
 &lt;summary>不带抗战 LL 铁（不推荐）&lt;/summary>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-name">&lt;a href="https://www.bilibili.com/read/cv15083840" target="_blank" rel="noopener noreferrer">没抗战没大鸟的 LL 铁&lt;/a>&lt;/div>&lt;div class="ygo-deck-title">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/34550857" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">&lt;a href="https://www.bilibili.com/read/cv15083840" target="_blank" rel="noopener noreferrer">没抗战没大鸟的 LL 铁&lt;/a>&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/34550857" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/34550857.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/34550857" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/34550857.jpg!half" />
@@ -6301,7 +7064,7 @@ LL 铁后攻是很难突破，而且先攻吃到陨石是很难受的，陨石 /
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/10045474.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/10045474" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/10045474.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/65305468" target="_blank">
+&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/65305468" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/65305468.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/8491961" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/8491961.jpg!half" />
