@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Tue, 22 Mar 2022 22:20:37 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>《游戏王》有趣构筑记录</title><link>https://ews.ink/game/yu_gi_oh-interesting-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-interesting-deck/</guid><pubDate>Fri, 18 Mar 2022 09:11:33 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;details>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Wed, 23 Mar 2022 12:39:37 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>《游戏王》有趣构筑记录</title><link>https://ews.ink/game/yu_gi_oh-interesting-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-interesting-deck/</guid><pubDate>Fri, 18 Mar 2022 09:11:33 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;details>
 &lt;summary>战华（三国）&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">战华&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -1612,8 +1612,6 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/50277355.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/52119435" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/52119435.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-title ygo-deck-title-small">副卡组&lt;/div>&lt;a href="https://ygocdb.com/card/98978921" target="_blank">
-&lt;img src="https://cdn.233.momobako.com/ygopro/pics/98978921.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
 &lt;table>
@@ -1671,6 +1669,26 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;ol>
+&lt;li>本家仪式都可以从 手卡 / &lt;strong>墓地&lt;/strong> 仪式召唤 &lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;b>屠魔侠&lt;/b>&lt;/a>，区别在于：
+&lt;ul>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/7986397" target="_blank">&lt;b>爆诞&lt;/b>&lt;/a> 召唤的是临时的（只能站 2 回合），&lt;a href="https://www.ygocdb.com/card/94666032" target="_blank">&lt;b>诞生&lt;/b>&lt;/a> 才是永久的。&lt;/li>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/7986397" target="_blank">&lt;b>爆诞&lt;/b>&lt;/a> 可以从卡组用 1 只本家怪兽当素材，&lt;a href="https://www.ygocdb.com/card/94666032" target="_blank">&lt;b>诞生&lt;/b>&lt;/a> 只能老老实实从手卡 / 场上选素材。&lt;/li>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/7986397" target="_blank">&lt;b>爆诞&lt;/b>&lt;/a> 素材必须严格&lt;strong>等于&lt;/strong> 6 星（&lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;b>屠魔侠&lt;/b>&lt;/a> / &lt;a href="https://www.ygocdb.com/card/67267333" target="_blank">&lt;b>地狱犬&lt;/b>&lt;/a> × 2），&lt;a href="https://www.ygocdb.com/card/94666032" target="_blank">&lt;b>诞生&lt;/b>&lt;/a> 只要达到 6 星以上就行。&lt;/li>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/94666032" target="_blank">&lt;b>诞生&lt;/b>&lt;/a> 有墓效代破，而且没有「一回合一次」——墓地 3 张 &lt;a href="https://www.ygocdb.com/card/94666032" target="_blank">&lt;b>诞生&lt;/b>&lt;/a> 可以一回合代破 3 次。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>本家下级怪兽（贴 buff 的仪式素材）均限定为「使用&lt;strong>场上的&lt;/strong>这张卡仪式召唤」，也就是说用 &lt;a href="https://www.ygocdb.com/card/7986397" target="_blank">&lt;b>爆诞&lt;/b>&lt;/a> 从卡组拉 &lt;a href="https://www.ygocdb.com/card/67267333" target="_blank">&lt;b>地狱犬&lt;/b>&lt;/a> 出的 &lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;b>屠魔侠&lt;/b>&lt;/a> 是没有 &lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;b>地狱犬&lt;/b>&lt;/a> 给的「除外魔陷」效果的。&lt;/li>
+&lt;li>所以 &lt;a href="https://www.ygocdb.com/card/7986397" target="_blank">&lt;b>爆诞&lt;/b>&lt;/a> 的实际用法为：
+&lt;ol>
+&lt;li>堆墓卡组里 1 张 &lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;b>屠魔侠&lt;/b>&lt;/a> 苏生墓地里的 &lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;b>屠魔侠&lt;/b>&lt;/a>，墓地没有才用手里的。&lt;/li>
+&lt;li>堆墓卡组里 1 张 &lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;b>地狱犬&lt;/b>&lt;/a>，加手里 / 场上的 &lt;a href="https://www.ygocdb.com/card/79783880" target="_blank">&lt;b>逢魔之妖刀-不知火&lt;/b>&lt;/a> 等于 6 星。&lt;/li>
+&lt;li>用光 2 张 &lt;a href="https://www.ygocdb.com/card/4388680" target="_blank">&lt;b>地狱犬&lt;/b>&lt;/a>，出一只没有额外 buff 的 2 回合的临时大哥。很蠢，但也无可奈何。&lt;br>
+等 &lt;a href="https://www.ygocdb.com/card/7986397" target="_blank">&lt;b>爆诞&lt;/b>&lt;/a> 出的临时大哥寿命终结进墓发效果，检索 &lt;a href="https://www.ygocdb.com/card/94666032" target="_blank">&lt;b>诞生&lt;/b>&lt;/a> 上手，特召 1 只本家下级仪式素材，然后用 &lt;a href="https://www.ygocdb.com/card/94666032" target="_blank">&lt;b>诞生&lt;/b>&lt;/a> 苏生墓地的大哥，变成带 buff 效果的永久大哥。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>大哥摆在 1 / 3 / 5 位置比较好（便于吃 &lt;a href="https://www.ygocdb.com/card/50277355" target="_blank">&lt;b>绵羊&lt;/b>&lt;/a> 效果），推荐 5 / 3（避免卡到 &lt;a href="https://www.ygocdb.com/card/52119435" target="_blank">&lt;b>转晶&lt;/b>&lt;/a> 位置）。&lt;/li>
+&lt;/ol>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1687,7 +1705,7 @@
 &lt;tr>
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/99423156" target="_blank">&lt;span class="ygo-card-text">
 &lt;img src="https://ews.ink/icons/ygo/fire.png" alt="YGO Card Attribute of不知火的宫司" />不知火的宫司&lt;/span>&lt;/a>&lt;/div>&lt;/td>
-&lt;td style="text-align:center">①：战吼：从手卡 / 墓地特召 1 只本家怪兽&lt;br/>②：被除外炸 对面 1 张表侧卡（取对象）&lt;/td>
+&lt;td style="text-align:center">①：战吼：从手卡 / 墓地特召 1 只本家怪兽&lt;br/>②：被除外炸对面 1 张表侧卡（取对象）&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">&lt;div class="ygo-card ygo-monster">&lt;a href="https://www.ygocdb.com/card/35818851" target="_blank">&lt;span class="ygo-card-text">
@@ -1721,6 +1739,22 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;ol>
+&lt;li>加入 &lt;code>不知火&lt;/code> 轴要的是「除外时发的墓效」：
+&lt;ul>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/99423156" target="_blank">&lt;b>不知火的宫司&lt;/b>&lt;/a>（神官）：取对象炸 1 卡。&lt;/li>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/35818851" target="_blank">&lt;b>不知火的武士&lt;/b>&lt;/a>：回收墓地 1 张 &lt;code>不知火&lt;/code> 字段的怪兽。&lt;/li>
+&lt;li>&lt;a href="https://www.ygocdb.com/card/41562624" target="_blank">&lt;b>不知火的武部&lt;/b>&lt;/a>（弓道妹子）：抽 1 丢 1。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>别的就没啥了：
+&lt;ul>
+&lt;li>二速魔法（&lt;a href="https://www.ygocdb.com/card/13965201" target="_blank">&lt;b>逢华妖丽谭-不知火语&lt;/b>&lt;/a>）是堆墓 + 强大的特召点（卡组 / 墓地）。&lt;/li>
+&lt;li>妖刀（&lt;a href="https://www.ygocdb.com/card/79783880" target="_blank">&lt;b>逢魔之妖刀-不知火&lt;/b>&lt;/a>，3 星调整）是回收 2 张除外的怪兽。&lt;/li>
+&lt;li>额外就妖神（&lt;a href="https://www.ygocdb.com/card/52711246" target="_blank">&lt;b>妖神-不知火&lt;/b>&lt;/a>）比较好用，可以炸 1 魔陷 + 1 怪兽。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
 &lt;h2 id="英雄">英雄&lt;/h2>
 &lt;details>
 &lt;summary>卡组构筑&lt;/summary>
