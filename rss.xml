@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 25 Mar 2022 12:49:46 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>《游戏王》有趣构筑记录</title><link>https://ews.ink/game/yu_gi_oh-interesting-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-interesting-deck/</guid><pubDate>Fri, 18 Mar 2022 09:11:33 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;details>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 28 Mar 2022 15:38:08 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>《游戏王》有趣构筑记录</title><link>https://ews.ink/game/yu_gi_oh-interesting-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-interesting-deck/</guid><pubDate>Fri, 18 Mar 2022 09:11:33 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;details>
 &lt;summary>战华（三国）&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title ygo-deck-title-big">战华&lt;/div>&lt;div class="ygo-deck-title ygo-deck-title-small">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -1501,7 +1501,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/61728808.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;p>没玩过，碰到不少，也就那样。倒是纯炼装挂融合轴（&lt;a href="https://www.ygocdb.com/card/39564736" target="_blank">&lt;b>重炼装融合&lt;/b>&lt;/a>）比较恶心，被一个 挂着 &lt;a href="https://www.ygocdb.com/card/69711728" target="_blank">&lt;b>炼装联合&lt;/b>&lt;/a> 连融三只 &lt;a href="https://www.ygocdb.com/card/53262004" target="_blank">&lt;b>异色眼风雷龙&lt;/b>&lt;/a> 的打吐了，这强度就 NM 离谱，搁这打排名呢。&lt;/p>
+&lt;p>没玩过，碰到不少，也就那样。倒是纯炼装挂融合轴（&lt;a href="https://www.ygocdb.com/card/39564736" target="_blank">&lt;b>重炼装融合&lt;/b>&lt;/a>）比较恶心，被一个挂着 &lt;a href="https://www.ygocdb.com/card/69711728" target="_blank">&lt;b>炼装联合&lt;/b>&lt;/a> 连融三只 &lt;a href="https://www.ygocdb.com/card/53262004" target="_blank">&lt;b>异色眼风雷龙&lt;/b>&lt;/a> 的打吐了，这强度就 NM 离谱，搁这打排名呢。&lt;/p>
 &lt;h2 id="自称最强笑的复仇屠魔">自称最强（笑）的复仇屠魔&lt;/h2>
 &lt;div class="center">&lt;b>
 建议别组这套，还就那个上当。经常被各种 NR 主流（巨石、链装、真龙……）暴打。&lt;br/>
@@ -2966,7 +2966,7 @@
 &lt;/span>&lt;span class="cm"> */&lt;/span>
 &lt;span class="kr">const&lt;/span> &lt;span class="nx">bin2base64&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">binary&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="c1">// 补零 由于是二进制数直接转成 base64 编码 不存在进一步的冗余 所以不会出现 = 等号
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">binary&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">12&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nx">binary&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="s2">&amp;#34;0&amp;#34;&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">repeat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">binary&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">binary&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">12&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nx">binary&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="s2">&amp;#34;0&amp;#34;&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">repeat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">binary&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">));&lt;/span>
 &lt;span class="kr">const&lt;/span> &lt;span class="nx">base64&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
 &lt;span class="c1">// 懒得写 [A-Za-z0-9] 了 临时用自动生成顶顶
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// TODO 生产环境应该写死 以免每次运行都要遍历一遍(重新生成)
@@ -20876,7 +20876,8 @@ A：你都十三幺了哪还有给你抢的杠……只剩吃碰可以抢一抢�
 &lt;h3 id="纯正九莲宝灯门前清限定">纯正九莲宝灯（门前清限定）&lt;/h3>
 &lt;p>同一种数字牌 1112345678999 和其中任何一张数字牌&lt;/p>
 &lt;blockquote>
-&lt;p>普通九莲宝灯单和一张（凑成九莲宝灯），纯正九莲宝灯和九张中任何一张。&lt;/p>
+&lt;p>普通九莲宝灯单和一张（凑成九莲宝灯），纯正九莲宝灯和九张中任何一张。&lt;br>
+类似普通国与十三么。&lt;/p>
 &lt;/blockquote>
 &lt;div class="mahjong center" style="margin: 1rem 0; font-size: 2rem;">🀐🀐🀐🀑🀒🀓🀔🀕🀖🀗🀘🀘🀘&lt;span style="margin: 0 0.25rem;">和&lt;/span>🀕&lt;/div>
 &lt;blockquote>
@@ -20901,7 +20902,7 @@ A：你都十三幺了哪还有给你抢的杠……只剩吃碰可以抢一抢�
 &lt;del>当然你硬要追梦我也劝不住是吧。&lt;/del>&lt;/p>
 &lt;/blockquote>
 &lt;p>2021.3.19 补充：九种九牌为什么可以直接流局，是有它的道理的。&lt;br>
-如果概率高是个人都接着做国了，谁还会流？还有必要专门加一条允许流牌的规则吗？&lt;/p>
+如果概率高是个人都接着做国了，谁还会流？还有必要专门加一条允许流局的规则吗？&lt;/p>
 &lt;p>附国士无双概率表：&lt;/p>
 &lt;table>
 &lt;thead>
@@ -20960,8 +20961,8 @@ A：你都十三幺了哪还有给你抢的杠……只剩吃碰可以抢一抢�
 &lt;/table>
 &lt;blockquote>
 &lt;p>为什么十三幺听牌也有放铳概率啊？&lt;br>
-只许你十三幺，就不许别人也是十三幺？铳一色了解一下？&lt;br>
-结论：九种及以下直接下一把，十种可以追梦，十一种及以上建议不多 BB 直接国。&lt;/p>
+只许你做十三幺，就不许别人已经做好十三幺？铳一色了解一下？&lt;br>
+结论：九种直接下一把，十种可以追梦，十一种及以上建议不多 BB 直接国。&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="四家立直">四家立直&lt;/h3>
 &lt;p>四家全部宣告立直成功&lt;/p>
@@ -20970,7 +20971,7 @@ A：你都十三幺了哪还有给你抢的杠……只剩吃碰可以抢一抢�
 &lt;ol>
 &lt;li id="fn:1" role="doc-endnote">
 &lt;p>全套麻将牌的 emoji 出现在 emoji 版本 11.0 以及 Unicode 版本 5.1。&lt;br>
-（🀄 是出现在 emoji 版本 1.0。）&amp;#160;&lt;a href="https://ews.ink/game/mahjong-all/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+（🀄 是出现在 emoji 版本 1.0，作为「麻将」这个概念的代表。）&amp;#160;&lt;a href="https://ews.ink/game/mahjong-all/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/section></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/mahjong/">Mahjong</category></item><item><title>日麻新手入门简易指南</title><link>https://ews.ink/game/mahjong-new/</link><guid isPermaLink="true">https://ews.ink/game/mahjong-new/</guid><pubDate>Thu, 18 Mar 2021 22:47:20 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="牌种一览">牌种一览&lt;/h2>
