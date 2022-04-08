@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Fri, 08 Apr 2022 21:25:31 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Hugo 魔改 shortcode 显示麻将牌</title><link>https://ews.ink/tech/blog-shortcode-mahjong/</link><guid isPermaLink="true">https://ews.ink/tech/blog-shortcode-mahjong/</guid><pubDate>Sun, 20 Mar 2022 21:26:42 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="改造主题">改造主题&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sat, 09 Apr 2022 01:47:55 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Hugo 魔改 shortcode 显示麻将牌</title><link>https://ews.ink/tech/blog-shortcode-mahjong/</link><guid isPermaLink="true">https://ews.ink/tech/blog-shortcode-mahjong/</guid><pubDate>Sun, 20 Mar 2022 21:26:42 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="改造主题">改造主题&lt;/h2>
 &lt;p>一开始我就决定要 &lt;strong>可视化&lt;/strong> 显示各种麻将牌面，但当时还没想好如何设计。&lt;br>
 接着我想起 emoji 是有麻将牌的 &lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/blog-shortcode-mahjong/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，于是 &lt;em>最开始的时候&lt;/em> 就用了笨办法——手写 emoji。&lt;/p>
 &lt;p>由于我的重度强迫症，「分门别类地列出所有役种」对我来说是一件能带来快感的事。&lt;br>
@@ -129,7 +129,7 @@
 {{&amp;lt; mahjong 1234567z &amp;gt;}} # 显示效果同上
 &lt;/pre>
 &lt;div class="mahjong center">&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-2z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-3z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-4z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-5z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-7z" />&lt;/svg>&lt;/div>
-&lt;p>字牌既可以用「&lt;code>1z&lt;/code> ~ &lt;code>7z&lt;/code>」的标准描述方式，也可以用表意更明显的特定字符形式表示：&lt;/p>
+&lt;p>字牌既可以用「&lt;code>1z&lt;/code> ~ &lt;code>7z&lt;/code>」的标准描述方式，也可以用表意更明确的特定字符形式表示：&lt;/p>
 &lt;pre>
 {{&amp;lt; mahjong 1z2z3z4z5z6z7z &amp;gt;}}
 {{&amp;lt; mahjong ESWNPFC &amp;gt;}} # 显示效果同上
@@ -139,10 +139,10 @@
 &lt;p>如果没有特别指定「不排序」的参数，最后显示会按这个顺序自动排序：&lt;br>
 「万子」，「饼子」，「索子」，「东风、南风、西风、北风、白板、发财、红中」。&lt;/p>
 &lt;pre>
-{{&amp;lt; mahjong main="2176543z91m91s91p" sort="off" &amp;gt;}}
-{{&amp;lt; mahjong main="2176543z91m91s91p" sort="on" &amp;gt;}}
+{{&amp;lt; mahjong main="2716453z91m91s91p" sort="off" &amp;gt;}}
+{{&amp;lt; mahjong main="2716453z91m91s91p" sort="on" &amp;gt;}}
 &lt;/pre>
-&lt;p>&lt;div class="mahjong center">&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9m" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1m" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9p" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1p" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-2z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-7z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-5z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-4z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-3z" />&lt;/svg>&lt;/div>
+&lt;p>&lt;div class="mahjong center">&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9m" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1m" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9p" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1p" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-2z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-7z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-4z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-5z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-3z" />&lt;/svg>&lt;/div>
 &lt;div class="mahjong center">&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1m" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9m" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1p" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9p" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-9s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-1z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-2z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-3z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-4z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-5z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-7z" />&lt;/svg>&lt;/div>&lt;/p>
 &lt;blockquote>
 &lt;p>至于万、饼、索、字的「种类」顺序永远是自动排序的，这也没必要故意不排序吧。&lt;/p>
@@ -193,7 +193,7 @@
 &lt;li>如果附加的牌只有 1 张，自动视为和牌。&lt;/li>
 &lt;li>如果有 2 张及以上，则视为听牌。（重复的牌作为听牌显示时会自动去重）&lt;/li>
 &lt;/ul>
-&lt;p>这样就区分开了单听与和牌。&lt;/p>
+&lt;p>这样就轻易区分开了单听与和牌。&lt;/p>
 &lt;pre>
 {{&amp;lt; mahjong 1334455699pEEE 22p &amp;gt;}}
 {{&amp;lt; mahjong 1334455699pEEE 2p &amp;gt;}}
@@ -3546,7 +3546,7 @@
 &lt;td style="text-align:center">抽 1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/yu-gi-oh/">Yu-Gi-Oh</category><category domain="https://ews.ink/tags/%E6%B4%BB%E5%8A%A8/">活动</category><category domain="https://ews.ink/tags/%E6%9E%84%E7%AD%91/">构筑</category></item><item><title>《游戏王》卡组构筑 ydk 格式代码处理</title><link>https://ews.ink/game/yu_gi_oh-deck-code/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-deck-code/</guid><pubDate>Wed, 16 Mar 2022 12:17:08 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="参考资料--测试">参考资料 &amp;amp; 测试&lt;/h2>
+&lt;/table></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/yu-gi-oh/">Yu-Gi-Oh</category><category domain="https://ews.ink/tags/%E6%B4%BB%E5%8A%A8/">活动</category><category domain="https://ews.ink/tags/%E6%9E%84%E7%AD%91/">构筑</category></item><item><title>《游戏王》卡组构筑 ydk 格式代码处理</title><link>https://ews.ink/tech/game-yu_gi_oh-deck/</link><guid isPermaLink="true">https://ews.ink/tech/game-yu_gi_oh-deck/</guid><pubDate>Wed, 16 Mar 2022 12:17:08 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="参考资料--测试">参考资料 &amp;amp; 测试&lt;/h2>
 &lt;ul>
 &lt;li>前端渲染及 SSR：card.js「&lt;a href="https://github.com/ymssx/ygo-card">GitHub Repo&lt;/a>」「&lt;a href="https://ymssx.github.io/ygo/">Demo&lt;/a>」「&lt;a href="https://gitee.com/ymssx/pics/">卡图&lt;/a>」&lt;/li>
 &lt;li>鼠标悬浮提示框参考：Steam Info「&lt;a href="https://keylol.com/t85959-1-1">出处：其乐论坛&lt;/a>」「&lt;a href="https://greasyfork.org/zh-CN/scripts/956-steam-info/code">Greasy Fork&lt;/a>」「&lt;a href="https://steamdb.keylol.com/steam_info.js">源码&lt;/a>」&lt;/li>
@@ -4161,7 +4161,7 @@
 &lt;/div>
 &lt;/div>&lt;p>得到下面生成的链接：&lt;/p>
 &lt;pre>&lt;code>http://deck.ourygo.top/ydk/show.html?ygotype=deck&amp;amp;v=1&amp;amp;d=B0Lh39z6rXHNuq9TRqS7vpSt-90tNgLdKDZaCCB-5lr07AzkNA1k4Gymk7KKdUnNu4A
-&lt;/code>&lt;/pre>&lt;p>&lt;a href="http://deck.ourygo.top/ydk/show.html?ygotype=deck&amp;amp;v=1&amp;amp;d=B0Lh39z6rXHNuq9TRqS7vpSt-90tNgLdKDZaCCB-5lr07AzkNA1k4Gymk7KKdUnNu4A">打开链接&lt;/a> 验证效果，完美。&lt;/p></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/yu-gi-oh/">Yu-Gi-Oh</category><category domain="https://ews.ink/tags/javascript/">JavaScript</category><category domain="https://ews.ink/tags/hugo/">Hugo</category><category domain="https://ews.ink/tags/shortcode/">shortcode</category></item><item><title>《游戏王》「三形金字塔」玩法浅析</title><link>https://ews.ink/game/yu_gi_oh-triamid/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-triamid/</guid><pubDate>Tue, 15 Mar 2022 22:17:36 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>三金即便算上猛得一 B 的补强卡（本家永续魔法，确实增强了一大截），强度也就那样。&lt;br>
+&lt;/code>&lt;/pre>&lt;p>&lt;a href="http://deck.ourygo.top/ydk/show.html?ygotype=deck&amp;amp;v=1&amp;amp;d=B0Lh39z6rXHNuq9TRqS7vpSt-90tNgLdKDZaCCB-5lr07AzkNA1k4Gymk7KKdUnNu4A">打开链接&lt;/a> 验证效果，完美。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/yu-gi-oh/">Yu-Gi-Oh</category><category domain="https://ews.ink/tags/javascript/">JavaScript</category><category domain="https://ews.ink/tags/hugo/">Hugo</category><category domain="https://ews.ink/tags/shortcode/">shortcode</category></item><item><title>《游戏王》「三形金字塔」玩法浅析</title><link>https://ews.ink/game/yu_gi_oh-triamid/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-triamid/</guid><pubDate>Tue, 15 Mar 2022 22:17:36 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>三金即便算上猛得一 B 的补强卡（本家永续魔法，确实增强了一大截），强度也就那样。&lt;br>
 大概只有在 Master Duel 的 NR 杯这种限定了&lt;ruby>&lt;rb>强度&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>稀有度&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>的情况下才有一点声音。&lt;br>
 没有终端太可惜了，强度比起主流来还是差了一大截，等&lt;ruby>&lt;rb>后续&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>也许&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>会补强的&lt;ruby>&lt;rb>本家大哥&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>有生之年&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>吧。&lt;/p>
 &lt;blockquote>
@@ -5083,14 +5083,13 @@ A 站文章区风气这里不讨论，总归是自成风景；&lt;br>
 &lt;span class="handwriting">卡片属性&lt;/span>
 &lt;div class="icon icon-ygo-light">&lt;/div> | &lt;div class="icon icon-ygo-dark">&lt;/div> | &lt;div class="icon icon-ygo-wind">&lt;/div> | &lt;div class="icon icon-ygo-earth">&lt;/div> | &lt;div class="icon icon-ygo-water">&lt;/div> | &lt;div class="icon icon-ygo-fire">&lt;/div> | &lt;div class="icon icon-ygo-divine">&lt;/div> | &lt;div class="icon icon-ygo-spell">&lt;/div> | &lt;div class="icon icon-ygo-trap">&lt;/div>
 &lt;/div>
-&lt;div class="center" style="font-size: 1.5rem;" >
-&lt;span class="handwriting">魔陷类型&lt;/span>
-&lt;div class="icon icon-ygo-sg">&lt;/div> | &lt;div class="icon icon-ygo-ys">&lt;/div> | &lt;div class="icon icon-ygo-zb">&lt;/div> | &lt;div class="icon icon-ygo-cd">&lt;/div> | &lt;div class="icon icon-ygo-yx">&lt;/div> | &lt;div class="icon icon-ygo-fj">&lt;/div>
+&lt;div class="center handwriting" style="font-size: 1.5rem;" >
+速攻 &lt;div class="icon icon-ygo-sg">&lt;/div> / 仪式 &lt;div class="icon icon-ygo-ys">&lt;/div> / 装备 &lt;div class="icon icon-ygo-zb">&lt;/div> / 场地 &lt;div class="icon icon-ygo-cd">&lt;/div> / 永续 &lt;div class="icon icon-ygo-yx">&lt;/div> / 反击 &lt;div class="icon icon-ygo-fj">&lt;/div>
 &lt;/div>
 &lt;div class="center">&lt;div class="ygo-card ygo-spell">&lt;a href="https://www.ygocdb.com/card/24299458" target="_blank">&lt;div class="icon icon-ygo-spell">&lt;/div>
 &lt;span class="ygo-card-text">禁忌的一滴&lt;/span>&lt;div class="icon icon-ygo-sg">&lt;/div>&lt;/a>&lt;/div>&lt;div class="ygo-card ygo-trap">&lt;a href="https://www.ygocdb.com/card/23002292" target="_blank">&lt;div class="icon icon-ygo-trap">&lt;/div>
 &lt;span class="ygo-card-text">红色重启&lt;/span>&lt;div class="icon icon-ygo-fj">&lt;/div>&lt;/a>&lt;/div>&lt;/div>
-&lt;div class="ygo-deck">&lt;div class="ygo-deck-title">无敌的红爹&lt;/div>&lt;div class="ygo-deck-subtitle">悲报：2022.3.13 森蚺 1 → 0&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/46986414" target="_blank">
+&lt;div class="ygo-deck">&lt;div class="ygo-deck-title">无敌的红爹&lt;/div>&lt;div class="ygo-deck-subtitle">悲报: 2022.3.13 森蚺 1 → 0&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/46986414" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/46986414.jpg!half" />
 &lt;/a>&lt;a href="https://ygocdb.com/card/74677422" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/74677422.jpg!half" />
@@ -5098,7 +5097,7 @@ A 站文章区风气这里不讨论，总归是自成风景；&lt;br>
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/6172122.jpg!half" />
 &lt;/a>&lt;div class="ygo-deck-subtitle">额外卡组&lt;/div>&lt;a href="https://ygocdb.com/card/37818794" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/37818794.jpg!half" />
-&lt;/a>&lt;div class="ygo-deck-subtitle">渲染失败的卡 &amp;amp; 占位的卡&lt;/div>&lt;a style="pointer-events: none;">
+&lt;/a>&lt;div class="ygo-deck-subtitle">渲染失败的卡 &amp;amp; 用来占位的卡&lt;/div>&lt;a style="pointer-events: none;">
 &lt;img class="sticker" style="width: 46px; height: 69.391px; margin: 2px; border: 3px dashed red; " />
 &lt;/a>&lt;a style="pointer-events: none;">
 &lt;img class="sticker" style="width: 46px; height: 69.391px; margin: 2px; border: 3px solid black; " />
@@ -9027,7 +9026,7 @@ MD 的卡池是落后 OCG/TCG 几个版本的，所以如果导入 OCG 的卡组
 &lt;/span>
 &lt;blockquote>
 &lt;p>以上的三个 badges 都是根据实际的服务端运行情况动态更新的，爽到。&lt;/p>
-&lt;/blockquote></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/shields.io/">shields.io</category><category domain="https://ews.ink/tags/badges/">Badges</category><category domain="https://ews.ink/tags/cloudflare/">Cloudflare</category><category domain="https://ews.ink/tags/workers/">Workers</category></item><item><title>《饥荒联机版》修改游戏中文字体</title><link>https://ews.ink/game/dont_starve_together-font-modify/</link><guid isPermaLink="true">https://ews.ink/game/dont_starve_together-font-modify/</guid><pubDate>Sat, 06 Nov 2021 23:08:07 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="起因">起因&lt;/h2>
+&lt;/blockquote></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/shields.io/">shields.io</category><category domain="https://ews.ink/tags/badges/">Badges</category><category domain="https://ews.ink/tags/cloudflare/">Cloudflare</category><category domain="https://ews.ink/tags/workers/">Workers</category></item><item><title>《饥荒联机版》修改游戏中文字体</title><link>https://ews.ink/tech/game-dont_starve_together-font-modify/</link><guid isPermaLink="true">https://ews.ink/tech/game-dont_starve_together-font-modify/</guid><pubDate>Sat, 06 Nov 2021 23:08:07 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="起因">起因&lt;/h2>
 &lt;p>我是看到《&lt;a href="https://www.bilibili.com/video/BV1bM4y1T7sJ">豪华船2.0！&lt;/a>》这个视频里用的字体挺好康的，有被安利到。&lt;br>
 简单搜了一下应该是 &lt;a href="https://weibo.com/6624339726" target="_blank">@孤鹜先森&lt;/a> 用爱发电的「&lt;a href="https://github.com/lxgw/yozai-font" target="_blank">&lt;ruby>&lt;rb>悠哉字体 Blod&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Yozai-Bold&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>&lt;/a>」（可免费商用）。&lt;br>
 字体 GET！DAZE☆&lt;/p>
@@ -9036,8 +9035,8 @@ MD 的卡池是落后 OCG/TCG 几个版本的，所以如果导入 OCG 的卡组
 &lt;h2 id="通用游戏汉化流程">通用游戏汉化流程&lt;/h2>
 &lt;p>先简单介绍一下「原本只有英语」的游戏汉化的过程：&lt;/p>
 &lt;ul>
-&lt;li>如果文本量很大，或者游戏需要支持「用户输入（中文）&lt;sup id="fnref:1">&lt;a href="https://ews.ink/game/dont_starve_together-font-modify/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>」这个功能，大部分时候会直接引入标准格式的字体文件，因为你没有办法预测&lt;del>沙雕玩家&lt;/del> 演出脚本会输入什么玩意。&lt;/li>
-&lt;li>但如果文本量有限，（注意不止是民间汉化，哪怕是官方出的中文版）讲究&lt;sup id="fnref:2">&lt;a href="https://ews.ink/game/dont_starve_together-font-modify/#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>的游戏开发者很可能会选择「更为节省性能的方式」引入中文字体。&lt;/li>
+&lt;li>如果文本量很大，或者游戏需要支持「用户输入（中文）&lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/game-dont_starve_together-font-modify/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>」这个功能，大部分时候会直接引入标准格式的字体文件，因为你没有办法预测&lt;del>沙雕玩家&lt;/del> 演出脚本会输入什么玩意。&lt;/li>
+&lt;li>但如果文本量有限，（注意不止是民间汉化，哪怕是官方出的中文版）讲究&lt;sup id="fnref:2">&lt;a href="https://ews.ink/tech/game-dont_starve_together-font-modify/#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>的游戏开发者很可能会选择「更为节省性能的方式」引入中文字体。&lt;/li>
 &lt;/ul>
 &lt;p>这种方式就是：提前绘制游戏内将用到的每一个字，放到同一个材质包（视为一张大图）里，另外建立一个索引文件（纯文本）标注出每个字在什么位置（比如第几行第几列偏移多少）。&lt;br>
 然后游戏里用到的时候根据索引去引入「该材质包指定位置的区域」，即「这个字」。&lt;/p>
@@ -9105,7 +9104,7 @@ MD 的卡池是落后 OCG/TCG 几个版本的，所以如果导入 OCG 的卡组
 &lt;p>于是终于找到了，「&lt;a href="http://www.angelcode.com/products/bmfont/">Bitmap Font Generator&lt;/a>」，也就是江湖人称的 &lt;code>BMFont&lt;/code>。&lt;/p>
 &lt;blockquote>
 &lt;p>下完用 Everything 一搜才发现原来我电脑上有这玩意，看目录是以前玩 Cocos2d 留下的。&lt;br>
-前略……百度。蓦然回首，那人却在，灯火阑珊处。&lt;sup id="fnref:3">&lt;a href="https://ews.ink/game/dont_starve_together-font-modify/#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/p>
+前略……百度。蓦然回首，那人却在，灯火阑珊处。&lt;sup id="fnref:3">&lt;a href="https://ews.ink/tech/game-dont_starve_together-font-modify/#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/p>
 &lt;/blockquote>
 &lt;p>简单把玩了一会，学会「如何将特定字符集以特定字体生成 &lt;code>.fnt&lt;/code> 对应的 &lt;code>.png&lt;/code> 纹理材质」了。&lt;/p>
 &lt;p>现在只剩下两件事：&lt;/p>
@@ -9640,16 +9639,16 @@ chars=0-7,10-12,14-126
 &lt;p>早年间，游戏机还大行其道的时候，大部分 GBA 的 RPG 游戏起名环节都是只给出一张表，里面是最多几页字库里已经包含的字，让你从其中选，汉化之后也是这样。&lt;br>
 这是硬件机能和操作便捷性上双重的限制，像 PSP / NDS / Switch 那样内置输入法？做梦呢。&lt;br>
 FC 就更不用说了，其实 FC 上的 RPG 少得可怜；而其他需要输入文字的地方，比如通关密码和游戏秘籍，一般都是字母和数字，最多加个五十音表。怎么样，有印象了吗。&lt;br>
-「GBA 和 FC 是什么？」打扰了。&lt;del>妈的我是真的没想到有一天这也能当成科普知识讲。&lt;/del>&amp;#160;&lt;a href="https://ews.ink/game/dont_starve_together-font-modify/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+「GBA 和 FC 是什么？」打扰了。&lt;del>妈的我是真的没想到有一天这也能当成科普知识讲。&lt;/del>&amp;#160;&lt;a href="https://ews.ink/tech/game-dont_starve_together-font-modify/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:2" role="doc-endnote">
-&lt;p>如果没那么讲究，比方说很多 RPG Maker 开发者（不是开地图炮，确实我用身边统计学发现有这个现象），比如很多 RPG MV 做的&lt;del>黄油&lt;/del> 小游戏，游戏本体可能就十几 MB 几十 MB，但字体文件就占了几 MB。&lt;del>这种情况我见得多了&lt;/del>&amp;#160;&lt;a href="https://ews.ink/game/dont_starve_together-font-modify/#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>如果没那么讲究，比方说很多 RPG Maker 开发者（不是开地图炮，确实我用身边统计学发现有这个现象），比如很多 RPG MV 做的&lt;del>黄油&lt;/del> 小游戏，游戏本体可能就十几 MB 几十 MB，但字体文件就占了几 MB。&lt;del>这种情况我见得多了&lt;/del>&amp;#160;&lt;a href="https://ews.ink/tech/game-dont_starve_together-font-modify/#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:3" role="doc-endnote">
-&lt;p>——〔宋〕辛弃疾《青玉案·元夕》&amp;#160;&lt;a href="https://ews.ink/game/dont_starve_together-font-modify/#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>——〔宋〕辛弃疾《青玉案·元夕》&amp;#160;&lt;a href="https://ews.ink/tech/game-dont_starve_together-font-modify/#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/%E9%A5%A5%E8%8D%92/">饥荒</category><category domain="https://ews.ink/tags/klei/">Klei</category><category domain="https://ews.ink/tags/mod/">mod</category></item><item><title>《饥荒联机版》订阅的 Mod 加载失败问题</title><link>https://ews.ink/game/dont_starve_together-mods-load-failed-fix/</link><guid isPermaLink="true">https://ews.ink/game/dont_starve_together-mods-load-failed-fix/</guid><pubDate>Fri, 05 Nov 2021 20:54:23 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="客户端-mod-无法加载">客户端 mod 无法加载&lt;/h2>
+&lt;/section></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/%E9%A5%A5%E8%8D%92/">饥荒</category><category domain="https://ews.ink/tags/klei/">Klei</category><category domain="https://ews.ink/tags/mod/">mod</category></item><item><title>《饥荒联机版》订阅的 Mod 加载失败问题</title><link>https://ews.ink/game/dont_starve_together-mods-load-failed-fix/</link><guid isPermaLink="true">https://ews.ink/game/dont_starve_together-mods-load-failed-fix/</guid><pubDate>Fri, 05 Nov 2021 20:54:23 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="客户端-mod-无法加载">客户端 mod 无法加载&lt;/h2>
 &lt;p>碰到一个非常恼人的问题。&lt;/p>
 &lt;h3 id="现象">现象&lt;/h3>
 &lt;p>&lt;strong>部分 Mod 订阅之后并不能在游戏中正确加载&lt;/strong>。&lt;br>
@@ -19164,7 +19163,7 @@ https://img.shields.io/badge/dynamic/yaml?url=&amp;lt;URL&amp;gt;&amp;amp;label=
 &lt;h2 id="其他玩法">其他玩法&lt;/h2>
 &lt;h3 id="监控网站状态">监控网站状态&lt;/h3>
 &lt;pre>&lt;code>https://img.shields.io/website?up_color=brightgreen&amp;amp;up_message=Online&amp;amp;down_color=lightgrey&amp;amp;down_message=Offline&amp;amp;label=&amp;lt;LABEL&amp;gt;&amp;amp;url=&amp;lt;URL&amp;gt;&amp;amp;logo=nginx
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://img.shields.io/website?up_color=brightgreen&amp;up_message=Online&amp;down_color=lightgrey&amp;down_message=Offline&amp;label=Server%20Status&amp;url=https%3A%2F%2Fapi.osrp.run&amp;logo=nginx" data-no-zoom />&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/shields.io/">shields.io</category><category domain="https://ews.ink/tags/badges/">Badges</category><category domain="https://ews.ink/tags/markdown/">Markdown</category></item><item><title>Steam 模拟手机令牌二步验证</title><link>https://ews.ink/game/steam-2fa/</link><guid isPermaLink="true">https://ews.ink/game/steam-2fa/</guid><pubDate>Sat, 15 May 2021 18:42:20 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="第三方-steam-工具">第三方 Steam 工具&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://img.shields.io/website?up_color=brightgreen&amp;up_message=Online&amp;down_color=lightgrey&amp;down_message=Offline&amp;label=Server%20Status&amp;url=https%3A%2F%2Fapi.osrp.run&amp;logo=nginx" data-no-zoom />&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/shields.io/">shields.io</category><category domain="https://ews.ink/tags/badges/">Badges</category><category domain="https://ews.ink/tags/markdown/">Markdown</category></item><item><title>Steam 模拟手机令牌二步验证</title><link>https://ews.ink/tech/game-steam-2fa/</link><guid isPermaLink="true">https://ews.ink/tech/game-steam-2fa/</guid><pubDate>Sat, 15 May 2021 18:42:20 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="第三方-steam-工具">第三方 Steam 工具&lt;/h2>
 &lt;blockquote>
 &lt;p>第三方工具安全性各有不同，风险自负。&lt;/p>
 &lt;/blockquote>
@@ -19378,7 +19377,7 @@ https://img.shields.io/badge/dynamic/yaml?url=&amp;lt;URL&amp;gt;&amp;amp;label=
 &lt;span class="k">return&lt;/span> &lt;span class="n">steam_code&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description><category domain="https://ews.ink/game/">game</category><category domain="https://ews.ink/tags/steam/">Steam</category><category domain="https://ews.ink/tags/totp/">TOTP</category></item><item><title>Github 用户资料页面玩法</title><link>https://ews.ink/tech/github-profile-readme/</link><guid isPermaLink="true">https://ews.ink/tech/github-profile-readme/</guid><pubDate>Sat, 15 May 2021 15:55:27 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="开始">开始&lt;/h2>
+&lt;/div></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/steam/">Steam</category><category domain="https://ews.ink/tags/totp/">TOTP</category></item><item><title>Github 用户资料页面玩法</title><link>https://ews.ink/tech/github-profile-readme/</link><guid isPermaLink="true">https://ews.ink/tech/github-profile-readme/</guid><pubDate>Sat, 15 May 2021 15:55:27 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="开始">开始&lt;/h2>
 &lt;p>众所周知，创建一个和用户名相同的 Repo，这个 Repo 的 &lt;code>README.md&lt;/code> 内容就会显示在用户资料主页面。&lt;br>
 所以在这个 markdown 文档里写什么，用户资料页就会显示什么，那么就可以开始玩了。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
