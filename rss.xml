@@ -1,4 +1,1052 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.96.0 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sat, 09 Apr 2022 18:18:38 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Hugo 魔改 shortcode 显示麻将牌</title><link>https://ews.ink/tech/blog-shortcode-mahjong/</link><guid isPermaLink="true">https://ews.ink/tech/blog-shortcode-mahjong/</guid><pubDate>Sun, 20 Mar 2022 21:26:42 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="改造主题">改造主题&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.96.0 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Thu, 14 Apr 2022 00:41:33 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>复习 Godot 开发流程 其一 前期准备</title><link>https://ews.ink/tech/game-godot-review-1-prepare/</link><guid isPermaLink="true">https://ews.ink/tech/game-godot-review-1-prepare/</guid><pubDate>Fri, 08 Apr 2022 22:52:10 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;p>隔了数月再捡起 Godot 居然觉得无所适从，找不到从何下手。&lt;br>
+顿时一股悲哀从心底升起：曾几何时我也是过目不忘、学过一遍必如数家珍的选手。&lt;br>
+现在变成这个 &lt;del>B 样&lt;/del>，是谁的错呢？&lt;/p>
+&lt;p>虽然人老了，活还是要干的。以后还是老老实实勤做笔记吧。&lt;br>
+想当年中学的时候每一个老师都不厌其烦地叨叨「好记性不如烂笔头」。&lt;br>
+从「嗤之以鼻」到「有点道理」再到「不以为然」，到现在再反转，果然姜还是老的辣。&lt;/p>
+&lt;h2 id="技术选型">技术选型&lt;/h2>
+&lt;p>前天（2022.4.6）刚好出了 &lt;a href="https://godotengine.org/article/dev-snapshot-godot-4-0-alpha-6">开发者快照&lt;/a> &lt;code>alpha 6&lt;/code>，不过跟我没关系。&lt;br>
+一堆坑没填呢，真没精力开新坑了。（至少等年中 beta 再说）&lt;/p>
+&lt;blockquote>
+&lt;p>话说之前 Godot 4.0 开发进度竟然从 82% 倒退回 81%，挺乐的。&lt;br>
+（关闭的 issues 没有新开的多就会这样）&lt;/p>
+&lt;/blockquote>
+&lt;p>4.0 肯定是和 3.x 不兼容的——改了很多语法，重命名部分系统函数和变量。&lt;br>
+好消息是官方确认会出迁移工具帮助 3.x 项目过渡到 4.0。&lt;br>
+不过我估计有也不会用，毕竟我这种，啊，强迫症晚期，啊，人称重构狂魔。&lt;br>
+&lt;del>Code Review 对我来说是一种享受。&lt;/del>&lt;/p>
+&lt;p>这次用的是最新的稳定版 &lt;code>v3.4.4.stable.official [419e713a2]&lt;/code>。&lt;/p>
+&lt;h2 id="参考文档">参考文档&lt;/h2>
+&lt;span class="sticker">
+&lt;a href="https://docs.godotengine.org/en/stable/" target="_blank">&lt;img src="https://img.shields.io/badge/Godot-官方文档-informational" />&lt;/a>
+&lt;a href="http://godot.pro/doc/index.html" target="_blank">&lt;img src="https://img.shields.io/badge/文档-中文翻译-informational" />&lt;/a>
+&lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html" target="_blank">&lt;img src="https://img.shields.io/badge/GDScript-语法-informational" />&lt;/a>
+&lt;/span>
+&lt;h2 id="开发范式">开发范式&lt;/h2>
+&lt;h3 id="代码格式">代码格式&lt;/h3>
+&lt;p>「&lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#formatting">代码格式&lt;/a>」参考 Python 的《&lt;a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 编程风格指南&lt;/a>》。&lt;/p>
+&lt;h3 id="命名约定">命名约定&lt;/h3>
+&lt;p>「&lt;a href="https://docs.godotengine.org/en/stable/tutorials/best_practices/project_organization.html">文件命名&lt;/a>」考虑到项目一致性，文件命名统一使用全小写蛇形 &lt;code>snake_case&lt;/code>。&lt;/p>
+&lt;blockquote>
+&lt;p>除非你写的是 C# 要用&lt;ruby>&lt;rb>类名做文件名&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>ClassName&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>，那你用大驼峰。&lt;br>
+当然 场景 / 类 / 节点 的命名仍使用大驼峰，和默认的节点名格式保持一致。&lt;/p>
+&lt;/blockquote>
+&lt;p>「&lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#naming-conventions">变量命名&lt;/a>」就那一套，没什么可说的。&lt;/p>
+&lt;h3 id="代码顺序">代码顺序&lt;/h3>
+&lt;p>「&lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order">代码顺序&lt;/a>」如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">tool&lt;/span> &lt;span class="c1"># 标记为工具脚本(会在编辑器直接执行 不用运行调试器)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">class_name&lt;/span> &lt;span class="c1"># (可选)类定义&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">extends&lt;/span> &lt;span class="c1"># 继承&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># docstring 多行文档说明&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">signals&lt;/span> &lt;span class="c1"># 信号&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">enums&lt;/span> &lt;span class="c1"># 枚举&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">constants&lt;/span> &lt;span class="c1"># 常量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">exported&lt;/span> &lt;span class="n">variables&lt;/span> &lt;span class="c1"># 导出变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">public&lt;/span> &lt;span class="n">variables&lt;/span> &lt;span class="c1"># 公共变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">private&lt;/span> &lt;span class="n">variables&lt;/span> &lt;span class="c1"># 私有变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">onready&lt;/span> &lt;span class="n">variables&lt;/span> &lt;span class="c1"># 自动初始化变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">optional&lt;/span> &lt;span class="n">built&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="ow">in&lt;/span> &lt;span class="n">virtual&lt;/span> &lt;span class="n">_init&lt;/span> &lt;span class="n">method&lt;/span> &lt;span class="c1"># (可选)内置的初始化虚函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">built&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="ow">in&lt;/span> &lt;span class="n">virtual&lt;/span> &lt;span class="n">_ready&lt;/span> &lt;span class="n">method&lt;/span> &lt;span class="c1"># 内置的初始化完成(节点第一次级联场景树时)虚函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">remaining&lt;/span> &lt;span class="n">built&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="ow">in&lt;/span> &lt;span class="n">virtual&lt;/span> &lt;span class="n">methods&lt;/span> &lt;span class="c1"># 其他内置的虚函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">public&lt;/span> &lt;span class="n">methods&lt;/span> &lt;span class="c1"># 公共方法(函数)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">private&lt;/span> &lt;span class="n">methods&lt;/span> &lt;span class="c1"># 私有方法&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>「方法」就是「函数」。一般&lt;strong>面向对象&lt;/strong>叫 &lt;ruby>&lt;rb>方法&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>method&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>、&lt;strong>面向过程&lt;/strong>叫 &lt;ruby>&lt;rb>函数&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>function&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>。&lt;/p>
+&lt;/blockquote>
+&lt;p>这个顺序一定要背下来吗？&lt;br>
+不要，谁有功夫背这个。&lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/creating_script_templates.html">自定义脚本模板&lt;/a>直接套就完了。&lt;br>
+Windows 打开 &lt;code>%APPDATA%\Godot\script_templates&lt;/code>，新建文本文件 &lt;code>all_comments.gd&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">extends&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">BASE&lt;/span>&lt;span class="o">%&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># docstring 文档说明&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Signals 信号&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Enums 枚举&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Constants 常量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Exported variables 导出变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Public variables 公共变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Private variables 私有变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Onready variables 自动初始化变量&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># built-in virtual methods 内置的虚函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#func _init()%VOID_RETURN%:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pass&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">_ready&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">VOID_RETURN&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">pass&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#func _process(delta%FLOAT_TYPE%)%VOID_RETURN%:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pass&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Public methods 公共函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Private methods 私有函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Setter/Getter methods&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Callback methods 回调函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">################################################################&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 记得文件末尾空一行 好习惯 老生常谈了&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 我印象里起初的目的是为了兼容某些文件系统的 EOF 吞字符问题&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="常见-q--a">常见 Q &amp;amp; A&lt;/h2>
+&lt;p>以下答案均来自官方文档《&lt;a href="https://docs.godotengine.org/en/stable/tutorials/best_practices/index.html">最佳实践&lt;/a>》一章。&lt;/p>
+&lt;h3 id="scenetree场景树和-nodetree节点树">SceneTree（场景树）和 NodeTree（节点树）&lt;/h3>
+&lt;p>任何游戏引擎都是围绕着构建程序所用的事物抽象的。&lt;br>
+在 Godot 中，游戏就是一棵由节点构成的树，树又可以结合起来构成场景。&lt;br>
+然后你还可以将这些节点连起来，让它们通过信号进行通信。&lt;/p>
+&lt;p>游戏的所有场景都汇集在场景树（Scene Tree）中，字面意思是一棵由场景形成的树。&lt;br>
+又由于场景是由一个个子节点聚合而成的，以树的形式保存为节点树（Node Tree），因此场景树也是节点树，一棵更大的节点树。&lt;/p>
+&lt;div class="mermaid">
+flowchart TD
+scene_root["某个场景&lt;br>（决战关卡）"] === scene_a["场景 A&lt;br>（BOSS）"]
+scene_root === scene_b["场景 B&lt;br>（宝箱）"]
+&lt;/div>
+&lt;p>这是一棵（最简单的）场景树。&lt;/p>
+&lt;div class="mermaid">
+flowchart TD
+scene_root["某个场景&lt;br>（决战关卡）"] === parent(["子节点&lt;br>（BOSS 对象实例）"])
+scene_root === scene_b["场景 B&lt;br>（宝箱）"]
+subgraph scene_a["场景 A（BOSS）"]
+parent === child_1(["孙节点 1&lt;br>（BOSS 的动画）"])
+parent === child_2(["孙节点 2&lt;br>（BOSS 的音效）"])
+end
+&lt;/div>
+&lt;p>这是&lt;strong>同一棵&lt;/strong>场景树（不过是把子节点的细节显示出来了）。如上图所示：&lt;/p>
+&lt;ul>
+&lt;li>场景 A 是一棵节点树；&lt;/li>
+&lt;li>包含场景 A 的「某个场景」是场景树，当然更是一棵节点树。&lt;/li>
+&lt;/ul>
+&lt;p>但是，从场景的角度来考虑设计游戏更容易，因为它们可以代表角色、武器、门或用户界面。&lt;br>
+节点是面向 &lt;strong>内部的业务逻辑&lt;/strong> 的，场景却是面向 &lt;strong>实际的应用场景&lt;/strong> 的。&lt;/p>
+&lt;p>你可以创建任意数量的场景，用 &lt;code>.tscn&lt;/code> 扩展名保存到硬盘上，表示「&lt;ruby>&lt;rb>text scene&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>文本场景&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>」。&lt;br>
+（没错，Godot 最常见的 &lt;code>.tscn&lt;/code> 文件就是「以文本形式保存或者说记录的场景」。）&lt;br>
+我们把这些文件叫作「&lt;ruby>&lt;rb>Packed Scene&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>打包场景&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>」，因为它们将场景的内容信息进行了打包。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">var&lt;/span> &lt;span class="n">the_scene&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">preload&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;res://packed_scene.tscn&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">instance&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">get_tree&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_root&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_child&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">the_scene&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 在场景树根节点手动添加某个场景&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="如何选择分辨率">如何选择分辨率&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">类型&lt;/th>
+&lt;th style="text-align:center">&lt;/th>
+&lt;th style="text-align:center">尺寸&lt;/th>
+&lt;th style="text-align:center">拉伸模式&lt;/th>
+&lt;th style="text-align:center">拉伸比例&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">推荐设置&lt;/td>
+&lt;td style="text-align:center">&lt;code>Width × Height&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>Stretch Mode&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>Stretch Aspect&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">桌面游戏&lt;/td>
+&lt;td style="text-align:center">像素风&lt;/td>
+&lt;td style="text-align:center">&lt;code>256 × 224&lt;/code> ~ &lt;code>640 × 480&lt;/code>&lt;br/>取决于你用的大部分素材，比如 &lt;code>320 × 180&lt;/code>&lt;br/>（1080p 的像素就真的只是一种 &lt;em>风格&lt;/em> 了）&lt;br/>（我只见过有插画，游戏大规模用不现实）&lt;/td>
+&lt;td style="text-align:center">&lt;code>viewport&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>keep&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">桌面游戏&lt;/td>
+&lt;td style="text-align:center">非像素风&lt;/td>
+&lt;td style="text-align:center">&lt;code>1920 × 1080&lt;/code>&lt;br/>&lt;code>3840 × 2160&lt;/code>（2K）&lt;br/>（4K？独立游戏？&lt;del>噗哧&lt;/del> 大佬右转虚幻 5 如何）&lt;br/>（有能力做 4K 的不会看本文，不会选 Godot）&lt;/td>
+&lt;td style="text-align:center">&lt;code>2d&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>expand&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">手机游戏&lt;/td>
+&lt;td style="text-align:center">横屏&lt;/td>
+&lt;td style="text-align:center">&lt;code>1280 × 720&lt;/code>&lt;br/>&lt;code>1920 × 1080&lt;/code>（针对高端机型）&lt;br/>（再高没有意义，你的玩家没有写轮眼）&lt;/td>
+&lt;td style="text-align:center">&lt;code>2d&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>expand&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">手机游戏&lt;/td>
+&lt;td style="text-align:center">竖屏&lt;/td>
+&lt;td style="text-align:center">&lt;code>720 × 1080&lt;/code>&lt;br/>&lt;code>1080 × 1920&lt;/code>（针对高端机型）&lt;/td>
+&lt;td style="text-align:center">&lt;code>2d&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>expand&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">应用程序&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">你想要支持的最小窗口尺寸&lt;/td>
+&lt;td style="text-align:center">&lt;code>disabled&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>ignore&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>采用 &lt;code>expand&lt;/code> 拉伸应该善用 &lt;strong>布局&lt;/strong> 菜单将 Control 节点的锚点吸附到正确的位置。&lt;/li>
+&lt;li>不想支持异形屏（比如 16:10 的显示器，18:9 甚至 19:9 的手机）可以不用 &lt;code>expand&lt;/code> 而是继续采用 &lt;code>keep&lt;/code>，多余的部分会自动用黑边填充。&lt;/li>
+&lt;li>竖屏手游应该将 Display &amp;gt; Window &amp;gt; Handheld &amp;gt; Orientation 设置为 &lt;ruby>&lt;rb>portrait&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>竖屏&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>。&lt;/li>
+&lt;li>应用程序可以在脚本的 &lt;code>_ready()&lt;/code> 函数中通过设置 &lt;code>OS.min_window_size&lt;/code> 的值来定义窗口的最小尺寸。这样可以防止用户将应用窗口缩得过小，导致 UI 布局出现问题。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>手机&lt;strong>显示&lt;/strong>的分辨率和拍摄是两码事，哪怕 10 吋平板，超过 1080p 肉眼凡胎又能看出个什么花呢？&lt;br>
+恕我直言，1440p 都 TM 是纯噱头、无效堆料。&lt;br>
+你就是看得出来？（大圣收了神通吧）&lt;del>那你跟我说干嘛，你去跟中科院说啊。&lt;/del>&lt;br>
+拍摄还有点说法，万一机主就是喜欢用手机拍（他买得起 RED，但他买了就是不用），拍完别说 60 吋 8K 屏，他用 IMAX 巨幕放，有钱任性爱造作，行不行？当然可以。至少物质上可以实现。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="如何组织项目结构">如何组织项目结构&lt;/h3>
+&lt;p>文件夹名和文件名，&lt;ruby>&lt;rb>必须&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>must&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>小写，&lt;ruby>&lt;rb>尽量&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>should&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>在适当的时候使用复数形式。&lt;/p>
+&lt;p>举例（自用项目组织）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">game/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── assets/ &lt;span class="c1"># 资源&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── images/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── sounds/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── docs/ &lt;span class="c1"># 文档&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── .gdignore &lt;span class="c1"># 有这个名字的文件则此目录所有内容(包括二级子目录)都会被忽略&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── learning.html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── src/ &lt;span class="c1"># 源码&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── characters/ &lt;span class="c1"># 角色&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ ├── enemies/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ ├── npcs/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ └── player/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── levels/ &lt;span class="c1"># 关卡&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ ├── world_01/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── w1_level_01.gd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── w1_level_01.tscn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── w1_level_02.gd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── w1_level_02.tscn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ └── ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ ├── world_02/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ └── ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ ├── models/ &lt;span class="c1"># 模型&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ ├── forest/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── bush.tscn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── tree.tscn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── grass.gd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── grass.tscn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ └── ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ ├── town/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── house.tscn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── house_door.gd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ ├── house_door.tscn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ │ └── ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ │ └── ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│ └── ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── project.godot &lt;span class="c1"># 项目基础文件(定位项目根目录)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="如何切换场景">如何切换场景&lt;/h3>
+&lt;h4 id="手动更换场景">手动更换场景&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">多种实现方式&lt;/th>
+&lt;th style="text-align:center">方式&lt;/th>
+&lt;th style="text-align:center">是否继续处理&lt;/th>
+&lt;th style="text-align:center">缺点&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">删除现有场景&lt;/td>
+&lt;td style="text-align:center">1. &lt;code>SceneTree.change_scene()&lt;/code>&lt;br/>2. &lt;code>SceneTree.change_scene_to()&lt;/code>&lt;br/>3. &lt;code>get_node(&amp;quot;/root/Main&amp;quot;).free()&lt;/code>&lt;br/>删除整个主场景&lt;/td>
+&lt;td style="text-align:center">卸载内存&lt;/td>
+&lt;td style="text-align:center">回到此场景变得更昂贵&lt;br/>（重新加载需要时间和内存）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">隐藏现有场景&lt;/td>
+&lt;td style="text-align:center">更改节点的可见性和碰撞检测&lt;br/>从游戏角色的角度隐藏整个节点子树&lt;/td>
+&lt;td style="text-align:center">处理继续&lt;/td>
+&lt;td style="text-align:center">增加不必要的负载&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">分离现有场景&lt;/td>
+&lt;td style="text-align:center">&lt;code>Node.remove_child(Node)&lt;/code>&lt;br/>将此场景从场景树上分离&lt;br/>类似其他引擎里的禁用（disable）&lt;/td>
+&lt;td style="text-align:center">仍在内存中&lt;br/>但处理停止&lt;/td>
+&lt;td style="text-align:center">如果场景树中存在数据更新&lt;br/>则此场景里的数据会变得过时&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>小地图功能或本地多人分屏游戏可以使用 &lt;a href="https://docs.godotengine.org/en/stable/classes/class_viewportcontainer.html#class-viewportcontainer">&lt;code>ViewportContainer&lt;/code>&lt;/a> 来同时显示多个不同的场景。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="直接切换场景树">直接切换场景树&lt;/h4>
+&lt;p>对于小型游戏，一个更简易的选择是使用一个游戏单例；&lt;br>
+然后用 &lt;a href="https://docs.godotengine.org/en/stable/classes/class_scenetree.html#class-scenetree-method-change-scene">&lt;code>SceneTree.change_scene()&lt;/code>&lt;/a> 直接切换游戏的主场景（舞台）。&lt;/p>
+&lt;p>不过这种方式需要注意 GUI 的额外处理，可以选用以下任一方式：&lt;/p>
+&lt;ul>
+&lt;li>GUI 也是单例&lt;/li>
+&lt;li>将 GUI 包含在世界中&lt;/li>
+&lt;li>手动添加到根节点的子节点&lt;/li>
+&lt;/ul>
+&lt;p>否则 GUI 会在场景转换时自行删除。&lt;/p>
+&lt;h3 id="何时使用场景与脚本">何时使用场景与脚本&lt;/h3>
+&lt;p>正如本章一开始就讲过了：Godot 说的「场景」一般泛指的 &lt;code>.tscn&lt;/code> 文件，其本质就是打包好的场景（Packed Scene）而已。理论上只用纯脚本就可以实现场景的所有功能。&lt;br>
+那么在既可以用脚本包也可以用场景的情况下，什么时候应该选用脚本呢？&lt;/p>
+&lt;h4 id="从性能方面考虑">从性能方面考虑&lt;/h4>
+&lt;ul>
+&lt;li>脚本每条指令都要调用脚本 API，导致后端要进行多次 「查找」，以找到要执行的逻辑。&lt;/li>
+&lt;li>场景定义了使用序列化数据创建对象的资源。&lt;br>
+引擎可以在后端批量处理场景，并提供比脚本好得多的性能。&lt;/li>
+&lt;/ul>
+&lt;p>也就是说：&lt;strong>场景包的速度比脚本快；游戏越大，越应该选用场景包。&lt;/strong>&lt;/p>
+&lt;h4 id="从易用性方面考虑">从易用性方面考虑&lt;/h4>
+&lt;details class="collapse" open="open">
+&lt;summary>使用脚本添加一个节点&lt;/summary>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">extends&lt;/span> &lt;span class="ne">Node&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">_init&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">child&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="ne">Node&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">child&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Child&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">child&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">script&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">preload&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Child.gd&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">child&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">owner&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">add_child&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">child&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/details>
+&lt;details class="collapse">
+&lt;summary>使用场景添加一个节点&lt;/summary>
+&lt;p>点击加号，选中要添加的节点，点击确定。&lt;/p>
+&lt;/details>
+&lt;h4 id="从稳定性方面考虑">从稳定性方面考虑&lt;/h4>
+&lt;p>实际使用过程中勾选一个选项 / 改变一个数值很容易，但你很难「不小心」删掉一整行代码。&lt;br>
+这是好处也是坏处，是优势也是劣势：&lt;/p>
+&lt;ul>
+&lt;li>「创造」过程中，采用 &lt;strong>脚本&lt;/strong> 写代码一字一句交代得清清楚楚显然更保险；&lt;/li>
+&lt;li>「使用」过程中，采用 &lt;strong>场景&lt;/strong> 来修改提供现成的可配置项对于 &lt;em>节点本身&lt;/em> 的破坏性显然更小。&lt;/li>
+&lt;/ul>
+&lt;p>因此得出下列结论。&lt;/p>
+&lt;h4 id="结论">结论&lt;/h4>
+&lt;ul>
+&lt;li>如果想创建一个基本工具，会在不同的项目中重用，可能会提供给不同技能水平的人（包括那些不认为自己是程序员的人），那么它应该是一个脚本，最好有一个自定义名称 / 图标。&lt;/li>
+&lt;li>如果想创建一个基于本游戏特有的概念，那么它应该是一个场景，场景比脚本更容易跟踪 / 编辑（毕竟可视化），而且更安全（出错的概率更小*），最后性能也更高。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>* 众所周知，开发过程中最大的安全隐患是「你」，你就是一个人形 bug 制造机。&lt;br>
+你会受到体力（生理）/ 精力（心理）以及来自外界环境的各种负面影响，堪称极其不稳定。&lt;br>
+&lt;del>血肉苦弱，有机体。&lt;/del> 如果有得选，尽量不要给自己任何犯错的机会。&lt;/p>
+&lt;/blockquote>
+&lt;p>至于那些仅用场景无法实现的功能，当然是正常写脚本了（你想用场景也不能够啊）。&lt;br>
+（说起来一个游戏真正的精华，灵魂所在，往往是这些引擎本身的接口提供不了的功能。）&lt;/p>
+&lt;h3 id="_processdelta-和-_physics_processdelta-该用哪个">&lt;code>_process(delta)&lt;/code> 和 &lt;code>_physics_process(delta)&lt;/code> 该用哪个&lt;/h3>
+&lt;p>游戏是使用循环来运行的。每一帧，你都需要先更新游戏世界的状态，再把它画到屏幕上。&lt;br>
+刷新画面的每一帧怎么来的？当然是运算出来的。&lt;br>
+依赖于这个「刷新画面」的帧——我称之为前端渲染帧，&lt;ruby>&lt;rb>即俗称的 FPS&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Frames Per Second&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>——&lt;br>
+就是 &lt;code>_process()&lt;/code> 处理数据的时机。&lt;/p>
+&lt;p>无论渲染时间长短（进而导致&lt;ruby>&lt;rb>渲染帧速率&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>FPS / 帧数&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>高低），随着现实时间的推移同步进行一致性更新的（我称之为后端物理帧）——就是 &lt;code>_physics_process()&lt;/code> 处理数据的时机。&lt;/p>
+&lt;p>而 &lt;code>delta&lt;/code> 这个参数表示 &lt;ruby>&lt;rb>deltatime&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>增量时间&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>，指「上一帧到这一帧经过的时间」。&lt;br>
+通过 deltatime 动态调整游戏的表现，就能做到（避免 &lt;em>掉帧&lt;/em> 发生）：&lt;br>
+无论游戏后端运算速率的快慢，最后展现出来玩家感受到的观感是平滑且一致的。&lt;/p>
+&lt;ul>
+&lt;li>前端渲染帧越高越好；越高表示画面刷新速率越快、频率越高，画面响应越及时。&lt;br>
+前端渲染帧可能随着时间、设备的不同而不同。&lt;/li>
+&lt;li>后端物理帧变化越小越好；变化越小表示游戏运行得越稳定。&lt;br>
+后端物理帧会努力维持在一个固定的频率*。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>* 后端物理帧在默认设置下恒定为一秒 60 帧。（以格斗游戏为典型的大部分游戏都是 60 帧）&lt;br>
+你可以在 Project Settings &amp;gt; Physics &amp;gt; Common &amp;gt; Physics Fps 设置这个值。&lt;/p>
+&lt;/blockquote>
+&lt;p>任何和物理运算（比如运动和碰撞）相关的行为都应该在 &lt;code>_physics_process()&lt;/code> 中处理，比如角色的移动速度 / 子弹的弹道速度等等。&lt;/p>
+&lt;ul>
+&lt;li>大部分时候都应该将速度乘以 deltatime；&lt;br>
+否则游戏一卡顿就会导致判定出现异常（它理应已抵达那里，但实际上却尚未到达那里）。&lt;/li>
+&lt;li>有时加速度也应该乘以 deltatime；&lt;br>
+否则可能出现类似坠落前 90 米掉落用了 0.9 秒，最后 10 米却用了 10 秒的怪异情形。&lt;/li>
+&lt;/ul>
+&lt;p>很多玩家司空见惯的 bug 背后就是这么简单的原理。&lt;/p>
+&lt;blockquote>
+&lt;p>以上只是范式，很多游戏并没有这样做；有些是没有顾及到，有些是不在乎，有些甚至是故意为之。&lt;br>
+比如跑毒图的都知道 GTA5 就是物理和渲染帧挂钩的：同一辆车，FPS 越高极限速度就越快。&lt;br>
+也许 R 星认为当画面掉帧时应该让操作一起卡顿对玩家来说才更公平。&lt;br>
+（没有嘲讽的意思，你细想是有它的道理在的。涉及到输入反馈等多方面的游戏体验优化问题）&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>如果只是需要一个一直运行，但不需要像 &lt;code>_process()&lt;/code> 或 &lt;code>_physics_process()&lt;/code> 频率那么高的逻辑检查和数据缓存循环，可以利用计时器实现：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span> &lt;span class="bp">true&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">my_method&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">$&lt;/span>&lt;span class="ne">Timer&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">start&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># Timer 节点设置为 1 / 2.5 / 10 秒就随你高兴了&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">yield&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="ne">Timer&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;timeout&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="_inputevent-和-_unhandled_inputevent-该用哪个">&lt;code>_input(event)&lt;/code> 和 &lt;code>_unhandled_input(event)&lt;/code> 该用哪个&lt;/h3>
+&lt;p>两者都可以用来接收并处理单独的输入事件。二者的区别在于：如果按键、鼠标点击等事件没有被 &lt;code>_input()&lt;/code> 回调或用户界面组件处理，&lt;code>_unhandled_input()&lt;/code> 方法才会收到这个事件。&lt;/p>
+&lt;p>游戏中的输入通常是使用 &lt;code>_unhandled_input()&lt;/code> 处理的。&lt;br>
+而 &lt;code>_input()&lt;/code> 回调可以用来在 &lt;code>_unhandled_input()&lt;/code> 获取前拦截并处理输入事件。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">_unhandled_input&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">event&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">match&lt;/span> &lt;span class="n">event&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get_class&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;InputEventKey&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="ne">Input&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">is_action_just_pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;ui_accept&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">get_process_delta_time&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>为了保证最佳性能，尽可能避免在上面说的 &lt;code>_process()&lt;/code> 或 &lt;code>_physics_process()&lt;/code> 里高频率轮询检查输入——不管实际有没有输入，它们都会触发检查（浪费巨量资源）。&lt;br>
+而 &lt;code>_input()&lt;/code> 或 &lt;code>_unhandled_input()&lt;/code> 只会在引擎实际检测到存在输入的帧上触发。&lt;/p>
+&lt;p>当然了，如果的确需要 deltatime 的话，你可以根据实际需求来获取对应的 deltatime。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">_process&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">delta&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="c1"># 或者 _physics_process, 具体区别详见上一节&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="ne">Input&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">is_action_just_pressed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;ui_select&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">delta&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="单例自动加载-autoload什么时候用">单例（自动加载 &lt;code>autoload&lt;/code>）什么时候用&lt;/h3>
+&lt;p>Godot 的场景系统虽然强大而灵活，但有一个缺点：无法保存多个场景都需要的信息。&lt;br>
+具体来说：玩家得分、背包 / 仓库、永久属性、持有货币、阵营声望……等等。&lt;/p>
+&lt;p>你当然可以通过一些变通方法来解决此问题，但是它们有其自身的局限性：&lt;/p>
+&lt;ul>
+&lt;li>可以把需要的数据当成子节点来加载和卸载；&lt;br>
+然而，这就意味着产生了不健康的强耦合关系——如果缺失了数据，这些场景就无法再独立正常运行。&lt;/li>
+&lt;li>可以把需要的数据存储到硬盘里的 &lt;code>user://&lt;/code> 目录（类似存档文件），谁需要就自行读取；&lt;br>
+可是频繁地读写文件是一件很麻烦也很耗资源的事，甚至可能拖累游戏运行速度。&lt;/li>
+&lt;/ul>
+&lt;h4 id="什么是-godot-的单例">什么是 Godot 的单例&lt;/h4>
+&lt;p>单例就是解决「在多个场景之间持久存储数据」的常见用例的实用工具。&lt;br>
+利用单例，你可以实现：&lt;/p>
+&lt;ul>
+&lt;li>无论当前运行哪个场景，始终加载。因此可以用来切换场景和处理场景之间的过渡。&lt;/li>
+&lt;li>存储全局变量（比如玩家信息），因为 GDScript 在设计上就不支持全局变量。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>需要注意的是 Godot 中的单例比较特殊，只是「行为」类似我们一般所说的「单例设计模式」中的那种「真」单例。也就是说，如果你确实需要，你&lt;strong>&lt;ruby>&lt;rb>可以&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>may&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>&lt;/strong>把 Godot 的单例多次实例化。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="godot-里单例的实际用法">Godot 里单例的实际用法&lt;/h4>
+&lt;p>你可以设置 &lt;ruby>&lt;rb>自动加载&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>AutoLoad&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> 来加载「场景包」或「继承自 Node 节点（&lt;code>extends Node&lt;/code>）的脚本」。&lt;br>
+比方说「Path」为 &lt;code>res://player_variables.gd&lt;/code>，「Node Name」为 &lt;code>PlayerVariables&lt;/code>。&lt;br>
+这意味着，任何节点都可以访问并使用一个名为 &lt;code>PlayerVariables&lt;/code> 的单例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">var&lt;/span> &lt;span class="n">player_vars&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">get_node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;/root/PlayerVariables&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">player_vars&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">health&lt;/span> &lt;span class="o">-=&lt;/span> &lt;span class="mi">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果你还勾选了&lt;strong>&lt;ruby>&lt;rb>启用&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Enable&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>&lt;/strong>（默认勾选），那么就可以直接访问该单例而不需要通过 &lt;code>get_node()&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="n">PlayerVariables&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">health&lt;/span> &lt;span class="o">-=&lt;/span> &lt;span class="mi">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="应该在什么时机使用单例">应该在什么时机使用单例&lt;/h4>
+&lt;p>举个实际的例子：切割音频问题。&lt;/p>
+&lt;p>假设我们正在制作一个平台跳跃类游戏（类似超级马里奥），希望收集金币时能够播放音效。&lt;br>
+如果使用 &lt;code>AudioStreamPlayer&lt;/code> 节点，当正在播放音效时调用它，新的声音就会打断第一个声音。&lt;/p>
+&lt;p>有一个堪称一劳永逸的解决方案——写一个全局的、能够自动加载的类（音效管理器）。&lt;br>
+它会生成一个 &lt;code>AudioStreamPlayers&lt;/code> 的节点池，每次新的音效播放请求出现就添加到节点池里开始播放。假如取名为 &lt;code>Sound&lt;/code>，你可以在项目的任何地方使用 &lt;code>Sound.play(&amp;quot;coin_pickup.ogg&amp;quot;)&lt;/code> 之类的方式轻松调用，听起来很美好是吧。&lt;/p>
+&lt;p>短期来看，这确实解决了问题；但与此同时，它带来了更多更大的麻烦。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>全局对象&lt;/strong>：整个项目&lt;strong>每一个&lt;/strong>需要声音的地方现在都&lt;strong>强依赖&lt;/strong>于这个音效类。假如一个音效有错误，或者找不到一个可用 &lt;code>AudioStreamPlayer&lt;/code>，那么一切都会崩溃，&lt;strong>一切&lt;/strong>。&lt;/li>
+&lt;li>&lt;strong>全局访问&lt;/strong>：任何对象都可以从&lt;strong>任何地方&lt;/strong>调用 &lt;code>Sound.play(sound_path)&lt;/code>。如果你发现有一个音效有错，你对于它具体在什么位置完全&lt;ruby>&lt;rb>是毫无头绪&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>have no idea&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>，你必须漫山遍野地去排查&lt;strong>每一个&lt;/strong>可能出错的地方。&lt;/li>
+&lt;li>&lt;strong>全局资源占用&lt;/strong>：由于从游戏启动之始就维护了一个 &lt;code>AudioStreamPlayer&lt;/code> 节点池，你不知道该如何控制数量——太少会出现 bug（被吞掉而没有播放成功的音效），太多则会占用更多其实根本没必要占用的内存。&lt;/li>
+&lt;/ul>
+&lt;p>将使用音效的场景的 &lt;code>AudioStreamPlayer&lt;/code> 尽可能保留在其内部，以上问题都会消失。&lt;/p>
+&lt;ul>
+&lt;li>每个场景管理自己的状态信息，如果数据有问题，只会在该场景&lt;ruby>&lt;rb>内部出现问题&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>死道友不死贫道&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>。&lt;/li>
+&lt;li>每个场景只会访问自己的节点，如果出现一个和它相关的 bug，不用找了，必然是它。&lt;/li>
+&lt;li>每个场景占用的内存按需分配（&lt;del>少份多次&lt;/del>）；而且在不再需要时可以直接从内存中卸载掉。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>然后会碰到一个问题：音效可能放不完——当金币被吃掉的时候播放音效，而音效还没放完可能整个金币节点就被 &lt;code>queue_free()&lt;/code> 释放掉了。这里提两个解决方案：&lt;/p>
+&lt;ol>
+&lt;li>金币被吃的时候&lt;ruby>&lt;rb>现&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>临时&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>创建一个新的 &lt;code>AudioStreamPlayer&lt;/code> 节点并挂载到根节点再播放，放完清理。&lt;br>
+（音效不像图形会「错位」，随便在哪放都是同样效果。&lt;del>总不可能从邻居的蓝牙音箱放出来吧&lt;/del>）&lt;/li>
+&lt;li>金币被吃的时候隐藏金币的图像和碰撞体，启动音效播放器，播放完毕后再释放整个金币节点。&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;p>讲清楚了为什么应该谨慎使用单例（自动加载），现在说说到底怎么用才不算乱用：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>静态数据&lt;/strong>：如果你需要某个类专属的数据，比如数据库，那么自动加载很合适。&lt;br>
+因为 Godot 中并没有脚本 API 来创建和管理静态数据。&lt;/li>
+&lt;li>&lt;strong>静态函数&lt;/strong>：创建一个只返回值的函数库（工具类）。&lt;/li>
+&lt;li>&lt;strong>范围广泛的系统&lt;/strong>：如果一个类只管理自己的信息，而不会掺杂其他对象的数据。&lt;br>
+而且这个信息可能到处都会访问，那么使用单例是一个好主意，比如任务 / 对话系统。&lt;/li>
+&lt;/ul>
+&lt;p>一句话：有一个游戏系统 1. 自己管自己（的数据）；2. 全局可访问；3. 独立存在。&lt;br>
+这个系统就是单例（自动加载）没跑了。&lt;/p>
+&lt;h3 id="如何快速调试使用-tool-工具脚本预览代码效果">如何快速调试（使用 &lt;code>tool&lt;/code> 工具脚本预览代码效果）&lt;/h3>
+&lt;p>将 &lt;code>tool&lt;/code> 关键字放在任何 GDScript 文件的顶部，它将在编辑器中运行。&lt;br>
+用&lt;a href="https://docs.godotengine.org/en/stable/tutorials/plugins/running_code_in_the_editor.html">官方文档&lt;/a>的话说：「这使您可以导入和导出插件，创建自定义级别编辑器之类的插件，或使用与项目中使用的相同的节点和 API 来创建脚本。」&lt;/p>
+&lt;p>我没当成脚本；我是当成「即时可见的调试器」（所见即所得）用的。不过需要注意两点：&lt;/p>
+&lt;ol>
+&lt;li>如果你写了 bug，由于立刻运行，bug 会传染给编辑器，可能导致编辑器崩溃。&lt;br>
+（比如涉及 &lt;code>queue_free()&lt;/code>，一定要小心再小心，&lt;strong>极其谨慎&lt;/strong>。）&lt;br>
+解决方案：主要逻辑写完测过没问题再在文件开头加上 tool 慢慢&lt;del>调教&lt;/del> 调试。&lt;/li>
+&lt;li>如果你状态不太好（加班太久神智不清），可能会忘记编辑器和实际运行之间是有区别的。&lt;br>
+（然后你 debug 半天死活没有效果差点疯掉，最后发现是编辑器和游戏的代码弄混了。）&lt;br>
+解决方案：把在编辑器中运行的代码和在游戏中运行的代码分开，如下所示。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">_process&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">delta&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">Engine&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">editor_hint&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;现在在编辑器中&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">delta&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;现在在游戏中&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">delta&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="如何自定义数据结构">如何自定义数据结构&lt;/h3>
+&lt;p>并不是任何事都必须用 Node 节点来完成；比如自定义数据结构，使用 Object 扩展即可。&lt;/p>
+&lt;p>给大家简单表演一个链表助助兴吧：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;span class="lnt">76
+&lt;/span>&lt;span class="lnt">77
+&lt;/span>&lt;span class="lnt">78
+&lt;/span>&lt;span class="lnt">79
+&lt;/span>&lt;span class="lnt">80
+&lt;/span>&lt;span class="lnt">81
+&lt;/span>&lt;span class="lnt">82
+&lt;/span>&lt;span class="lnt">83
+&lt;/span>&lt;span class="lnt">84
+&lt;/span>&lt;span class="lnt">85
+&lt;/span>&lt;span class="lnt">86
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># linked_list.gd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">extends&lt;/span> &lt;span class="ne">Object&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">class_name&lt;/span> &lt;span class="n">LinkedList&lt;/span> &lt;span class="c1"># 定义 class_name 后 本类会被视为全局变量 直接用就完了&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 简单的链表实现&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="n">LinkedListNode&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="c1"># 链表节点内部类&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">func&lt;/span> &lt;span class="n">_init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p_value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">p_next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">null&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="c1"># 递归结构&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">p_value&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">p_next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">var&lt;/span> &lt;span class="n">head&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">null&lt;/span> &lt;span class="c1"># 单向链表头部&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">_init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">LinkedListNode&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">find_node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="c1"># 寻找节点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="ow">and&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">null&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Node &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34; not found!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Node &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34; found.&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">current&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">insert_after&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">new_value&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="c1"># 插入节点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">new_node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">LinkedListNode&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">new_value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">new_node&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">new_node&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="c1"># 在尾部添加节点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">new_node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">LinkedListNode&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">new_node&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">prepend&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="c1"># 在头部添加节点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">new_node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">LinkedListNode&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">new_node&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">new_node&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="c1"># 移除指定节点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">previous_node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="ow">and&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">previous_node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">previous_node&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">remove_head&lt;/span>&lt;span class="p">():&lt;/span> &lt;span class="c1"># 移除头部节点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">remove_tail&lt;/span>&lt;span class="p">():&lt;/span> &lt;span class="c1"># 移除尾部节点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">previous_node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="ow">and&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">previous_node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">previous_node&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">traverse&lt;/span>&lt;span class="p">():&lt;/span> &lt;span class="c1"># 遍历节点&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">self&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">head&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">temp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">temp&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s2">&amp;#34; &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">current&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">current&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">next&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">temp&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>如果是继承节点（&lt;code>extends Node&lt;/code>）的脚本定义了 &lt;code>class_name&lt;/code> 还会自动加入节点列表。&lt;/p>
+&lt;/blockquote>
+&lt;p>单元测试：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># main.gd&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">extends&lt;/span> &lt;span class="ne">Node&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">_ready&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">var&lt;/span> &lt;span class="n">linked_list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">LinkedList&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># 不需要额外引入 直接用即可 原因上面讲过了&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">traverse&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 1, 2, 3, 4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">insert_after&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">traverse&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 1, 2, 5, 3, 4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">prepend&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">6&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">traverse&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 6, 1, 2, 5, 3, 4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">remove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">traverse&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 6, 1, 2, 5, 4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">remove_head&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">traverse&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 1, 2, 5, 4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">remove_tail&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">traverse&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># 1, 2, 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">linked_list&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_node&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>预期结果：&lt;/p>
+&lt;pre tabindex="0">&lt;code>1 2 3 4
+Node 2 found.
+1 2 5 3 4
+6 1 2 5 3 4
+6 1 2 5 4
+1 2 5 4
+1 2 5
+Node 2 found.
+Node 3 not found!
+&lt;/code>&lt;/pre>&lt;p>这里只是简单演示一下用法，如何做内存管理、甚至扩展成 &lt;code>双向循环链表&lt;/code> 此处不再赘述。&lt;/p>
+&lt;blockquote>
+&lt;p>Object 不管理内存，如果类继承自 Object，必须手动删除（&lt;code>free&lt;/code>）它的实例来释放内存。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">extends&lt;/span> &lt;span class="ne">Object&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">class_name&lt;/span> &lt;span class="n">TreeNode&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">var&lt;/span> &lt;span class="n">_parent&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">TreeNode&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">var&lt;/span> &lt;span class="n">_children&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span> &lt;span class="k">setget&lt;/span> &lt;span class="c1"># TODO 这里写 setter 和 getter&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">func&lt;/span> &lt;span class="n">_notification&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">p_what&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">match&lt;/span> &lt;span class="n">p_what&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">NOTIFICATION_PREDELETE&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="c1"># 手动实现析构函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">a_child&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">_children&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a_child&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">free&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同理，&lt;code>队列&lt;/code>、&lt;code>栈&lt;/code>、&lt;code>堆&lt;/code>、&lt;code>二叉搜索树&lt;/code> / &lt;code>红黑树&lt;/code> / &lt;code>散列树&lt;/code> / 各种 &lt;code>树&lt;/code>、各种 &lt;code>图&lt;/code>、不相交集……&lt;br>
+无论何种数据结构，只要你想，你做就完了。&lt;br>
+GDScript 是一门具有自举能力的独立编程「语言」。&lt;/p>
+&lt;blockquote>
+&lt;p>Godot 就是用 GDScript 写的，编辑器本身其实就是一个 Godot 游戏。&lt;/p>
+&lt;/blockquote>
+&lt;p>除了 &lt;a href="https://docs.godotengine.org/en/stable/classes/class_object.html#class-object">Object&lt;/a> 之外，你还可以使用 &lt;a href="https://docs.godotengine.org/en/stable/classes/class_reference.html#class-reference">Reference&lt;/a>，如果你不想手动进行内存管理的话。&lt;br>
+Reference 会跟踪对自己的引用，只有当对自己没有另外的引用存在时，才会删除加载的内存。
+（除此之外跟 Object 没啥区别。&lt;code>Tree&lt;/code> 节点就是 Object，&lt;code>File&lt;/code> 对象就是 Reference。）&lt;/p>
+&lt;p>如果你想将数据结构保存为文件，可以再进一步使用 &lt;a href="https://docs.godotengine.org/en/stable/classes/class_resource.html#class-resource">Resource&lt;/a>。&lt;br>
+它们天然具有将其对象属性，序列化和反序列化 Godot 资源文件的能力。&lt;br>
+（用人话说：以文件形式保存和加载。脚本 &lt;code>.gd&lt;/code> 和场景包 &lt;code>.tscn&lt;/code> 其实就是 Resource。）&lt;br>
+具体用法可以参考「&lt;a href="https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html#creating-your-own-resources">创建自己的资源&lt;/a>」。&lt;/p>
+&lt;h3 id="如何应用面向对象原则">如何应用面向对象原则&lt;/h3>
+&lt;p>如果可能的话，应该尽量设计没有依赖性的场景。&lt;br>
+你应该创建场景，而场景将所需的一切保留在其内部。&lt;/p>
+&lt;p>另外设计项目架构时可以思考以下几个问题：&lt;/p>
+&lt;h4 id="聚合-or-组合">聚合 or 组合&lt;/h4>
+&lt;ul>
+&lt;li>聚合：简单地聚在一起，彼此之间并不直接依赖。&lt;/li>
+&lt;li>组合：除了聚在一起之外，还进一步互相连接彼此，进而形成一个整体。&lt;/li>
+&lt;/ul>
+&lt;h4 id="继承-or-构造">继承 or 构造&lt;/h4>
+&lt;ul>
+&lt;li>继承：全盘接受父类的一切，并在此基础上扩展自己的特有功能。&lt;/li>
+&lt;li>构造：想象一堆拼到一半的乐高积木，你可以选择自己想要的不同部件组成特定的整体。&lt;/li>
+&lt;/ul>
+&lt;h4 id="场景如何与外部环境交互">场景如何与外部环境交互&lt;/h4>
+&lt;p>一句话：向下调用（善用 &lt;code>$&lt;/code>），向上信号。&lt;br>
+具体应用可以参考官方文档对 &lt;a href="https://docs.godotengine.org/en/stable/tutorials/best_practices/scene_organization.html#how-to-build-relationships-effectively">依赖注入&lt;/a> 设计模式的实现。&lt;/p></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/godot/">Godot</category></item><item><title>Hugo 魔改 shortcode 显示麻将牌</title><link>https://ews.ink/tech/blog-shortcode-mahjong/</link><guid isPermaLink="true">https://ews.ink/tech/blog-shortcode-mahjong/</guid><pubDate>Sun, 20 Mar 2022 21:26:42 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;h2 id="改造主题">改造主题&lt;/h2>
 &lt;p>一开始我就决定要 &lt;strong>可视化&lt;/strong> 显示各种麻将牌面，但当时还没想好如何设计。&lt;br>
 接着我想起 emoji 是有麻将牌的 &lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/blog-shortcode-mahjong/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，于是 &lt;em>最开始的时候&lt;/em> 就用了笨办法——手写 emoji。&lt;/p>
 &lt;p>由于我的重度强迫症，「分门别类地列出所有役种」对我来说是一件能带来快感的事。&lt;br>
@@ -10,7 +1058,7 @@
 &lt;p>直到那时我仍然视 emoji 为一种妥协方案，因为 emoji 在不同系统不同平台上的显示风格……不能说各有千秋，也可以说是五花八门了，严重缺乏我想要的一致性。&lt;/p>
 &lt;p>然后本来想用 SVG 矢量图，没什么好说的，SVG 天下第一。&lt;br>
 转念一想，麻将有 9 × 3 + 4 + 3 = 34 种花色，当然要用 CSS Sprite 优化，那不如就用图片。&lt;/p>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>麻将图片素材预览&lt;/summary>
 &lt;blockquote>
 &lt;p>以下图片素材来自「&lt;a href="https://mj-king.net/sozai/">麻雀王国&lt;/a>」&lt;/p>
@@ -224,7 +1272,7 @@
 &lt;li>「&lt;a href="https://tympanus.net/Development/AnimatedSVGIcons/">SVG 图标动画&lt;/a>」&lt;/li>
 &lt;/ul>
 &lt;p>可操作性有了，需要的 &lt;a href="https://ews.ink/pages/mahjong-svg.html" target="_blank">麻将 SVG 素材&lt;/a> 也找到了。&lt;/p>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>麻将 SVG 素材预览&lt;/summary>
 &lt;blockquote>
 &lt;p>以下 SVG 素材来自 &lt;a href="https://github.com/WarL0ckNet/tile-art">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-WarL0ckNet%2Ftile--art-informational?logo=github" alt="">&lt;/a>&lt;/p>
@@ -1125,7 +2173,7 @@
 （红中的 emoji 🀄 是出现在 emoji 版本 1.0，作为「麻将」这个概念的代表。）&amp;#160;&lt;a href="https://ews.ink/tech/blog-shortcode-mahjong/#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/mahjong/">Mahjong</category><category domain="https://ews.ink/tags/hugo/">Hugo</category><category domain="https://ews.ink/tags/shortcode/">shortcode</category></item><item><title>《游戏王》有趣构筑记录</title><link>https://ews.ink/game/yu_gi_oh-interesting-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-interesting-deck/</guid><pubDate>Fri, 18 Mar 2022 09:11:33 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;details>
+&lt;/section></description><category domain="https://ews.ink/tech/">tech</category><category domain="https://ews.ink/tags/mahjong/">Mahjong</category><category domain="https://ews.ink/tags/hugo/">Hugo</category><category domain="https://ews.ink/tags/shortcode/">shortcode</category></item><item><title>《游戏王》有趣构筑记录</title><link>https://ews.ink/game/yu_gi_oh-interesting-deck/</link><guid isPermaLink="true">https://ews.ink/game/yu_gi_oh-interesting-deck/</guid><pubDate>Fri, 18 Mar 2022 09:11:33 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;details class="collapse">
 &lt;summary>战华（三国）&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">战华&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -1239,7 +2287,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/98127546.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>除外 + 烧血 阴间卡组&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">魔兽的大饵 &amp;#43; 异次元炸药 OTK&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23898021" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23898021.jpg!half" />
@@ -1464,7 +2512,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/85289965.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>高浓度 魔偶甜点 可爱的妹卡&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">一看就未完成的 魔偶甜点&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/91350799" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/91350799.jpg!half" />
@@ -1574,7 +2622,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/96150936.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>魔术师展开 凶饿毒 复制 独立夜莺 FTK&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1mS4y137aJ" target="_blank" rel="noopener noreferrer">魔术师 独立夜莺 凶饿毒 FTK&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/51531505" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/51531505.jpg!half" />
@@ -1678,7 +2726,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/70369116.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>点火展开 转晶 + No.33 炸 究极幻神 FTK&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">No.33 究极幻神 FTK&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24131534" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24131534.jpg!half" />
@@ -1786,7 +2834,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/52119435.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>被暴打的双子真龙&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">直播☆双子 真龙&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -1900,7 +2948,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/86066372.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>一个报社的棒子&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">重坑 除外 暴食兽 / 红莲兽&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/63845230" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/63845230.jpg!half" />
@@ -2014,7 +3062,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/98127546.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>霍普雷普霍普雷&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">魂 霍普&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -2128,7 +3176,7 @@
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/95134948.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>有手就行的源数&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://bbs.nga.cn/read.php?tid=30645552" target="_blank" rel="noopener noreferrer">源数 OTK&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/42352091" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/42352091.jpg!half" />
@@ -2259,7 +3307,7 @@
 只能用 N 卡和 R 卡，这可比超量杯有意思多了。&lt;/p>
 &lt;p>每次活动必有自爆卡车刷分，&lt;a href="https://ews.ink/game/yu_gi_oh-demolition-truck/" target="_blank">之前超量杯就写过&lt;/a>。&lt;br>
 不过这次 NR 杯有专门的禁限卡表，ban 掉了常用的自爆用卡。&lt;/p>
-&lt;details open="open">
+&lt;details class="collapse" open="open">
 &lt;summary>NR 杯（2022.3.23）禁限卡表&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.masterduelmeta.com/articles/news/march-2022/nr-festival-banlist" target="_blank" rel="noopener noreferrer">NR 杯（2022.3.23）禁限卡表&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">禁止卡 Forbidden（限 0）&lt;/div>&lt;div class="ygo-deck-subtitle">所有 SR 卡和 UR 卡 以及&lt;/div>&lt;a href="https://ygocdb.com/card/35112613" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/35112613.jpg!half" />
@@ -2401,7 +3449,7 @@
 &lt;/details>
 &lt;h2 id="河马坏兽破坏轮打不过就跑">河马坏兽破坏轮打不过就跑&lt;/h2>
 &lt;p>然而该自爆还是能自爆。&lt;/p>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>卡组构筑&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1yL411P7sV" target="_blank" rel="noopener noreferrer">全 NR 一言不合就自爆&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/19665973" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/19665973.jpg!half" />
@@ -2514,7 +3562,7 @@
 &lt;li>河马直接撞坏兽。&lt;/li>
 &lt;/ol>
 &lt;h2 id="自称最强的威风炼装">自称最强的威风炼装&lt;/h2>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>卡组构筑&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1Mq4y1v7og" target="_blank" rel="noopener noreferrer">全 NR 威风妖怪 炼装勇士&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/60473572" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/60473572.jpg!half" />
@@ -2646,7 +3694,7 @@
 &lt;a href="https://www.ygocdb.com/card/70491682" target="_blank">&lt;b>阿尼玛&lt;/b>&lt;/a> 墓效可以拉除外？是啊，是可以啊，那你确定你要每把都指望 40 抽 1 吗？&lt;br/>
 有堆墓？那加上 3 张 &lt;a href="https://www.ygocdb.com/card/68989981" target="_blank">&lt;b>堕武者&lt;/b>&lt;/a> 算你 40 抽 4 好吧。祝好运。&lt;br/>
 这 40 抽 4 是&lt;strong>保&lt;/strong>（甚至不是上手）其中 1 张 key 卡记得吗？你还要想别的办法保证大哥和仪式。&lt;/p>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>卡组构筑&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1Yb4y1p7zk" target="_blank" rel="noopener noreferrer">全 NR 不知火 复仇死者&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/70491682" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/70491682.jpg!half" />
@@ -2907,7 +3955,7 @@
 &lt;/li>
 &lt;/ol>
 &lt;h2 id="英雄">英雄&lt;/h2>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>卡组构筑&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1LY411n7oN" target="_blank" rel="noopener noreferrer">全 NR 融合 英雄&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/20721928" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/20721928.jpg!half" />
@@ -3030,7 +4078,7 @@
 &lt;/a>&lt;/div>
 &lt;/details>
 &lt;h2 id="三形金字塔">三形金字塔&lt;/h2>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>卡组构筑&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://ews.ink/game/yu_gi_oh-triamid/" target="_blank" rel="noopener noreferrer">全 NR 三形金字塔&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/44440058" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/44440058.jpg!half" />
@@ -3146,7 +4194,7 @@
 &lt;/details>
 &lt;p>详见另一篇博文《&lt;a href="https://ews.ink/game/yu_gi_oh-triamid/" target="_blank">〈游戏王〉「三形金字塔」玩法浅析&lt;/a>》。&lt;/p>
 &lt;h2 id="无限起动-龙影神">无限起动 龙影神&lt;/h2>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>卡组构筑&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1BL411A7m7" target="_blank" rel="noopener noreferrer">全 NR 无限起动 龙影神&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/35645105" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/35645105.jpg!half" />
@@ -3334,7 +4382,7 @@
 &lt;p>注意挖掘机不能拉银 / 金零件（光属性），银 / 金零件可以拉挖掘机。&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="暗黑界-未界域-龙影神">暗黑界 未界域 龙影神&lt;/h2>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>卡组构筑&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1qL4y1T7Kq" target="_blank" rel="noopener noreferrer">全 NR 暗黑界 未界域 龙影神&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/7623640" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/7623640.jpg!half" />
@@ -3570,7 +4618,7 @@
 &lt;li>鼠标悬浮提示框参考：Steam Info「&lt;a href="https://keylol.com/t85959-1-1">出处：其乐论坛&lt;/a>」「&lt;a href="https://greasyfork.org/zh-CN/scripts/956-steam-info/code">Greasy Fork&lt;/a>」「&lt;a href="https://steamdb.keylol.com/steam_info.js">源码&lt;/a>」&lt;/li>
 &lt;li>Hugo：自定义 shortcode「&lt;a href="https://gohugo.io/templates/shortcode-templates/#custom-shortcode-examples">Shortcode 文档&lt;/a>」「&lt;a href="https://gohugo.io/templates/introduction/">基本语法&lt;/a>」「&lt;a href="https://gohugo.io/functions/">函数&lt;/a>」&lt;/li>
 &lt;/ul>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>一个小 bug&lt;/summary>
 &lt;pre>
 这是一个 bug：`&amp;lt;div class="ygo-card" /&amp;gt;` **首次**出现的时候 _前面的文本_ 会被视为一个段落 `&amp;lt;p/&amp;gt;` 进而导致自动换行，考虑使用双层 `&amp;lt;span/&amp;gt;` 嵌套尝试修复{{&amp;lt; ygo-card 禁忌的一滴 24299458 spell sg &amp;gt;}}测试文本测试文本测试文本测试文本{{&amp;lt; ygo-card name="青眼白龙" id="89631139" type="light" &amp;gt;}}测试文本测试文本测试文本测试文本测试文本测试文本测试文本{{&amp;lt; ygo-card name="红色重启" id="23002292" type="trap" icon="fj" &amp;gt;}}测试文本测试文本测试文本测试文本测试文本{{&amp;lt; ygo-card &amp;gt;}}测试文本测试文本测试文本测试测试文本
@@ -3584,7 +4632,7 @@
 &lt;blockquote>
 &lt;p>考虑做成一个前端网站。这里临时用 JS 做可行性验证，到时候还是用 TS 写。&lt;/p>
 &lt;/blockquote>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>Todo List&lt;/summary>
 &lt;ul>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 卡组格式转换 ydk ygm 等，类似「&lt;a href="https://www.ygo-sem.cn/yrp/deck.aspx">YGO-Engine 的 ydk 和 ygm 转换&lt;/a>」&lt;/li>
@@ -5099,13 +6147,13 @@ A 站文章区风气这里不讨论，总归是自成风景；&lt;br>
 &lt;p>第二、我需要 &lt;strong>完全自主&lt;/strong> 的丰富的内容创作方式。&lt;br>
 只要我想，除了技术以外没有别的条件限制我自由发挥。&lt;/p>
 &lt;p>&lt;span class="center">右键「检查」或&lt;kbd>F12&lt;/kbd>可以看看以下内容本站是怎么做的&lt;/span>&lt;/p>
-&lt;details open="open">
+&lt;details class="collapse" open="open">
 &lt;summary>分别以 emoji、SVG、PNG 三种方式显示的麻将牌&lt;/summary>
 &lt;p>&lt;div class="mahjong center">🀐🀐🀐🀑🀒🀓🀔🀕🀖🀗🀘🀘🀘&lt;span class="mahjong-text">&lt;br/>听&lt;/span>🀐🀑🀒🀓🀔🀕🀖🀗🀘&lt;/div>
 &lt;div class="mahjong center">&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-2s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-2s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-2s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-2s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-3s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-4s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-8s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-8s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-8s" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6z" />&lt;/svg>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6z" />&lt;/svg>&lt;span class="mahjong-text">和&lt;/span>&lt;svg class="tile">&lt;use class="face" xlink:href="#mj-6z" />&lt;/svg>&lt;/div>
 &lt;div class="mahjong center">&lt;div class="icon icon-mj-1m">&lt;/div>&lt;div class="icon icon-mj-9m">&lt;/div>&lt;div class="icon icon-mj-1p">&lt;/div>&lt;div class="icon icon-mj-9p">&lt;/div>&lt;div class="icon icon-mj-1s">&lt;/div>&lt;div class="icon icon-mj-9s">&lt;/div>&lt;div class="icon icon-mj-1z">&lt;/div>&lt;div class="icon icon-mj-2z">&lt;/div>&lt;div class="icon icon-mj-3z">&lt;/div>&lt;div class="icon icon-mj-4z">&lt;/div>&lt;div class="icon icon-mj-5z">&lt;/div>&lt;div class="icon icon-mj-6z">&lt;/div>&lt;div class="icon icon-mj-7z">&lt;/div>&lt;span class="mahjong-text">和&lt;/span>&lt;div class="icon icon-mj-1z">&lt;/div>&lt;/div>&lt;/p>
 &lt;/details>
-&lt;details open="open">
+&lt;details class="collapse" open="open">
 &lt;summary>游戏王相关样式&lt;/summary>
 &lt;div class="center" style="font-size: 1.5rem;" >
 &lt;img src="https://ews.ink/icons/ygo-attribute.png" style="margin: 1rem auto;" />
@@ -5680,7 +6728,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;li>&lt;a href="https://www.ygocdb.com/card/37129797">&lt;strong>吸血鬼吸食者&lt;/strong>&lt;/a> LINK-2 妹卡 + 我有白碎&lt;/li>
 &lt;/ul>
 &lt;h2 id="示例构筑">示例构筑&lt;/h2>
-&lt;details open="open">
+&lt;details class="collapse" open="open">
 &lt;summary>十二国&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">黄金国 十二国&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/49036338.jpg!half" />
@@ -5804,7 +6852,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/31226177.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>超融合 纯国&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">黄金国 纯国&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/49036338.jpg!half" />
@@ -5928,7 +6976,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/9839945.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>教导国&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">黄金国 教导国&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/23434538" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/23434538.jpg!half" />
@@ -6052,7 +7100,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/49202162.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>教导国 40 卡&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">黄金国 40 卡 教导国&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/49036338" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/49036338.jpg!half" />
@@ -6206,7 +7254,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 这是&lt;a href="https://www.ygocdb.com/card/79606837" target="_blank">&lt;b>虹光之宣告者&lt;/b>&lt;/a>。&lt;br>
 这是&lt;a href="https://www.ygocdb.com/card/99726621" target="_blank">&lt;b>铁兽战线 凶鸟之施莱格&lt;/b>&lt;/a>。&lt;br>
 这是&lt;a href="https://www.ygocdb.com/card/26973555" target="_blank">&lt;b>未来No.0 未来龙皇 霍普&lt;/b>&lt;/a>！&lt;/p>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>这里是&lt;b>天霆号！！阿宙斯！！！&lt;/b>&lt;/summary>
 &lt;div>
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/90448279.jpg" alt="俺はガンダムで行く！" />&lt;a href="https://www.ygocdb.com/card/90448279" target="_blank" rel="noopener noreferrer">&lt;span class="sticker">俺はガンダムで行く！&lt;/span>&lt;/a>&lt;/div>
@@ -6452,7 +7500,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;span class="ygo-card-text">访问码语者&lt;/span>&lt;/a>&lt;/div> LINK-4，访码。斩杀用高打点；除外墓地 LINK 怪兽可以&lt;ruby>&lt;rb>炸 1 卡&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>不取对象&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>。&lt;/li>
 &lt;/ul>
 &lt;h2 id="示例构筑">示例构筑&lt;/h2>
-&lt;details open="open">
+&lt;details class="collapse" open="open">
 &lt;summary>纯本家毛毛&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1cu411d7o2?t=470.9" target="_blank" rel="noopener noreferrer">纯童话动物&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24508238.jpg!half" />
@@ -6567,7 +7615,7 @@ R8 只能用&lt;span style="color:red;">&lt;b>大红&lt;/b>&lt;/span> + &lt;span
 &lt;/a>&lt;/div>
 &lt;p>初动点：&lt;a href="https://www.ygocdb.com/card/68353324" target="_blank">&lt;b>河狸&lt;/b>&lt;/a>、&lt;a href="https://www.ygocdb.com/card/14878871" target="_blank">&lt;b>救援猫&lt;/b>&lt;/a>、&lt;a href="https://www.ygocdb.com/card/72537897" target="_blank">&lt;b>怀柔&lt;/b>&lt;/a>。&lt;/p>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>铁兽毛毛&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/video/BV1cu411d7o2?t=481.4" target="_blank" rel="noopener noreferrer">铁兽战线 童话动物&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24508238.jpg!half" />
@@ -6768,8 +7816,7 @@ end
 &lt;/div>
 &lt;p>结果显而易见：&lt;ruby>&lt;rb>&lt;span style="color:#b8521c">&lt;del>&lt;em>无中生有&lt;/em>&lt;/del>&lt;/span>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>c1&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> ← &lt;ruby>&lt;rb>&lt;span style="color:#1c81b8">&lt;strong>无懈可击&lt;/strong>&lt;/span>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>c2&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> ← &lt;ruby>&lt;rb>&lt;span style="color:#b8521c">&lt;del>&lt;em>无懈可击&lt;/em>&lt;/del>&lt;/span>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>c3&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby> ← &lt;ruby>&lt;rb>&lt;span style="color:#1c81b8">&lt;strong>无懈可击&lt;/strong>&lt;/span>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>c4&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>，抽不了卡。&lt;br>
 总结一下，蓝色两个无懈均生效，&lt;ruby>&lt;rb>&lt;span style="color:#1c81b8">第一个无懈&lt;/span>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>c2&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>无效了橙色&lt;ruby>&lt;rb>&lt;span style="color:#b8521c">先发的无中生有&lt;/span>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>c1&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>，&lt;ruby>&lt;rb>&lt;span style="color:#1c81b8">第二个无懈&lt;/span>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>c4&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>无效了橙色&lt;ruby>&lt;rb>&lt;span style="color:#b8521c">后发的无懈&lt;/span>&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>c3&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>。&lt;/p>
-&lt;p>这并不是什么难得一见的场景。&lt;br>
-你手里有「&lt;code>无中生有&lt;/code> × 1 + &lt;code>无懈可击&lt;/code> × 1」，我手里有「&lt;code>无懈可击&lt;/code> × 2」，打成这样再正常不过。&lt;/p>
+&lt;p>这并不是什么难得一见的场景。你手里有「&lt;em>无中生有&lt;/em> × 1 + &lt;em>无懈可击&lt;/em> × 1」，我手里有「&lt;em>无懈可击&lt;/em> × 2」，打成这样再正常不过。&lt;/p>
 &lt;h2 id="总结">总结&lt;/h2>
 &lt;p>在 YGO 里，玩家&lt;ruby>&lt;rb>打牌&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>DUEL&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>的日常就更逃不掉连锁了。&lt;/p>
 &lt;p>甚至衍生出了「连锁保护」之类的进阶技巧：&lt;br>
@@ -8067,7 +9114,7 @@ LL 铁后攻是很难突破，而且先攻吃到陨石是很难受的，陨石 /
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="示例构筑">示例构筑&lt;/h2>
-&lt;details open="open">
+&lt;details class="collapse" open="open">
 &lt;summary>正常 LL 铁&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">LL 铁兽&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/24508238" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/24508238.jpg!half" />
@@ -8181,7 +9228,7 @@ LL 铁后攻是很难突破，而且先攻吃到陨石是很难受的，陨石 /
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/99726621.jpg!half" />
 &lt;/a>&lt;/div>
 &lt;/details>
-&lt;details>
+&lt;details class="collapse">
 &lt;summary>不带抗战 LL 铁（不推荐）&lt;/summary>
 &lt;div class="ygo-deck">&lt;div class="ygo-deck-title">&lt;a href="https://www.bilibili.com/read/cv15083840" target="_blank" rel="noopener noreferrer">没抗战没大鸟的 LL 铁&lt;/a>&lt;/div>&lt;div class="ygo-deck-subtitle">主卡组&lt;/div>&lt;a href="https://ygocdb.com/card/34550857" target="_blank">
 &lt;img src="https://cdn.233.momobako.com/ygopro/pics/34550857.jpg!half" />
