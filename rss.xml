@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.96.0 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Sat, 23 Apr 2022 23:33:11 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Godot 3.4 使用 TileMap 实例化场景</title><link>https://ews.ink/tech/game-godot-trick-instance-tilemap/</link><guid isPermaLink="true">https://ews.ink/tech/game-godot-trick-instance-tilemap/</guid><pubDate>Wed, 20 Apr 2022 12:04:14 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.96.0 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 25 Apr 2022 23:33:44 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Godot 3.4 使用 TileMap 实例化场景</title><link>https://ews.ink/tech/game-godot-trick-instance-tilemap/</link><guid isPermaLink="true">https://ews.ink/tech/game-godot-trick-instance-tilemap/</guid><pubDate>Wed, 20 Apr 2022 12:04:14 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;blockquote>
 &lt;p>主要思路参考 timothyqiu 的《&lt;a href="https://www.bilibili.com/video/BV1kf4y1b7L2">如何在 TileMap 中使用实例场景【Godot 教程】&lt;/a>》，略有优化。&lt;/p>
 &lt;/blockquote>
 &lt;p>原理是将取好名的 TileSet 作为「占位图」画好，加载的时候通过脚本代码自动用「场景实例」替换掉「该名称的占位图」。&lt;/p>
@@ -2507,34 +2507,50 @@ Reference 会跟踪对自己的引用，只有当对自己没有另外的引用�
 &lt;a href="https://discord.gg/X5jdmuXfgq" target="_blank">&lt;img src="https://img.shields.io/discord/482578656229720084?label=Discord&amp;logo=discord&amp;logoColor=fff" />&lt;/a>
 &lt;/span>
 &lt;h2 id="roadmap-路线图">Roadmap 路线图&lt;/h2>
+&lt;blockquote>
+&lt;p>稍微回头看了下，写得太随意了，根本没有任何组织性，想到哪里写到哪里。&lt;br>
+Roadmap 既没有提纲挈领，也基本没有前瞻性，完全就是流水帐。重写重写。&lt;/p>
+&lt;/blockquote>
+&lt;p>重新设计项目架构：&lt;/p>
 &lt;ul>
-&lt;li>&lt;code>v0.1.0-alpha.1&lt;/code> &lt;strong>雏形&lt;/strong>
+&lt;li>麻将基础类 &lt;code>MahjongBase&lt;/code>：麻将相关基础功能
 &lt;ol>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 基础 UI 交互界面&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 便于自动排序、且兼容赤宝牌的数据结构设计&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 配牌生成 &amp;amp; 牌序记录&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 序列化（字符串 → 牌序对象）和反序列化（对象 → 牌序字符串）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> md5 验证牌山确保牌序未被篡改（参考&lt;a href="https://www.queji.tw/cardsmd5/">雀姬&lt;/a>）&lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/game-mahjong-diy/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 根据牌序计算四家手牌&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 根据牌序计算宝牌指示器（杠宝）、里宝牌（杠里宝）、岭上牌、海底牌&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 发牌 / 打牌 / 摸牌&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 记录摸切历史（进张、舍张记录）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;kbd>Esc&lt;/kbd> 开启 debug 控制台功能（配牌预览 山牌 / 王牌）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 动态渲染手牌和宝牌指示器&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 鸣牌判定&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> GitHub Action 自动编译&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 生成 &lt;code>new_tile_walls()&lt;/code> 使用公平洗牌算法（打乱顺序）洗好的牌堆&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 解析字符串牌面 序列化与反序列化 &lt;code>serialize()&lt;/code> / &lt;code>deserialize()&lt;/code> 以便 md5 验证&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 根据牌序按人数和游戏方式发放手牌 &lt;code>deal_tiles()&lt;/code> 并在此基础上计算出山牌&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 根据牌序和开杠数量 &lt;code>get_dora()&lt;/code> 计算对应的宝牌指示器 / 里宝牌 / 岭上牌 / 海底牌&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 判断一副手牌 &lt;code>can_win()&lt;/code> 是否能和&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 判断一副手牌 &lt;code>is_ready()&lt;/code> 是否已经听牌&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 计算一副手牌 &lt;code>get_shanten()&lt;/code> 的向听数&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 评估一副手牌 &lt;code>estimate_hand_value()&lt;/code> 的得分（符数、翻数、役种、基本点数）&lt;/li>
 &lt;/ol>
 &lt;/li>
-&lt;li>&lt;code>v0.1.0-alpha.2&lt;/code> &lt;strong>建设基础设施以支持正常游玩&lt;/strong>
+&lt;li>麻将游戏类 &lt;code>MahjongGame&lt;/code>：麻将游戏所需功能
 &lt;ol>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 单元测试类&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 优化发牌函数，降低耦合程度（不再与人数绑定，动态人数也可以正确发牌）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 更新图片、音效素材并重新设计 UI 布局&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 完成鸣牌功能（包括加杠 / 暗杠）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 完成和牌判定&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 完成主游戏循环（轮流 turn 摸切）&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 生成（记录）牌谱&lt;/li>
 &lt;/ol>
 &lt;/li>
+&lt;li>麻将游戏 Server 服务端 &lt;code>BoardHost&lt;/code>：游戏主持人，负责裁定（联机则把这部分放到云端）
+&lt;ol>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;ruby>&lt;rb>读写牌谱&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Play Log&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>：手牌、山牌、宝牌、余牌、荒牌流局、摸切记录、鸣牌记录&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 记录&lt;ruby>&lt;rb>对局信息&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>Round Info&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>：场风、本场数、点棒（立直）数、座位（自风）、点数&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>麻将游戏 Client 客户端 &lt;code>PlaySpace&lt;/code>：用户接口（UI）提供交互
+&lt;ol>
+&lt;li>&lt;input disabled="" type="checkbox"> 读取已知牌谱，并进行渲染&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 接受用户输入（玩家操作）&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 排序手牌&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 听牌提示&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h3>版本目标&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>v0.1.0-alpha.1&lt;/code> &lt;strong>雏形&lt;/strong>&lt;br>
+能动：可以输入，处理完输入后有反馈，像个游戏的样子&lt;/li>
+&lt;li>&lt;code>v0.1.0-alpha.2&lt;/code> &lt;strong>完善基础设施&lt;/strong>&lt;br>
+能打麻将：可以正常游玩（指获得一局完整的游戏体验）&lt;/li>
 &lt;li>&lt;code>v0.1.0-alpha.3&lt;/code> &lt;strong>完成人机 AI&lt;/strong>
 &lt;ol>
 &lt;li>&lt;input disabled="" type="checkbox"> 思考 AI 如何介入游戏：com 玩家数据拥有 AI？还是 AI 拥有 com 玩家数据？&lt;/li>
@@ -2575,14 +2591,17 @@ Reference 会跟踪对自己的引用，只有当对自己没有另外的引用�
 &lt;details class="collapse">
 &lt;summary>&lt;code>v0.1.0-alpha.1a&lt;/code> feat: basic ui&lt;/summary>
 &lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 兼容赤宝牌的数据结构设计&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 自动排序手牌&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 配牌生成 md5 验证牌山&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 便于自动排序、且兼容赤宝牌的数据结构设计&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 配牌生成 &amp;amp; 牌序记录&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 序列化（字符串 → 牌序对象）和反序列化（对象 → 牌序字符串）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> md5 验证牌山确保牌序未被篡改（参考&lt;a href="https://www.queji.tw/cardsmd5/">雀姬&lt;/a>）&lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/game-mahjong-diy/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 基本 UI 交互界面&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 手牌 / 宝牌 / 里宝 / 岭上 / 海底计算&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 根据牌序计算四家手牌&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 根据牌序计算宝牌指示器（杠宝）、里宝牌（杠里宝）、岭上牌、海底牌&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 发牌 / 打牌 / 摸牌&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;kbd>Esc&lt;/kbd> 开启 debug 控制台功能&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 配牌预览 山牌 / 王牌&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 记录摸切历史（进张、舍张记录）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;kbd>Esc&lt;/kbd> 开启 debug 控制台功能（配牌预览 山牌 / 王牌）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 动态渲染手牌和宝牌指示器&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 鸣牌判定&lt;/li>
 &lt;/ul>
 &lt;/details>
@@ -2592,22 +2611,29 @@ Reference 会跟踪对自己的引用，只有当对自己没有另外的引用�
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 部署 SSH-Key &lt;code>ssh-keygen -b 4096 -C &amp;quot;ACTIONS_DEPLOY_KEY&amp;quot; -f actions_deploy_key&lt;/code>&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 找到合适的 action 脚本 &lt;a href="https://github.com/marketplace/actions/godot-ci" target="_blank">&lt;img class="emoji" src="https://img.shields.io/badge/GitHub_Actions-godot--ci-informational?logo=github" />&lt;/a>&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 修改脚本以适配本项目&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 打通自动部署工作流 &lt;a href="https://time2beat.github.io/mahjong-game/" target="_blank">&lt;img class="emoji" src="https://img.shields.io/badge/GitHub_Pages-Mahjong_Fruit-success?logo=github" />&lt;/a>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 打通自动部署工作流 &lt;a href="https://time2beat.github.io/mahjong-game/" target="_blank">&lt;img class="emoji" src="https://img.shields.io/badge/GitHub_Pages-Mahjong_Fruit-success?logo=github" />&lt;/a> 由 GitHub Action 自动编译&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 枚举：役种 / 流局类型&lt;/li>
 &lt;/ul>
 &lt;/details>
 &lt;details class="collapse">
 &lt;summary>&lt;code>v0.1.0-alpha.2a&lt;/code> feat: basic game&lt;/summary>
 &lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 单元测试 hook&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 优化发牌函数，降低耦合程度：手牌和山牌计算现在最低兼容 2 个玩家&lt;br>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 单元测试 hook&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 优化发牌函数，降低耦合程度：手牌和山牌计算现在最低兼容 2 个玩家&lt;br>
 （而且不止可以发 13 张，即使发 7 张，各玩家的手牌和山牌也是正确的。）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 更新了图片素材（资源来自 &lt;a href="https://www.civillink.net/fsozai/majan.html">麻雀の画像・素材 - 来夢来人&lt;/a>）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 新增了音效（资源来自 &lt;a href="http://ancoro.way-nifty.com/blog/se.html">天鳳用オリジナル SE: アンコロキング blog&lt;/a>）&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> 重绘了 UI 布局，现在的界面更合理了&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 完成鸣牌功能（包括加杠 / 暗杠）&lt;span style="color:red;">&lt;b>doing&lt;/b>&lt;/span>&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 完成和牌判定&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 完成主游戏循环（轮流 turn 摸切）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 渲染别家手牌信息&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: Debug 控制台添加透视功能&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 新增了简单的标题界面和调试界面&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> feat: 完成鸣牌功能（包括加杠 / 暗杠）&lt;span style="color:red;">&lt;b>doing&lt;/b>&lt;/span> 已完成按钮功能和渲染副露区&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> feat: 完成和牌判定&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> feat: 完成主游戏循环（轮流 turn 摸切）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 新增了音效（资源来自 &lt;a href="http://ancoro.way-nifty.com/blog/se.html">天鳳用オリジナル SE: アンコロキング blog&lt;/a>）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> style: 更新了图片素材（资源来自 &lt;a href="https://www.civillink.net/fsozai/majan.html">麻雀の画像・素材 - 来夢来人&lt;/a>）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> fix: 更新了牌背的渲染方式：着色器染色 → 直接更换素材帧&lt;br>
+现在理论上不可能（作弊）&lt;strong>看穿&lt;/strong>牌背（因为它本来就是&lt;ruby>&lt;rb>一张单独&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>不携带数据&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>的 &lt;strong>背面&lt;/strong> 牌）。&lt;br>
+&lt;del>以前取消着色器就可以直接透视牌面了。&lt;/del>&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> fix: 重绘了 UI 布局，添加了对局信息：东一局 / 本场数 / 点棒数 / 余牌数 / 各家点数&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> fix: 现在可以正确渲染赤宝牌了（以前计算是正确的，但显示为普通五万 / 饼 / 索）&lt;/li>
 &lt;/ul>
 &lt;/details>
 &lt;h2 id="reference-参考资料">Reference 参考资料&lt;/h2>
@@ -2621,10 +2647,10 @@ Reference 会跟踪对自己的引用，只有当对自己没有另外的引用�
 &lt;li>「&lt;a href="https://tenhou.net/">天鳳 | 最高峰の対戦麻雀サイト&lt;/a>」流程设计参考&lt;/li>
 &lt;li>「&lt;a href="https://repo.riichi.moe/">4chan /mjg/ Repository&lt;/a>」麻将相关的各种资料 / 资源&lt;/li>
 &lt;li>&lt;a href="https://github.com/yuanfengyun/qipai_algorithm">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-yuanfengyun%2Fqipai__algorithm-informational?logo=github" alt="">&lt;/a> 各种语言的棋牌相关算法&lt;/li>
-&lt;li>&lt;a href="https://github.com/kobalab/Majiang">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-kobalab%2FMajiang-informational?logo=github" alt="">&lt;/a> &lt;a href="https://kobalab.net/majiang/">HTML5 在线麻将&lt;/a>（交互参考）&lt;/li>
+&lt;li>&lt;a href="https://github.com/kobalab/Majiang">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-kobalab%2FMajiang-informational?logo=github" alt="">&lt;/a> &lt;a href="https://kobalab.net/majiang/">HTML5 在线日麻&lt;/a>（交互参考）&lt;/li>
 &lt;li>&lt;a href="https://github.com/MahjongRepository/mahjong">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-MahjongRepository%2Fmahjong-informational?logo=github" alt="">&lt;/a> 日麻相关 Python 库&lt;/li>
 &lt;li>&lt;a href="https://github.com/EndlessCheng/mahjong-helper">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-EndlessCheng%2Fmahjong--helper-informational?logo=github" alt="">&lt;/a> 日麻助手（计算牌效，支持天凤 / 雀魂，AI 算法参考）&lt;/li>
-&lt;li>&lt;a href="https://github.com/Equim-chan/akochan-reviewer">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-Equim--chan%2Fakochan--reviewer-informational?logo=github" alt="">&lt;/a> 天凤 / 雀魂复盘工具&lt;/li>
+&lt;li>&lt;a href="https://github.com/Equim-chan/akochan-reviewer">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-Equim--chan%2Fakochan--reviewer-informational?logo=github" alt="">&lt;/a> &lt;a href="https://akochan.ekyu.moe/">天凤 / 雀魂复盘工具&lt;/a> 链接&lt;/li>
 &lt;li>&lt;a href="https://github.com/zyr17/MajsoulPaipuAnalyzer">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-zyr17%2FMajsoulPaipuAnalyzer-informational?logo=github" alt="">&lt;/a> 雀魂牌谱分析工具&lt;/li>
 &lt;li>&lt;a href="https://github.com/MajsoulPlus/majsoul-plus">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-MajsoulPlus%2Fmajsoul--plus-informational?logo=github" alt="">&lt;/a> 雀魂加强版客户端&lt;/li>
 &lt;/ul>
@@ -2666,6 +2692,8 @@ Reference 会跟踪对自己的引用，只有当对自己没有另外的引用�
 &lt;dd>而编号仍然按照代码习惯从 0 到 3 ——共计 4 位，代表四张同种麻将牌。&lt;/dd>
 &lt;dd>所有枚举值都是 &lt;code>100 &amp;lt; x &amp;lt; 500&lt;/code> 的 &lt;ruby>&lt;rb>整型&lt;/rb>&lt;rp>（&lt;/rp>&lt;rt>int&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>，也保证了尽量小的运算量。&lt;/dd>
 &lt;dd>而且有些语言本来就不支持枚举字符串（&lt;code>9m/9p/9s/7z&lt;/code>），这个设计也保证了通用性。&lt;/dd>
+&lt;dd>这个设计还有个好处就是排序手牌变得非常简单，直接按值从小到大排就行了。&lt;/dd>
+&lt;dd>天然兼容赤宝牌，无需任何额外判断。&lt;/dd>
 &lt;dt>枚举不同的牌&lt;/dt>
 &lt;dd>在运算过程中还会经常碰到要遍历 34 种不同麻将牌的需求。&lt;/dd>
 &lt;dd>但这就没必要过度设计了，直接按顺序排成 &lt;code>0&lt;/code> ~ &lt;code>33&lt;/code> 即可。&lt;/dd>
@@ -2696,6 +2724,17 @@ honor ==>|"包括"| dragon("三元牌 🀆🀅🀄")
 &lt;li>起手完毕，翻开第 1 张宝牌指示器（倒第 5 张）。&lt;/li>
 &lt;li>庄家打出第一张牌，正常轮流摸切。&lt;/li>
 &lt;/ol>
+&lt;h3 id="序列化与反序列化">序列化与反序列化&lt;/h3>
+&lt;p>反序列化为字符串后会&lt;strong>损失&lt;/strong>每一张牌&lt;strong>自己&lt;/strong>的具体位置信息，不过牌种位置信息还在。&lt;br>
+比方说 &lt;code>152, 153, 150, 151&lt;/code> 反序列化后就是 &lt;code>5m0m5m5m&lt;/code>。&lt;br>
+只有特别处理过的 &lt;svg class="tile">&lt;use class="face" xlink:href="#mj-0m" />&lt;/svg> 的位置信息还在，别的普通 &lt;svg class="tile">&lt;use class="face" xlink:href="#mj-5m" />&lt;/svg> 具体 &lt;strong>一对一&lt;/strong> 的位置信息都在转换过程中损失了。重新序列化 &lt;code>5m0m5m5m&lt;/code> 变成 &lt;code>150, 153, 151, 152&lt;/code>，已经不是原来的序列了。&lt;/p>
+&lt;p>但实际上对游戏本身 &lt;strong>并没有影响&lt;/strong>。&lt;br>
+因为实际游戏过程中是不会关心「一张五万本来是第几张五万」的：&lt;br>
+「我只和上局 &lt;strong>第三张&lt;/strong> 打出的 &lt;em>七饼&lt;/em>，别的 &lt;em>七饼&lt;/em> 我不和」这不是有病吗。&lt;/p>
+&lt;p>洗牌时枚举每一张进行打乱顺序，是为了保证公平，不会出现意外的偏差（比如避免和上一局的牌序发生某些关联）。洗完之后同一种牌具体的排序就不再重要了，损失掉也没关系，只要保证赤宝牌的位置信息没损失就行了。&lt;/p>
+&lt;p>以字符串序列化的牌序，同一种牌永远是 &lt;code>0, 1, 2, 3&lt;/code> 这样排序，尾号为 3 的牌永远沉底——&lt;br>
+只有&lt;span style="color:red;">&lt;b>赤宝牌&lt;/b>&lt;/span>特殊处理，洗完它在哪里它就一直在那里，序列化和反序列化不会对它产生影响。&lt;br>
+所以起始手牌可能存在赤宝牌，这是符合事实逻辑的。&lt;/p>
 &lt;h3 id="关于鸣牌">关于鸣牌&lt;/h3>
 &lt;p>同时鸣牌如何判定？&lt;/p>
 &lt;ul>
@@ -2706,6 +2745,32 @@ honor ==>|"包括"| dragon("三元牌 🀆🀅🀄")
 &lt;li>因此鸣牌优先级为：和 &amp;gt; 杠 / 碰 &amp;gt; 吃。&lt;/li>
 &lt;/ul>
 &lt;p>鸣牌如何标记？（和牌不需要标记，除非是「血战」玩法）&lt;/p>
+&lt;blockquote>
+&lt;p>吃只可能吃上家，因此只有 &lt;code>_ 2 3&lt;/code> / &lt;code>1 _ 3&lt;/code> / &lt;code>1 2 _&lt;/code> 吃哪组的问题。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">var&lt;/span> &lt;span class="n">meld&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="ne">Dictionary&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1"># 副露 示例数据结构&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">CALL&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">CHOW&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># 枚举鸣牌类型&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;have&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[],&lt;/span> &lt;span class="c1"># 拥有的牌&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;pick&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[],&lt;/span> &lt;span class="c1"># 捡回的牌&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;mark&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># 特殊标记的位置 吃不需要特殊标记 位置信息就足够了&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="c1"># 比如 123 213 312&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 碰 / 杠才需要, 比如 222 需要标记哪张是碰过来的&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>其实 &lt;code>type&lt;/code> 都不需要，保留只是为了提高容错。&lt;/p>
+&lt;/blockquote>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2719,48 +2784,48 @@ honor ==>|"包括"| dragon("三元牌 🀆🀅🀄")
 &lt;tbody>
 &lt;tr>
 &lt;td style="text-align:center">吃第 1 张&lt;/td>
-&lt;td style="text-align:center">碰上家&lt;/td>
-&lt;td style="text-align:center">碰上家后加杠&lt;/td>
-&lt;td style="text-align:center">杠上家&lt;/td>
+&lt;td style="text-align:center">碰下家 &lt;code>#1&lt;/code>&lt;/td>
+&lt;td style="text-align:center">碰下家后 &lt;code>#1&lt;/code> 加杠&lt;/td>
+&lt;td style="text-align:center">杠下家 &lt;code>#3&lt;/code>&lt;/td>
 &lt;td style="text-align:center">不求人&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">吃第 2 张&lt;/td>
-&lt;td style="text-align:center">碰对家&lt;/td>
-&lt;td style="text-align:center">碰对家后加杠&lt;/td>
-&lt;td style="text-align:center">杠对家&lt;/td>
+&lt;td style="text-align:center">碰对家 &lt;code>#2&lt;/code>&lt;/td>
+&lt;td style="text-align:center">碰对家后 &lt;code>#2&lt;/code> 加杠&lt;/td>
+&lt;td style="text-align:center">杠对家 &lt;code>#2&lt;/code>&lt;/td>
 &lt;td style="text-align:center">&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">吃第 3 张&lt;/td>
-&lt;td style="text-align:center">碰下家&lt;/td>
-&lt;td style="text-align:center">碰下家后加杠&lt;/td>
-&lt;td style="text-align:center">杠下家&lt;/td>
+&lt;td style="text-align:center">碰上家 &lt;code>#3&lt;/code>&lt;/td>
+&lt;td style="text-align:center">碰上家后 &lt;code>#3&lt;/code> 加杠&lt;/td>
+&lt;td style="text-align:center">杠上家 &lt;code>#1&lt;/code>&lt;/td>
 &lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">have 2 pick 1&lt;br>&lt;span style="color:red;">&lt;b>no repeat&lt;/b>&lt;/span>&lt;/td>
+&lt;td style="text-align:center">have 2 pick 1&lt;br>repeat&lt;/td>
+&lt;td style="text-align:center">have 2 pick &lt;span style="color:red;">&lt;b>2&lt;/b>&lt;/span>&lt;br>repeat&lt;/td>
+&lt;td style="text-align:center">have &lt;span style="color:red;">&lt;b>3&lt;/b>&lt;/span> pick 1&lt;br>repeat&lt;/td>
+&lt;td style="text-align:center">have &lt;span style="color:red;">&lt;b>4&lt;/b>&lt;/span> pick &lt;span style="color:red;">&lt;b>0&lt;/b>&lt;/span>&lt;br>repeat&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;code>m13-2&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>p50-5_2&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>s55-05_3&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>m550-5_1&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>z7777&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>吃只可能吃上家，因此只有 &lt;code>_ 2 3&lt;/code> / &lt;code>1 _ 3&lt;/code> / &lt;code>1 2 _&lt;/code> 吃哪组的问题。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-GDScript" data-lang="GDScript">&lt;span class="line">&lt;span class="cl">&lt;span class="k">var&lt;/span> &lt;span class="n">fulu&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="ne">Dictionary&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1"># 副露 示例数据结构&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">CALL&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">CHOW&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># 枚举鸣牌类型&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[],&lt;/span> &lt;span class="c1"># 具体牌面&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;mark&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># 特殊标记的位置 吃不需要特殊标记 位置信息就足够了&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="c1"># 比如 123 213 312&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 碰 / 杠才需要, 比如 222 需要标记哪张是碰过来的&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="和牌判定">和牌判定&lt;/h3>
-&lt;p>详见《&lt;a href="https://ews.ink/tech/game-mahjong-check-win-algorism" target="_blank">麻将和牌判定算法及相关实现&lt;/a>》一文。&lt;/p>
+&lt;blockquote>
+&lt;p>本来 &lt;code>m550=5#1&lt;/code> 这样更具代表性的符号可读性更强，换成 &lt;code>-_&lt;/code> 是为了保证 URL 编码后的兼容性。&lt;/p>
+&lt;/blockquote>
+&lt;p>正则也很简单——&lt;code>/^([mpsz]{1})(\d{2,4})-?(\d{0,4})_?(\d?)$/ig&lt;/code>（&lt;a href="https://jex.im/regulex/#!flags=ig&amp;amp;re=%5E(%5Bmpsz%5D%7B1%7D)(%5Cd%7B2%2C4%7D)-%3F(%5Cd%7B0%2C4%7D)_%3F(%5Cd%3F)%24">可视化&lt;/a>）。&lt;br>
+匹配到的四组分别是：花色、拥有的牌（&lt;code>have&lt;/code>）、捡回的牌（&lt;code>pick&lt;/code>）、鸣牌目标（&lt;code>mark&lt;/code>）。&lt;/p>
+&lt;h3 id="和牌判定">和牌判定&lt;/h3>
+&lt;p>详见《&lt;a href="https://ews.ink/tech/game-mahjong-algorithm" target="_blank">麻将和牌判定算法及相关实现&lt;/a>》一文。&lt;/p>
 &lt;h3 id="听牌判定">听牌判定&lt;/h3>
 &lt;p>&lt;strong>听牌&lt;/strong> 时的手牌数量必定是 $ 3 n + 1 $ 形式。&lt;/p>
 &lt;ul>
