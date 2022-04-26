@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.96.0 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Mon, 25 Apr 2022 23:33:44 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Godot 3.4 使用 TileMap 实例化场景</title><link>https://ews.ink/tech/game-godot-trick-instance-tilemap/</link><guid isPermaLink="true">https://ews.ink/tech/game-godot-trick-instance-tilemap/</guid><pubDate>Wed, 20 Apr 2022 12:04:14 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Everybody Wants Some</title><link>https://ews.ink/</link><description>人傻又健忘，记点什么</description><generator>Hugo 0.96.0 https://gohugo.io/</generator><language>zh-CN</language><managingEditor>po@ews.ink (time2beat)</managingEditor><webMaster>po@ews.ink (time2beat)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><lastBuildDate>Tue, 26 Apr 2022 21:49:12 +0800</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://ews.ink/rss.xml"/><item><title>Godot 3.4 使用 TileMap 实例化场景</title><link>https://ews.ink/tech/game-godot-trick-instance-tilemap/</link><guid isPermaLink="true">https://ews.ink/tech/game-godot-trick-instance-tilemap/</guid><pubDate>Wed, 20 Apr 2022 12:04:14 +0800</pubDate><author>po@ews.ink (time2beat)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright><description>&lt;blockquote>
 &lt;p>主要思路参考 timothyqiu 的《&lt;a href="https://www.bilibili.com/video/BV1kf4y1b7L2">如何在 TileMap 中使用实例场景【Godot 教程】&lt;/a>》，略有优化。&lt;/p>
 &lt;/blockquote>
 &lt;p>原理是将取好名的 TileSet 作为「占位图」画好，加载的时候通过脚本代码自动用「场景实例」替换掉「该名称的占位图」。&lt;/p>
@@ -2513,13 +2513,13 @@ Roadmap 既没有提纲挈领，也基本没有前瞻性，完全就是流水帐
 &lt;/blockquote>
 &lt;p>重新设计项目架构：&lt;/p>
 &lt;ul>
-&lt;li>麻将基础类 &lt;code>MahjongBase&lt;/code>：麻将相关基础功能
+&lt;li>麻将通用基类 &lt;code>MahjongBase&lt;/code>：麻将相关基础功能
 &lt;ol>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 生成 &lt;code>new_tile_walls()&lt;/code> 使用公平洗牌算法（打乱顺序）洗好的牌堆&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 解析字符串牌面 序列化与反序列化 &lt;code>serialize()&lt;/code> / &lt;code>deserialize()&lt;/code> 以便 md5 验证&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 根据牌序按人数和游戏方式发放手牌 &lt;code>deal_tiles()&lt;/code> 并在此基础上计算出山牌&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 根据牌序和开杠数量 &lt;code>get_dora()&lt;/code> 计算对应的宝牌指示器 / 里宝牌 / 岭上牌 / 海底牌&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 判断一副手牌 &lt;code>can_win()&lt;/code> 是否能和&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 判断一副手牌 &lt;code>can_win()&lt;/code> 是否能和&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 判断一副手牌 &lt;code>is_ready()&lt;/code> 是否已经听牌&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 计算一副手牌 &lt;code>get_shanten()&lt;/code> 的向听数&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 评估一副手牌 &lt;code>estimate_hand_value()&lt;/code> 的得分（符数、翻数、役种、基本点数）&lt;/li>
@@ -2538,9 +2538,9 @@ Roadmap 既没有提纲挈领，也基本没有前瞻性，完全就是流水帐
 &lt;/li>
 &lt;li>麻将游戏 Client 客户端 &lt;code>PlaySpace&lt;/code>：用户接口（UI）提供交互
 &lt;ol>
-&lt;li>&lt;input disabled="" type="checkbox"> 读取已知牌谱，并进行渲染&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 接受用户输入（玩家操作）&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 排序手牌&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 读取已知牌谱，并进行渲染&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 接受用户输入（玩家操作）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 排序手牌&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> 听牌提示&lt;/li>
 &lt;/ol>
 &lt;/li>
@@ -2615,7 +2615,7 @@ Roadmap 既没有提纲挈领，也基本没有前瞻性，完全就是流水帐
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> 枚举：役种 / 流局类型&lt;/li>
 &lt;/ul>
 &lt;/details>
-&lt;details class="collapse">
+&lt;details class="collapse" open="open">
 &lt;summary>&lt;code>v0.1.0-alpha.2a&lt;/code> feat: basic game&lt;/summary>
 &lt;ul>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 单元测试 hook&lt;/li>
@@ -2624,8 +2624,10 @@ Roadmap 既没有提纲挈领，也基本没有前瞻性，完全就是流水帐
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 渲染别家手牌信息&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: Debug 控制台添加透视功能&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 新增了简单的标题界面和调试界面&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 完成单独的「模拟发牌」调试界面&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 完成单独的「手牌分析」调试界面（目前只有和牌判断，更多功能待补充）&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 完成和牌判定&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> feat: 完成鸣牌功能（包括加杠 / 暗杠）&lt;span style="color:red;">&lt;b>doing&lt;/b>&lt;/span> 已完成按钮功能和渲染副露区&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> feat: 完成和牌判定&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> feat: 完成主游戏循环（轮流 turn 摸切）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> feat: 新增了音效（资源来自 &lt;a href="http://ancoro.way-nifty.com/blog/se.html">天鳳用オリジナル SE: アンコロキング blog&lt;/a>）&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> style: 更新了图片素材（资源来自 &lt;a href="https://www.civillink.net/fsozai/majan.html">麻雀の画像・素材 - 来夢来人&lt;/a>）&lt;/li>
@@ -2650,7 +2652,7 @@ Roadmap 既没有提纲挈领，也基本没有前瞻性，完全就是流水帐
 &lt;li>&lt;a href="https://github.com/kobalab/Majiang">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-kobalab%2FMajiang-informational?logo=github" alt="">&lt;/a> &lt;a href="https://kobalab.net/majiang/">HTML5 在线日麻&lt;/a>（交互参考）&lt;/li>
 &lt;li>&lt;a href="https://github.com/MahjongRepository/mahjong">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-MahjongRepository%2Fmahjong-informational?logo=github" alt="">&lt;/a> 日麻相关 Python 库&lt;/li>
 &lt;li>&lt;a href="https://github.com/EndlessCheng/mahjong-helper">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-EndlessCheng%2Fmahjong--helper-informational?logo=github" alt="">&lt;/a> 日麻助手（计算牌效，支持天凤 / 雀魂，AI 算法参考）&lt;/li>
-&lt;li>&lt;a href="https://github.com/Equim-chan/akochan-reviewer">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-Equim--chan%2Fakochan--reviewer-informational?logo=github" alt="">&lt;/a> &lt;a href="https://akochan.ekyu.moe/">天凤 / 雀魂复盘工具&lt;/a> 链接&lt;/li>
+&lt;li>&lt;a href="https://github.com/Equim-chan/akochan-reviewer">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-Equim--chan%2Fakochan--reviewer-informational?logo=github" alt="">&lt;/a> &lt;a href="https://akochan.ekyu.moe/">天凤 / 雀魂复盘工具&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/zyr17/MajsoulPaipuAnalyzer">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-zyr17%2FMajsoulPaipuAnalyzer-informational?logo=github" alt="">&lt;/a> 雀魂牌谱分析工具&lt;/li>
 &lt;li>&lt;a href="https://github.com/MajsoulPlus/majsoul-plus">&lt;img class="sticker" src="https://img.shields.io/badge/GitHub-MajsoulPlus%2Fmajsoul--plus-informational?logo=github" alt="">&lt;/a> 雀魂加强版客户端&lt;/li>
 &lt;/ul>
@@ -2822,7 +2824,7 @@ honor ==>|"包括"| dragon("三元牌 🀆🀅🀄")
 &lt;blockquote>
 &lt;p>本来 &lt;code>m550=5#1&lt;/code> 这样更具代表性的符号可读性更强，换成 &lt;code>-_&lt;/code> 是为了保证 URL 编码后的兼容性。&lt;/p>
 &lt;/blockquote>
-&lt;p>正则也很简单——&lt;code>/^([mpsz]{1})(\d{2,4})-?(\d{0,4})_?(\d?)$/ig&lt;/code>（&lt;a href="https://jex.im/regulex/#!flags=ig&amp;amp;re=%5E(%5Bmpsz%5D%7B1%7D)(%5Cd%7B2%2C4%7D)-%3F(%5Cd%7B0%2C4%7D)_%3F(%5Cd%3F)%24">可视化&lt;/a>）。&lt;br>
+&lt;p>正则也很简单——&lt;code>/^([mpsz]{1})(\d{2,4})-?(\d{0,2})_?(\d?)$/ig&lt;/code>（&lt;a href="https://jex.im/regulex/#!flags=i&amp;amp;re=%5E(%5Bmpsz%5D%7B1%7D)(%5Cd%7B2%2C4%7D)-%3F(%5Cd%7B0%2C2%7D)_%3F(%5Cd%3F)%24">可视化&lt;/a>）。&lt;br>
 匹配到的四组分别是：花色、拥有的牌（&lt;code>have&lt;/code>）、捡回的牌（&lt;code>pick&lt;/code>）、鸣牌目标（&lt;code>mark&lt;/code>）。&lt;/p>
 &lt;h3 id="和牌判定">和牌判定&lt;/h3>
 &lt;p>详见《&lt;a href="https://ews.ink/tech/game-mahjong-algorithm" target="_blank">麻将和牌判定算法及相关实现&lt;/a>》一文。&lt;/p>
@@ -2864,7 +2866,7 @@ honor ==>|"包括"| dragon("三元牌 🀆🀅🀄")
 &lt;p>一开始我就决定要 &lt;strong>可视化&lt;/strong> 显示各种麻将牌面，但当时还没想好如何设计。&lt;br>
 接着我想起 emoji 是有麻将牌的 &lt;sup id="fnref:1">&lt;a href="https://ews.ink/tech/blog-shortcode-mahjong/#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>，于是 &lt;em>最开始的时候&lt;/em> 就用了笨办法——手写 emoji。&lt;/p>
 &lt;p>由于我的重度强迫症，「分门别类地列出所有役种」对我来说是一件能带来快感的事。&lt;br>
-于是我居然写完了《&lt;a href="https://ews.ink/game/mahjong-all/">日麻役种一览&lt;/a>》一文，50 副牌面每一个 emoji 都是我手写的。&lt;br>
+于是我居然写完了《&lt;a href="https://ews.ink/game/mahjong-all" target="_blank">日麻役种一览&lt;/a>》一文，50 副牌面每一个 emoji 都是我手写的。&lt;br>
 当时不觉得，写完才惊到。&lt;/p>
 &lt;p>后来由于日麻实在太杀时间了，渐渐就打得少了，这事儿也被遗忘了。&lt;br>
 直到 2022.3.15（刚好一年）有读者发邮件来问牌面，我才想起原来这里还有个坑没填。&lt;/p>
